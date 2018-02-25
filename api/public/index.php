@@ -4,6 +4,8 @@ use \Psr\Http\Message\ResponseInterface as Response;
 
 require '../vendor/autoload.php';
 require '../src/config/db.php';
+require '../src/controller/negocio/RNEmpresa.php';
+
 
 $app = new \Slim\App;
 $app->get('/hello/{name}', function (Request $request, Response $response) {
@@ -20,6 +22,6 @@ get: http://slimapp/api/usuario/3
 post: http://slimapp/api/usuario/add
 get: http://slimapp/api/vagas
 */
-require '../src/routes/servicos.php';
+require '../src/view/routes/servicos.php';
 
 $app->run();
