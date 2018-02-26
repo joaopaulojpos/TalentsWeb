@@ -21,10 +21,6 @@ $ composer
 ```
 ### API Endpints
 ```sh
-$ GET /api/usuarios
-$ GET /api/usuario/{id}
-$ POST /api/usuario/add
-$ PUT /api/usuario/update/{id}
-$ DELETE /api/usuario/delete/{id}
-$ GET /api/vagas
+$ http://localhost/talentsweb/api/public/api/profissional/login
+$ http://localhost/talentsweb/api/public/api/empresa/login
 ```

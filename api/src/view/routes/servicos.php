@@ -82,5 +82,20 @@ $app->get('/api/profissionais', function(Request $request, Response $response){
         echo '{"Erro": {"texto": '.$e->getMessage().'}';
     }
 });
+$app->post('/api/profissional/login', function(Request $request, Response $response){
+    
+    $login = $request->getParam('login');
+    $senha = $request->getParam('senha');    
+
+    try{
+        $rnprofissional = new RNProfissional();        
+        $rnprofissional = $rnprofissional->logar($login, $senha);
+        echo $rnprofissional;   
+
+    } catch(PDOException $e){
+        echo '{"Erro": '.$e->getMessage().'}';
+    }
+});
+
 
 ?>
