@@ -18,20 +18,20 @@
     <div class="row">
       <div class="col s6 offset-s3 z-depth-1" id="panell">
       <h5 id="title">Login Form</h5>
-      <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+      <form action="#" method="post">
         <div class="input-field" id="username">
-          <input  type="text" class="validate">
+          <input  type="text" id="email" name="email" class="validate">
           <label for="username">Email/CNPJ</label>
         </div>
         <div class="input-field" id="password">
-          <input  type="password" class="validate">
+          <input  type="password" id="senha" name="senha" class="validate">
           <label for="password">Senha</label>
         </div>
         <p>
           <input type="checkbox" id="remember"/>
           <label for="remember" id="checkbox" >Lembrar</label>
         </p>
-        <a class="waves-effect waves-light btn" id="loginbtn">Entrar</a>
+        <button type="submit">Entrar</button>
         
       </form>
 
@@ -58,10 +58,11 @@
 
 if(isset($_POST)){
 
-  printf('Resultado:'); 
+  $username = $_POST['email'];
+  $password = $_POST['senha'];
 
   $url = 'http://localhost/talentsweb/api/public/api/empresa/login'; 
-  $params = array( 'login' => 'brunofelixbarbosa123@hotmail.com', 'senha' => '123'); 
+  $params = array( 'login' => $username, 'senha' => $password); 
   $ch = curl_init(); 
   curl_setopt($ch, CURLOPT_URL, $url); 
   curl_setopt($ch, CURLOPT_POST, 1); 

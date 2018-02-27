@@ -18,20 +18,48 @@
     <div class="row">
       <div class="col s6 offset-s3 z-depth-1" id="panell">
       <h5 id="title">Login Form</h5>
-      <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+      <form action="#" method="post">
         <div class="input-field" id="username">
-          <input  type="text" class="validate">
-          <label for="username">Email/CNPJ</label>
+          <input  type="text" name="cnpj" class="validate">
+          <label for="username">CNPJ</label>
+        </div>
+        <div class="input-field" id="username">
+          <input  type="text" name="razaosocial" class="validate">
+          <label for="username">Razão Social</label>
+        </div>
+        <div class="input-field" id="username">
+          <input  type="text" name="nomefantasia" class="validate">
+          <label for="username">Nome Fantasia</label>
+        </div>
+        <div class="input-field" id="username">
+          <input  type="text" name="porte" class="validate">
+          <label for="username">Porte</label>
+        </div>
+        <div class="input-field" id="username">
+          <input  type="text" name="areaatuacao" class="validate">
+          <label for="username">Área de atuação</label>
+        </div>
+        <div class="input-field" id="username">
+          <input  type="text" name="responsavel" class="validate">
+          <label for="username">Responsável pelo cadastro</label>
+        </div>
+        <div class="input-field" id="username">
+          <input  type="text" name="telefone" class="validate">
+          <label for="username">Telefone</label>
+        </div>
+        <div class="input-field" id="username">
+          <input  type="text" name="site" class="validate">
+          <label for="username">Site</label>
+        </div>
+        <div class="input-field" id="username">
+          <input  type="text" id="email" name="email" class="validate">
+          <label for="username">Email</label>
         </div>
         <div class="input-field" id="password">
-          <input  type="password" class="validate">
+          <input  type="password" id="senha" name="senha" class="validate">
           <label for="password">Senha</label>
         </div>
-        <p>
-          <input type="checkbox" id="remember"/>
-          <label for="remember" id="checkbox" >Lembrar</label>
-        </p>
-        <a class="waves-effect waves-light btn" id="loginbtn">Entrar</a>
+        <button type="submit">Confirmar</button>
         
       </form>
 
@@ -58,10 +86,19 @@
 
 if(isset($_POST)){
 
-  printf('Resultado:'); 
+  $cnpj = $_POST['cnpj'];
+  $razao_social = $_POST['razaosocial'];
+  $nome_fantasia = $_POST['nomefantasia'];
+  $porte = $_POST['porte'];
+  $area_atuacao = $_POST['areaatuacao'];
+  $responsavel = $_POST['responsavel'];
+  $telefone = $_POST['telefone'];
+  $site = $_POST['site'];
+  $email = $_POST['email'];
+  $senha = $_POST['senha'];
 
-  $url = 'http://localhost/talentsweb/api/public/api/empresa/login'; 
-  $params = array( 'login' => 'brunofelixbarbosa123@hotmail.com', 'senha' => '123'); 
+  $url = 'http://localhost/talentsweb/api/public/api/empresa/cadastro'; 
+  $params = array( 'cnpj' => $cnpj, 'razao_social' => $razao_social, 'nome_fantasia' => $nome_fantasia, 'porte' => $porte, 'area_atuacao' => $area_atuacao, 'responsavel' => $responsavel, 'telefone' => $telefone, 'site' => $site, 'email' => $email, 'senha' => $senha); 
   $ch = curl_init(); 
   curl_setopt($ch, CURLOPT_URL, $url); 
   curl_setopt($ch, CURLOPT_POST, 1); 
