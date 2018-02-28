@@ -80,7 +80,7 @@ $app->post('/api/empresa/cadastrar', function(Request $request, Response $respon
         $empresa->setDsSite($site);
         $empresa->setDsTelefone($telefone);
         $empresa->setDsEmail($email);
-        $empresa->getDsSenha($senha);  
+        $empresa->setDsSenha($senha);  
         
         $rnempresa = $rnempresa->cadastrar($empresa);
         echo $rnempresa;   

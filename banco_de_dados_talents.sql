@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 27-Fev-2018 às 04:45
+-- Generation Time: 28-Fev-2018 às 05:16
 -- Versão do servidor: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -62,8 +62,21 @@ CREATE TABLE `empresa` (
   `ds_telefone` varchar(15) DEFAULT NULL,
   `nr_cnpj` int(11) DEFAULT NULL,
   `cd_empresa` int(11) NOT NULL,
-  `ds_email` varchar(50) DEFAULT NULL
+  `ds_email` varchar(50) DEFAULT NULL,
+  `ds_senha` varchar(32) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `empresa`
+--
+
+INSERT INTO `empresa` (`ds_razao_social`, `ds_nome_fantasia`, `nr_porte`, `ds_nome_responsavel`, `ds_area_atuacao`, `ds_site`, `ds_telefone`, `nr_cnpj`, `cd_empresa`, `ds_email`, `ds_senha`) VALUES
+('Talents LTDA.', 'Talents', '2', 'Bruno Felix', 'Desenvolvimento de sistemas', 'www.gotalents.com.br', '81995782171', 362935730, 1, 'brunofelixbarbosa123@hotmail.com', '123456'),
+('123', '123', '123', '123', '123', '123', '123', 123, 2, '123', '123'),
+('123', '123', '123', '123', '123', '123', '123', 123, 3, '123', '123'),
+('aa', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa', 0, 4, 'aa', NULL),
+('empresa nova', 'empresa nova', 'empresa nova', 'empresa nova', 'empresa nova', 'empresa nova', 'empresa nova', 0, 7, 'empresa nova', NULL),
+('teste', 'teste', 'teste', 'teste', 'teste', 'teste', 'teste', 0, 12, 'teste', NULL);
 
 -- --------------------------------------------------------
 
@@ -405,6 +418,16 @@ ALTER TABLE `vaga_habilidade`
 ALTER TABLE `vaga_idioma`
   ADD KEY `cd_idioma` (`cd_idioma`),
   ADD KEY `cd_vaga` (`cd_vaga`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `empresa`
+--
+ALTER TABLE `empresa`
+  MODIFY `cd_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- Constraints for dumped tables

@@ -15,7 +15,7 @@ class DaoEmpresa
 				   'site' => $emp->getDsSite(),
 				   'telefone' => $emp->getDsTelefone(),
 				   'email' => $emp->getDsEmail(),
-				   'senha' => '123'));
+				   'senha' => $emp->getDsSenha()));
 	}
 
 	public function logar(Empresa $emp){
