@@ -1,5 +1,4 @@
 <?php
-
 class Empresa{
 	private $cd_empresa;
 	private $nr_cnpj;
@@ -17,101 +16,101 @@ class Empresa{
 		
 	}
 
-	function setCdEmpresa($cd_empresa)
+	public function setCdEmpresa($cd_empresa)
 	{
 		$this->cd_empresa = trim($cd_empresa);
 	}
-	function getCdEmpresa()
+	public function getCdEmpresa()
 	{
 		return $this->cd_empresa;
 	}
 
-	function setNrCnpj($nr_cnpj)
+	public function setNrCnpj($nr_cnpj)
 	{
 		$this->nr_cnpj = trim($nr_cnpj);
 	}
-	function getNrCnpj()
+	public function getNrCnpj()
 	{
 		return $this->nr_cnpj;
 	}
 
-	function setDsRazaoSocial($ds_razao_social)
+	public function setDsRazaoSocial($ds_razao_social)
 	{
 		$this->ds_razao_social = trim($ds_razao_social);
 	}
-	function getDsRazaoSocial()
+	public function getDsRazaoSocial()
 	{
 		return $this->ds_razao_social;
 	}
 
-	function setDsNomeFantasia($ds_nome_fantasia)
+	public function setDsNomeFantasia($ds_nome_fantasia)
 	{
 		$this->ds_nome_fantasia = trim($ds_nome_fantasia);
 	}
-	function getDsNomeFantasia()
+	public function getDsNomeFantasia()
 	{
 		return $this->ds_nome_fantasia;
 	}
 
-	function setNrPorte($nr_porte)
+	public function setNrPorte($nr_porte)
 	{
 		$this->nr_porte = trim($nr_porte);
 	}
-	function getNrPorte()
+	public function getNrPorte()
 	{
 		return $this->nr_porte;
 	}
 
-	function setDsResponsavelCadastro($ds_responsavel_cadastro)
+	public function setDsResponsavelCadastro($ds_responsavel_cadastro)
 	{
 		$this->ds_responsavel_cadastro = trim($ds_responsavel_cadastro);
 	}
-	function getDsResponsavelCadastro()
+	public function getDsResponsavelCadastro()
 	{
 		return $this->ds_responsavel_cadastro;
 	}
 
-	function setDsAreaAtuacao($ds_area_atuacao)
+	public function setDsAreaAtuacao($ds_area_atuacao)
 	{
 		$this->ds_area_atuacao = trim($ds_area_atuacao);
 	}
-	function getDsAreaAtuacao()
+	public function getDsAreaAtuacao()
 	{
 		return $this->ds_area_atuacao;
 	}
 
-	function setDsSite($ds_site)
+	public function setDsSite($ds_site)
 	{
 		$this->ds_site = trim($ds_site);
 	}
-	function getDsSite()
+	public function getDsSite()
 	{
 		return $this->ds_site;
 	}
 
-	function setDsTelefone($ds_telefone)
+	public function setDsTelefone($ds_telefone)
 	{
 		$this->ds_telefone = trim($ds_telefone);
 	}
-	function getDsTelefone()
+	public function getDsTelefone()
 	{
 		return $this->ds_telefone;
 	}
 
-	function setDsEmail($ds_email)
+	public function setDsEmail($ds_email)
 	{
 		$this->ds_email = trim($ds_email);
 	}
-	function getDsEmail()
+	public function getDsEmail()
 	{
 		return $this->ds_email;
 	}
 
-	function setDsSenha($ds_senha)
+	public function setDsSenha($ds_senha)
 	{
 		$this->ds_senha = trim($ds_senha);
 	}
-	function getDsSenha()
+	public function getDsSenha()
 	{
 		return $this->ds_senha;
 	}

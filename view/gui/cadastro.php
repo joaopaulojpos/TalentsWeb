@@ -1,3 +1,13 @@
+<?php
+
+session_name('sessao');
+session_start();
+
+if (isset($_SESSION['empresa'])) 
+session_destroy();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -84,6 +94,11 @@
 
 <?php
 
+require_once('../../model/basica/empresa.php');
+require_once('../../controller/fachada.php');
+
+$fachada = Fachada::getInstance();
+
 if(isset($_POST)){
 
   $cnpj = $_POST['cnpj'];
@@ -97,24 +112,19 @@ if(isset($_POST)){
   $email = $_POST['email'];
   $senha = $_POST['senha'];
 
-  $url = 'http://localhost/talentsweb/api/public/api/empresa/cadastro'; 
-  $params = array( 'cnpj' => $cnpj, 'razao_social' => $razao_social, 'nome_fantasia' => $nome_fantasia, 'porte' => $porte, 'area_atuacao' => $area_atuacao, 'responsavel' => $responsavel, 'telefone' => $telefone, 'site' => $site, 'email' => $email, 'senha' => $senha); 
-  $ch = curl_init(); 
-  curl_setopt($ch, CURLOPT_URL, $url); 
-  curl_setopt($ch, CURLOPT_POST, 1); 
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-  curl_setopt($ch, CURLOPT_POSTFIELDS, 
-  http_build_query($params)); 
-  curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 60); 
-  curl_setopt($ch, CURLOPT_TIMEOUT, 60); 
-  // This should be the default Content-type for POST requests 
-  //curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-type: application/x-www-form-urlencoded")); 
-  $result = curl_exec($ch); 
-  if(curl_errno($ch) !== 0) { 
-    error_log('cURL error when connecting to ' . $url . ': ' . curl_error($ch)); 
-  } 
-  curl_close($ch); 
-  printf($result); 
+  $empresa = new Empresa();
+  $empresa->setNrCnpj($cnpj);
+  $empresa->setDsRazaoSocial($razao_social);
+  $empresa->setDsNomeFantasia($nome_fantasia);
+  $empresa->setNrPorte($porte);
+  $empresa->setDsAreaAtuacao($area_atuacao);
+  $empresa->setDsResponsavelCadastro($responsavel);   
+  $empresa->setDsSite($site);
+  $empresa->setDsTelefone($telefone);
+  $empresa->setDsEmail($email);
+  $empresa->getDsSenha($senha);  
+
+  echo $fachada->empresaCadastrar($empresa);
 
 }
 

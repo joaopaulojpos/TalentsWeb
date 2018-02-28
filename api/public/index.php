@@ -5,6 +5,7 @@ use \Psr\Http\Message\ResponseInterface as Response;
 require '../vendor/autoload.php';
 require '../src/config/db.php';
 require '../src/controller/negocio/RNEmpresa.php';
+require '../src/model/basica/Empresa.php';
 require '../src/controller/negocio/RNProfissional.php';
 
 

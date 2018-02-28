@@ -48,6 +48,48 @@ $app->post('/api/empresa/login', function(Request $request, Response $response){
     }
 });
 
+$app->post('/api/empresa/cadastrar', function(Request $request, Response $response){
+    
+
+   
+
+    $cnpj = $request->getParam('cnpj');
+    $razao_social = $request->getParam('razaosocial');
+    $nome_fantasia = $request->getParam('nomefantasia');
+    $porte = $request->getParam('porte');
+    $area_atuacao = $request->getParam('areaatuacao');
+    $responsavel = $request->getParam('responsavel');
+    $telefone = $request->getParam('telefone');
+    $site = $request->getParam('site');
+    $email = $request->getParam('email');
+    $senha = $request->getParam('senha');  
+
+
+    
+
+
+    try{
+        $rnempresa = new RNEmpresa();   
+        $empresa = new Empresa();
+        $empresa->setNrCnpj($cnpj);
+        $empresa->setDsRazaoSocial($razao_social);
+        $empresa->setDsNomeFantasia($nome_fantasia);
+        $empresa->setNrPorte($porte);
+        $empresa->setDsAreaAtuacao($area_atuacao);
+        $empresa->setDsResponsavelCadastro($responsavel);   
+        $empresa->setDsSite($site);
+        $empresa->setDsTelefone($telefone);
+        $empresa->setDsEmail($email);
+        $empresa->getDsSenha($senha);  
+        
+        $rnempresa = $rnempresa->cadastrar($empresa);
+        echo $rnempresa;   
+
+    } catch(PDOException $e){
+        echo '{"Erro": '.$e->getMessage().'}';
+    }
+});
+
 $app->get('/api/empresa/{id}', function(Request $request, Response $response){
     $id = $request->getAttribute('id');
 

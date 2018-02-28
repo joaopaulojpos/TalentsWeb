@@ -1,9 +1,19 @@
+<?php
+
+session_name('sessao');
+session_start();
+
+if (isset($_SESSION['empresa'])) 
+session_destroy();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>Login Empresa - Talents</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -27,10 +37,13 @@
           <input  type="password" id="senha" name="senha" class="validate">
           <label for="password">Senha</label>
         </div>
+
         <p>
           <input type="checkbox" id="remember"/>
           <label for="remember" id="checkbox" >Lembrar</label>
         </p>
+
+        <p class="p-alert"> <?php if (isset($_SESSION['mensagem'])) echo $_SESSION['mensagem']?> </p>
         <button type="submit">Entrar</button>
         
       </form>
@@ -56,29 +69,12 @@
 
 <?php
 
-if(isset($_POST)){
+require_once('../../controller/fachada.php');
+$fachada = Fachada::getInstance();
 
-  $username = $_POST['email'];
-  $password = $_POST['senha'];
+if(isset($_POST) && isset($_POST['email']) && isset($_POST['senha'])){
 
-  $url = 'http://localhost/talentsweb/api/public/api/empresa/login'; 
-  $params = array( 'login' => $username, 'senha' => $password); 
-  $ch = curl_init(); 
-  curl_setopt($ch, CURLOPT_URL, $url); 
-  curl_setopt($ch, CURLOPT_POST, 1); 
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
-  curl_setopt($ch, CURLOPT_POSTFIELDS, 
-  http_build_query($params)); 
-  curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 60); 
-  curl_setopt($ch, CURLOPT_TIMEOUT, 60); 
-  // This should be the default Content-type for POST requests 
-  //curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-type: application/x-www-form-urlencoded")); 
-  $result = curl_exec($ch); 
-  if(curl_errno($ch) !== 0) { 
-    error_log('cURL error when connecting to ' . $url . ': ' . curl_error($ch)); 
-  } 
-  curl_close($ch); 
-  printf($result); 
+  $fachada->empresaLogar($_POST['email'], $_POST['senha']);
 
 }
 
