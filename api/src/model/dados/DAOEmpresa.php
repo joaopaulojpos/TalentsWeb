@@ -14,7 +14,6 @@ class DaoEmpresa implements iDAOEmpresa
 		$stmt = db::getInstance()->prepare($comando);
 
 		$stmt->bindValue(':nr_cnpj', $emp->getNrCnpj());
-
 		$stmt->bindValue(':ds_razao_social', $emp->getDsRazaoSocial());
 		$stmt->bindValue(':ds_nome_fantasia', $emp->getDsNomeFantasia());
 		$stmt->bindValue(':nr_porte', $emp->getNrPorte());
@@ -27,21 +26,36 @@ class DaoEmpresa implements iDAOEmpresa
 		$run = $stmt->execute();
 	}
 	public function alterar(Empresa $emp){
-		$comando = "update tb_Empresa set nome = :nome, sobrenome = :sobrenome, login = :login, senha = :senha where id = :id";
+		$comando = "update empresa set nr_cnpj = :nr_cnpj, ds_razao_social = :ds_razao_social, ds_nome_fantasia = :ds_nome_fantasia, nr_porte = :nr_porte, ds_nome_responsavel = :ds_nome_responsavel, ds_area_atuacao = :ds_area_atuacao, ds_site = :ds_site, ds_telefone = :ds_telefone, ds_email = :ds_email, ds_senha = :ds_senha where cd_empresa = :cd_empresa";
 		$stmt = db::getInstance()->prepare($comando);
-		$run = $stmt->execute(array(
-    			':nome' => $emp->getNome(),
-    			':sobrenome' => $emp->getSobrenome(),
-    			':login' => $emp->getLogin(),
-				':senha' => $emp->getSenha(),
-				':id' => $emp->getId()
- 		));
+
+		$stmt->bindValue(':nr_cnpj', $emp->getNrCnpj());
+		$stmt->bindValue(':ds_razao_social', $emp->getDsRazaoSocial());
+		$stmt->bindValue(':ds_nome_fantasia', $emp->getDsNomeFantasia());
+		$stmt->bindValue(':nr_porte', $emp->getNrPorte());
+		$stmt->bindValue(':ds_nome_responsavel', $emp->getDsResponsavelCadastro());
+		$stmt->bindValue(':ds_area_atuacao', $emp->getDsAreaAtuacao());
+		$stmt->bindValue(':ds_site', $emp->getDsSite());
+		$stmt->bindValue(':ds_telefone', $emp->getDsTelefone());
+		$stmt->bindValue(':ds_email', $emp->getDsEmail());
+		$stmt->bindValue(':ds_senha', $emp->getDsSenha());
+		$stmt->bindValue(':cd_empresa', $emp->getCdEmpresa());
+		$run = $stmt->execute();
 	}
+
 	public function excluir(Empresa $emp){
 	}
 	public function pesquisar(Empresa $emp, $alt='false'){
 		$comando = 'select * from empresa ';
 		$where = '';
+
+		if (!empty($emp->getCdEmpresa())){
+			if (empty($where)){
+				$where = ' where cd_empresa = :cd_empresa';
+			}else{
+				$where = $where . ' and cd_empresa = :cd_empresa';
+			}
+		}
 
 		if (!empty($emp->getDsSenha())){
 			if (empty($where)){
@@ -62,6 +76,8 @@ class DaoEmpresa implements iDAOEmpresa
 		
 		$db = new db();
 		$stmt = db::getInstance()->prepare($comando . $where);
+		if (!empty($emp->getCdEmpresa()))
+			$stmt->bindValue(':cd_empresa', $emp->getCdEmpresa());
 		if (!empty($emp->getDsSenha()))
 			$stmt->bindValue(':senha', $emp->getDsSenha());
 		if (!empty($emp->getDsEmail()))

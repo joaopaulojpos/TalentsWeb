@@ -2,20 +2,21 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
+error_reporting(E_ALL | E_STRICT);
+ini_set('display_errors', 'On');
+
 require '../vendor/autoload.php';
+require '../src/config/config.php';
 require '../src/config/db.php';
+require '../src/config/constants.php';
 require '../src/controller/negocio/RNEmpresa.php';
 require '../src/model/basica/Empresa.php';
 require '../src/controller/negocio/RNProfissional.php';
 
+$app = new \Slim\App(['settings' => $config]);
 
-$app = new \Slim\App;
-$app->get('/hello/{name}', function (Request $request, Response $response) {
-    $name = $request->getAttribute('name');
-    $response->getBody()->write("Hello, $name");
+$container = $app->getContainer();
 
-    return $response;
-});
 require '../src/view/routes/servicos.php';
 
 $app->run();

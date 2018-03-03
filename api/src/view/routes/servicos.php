@@ -2,7 +2,12 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-$app = new \Slim\App;
+error_reporting(E_ALL | E_STRICT);
+ini_set('display_errors', 'On');
+
+$app = new \Slim\App(['settings' => $config]);
+
+$container = $app->getContainer();
 
 $app->options('/{routes:.+}', function ($request, $response, $args) {
     return $response;
@@ -20,7 +25,7 @@ $app->get('/api/empresas', function(Request $request, Response $response){
     $sql = "SELECT * FROM empresa";
 
     try{
-        $db = new db();
+        $db = new deb();
         
         $db = $db->getInstance();
 
@@ -28,8 +33,8 @@ $app->get('/api/empresas', function(Request $request, Response $response){
         $empresa = $stmt->fetchAll(PDO::FETCH_OBJ);
         $db = null;
         echo json_encode($empresa);
-    } catch(PDOException $e){
-        echo '{"Erro": {"texto": '.$e->getMessage().'}';
+    } catch(Exception $e){
+        echo json_encode(array('erro' => $e->getMessage()));
     }
 });
 
@@ -41,17 +46,14 @@ $app->post('/api/empresa/login', function(Request $request, Response $response){
     try{
         $rnempresa = new RNEmpresa();        
         $rnempresa = $rnempresa->logar($login, $senha);
-        echo $rnempresa;   
+        echo json_encode($rnempresa);   
 
-    } catch(PDOException $e){
-        echo '{"Erro": '.$e->getMessage().'}';
+    } catch(Exception $e){
+        echo json_encode(array('erro' => $e->getMessage()));
     }
 });
 
-$app->post('/api/empresa/cadastrar', function(Request $request, Response $response){
-    
-
-   
+$app->post('/api/empresa/salvar', function(Request $request, Response $response){
 
     $cnpj = $request->getParam('cnpj');
     $razao_social = $request->getParam('razaosocial');
@@ -62,15 +64,19 @@ $app->post('/api/empresa/cadastrar', function(Request $request, Response $respon
     $telefone = $request->getParam('telefone');
     $site = $request->getParam('site');
     $email = $request->getParam('email');
-    $senha = $request->getParam('senha');  
-
-
-    
-
+    $senha = $request->getParam('senha'); 
+    $codigo = $request->getParam('codigo');   
 
     try{
-        $rnempresa = new RNEmpresa();   
         $empresa = new Empresa();
+        if ($codigo != null){
+            $empresa->setCdEmpresa($codigo); 
+            /*$rnempresa = new RNEmpresa(); 
+            $rnempresa = $rnempresa->pesquisar($empresa);
+            if ($rnempresa == null){
+               echo json_encode(array('erro' => 'Código da empresa não existe!')); 
+            }*/
+        }
         $empresa->setNrCnpj($cnpj);
         $empresa->setDsRazaoSocial($razao_social);
         $empresa->setDsNomeFantasia($nome_fantasia);
@@ -80,31 +86,30 @@ $app->post('/api/empresa/cadastrar', function(Request $request, Response $respon
         $empresa->setDsSite($site);
         $empresa->setDsTelefone($telefone);
         $empresa->setDsEmail($email);
-        $empresa->setDsSenha($senha);  
-        
-        $rnempresa = $rnempresa->cadastrar($empresa);
-        echo $rnempresa;   
+        $empresa->setDsSenha($senha); 
 
-    } catch(PDOException $e){
-        echo '{"Erro": '.$e->getMessage().'}';
+        $rnempresa = new RNEmpresa(); 
+        $rnempresa = $rnempresa->salvar($empresa);
+        echo json_encode($rnempresa); 
+
+    } catch(Exception $e){
+        echo json_encode(array('erro' => $e->getMessage()));
     }
 });
 
 $app->get('/api/empresa/{id}', function(Request $request, Response $response){
+
     $id = $request->getAttribute('id');
 
-    $sql = "SELECT * FROM usuario WHERE id = $id";
-
     try{
-        $db = new db();
-        $db = $db->connect();
+        $rnempresa = new RNEmpresa();        
+        $empresa = new Empresa();
+        $empresa->setCdEmpresa($id);
+        $rnempresa = $rnempresa->pesquisar($empresa);
+        echo json_encode($rnempresa);   
 
-        $stmt = $db->query($sql);
-        $customer = $stmt->fetch(PDO::FETCH_OBJ);
-        $db = null;
-        echo json_encode($customer);
-    } catch(PDOException $e){
-        echo '{"Erro": {"texto": '.$e->getMessage().'}';
+    } catch(Exception $e){
+        echo json_encode(array('erro' => $e->getMessage()));
     }
 });
 
@@ -121,7 +126,7 @@ $app->get('/api/profissionais', function(Request $request, Response $response){
         $db = null;
         echo json_encode($profissional);
     } catch(PDOException $e){
-        echo '{"Erro": {"texto": '.$e->getMessage().'}';
+        echo json_encode(array('erro' => $e->getMessage()));
     }
 });
 $app->post('/api/profissional/login', function(Request $request, Response $response){
@@ -135,7 +140,7 @@ $app->post('/api/profissional/login', function(Request $request, Response $respo
         echo $rnprofissional;   
 
     } catch(PDOException $e){
-        echo '{"Erro": '.$e->getMessage().'}';
+        echo json_encode(array('erro' => $e->getMessage()));
     }
 });
 
