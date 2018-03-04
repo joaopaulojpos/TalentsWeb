@@ -1,5 +1,6 @@
 <?php
-class cargo{
+class cargo
+{
 
     private $cd_cargo;
     private $ds_cargo;

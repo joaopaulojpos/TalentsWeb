@@ -12,6 +12,10 @@ require '../src/config/constants.php';
 require '../src/controller/negocio/RNEmpresa.php';
 require '../src/model/basica/Empresa.php';
 require '../src/controller/negocio/RNProfissional.php';
+require '../src/model/basica/vaga.php';
+require '../src/model/basica/cargo.php';
+require '../src/model/dados/DAOVaga.php';
+require '../src/controller/negocio/RNVaga.php';
 
 $app = new \Slim\App(['settings' => $config]);
 
