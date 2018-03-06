@@ -1,11 +1,11 @@
 <?php
-require_once('../../model/basica/Empresa.php');
+require_once('../../model/basica/empresa.php');
 
 class DaoEmpresa
 {
 
 	public function cadastrar(Empresa $emp){
-		return $this->post('http://localhost/talentsweb/api/public/api/empresa/cadastrar', 
+		return $this->post('https://jpo1994.000webhostapp.com/api/public/api/empresa/salvar', 
 			array( 'cnpj' => $emp->getNrCnpj(), 
 				   'razaosocial' => $emp->getDsRazaoSocial(),
 				   'nomefantasia' => $emp->getDsNomeFantasia(),
@@ -19,7 +19,7 @@ class DaoEmpresa
 	}
 
 	public function logar(Empresa $emp){
-		return $this->post('http://localhost/talentsweb/api/public/api/empresa/login', array( 'login' => $emp->getDsEmail(), 'senha' => $emp->getDsSenha()));
+		return $this->post('https://jpo1994.000webhostapp.com/api/public/api/empresa/login', array( 'login' => $emp->getDsEmail(), 'senha' => $emp->getDsSenha()));
 	}
 
 	public function post($url, $params){

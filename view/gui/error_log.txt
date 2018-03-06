@@ -1,0 +1,116 @@
+[03-Mar-2018 19:55:12 UTC] PHP Warning:  require_once(../../model/basica/Empresa.php): failed to open stream: No such file or directory in /storage/ssd1/326/4854326/public_html/model/dados/DAOEmpresa.php on line 2
+[03-Mar-2018 19:55:12 UTC] PHP Fatal error:  require_once(): Failed opening required '../../model/basica/Empresa.php' (include_path='.:/usr/share/pear:/usr/share/php') in /storage/ssd1/326/4854326/public_html/model/dados/DAOEmpresa.php on line 2
+[03-Mar-2018 19:55:49 UTC] PHP Warning:  require_once(../../model/basica/Empresa.php): failed to open stream: No such file or directory in /storage/ssd1/326/4854326/public_html/model/dados/DAOEmpresa.php on line 2
+[03-Mar-2018 19:55:49 UTC] PHP Fatal error:  require_once(): Failed opening required '../../model/basica/Empresa.php' (include_path='.:/usr/share/pear:/usr/share/php') in /storage/ssd1/326/4854326/public_html/model/dados/DAOEmpresa.php on line 2
+[03-Mar-2018 19:56:54 UTC] PHP Notice:  Undefined index: email in /storage/ssd1/326/4854326/public_html/view/gui/login.php on line 80
+[03-Mar-2018 19:56:54 UTC] PHP Notice:  Undefined index: senha in /storage/ssd1/326/4854326/public_html/view/gui/login.php on line 80
+[03-Mar-2018 19:56:54 UTC] PHP Warning:  Invalid argument supplied for foreach() in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 79
+[03-Mar-2018 19:57:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:10) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 86
+[03-Mar-2018 19:57:34 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:10) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 86
+[03-Mar-2018 19:59:32 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 86
+[03-Mar-2018 19:59:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 86
+[03-Mar-2018 20:00:52 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:01:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:01:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:01:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:02:23 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:02:26 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:02:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:03:07 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:07:06 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:14) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:07:20 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:7) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 11
+[03-Mar-2018 20:07:20 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:7) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 11
+[03-Mar-2018 20:07:42 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:1) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 11
+[03-Mar-2018 20:07:42 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:1) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 11
+[03-Mar-2018 20:07:57 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:1) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 11
+[03-Mar-2018 20:07:57 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:1) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 11
+[03-Mar-2018 20:09:38 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:10) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:11:50 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:10) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 81
+[03-Mar-2018 20:12:22 UTC] PHP Fatal error:  Uncaught Error: Class 'Fachada' not found in /storage/ssd1/326/4854326/public_html/view/gui/login.php:71
+Stack trace:
+#0 {main}
+  thrown in /storage/ssd1/326/4854326/public_html/view/gui/login.php on line 71
+[03-Mar-2018 20:12:54 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:8) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 11
+[03-Mar-2018 20:12:54 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:8) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 11
+[03-Mar-2018 20:13:00 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:8) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 11
+[03-Mar-2018 20:13:12 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:8) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 11
+[03-Mar-2018 20:13:12 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:8) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 11
+[03-Mar-2018 20:13:13 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:8) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 86
+[03-Mar-2018 20:15:13 UTC] PHP Fatal error:  Uncaught Error: Class 'Fachada' not found in /storage/ssd1/326/4854326/public_html/view/gui/login.php:74
+Stack trace:
+#0 {main}
+  thrown in /storage/ssd1/326/4854326/public_html/view/gui/login.php on line 74
+[03-Mar-2018 20:16:17 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:16:22 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:16:39 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:16:44 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 86
+[03-Mar-2018 20:17:20 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:18:00 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 82
+[03-Mar-2018 20:20:19 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 79
+[03-Mar-2018 20:20:37 UTC] PHP Warning:  json_decode() expects parameter 1 to be string, object given in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 79
+[03-Mar-2018 20:21:33 UTC] PHP Fatal error:  Uncaught Error: Class 'Fachada' not found in /storage/ssd1/326/4854326/public_html/view/gui/login.php:74
+Stack trace:
+#0 {main}
+  thrown in /storage/ssd1/326/4854326/public_html/view/gui/login.php on line 74
+[03-Mar-2018 20:21:52 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /storage/ssd1/326/4854326/public_html/controller/fachada.php:79
+Stack trace:
+#0 /storage/ssd1/326/4854326/public_html/view/gui/login.php(78): Fachada->empresaLogar('123', '123')
+#1 {main}
+  thrown in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 79
+[03-Mar-2018 20:23:40 UTC] PHP Parse error:  syntax error, unexpected ';', expecting ',' or ')' in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 79
+[03-Mar-2018 20:24:39 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /storage/ssd1/326/4854326/public_html/controller/fachada.php:81
+Stack trace:
+#0 /storage/ssd1/326/4854326/public_html/view/gui/login.php(78): Fachada->empresaLogar('123', '123')
+#1 {main}
+  thrown in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 81
+[03-Mar-2018 20:27:45 UTC] PHP Notice:  Array to string conversion in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 83
+[03-Mar-2018 20:28:29 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 84
+[03-Mar-2018 20:29:57 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 84
+[03-Mar-2018 20:30:01 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 84
+[03-Mar-2018 20:31:16 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 86
+[03-Mar-2018 20:32:27 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /storage/ssd1/326/4854326/public_html/view/gui/login.php:11) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 89
+[03-Mar-2018 21:08:55 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php:10) in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 11
+[03-Mar-2018 21:08:55 UTC] PHP Notice:  Undefined index: cnpj in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 104
+[03-Mar-2018 21:08:55 UTC] PHP Notice:  Undefined index: razaosocial in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 105
+[03-Mar-2018 21:08:55 UTC] PHP Notice:  Undefined index: nomefantasia in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 106
+[03-Mar-2018 21:08:55 UTC] PHP Notice:  Undefined index: porte in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 107
+[03-Mar-2018 21:08:55 UTC] PHP Notice:  Undefined index: areaatuacao in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 108
+[03-Mar-2018 21:08:55 UTC] PHP Notice:  Undefined index: responsavel in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 109
+[03-Mar-2018 21:08:55 UTC] PHP Notice:  Undefined index: telefone in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 110
+[03-Mar-2018 21:08:55 UTC] PHP Notice:  Undefined index: site in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 111
+[03-Mar-2018 21:08:55 UTC] PHP Notice:  Undefined index: email in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 112
+[03-Mar-2018 21:08:55 UTC] PHP Notice:  Undefined index: senha in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 113
+[03-Mar-2018 21:08:56 UTC] PHP Warning:  Invalid argument supplied for foreach() in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 60
+[03-Mar-2018 21:09:39 UTC] PHP Warning:  Invalid argument supplied for foreach() in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 26
+[03-Mar-2018 21:13:55 UTC] PHP Notice:  Undefined index: cnpj in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 104
+[03-Mar-2018 21:13:55 UTC] PHP Notice:  Undefined index: razaosocial in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 105
+[03-Mar-2018 21:13:55 UTC] PHP Notice:  Undefined index: nomefantasia in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 106
+[03-Mar-2018 21:13:55 UTC] PHP Notice:  Undefined index: porte in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 107
+[03-Mar-2018 21:13:55 UTC] PHP Notice:  Undefined index: areaatuacao in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 108
+[03-Mar-2018 21:13:55 UTC] PHP Notice:  Undefined index: responsavel in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 109
+[03-Mar-2018 21:13:55 UTC] PHP Notice:  Undefined index: telefone in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 110
+[03-Mar-2018 21:13:55 UTC] PHP Notice:  Undefined index: site in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 111
+[03-Mar-2018 21:13:55 UTC] PHP Notice:  Undefined index: email in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 112
+[03-Mar-2018 21:13:55 UTC] PHP Notice:  Undefined index: senha in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 113
+[03-Mar-2018 21:13:55 UTC] PHP Warning:  Invalid argument supplied for foreach() in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 29
+[03-Mar-2018 21:14:26 UTC] PHP Warning:  Invalid argument supplied for foreach() in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 29
+[03-Mar-2018 21:14:52 UTC] PHP Warning:  Invalid argument supplied for foreach() in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 29
+[03-Mar-2018 21:15:07 UTC] PHP Warning:  Invalid argument supplied for foreach() in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 31
+[03-Mar-2018 21:24:05 UTC] PHP Notice:  Undefined index: cnpj in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 104
+[03-Mar-2018 21:24:05 UTC] PHP Notice:  Undefined index: razaosocial in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 105
+[03-Mar-2018 21:24:05 UTC] PHP Notice:  Undefined index: nomefantasia in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 106
+[03-Mar-2018 21:24:05 UTC] PHP Notice:  Undefined index: porte in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 107
+[03-Mar-2018 21:24:05 UTC] PHP Notice:  Undefined index: areaatuacao in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 108
+[03-Mar-2018 21:24:05 UTC] PHP Notice:  Undefined index: responsavel in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 109
+[03-Mar-2018 21:24:05 UTC] PHP Notice:  Undefined index: telefone in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 110
+[03-Mar-2018 21:24:05 UTC] PHP Notice:  Undefined index: site in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 111
+[03-Mar-2018 21:24:05 UTC] PHP Notice:  Undefined index: email in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 112
+[03-Mar-2018 21:24:05 UTC] PHP Notice:  Undefined index: senha in /storage/ssd1/326/4854326/public_html/view/gui/cadastro.php on line 113
+[03-Mar-2018 21:24:05 UTC] PHP Warning:  Invalid argument supplied for foreach() in /storage/ssd1/326/4854326/public_html/controller/fachada.php on line 31
+[05-Mar-2018 23:15:57 UTC] PHP Notice:  Undefined variable: empresa in /storage/ssd1/326/4854326/public_html/view/gui/vaga.php on line 26
+[05-Mar-2018 23:16:08 UTC] PHP Notice:  Undefined variable: empresa in /storage/ssd1/326/4854326/public_html/view/gui/vaga.php on line 26
+[06-Mar-2018 18:37:10 UTC] PHP Notice:  A session had already been started - ignoring session_start() in /storage/ssd1/326/4854326/public_html/view/gui/menu.php on line 9
+[06-Mar-2018 19:02:27 UTC] PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /storage/ssd1/326/4854326/public_html/view/gui/vaga.php:35
+Stack trace:
+#0 {main}
+  thrown in /storage/ssd1/326/4854326/public_html/view/gui/vaga.php on line 35

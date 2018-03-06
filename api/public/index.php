@@ -9,13 +9,14 @@ require '../vendor/autoload.php';
 require '../src/config/config.php';
 require '../src/config/db.php';
 require '../src/config/constants.php';
-require '../src/controller/negocio/RNEmpresa.php';
-require '../src/model/basica/Empresa.php';
-require '../src/controller/negocio/RNProfissional.php';
+require '../src/controller/negocio/rnempresa.php';
+require '../src/model/basica/empresa.php';
+require '../src/model/basica/profissional.php';
+require '../src/controller/negocio/rnprofissional.php';
 require '../src/model/basica/vaga.php';
 require '../src/model/basica/cargo.php';
 require '../src/model/dados/DAOVaga.php';
-require '../src/controller/negocio/RNVaga.php';
+require '../src/controller/negocio/rnVaga.php';
 
 $app = new \Slim\App(['settings' => $config]);
 

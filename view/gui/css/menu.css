@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.brand-logo{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+}
+
+.logo-text{
+	color: rgb(0, 183, 213);
+}
+
+nav ul li{
+	width: 100px;
+	text-align: center;
+}

@@ -21,8 +21,6 @@ $app->add(function ($req, $res, $next) {
             ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
 });
 
-//-------- Empresa
-
 $app->get('/api/empresas', function(Request $request, Response $response){
     $sql = "SELECT * FROM empresa";
 
@@ -115,8 +113,6 @@ $app->get('/api/empresa/{id}', function(Request $request, Response $response){
     }
 });
 
-//------- Profissional
-
 $app->get('/api/profissionais', function(Request $request, Response $response){
     $sql = "SELECT * FROM profissional";
 
@@ -141,7 +137,7 @@ $app->post('/api/profissional/login', function(Request $request, Response $respo
     try{
         $rnprofissional = new RNProfissional();        
         $rnprofissional = $rnprofissional->logar($login, $senha);
-        echo $rnprofissional;   
+        echo json_encode($rnprofissional);   
 
     } catch(PDOException $e){
         echo json_encode(array('erro' => $e->getMessage()));
@@ -156,10 +152,10 @@ $app->post('/api/profissional/login', function(Request $request, Response $respo
 $app->post('/api/vaga/salvar', function(Request $request, Response $response){
 
     $vaga = new Vaga();
-	$cargo = new Cargo();
-	$empresa = new Empresa();
-	
-	$teste = $request->getParsedBody()['cd_vaga'];
+    $cargo = new Cargo();
+    $empresa = new Empresa();
+    
+    $teste = $request->getParsedBody()['cd_vaga'];
     $vaga->setCdVaga($request->getParsedBody()['cd_vaga']);
     $vaga->setNrQtdVaga($request->getParsedBody()['nr_qtd_vaga']);
     $vaga->setDsObservacao($request->getParsedBody()['ds_observacao']);
@@ -172,10 +168,10 @@ $app->post('/api/vaga/salvar', function(Request $request, Response $response){
     $vaga->setDtCriacao($request->getParsedBody()['dt_criacao']);
     $vaga->setDsTitulo($request->getParsedBody()['ds_titulo']);
     $vaga->setVlSalario($request->getParsedBody()['vl_salario']);
-	$cargo->setCdCargo($request->getParsedBody()['cd_cargo']);
-	$vaga->setCargo($cargo);
-	$empresa->setCdEmpresa($request->getParsedBody()['cd_empresa']);
-	$vaga->setEmpresa($empresa);
+    $cargo->setCdCargo($request->getParsedBody()['cd_cargo']);
+    $vaga->setCargo($cargo);
+    $empresa->setCdEmpresa($request->getParsedBody()['cd_empresa']);
+    $vaga->setEmpresa($empresa);
     try{
     $rnvaga = new RNVaga();
     $rnvaga->cadastrar($vaga);

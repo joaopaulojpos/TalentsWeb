@@ -1,7 +1,6 @@
 <?php
-require_once('../src/model/basica/Profissional.php');
+
 require_once('../src/model/dados/iDAOProfissional.php');
-require_once('../src/config/db.php');
 
 class DaoProfissional implements iDAOProfissional
 {	
