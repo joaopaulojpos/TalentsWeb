@@ -3,11 +3,13 @@
 session_name('sessao');
 session_start();
 
-if (!isset($_SESSION['empresa'])) 
-  header("location: login.php");
+if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
+  session_destroy();            //Destroi a seção por segurança
+  header("Location: index.php"); 
+  exit; //Redireciona o visitante para login
+}
 
-$empresa = $_SESSION['empresa'];
-
+$empresa = $_SESSION['empresaLogada']; 
 
 ?>
 
@@ -22,7 +24,7 @@ $empresa = $_SESSION['empresa'];
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/login.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/menu.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
   <?php include "menu.php" ?>
@@ -47,4 +49,3 @@ $empresa = $_SESSION['empresa'];
 
   </body>
 </html>
-

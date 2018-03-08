@@ -1,15 +1,28 @@
-<nav class="light-blue lighten-1" role="navigation">
-  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Talents</a>
-    <ul class="right hide-on-med-and-down">
-      <li><a href="#">Entrar</a></li>
-    </ul>
-  <ul class="right hide-on-med-and-down">
-      <li><a href="#">Cadastrar</a></li>
-    </ul>
+<?php
 
-    <ul id="nav-mobile" class="side-nav">
-      <li><a href="#">Navbar Link</a></li>
-    </ul>
-    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
+error_reporting(E_ALL);
+
+?>
+
+<nav class="grey" role="navigation">
+  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><span class="logo-text">T</span>alents</a>
+    <?php if (!isset($_SESSION['empresaLogada'])) { ?>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="login.php">Entrar</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="cadastro.php">Cadastrar</a></li>
+      </ul>
+    <?php }else { ?>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="login.php">Sair</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="perfil.php">Perfil</a></li>
+      </ul>
+    <?php } ?>
   </div>
 </nav>

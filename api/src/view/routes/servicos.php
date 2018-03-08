@@ -141,7 +141,7 @@ $app->post('/api/profissional/login', function(Request $request, Response $respo
     try{
         $rnprofissional = new RNProfissional();        
         $rnprofissional = $rnprofissional->logar($login, $senha);
-        echo $rnprofissional;   
+        echo json_encode($rnprofissional);
 
     } catch(PDOException $e){
         echo json_encode(array('erro' => $e->getMessage()));

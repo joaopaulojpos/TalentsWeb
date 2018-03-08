@@ -1,0 +1,5 @@
+php_value session.cache_expire 80000
+php_value session.cookie_lifetime 80000
+php_value session.gc_maxlifetime 80000
+php_flag session.cache_limiter 0
+php_flag session.auto_start 1

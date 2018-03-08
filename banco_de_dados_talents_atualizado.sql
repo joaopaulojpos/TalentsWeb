@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: 28-Fev-2018 às 05:16
--- Versão do servidor: 10.1.30-MariaDB
--- PHP Version: 7.2.1
+-- Host: localhost
+-- Generation Time: 06-Mar-2018 às 23:31
+-- Versão do servidor: 10.1.31-MariaDB
+-- PHP Version: 7.0.26
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `id4854326_user_talents`
+-- Database: `id4854326_db_talents`
 --
 
 -- --------------------------------------------------------
@@ -71,12 +71,16 @@ CREATE TABLE `empresa` (
 --
 
 INSERT INTO `empresa` (`ds_razao_social`, `ds_nome_fantasia`, `nr_porte`, `ds_nome_responsavel`, `ds_area_atuacao`, `ds_site`, `ds_telefone`, `nr_cnpj`, `cd_empresa`, `ds_email`, `ds_senha`) VALUES
-('Talents LTDA.', 'Talents', '2', 'Bruno Felix', 'Desenvolvimento de sistemas', 'www.gotalents.com.br', '81995782171', 362935730, 1, 'brunofelixbarbosa123@hotmail.com', '123456'),
+('Talents LTDA.', 'Talents', '2', 'Bruno Felix', 'Desenvolvimento de sistemas', 'www.gotalents.com.br', '81995782171', 362935730, 1, 'bruno', '123456'),
 ('123', '123', '123', '123', '123', '123', '123', 123, 2, '123', '123'),
 ('123', '123', '123', '123', '123', '123', '123', 123, 3, '123', '123'),
 ('aa', 'aa', 'aa', 'aa', 'aa', 'aa', 'aa', 0, 4, 'aa', NULL),
 ('empresa nova', 'empresa nova', 'empresa nova', 'empresa nova', 'empresa nova', 'empresa nova', 'empresa nova', 0, 7, 'empresa nova', NULL),
-('teste', 'teste', 'teste', 'teste', 'teste', 'teste', 'teste', 0, 12, 'teste', NULL);
+('teste', 'teste', 'teste', 'teste', 'teste', 'teste', 'teste', 0, 12, 'teste', NULL),
+('teste bruno', 'teste bruno', 'teste bruno', 'teste bruno', 'teste bruno', 'teste bruno', 'teste bruno', 0, 13, 'teste bruno', 'teste bruno'),
+('teste bruno', 'teste bruno', 'teste bruno', 'teste bruno', 'teste bruno', 'teste bruno', 'teste bruno', 0, 14, 'teste bruno', 'teste bruno'),
+('novo', 'novo', 'novo', 'novo', 'novo', 'novo', 'novo', 0, 15, 'novo', 'novo'),
+('teste', 'teste', 'teste', 'aa', 'aa', 'aa', 'aa', 123456, 16, 'bb', '123');
 
 -- --------------------------------------------------------
 
@@ -153,6 +157,13 @@ CREATE TABLE `profissional` (
   `nr_latitude` float DEFAULT NULL,
   `cd_profissional` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `profissional`
+--
+
+INSERT INTO `profissional` (`ds_nome`, `ds_email`, `b_foto`, `ds_senha`, `nr_longitude`, `tp_sexo`, `tp_conta`, `dt_nascimento`, `nr_latitude`, `cd_profissional`) VALUES
+('TJ Batera', 'tjbatera', '/semfoto.jpg', '123456', 24.12, 'M', '1', '2017-01-11', -897.01, 1);
 
 -- --------------------------------------------------------
 
@@ -424,89 +435,64 @@ ALTER TABLE `vaga_idioma`
 --
 
 --
+-- AUTO_INCREMENT for table `cargo`
+--
+ALTER TABLE `cargo`
+  MODIFY `cd_cargo` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `curso`
+--
+ALTER TABLE `curso`
+  MODIFY `cd_curso` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `empresa`
 --
 ALTER TABLE `empresa`
-  MODIFY `cd_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `cd_empresa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- Constraints for dumped tables
+-- AUTO_INCREMENT for table `formacao`
 --
+ALTER TABLE `formacao`
+  MODIFY `cd_formacao` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Limitadores para a tabela `curso`
+-- AUTO_INCREMENT for table `habilidade`
 --
-ALTER TABLE `curso`
-  ADD CONSTRAINT `curso_ibfk_1` FOREIGN KEY (`cd_formacao`) REFERENCES `formacao` (`cd_formacao`);
+ALTER TABLE `habilidade`
+  MODIFY `cd_habilidade` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Limitadores para a tabela `opcao_perfil_comportamental`
+-- AUTO_INCREMENT for table `idioma`
+--
+ALTER TABLE `idioma`
+  MODIFY `cd_idioma` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `opcao_perfil_comportamental`
 --
 ALTER TABLE `opcao_perfil_comportamental`
-  ADD CONSTRAINT `opcao_perfil_comportamental_ibfk_1` FOREIGN KEY (`cd_pergunta_perfil_comportamental`) REFERENCES `pergunta_perfil_comportamental` (`cd_pergunta_perfil_comportamental`);
+  MODIFY `cd_opcao_perfil_comportamental` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Limitadores para a tabela `profissional_cargo`
+-- AUTO_INCREMENT for table `pergunta_perfil_comportamental`
 --
-ALTER TABLE `profissional_cargo`
-  ADD CONSTRAINT `profissional_cargo_ibfk_1` FOREIGN KEY (`cd_cargo`) REFERENCES `cargo` (`cd_cargo`),
-  ADD CONSTRAINT `profissional_cargo_ibfk_2` FOREIGN KEY (`cd_profissional`) REFERENCES `profissional` (`cd_profissional`);
+ALTER TABLE `pergunta_perfil_comportamental`
+  MODIFY `cd_pergunta_perfil_comportamental` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Limitadores para a tabela `profissional_curso`
+-- AUTO_INCREMENT for table `profissional`
 --
-ALTER TABLE `profissional_curso`
-  ADD CONSTRAINT `profissional_curso_ibfk_1` FOREIGN KEY (`cd_curso`) REFERENCES `curso` (`cd_curso`),
-  ADD CONSTRAINT `profissional_curso_ibfk_2` FOREIGN KEY (`cd_profissional`) REFERENCES `profissional` (`cd_profissional`);
+ALTER TABLE `profissional`
+  MODIFY `cd_profissional` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Limitadores para a tabela `profissional_habilidade`
+-- AUTO_INCREMENT for table `vaga`
 --
-ALTER TABLE `profissional_habilidade`
-  ADD CONSTRAINT `profissional_habilidade_ibfk_1` FOREIGN KEY (`cd_habilidade`) REFERENCES `habilidade` (`cd_habilidade`),
-  ADD CONSTRAINT `profissional_habilidade_ibfk_2` FOREIGN KEY (`cd_profissional`) REFERENCES `profissional` (`cd_profissional`);
-
---
--- Limitadores para a tabela `profissional_idioma`
---
-ALTER TABLE `profissional_idioma`
-  ADD CONSTRAINT `profissional_idioma_ibfk_1` FOREIGN KEY (`cd_idioma`) REFERENCES `idioma` (`cd_idioma`),
-  ADD CONSTRAINT `profissional_idioma_ibfk_2` FOREIGN KEY (`cd_profissional`) REFERENCES `profissional` (`cd_profissional`);
-
---
--- Limitadores para a tabela `profissional_perfil_comportamental`
---
-ALTER TABLE `profissional_perfil_comportamental`
-  ADD CONSTRAINT `profissional_perfil_comportamental_ibfk_1` FOREIGN KEY (`cd_opcao_perfil_comportamental`) REFERENCES `opcao_perfil_comportamental` (`cd_opcao_perfil_comportamental`),
-  ADD CONSTRAINT `profissional_perfil_comportamental_ibfk_2` FOREIGN KEY (`cd_profissional`) REFERENCES `profissional` (`cd_profissional`);
-
---
--- Limitadores para a tabela `profissional_vaga`
---
-ALTER TABLE `profissional_vaga`
-  ADD CONSTRAINT `profissional_vaga_ibfk_1` FOREIGN KEY (`cd_vaga`) REFERENCES `vaga` (`cd_vaga`),
-  ADD CONSTRAINT `profissional_vaga_ibfk_2` FOREIGN KEY (`cd_profissional`) REFERENCES `profissional` (`cd_profissional`);
-
---
--- Limitadores para a tabela `vaga_curso`
---
-ALTER TABLE `vaga_curso`
-  ADD CONSTRAINT `vaga_curso_ibfk_1` FOREIGN KEY (`cd_formacao`) REFERENCES `curso` (`cd_curso`),
-  ADD CONSTRAINT `vaga_curso_ibfk_2` FOREIGN KEY (`cd_vaga`) REFERENCES `vaga` (`cd_vaga`);
-
---
--- Limitadores para a tabela `vaga_habilidade`
---
-ALTER TABLE `vaga_habilidade`
-  ADD CONSTRAINT `vaga_habilidade_ibfk_1` FOREIGN KEY (`cd_habilidade`) REFERENCES `habilidade` (`cd_habilidade`),
-  ADD CONSTRAINT `vaga_habilidade_ibfk_2` FOREIGN KEY (`cd_vaga`) REFERENCES `vaga` (`cd_vaga`);
-
---
--- Limitadores para a tabela `vaga_idioma`
---
-ALTER TABLE `vaga_idioma`
-  ADD CONSTRAINT `vaga_idioma_ibfk_1` FOREIGN KEY (`cd_idioma`) REFERENCES `idioma` (`cd_idioma`),
-  ADD CONSTRAINT `vaga_idioma_ibfk_2` FOREIGN KEY (`cd_vaga`) REFERENCES `vaga` (`cd_vaga`);
+ALTER TABLE `vaga`
+  MODIFY `cd_vaga` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
