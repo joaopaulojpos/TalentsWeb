@@ -153,13 +153,12 @@ $app->post('/api/profissional/login', function(Request $request, Response $respo
 /**
  * Cadastro da vaga
  */
-$app->post('/api/vaga/salvar', function(Request $request, Response $response){
+$app->post('/api/vaga/publicar', function(Request $request, Response $response){
 
     $vaga = new Vaga();
 	$cargo = new Cargo();
 	$empresa = new Empresa();
-	
-	$teste = $request->getParsedBody()['cd_vaga'];
+
     $vaga->setCdVaga($request->getParsedBody()['cd_vaga']);
     $vaga->setNrQtdVaga($request->getParsedBody()['nr_qtd_vaga']);
     $vaga->setDsObservacao($request->getParsedBody()['ds_observacao']);
@@ -177,11 +176,11 @@ $app->post('/api/vaga/salvar', function(Request $request, Response $response){
 	$empresa->setCdEmpresa($request->getParsedBody()['cd_empresa']);
 	$vaga->setEmpresa($empresa);
     try{
-    $rnvaga = new RNVaga();
-    $rnvaga->cadastrar($vaga);
-} catch(PDOException $e){
-    echo json_encode(array('erro' => $e->getMessage()));
-}
+        $rnvaga = new RNVaga();
+        $rnvaga->publicar($vaga);
+    } catch(PDOException $e){
+        echo json_encode(array('erro' => $e->getMessage()));
+    }
 });
 
 

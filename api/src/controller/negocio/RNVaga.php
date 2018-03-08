@@ -2,12 +2,15 @@
 
 require_once('../src/model/dados/DAOVaga.php');
 
+/**
+ * User = Rhuan
+ */
 class RNVaga{
 
-	public function cadastrar($vaga){
+	public function publicar($vaga){
 		
 			$daovaga = new DAOVaga();
-			$result = $daovaga->cadastrar($vaga);
+			$result = $daovaga->publicar($vaga);
 
 			return array('sucess' => 'Cadastrado com sucesso!');
 		

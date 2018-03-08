@@ -7,7 +7,7 @@ class DaoVaga implements iDAOVaga
 {
     function __construct(){}
 
-    public function cadastrar(vaga $vaga){
+    public function publicar(vaga $vaga){
         $sql = "insert into vaga (cd_vaga,nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_longitude,nr_latitude,ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,cd_cargo,cd_empresa)
 values (:cd_vaga,:nr_qtd_vaga,:ds_observacao,:dt_validade,:tp_contratacao,:nr_longitude,:nr_latitude,:ds_beneficios,:ds_horario_expediente,:dt_criacao,:ds_titulo,:vl_salario,:cd_cargo,:cd_empresa);";
         $stmt = db::getInstance()->prepare($sql);

@@ -1,6 +1,8 @@
 <?php
     require_once('../../model/basica/empresa.php');
     require_once('../../model/dados/DAOEmpresa.php');
+    require_once('../../model/basica/vaga.php');
+    require_once('../../model/dados/DAOVaga.php');
 
     class Fachada {
 
@@ -84,6 +86,23 @@
                 unset ($_SESSION['empresa']);
                 $_SESSION['mensagem'] = $value;   
                 $mensagem = header("location: login.php"); 
+            }
+        }
+    }
+
+    //Vaga
+    public function publicarVaga($vaga){
+        $daovaga = new DAOVaga();
+        $result = json_decode($daovaga->cadastrar($vaga));
+        $mensagem = '';
+
+        foreach ($result as $key => $value) {
+            if ($key == 'sucess'){
+                $mensagem = header("location: cadastro.php"); 
+            }else{
+                unset ($_SESSION['empresa']);
+                $_SESSION['mensagem'] = $value;   
+                $mensagem = header("location: cadastro.php"); 
             }
         }
     }
