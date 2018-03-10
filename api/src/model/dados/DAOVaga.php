@@ -1,7 +1,7 @@
 <?php
-require_once('../src/model/basica/vaga.php');
-require_once('iDAOVaga.php');
-require_once('../src/config/db.php');
+
+require_once('../src/model/dados/idaovaga.php');
+
 
 class DaoVaga implements iDAOVaga
 {
@@ -9,7 +9,7 @@ class DaoVaga implements iDAOVaga
 
     public function publicar(vaga $vaga){
         $sql = "insert into vaga (cd_vaga,nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_longitude,nr_latitude,ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,cd_cargo,cd_empresa)
-values (:cd_vaga,:nr_qtd_vaga,:ds_observacao,:dt_validade,:tp_contratacao,:nr_longitude,:nr_latitude,:ds_beneficios,:ds_horario_expediente,:dt_criacao,:ds_titulo,:vl_salario,:cd_cargo,:cd_empresa);";
+            values (:cd_vaga,:nr_qtd_vaga,:ds_observacao,:dt_validade,:tp_contratacao,:nr_longitude,:nr_latitude,:ds_beneficios,:ds_horario_expediente,:dt_criacao,:ds_titulo,:vl_salario,:cd_cargo,:cd_empresa);";
         $stmt = db::getInstance()->prepare($sql);
         $run = $stmt->execute(array(
 				':cd_vaga' => $vaga->getCdVaga(),
@@ -30,16 +30,28 @@ values (:cd_vaga,:nr_qtd_vaga,:ds_observacao,:dt_validade,:tp_contratacao,:nr_lo
     }
 
     public function pesquisar(Vaga $vaga, $alt='false'){
+        $comando = 'select * from vaga ';
+        $where = '';
 
-        $sql = 'select * from empresa ';
-		
-		$db = new db();
-		$stmt = db::getInstance()->prepare($sql);
-		
-		$run = $stmt->execute();
+        if (!empty($vaga->getCdVaga())){
+            if (empty($where)){
+                $where = ' where cd_vaga = :cd_vaga';
+            }else{
+                $where = $where . ' and cd_vaga = :cd_vaga';
+            }
+        }
 
-		return ($stmt->fetchAll(PDO::FETCH_ASSOC));
-	}
+        
+        $db = new db();
+        $stmt = db::getInstance()->prepare($comando . $where);
+        if (!empty($vaga->getCdVaga()))
+            $stmt->bindValue(':cd_vaga', $vaga->getCdVaga());
+
+        $run = $stmt->execute();
+
+        return ($stmt->fetchAll(PDO::FETCH_ASSOC));
+    }
+
 }
 
  ?>

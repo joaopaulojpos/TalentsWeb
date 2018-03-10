@@ -1,6 +1,6 @@
 <?php
 
-require_once('../src/model/dados/DAOProfissional.php');
+require_once('../src/model/dados/daoprofissional.php');
 
 class RNProfissional{
 

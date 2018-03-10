@@ -1,6 +1,6 @@
 <?php
 
-require_once('../src/model/dados/iDAOEmpresa.php');
+require_once('../src/model/dados/idaoempresa.php');
 
 class DaoEmpresa implements iDAOEmpresa
 {	

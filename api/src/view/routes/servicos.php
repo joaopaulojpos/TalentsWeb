@@ -148,7 +148,23 @@ $app->post('/api/profissional/login', function(Request $request, Response $respo
     }
 });
 
-//----- Vagas
+//----- Vaga
+
+/**
+* Visualizar vagas
+*/
+$app->get('/api/vagas', function(Request $request, Response $response){
+    try{
+        $vaga = new Vaga();
+        $rnvaga = new RNVaga();        
+        $rnvaga = $rnvaga->pesquisar($vaga);
+        echo json_encode($rnvaga);  
+    } catch(Exception $e){
+        echo json_encode(array('erro' => $e->getMessage()));
+    }
+});
+
+
 
 /**
  * Cadastro da vaga
@@ -182,6 +198,61 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
         echo json_encode(array('erro' => $e->getMessage()));
     }
 });
+
+
+
+//------ cargo
+
+$app->get('/api/cargos', function(Request $request, Response $response){
+    try{
+        $cargo = new Cargo();
+        $rncargo = new RNCargo();        
+        $rncargo = $rncargo->pesquisar($cargo);
+        echo json_encode($rncargo);  
+    } catch(Exception $e){
+        echo json_encode(array('erro' => $e->getMessage()));
+    }
+});
+
+//------ curso
+
+$app->get('/api/cursos', function(Request $request, Response $response){
+    try{
+        $curso = new Curso();
+        $rncurso = new RNCurso();        
+        $rncurso = $rncurso->pesquisar($curso);
+        echo json_encode($rncurso);  
+    } catch(Exception $e){
+        echo json_encode(array('erro' => $e->getMessage()));
+    }
+});
+
+//------ idioma
+
+$app->get('/api/idiomas', function(Request $request, Response $response){
+    try{
+        $idioma = new Idioma();
+        $rnidioma = new RNIdioma();        
+        $rnidioma = $rnidioma->pesquisar($idioma);
+        echo json_encode($rnidioma);  
+    } catch(Exception $e){
+        echo json_encode(array('erro' => $e->getMessage()));
+    }
+});
+
+//------ habilidade
+
+$app->get('/api/habilidades', function(Request $request, Response $response){
+    try{
+        $habilidade = new Habilidade();
+        $rnhabilidade = new RNHabilidade();        
+        $rnhabilidade = $rnhabilidade->pesquisar($habilidade);
+        echo json_encode($rnhabilidade);  
+    } catch(Exception $e){
+        echo json_encode(array('erro' => $e->getMessage()));
+    }
+});
+
 
 
 ?>

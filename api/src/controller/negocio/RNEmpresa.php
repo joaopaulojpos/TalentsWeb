@@ -1,6 +1,6 @@
 <?php
 
-require_once('../src/model/dados/DAOEmpresa.php');
+require_once('../src/model/dados/daoempresa.php');
 
 class RNEmpresa{
 
