@@ -3,6 +3,9 @@
     require_once('../../model/dados/DAOEmpresa.php');
     require_once('../../model/basica/vaga.php');
     require_once('../../model/dados/DAOVaga.php');
+    require_once('../../model/basica/cargo.php');
+    require_once('../../model/dados/DAOCargo.php');
+
 
     class Fachada {
 
@@ -57,5 +60,14 @@
     public function pesquisarVagas($vaga){
         $daovaga = new DAOVaga();
         return $daovaga->pesquisar($vaga);
+    }
+
+    //Cargo
+    public function cargoPesquisar(){
+        $daocargo = new DAOCargo();
+        $cargo = new Cargo();
+        $result = json_decode($daocargo->pesquisar($cargo));
+        
+        return json_decode(json_encode($result, true));
     }
 }

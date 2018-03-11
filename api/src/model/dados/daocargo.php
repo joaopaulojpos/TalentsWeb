@@ -11,6 +11,7 @@ class DaoCargo implements iDAOCargo
 	public function pesquisar(Cargo $cargo, $alt='false'){
 		$comando = 'select * from cargo ';
 		$where = '';
+		$orderby = ' order by ds_cargo asc';
 
 		if (!empty($cargo->getCdCargo())){
 			if (empty($where)){
@@ -29,9 +30,7 @@ class DaoCargo implements iDAOCargo
 			}
 		}
 
-		
-		$db = new db();
-		$stmt = db::getInstance()->prepare($comando . $where);
+		$stmt = db::getInstance()->prepare($comando . $where . $orderby);
 		if (!empty($cargo->getCdCargo()))
 			$stmt->bindValue(':cd_cargo', $cargo->getCdCargo());
 		if (!empty($cargo->getDsCargo()))
