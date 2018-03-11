@@ -133,7 +133,7 @@ $app->get('/api/profissionais', function(Request $request, Response $response){
         echo json_encode(array('erro' => $e->getMessage()));
     }
 });
-$app->post('/api/profissional/login', function(Request $request, Response $response){
+$app->get('/api/profissional/login', function(Request $request, Response $response){
     
     $login = $request->getParam('login');
     $senha = $request->getParam('senha');    
