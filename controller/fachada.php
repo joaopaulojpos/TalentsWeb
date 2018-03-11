@@ -53,4 +53,9 @@
             }
         }
     }
+
+    public function pesquisarVagas($vaga){
+        $daovaga = new DAOVaga();
+        return $daovaga->pesquisar($vaga);
+    }
 }

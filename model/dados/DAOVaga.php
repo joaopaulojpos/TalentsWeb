@@ -1,11 +1,10 @@
 <?php
-require_once('../../model/basica/vaga.php');
+require_once('RequestMethods.php');
 
 class DAOVaga
 {
-
 	public function publicar(Vaga $vaga){
-		return $this->post('http://localhost/talentsweb/api/public/api/vaga/publicar',
+        return $this->post('http://localhost/talentsweb/api/public/api/vaga/publicar',
 			array( 
 			'cd_vaga' => $vaga->getCdVaga(),
 			'nr_qtd_vaga' => $vaga->getNrQtdVaga(),
@@ -22,6 +21,12 @@ class DAOVaga
 			'cd_cargo' => $vaga->getCargo()->getCdCargo(),
 			'cd_empresa' => $vaga->getEmpresa()->getCdEmpresa()));
 	}
+	public function pesquisar(){
+	    //Classe padrão com as configurações para GET/POST
+        $request = new RequestMethods();
+
+        return $request->get("http://localhost/talentsweb/api/public/api/vagas",array());
+    }
 
 	public function post($url, $params){
 

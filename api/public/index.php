@@ -17,6 +17,7 @@ require '../src/model/basica/cargo.php';
 require '../src/model/basica/curso.php';
 require '../src/model/basica/idioma.php';
 require '../src/model/basica/habilidade.php';
+require '../src/model/basica/vagaprofissional.php';
 
 require '../src/controller/negocio/rnempresa.php';
 require '../src/controller/negocio/rnvaga.php';
@@ -25,6 +26,7 @@ require '../src/controller/negocio/rncargo.php';
 require '../src/controller/negocio/rncurso.php';
 require '../src/controller/negocio/rnidioma.php';
 require '../src/controller/negocio/rnhabilidade.php';
+require '../src/controller/negocio/rnvagaprofissional.php';
 
 
 $app = new \Slim\App(['settings' => $config]);

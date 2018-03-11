@@ -75,5 +75,17 @@ class DaoProfissional implements iDAOProfissional
 
 		return ($stmt->fetchAll(PDO::FETCH_ASSOC));
 	}
+
+    public function pesquisarById(Profissional $u, $alt='false'){
+        $comando = 'select * from profissional WHERE cd_profissional = :cd_profissional';
+
+
+        $db = new db();
+        $stmt = db::getInstance()->prepare($comando);
+
+        $run = $stmt->execute(array(':cd_profissional' => $u->getCdProfissional()));
+
+        return ($stmt->fetchAll(PDO::FETCH_ASSOC));
+    }
 }
 ?>

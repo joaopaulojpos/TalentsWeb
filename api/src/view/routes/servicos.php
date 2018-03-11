@@ -158,7 +158,7 @@ $app->get('/api/vagas', function(Request $request, Response $response){
         $vaga = new Vaga();
         $rnvaga = new RNVaga();        
         $rnvaga = $rnvaga->pesquisar($vaga);
-        echo json_encode($rnvaga);  
+        echo json_encode($rnvaga);
     } catch(Exception $e){
         echo json_encode(array('erro' => $e->getMessage()));
     }
@@ -199,7 +199,29 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
     }
 });
 
+/**
+ * Curtir Vaga
+ */
+$app->post('/api/vaga/curtirVaga', function(Request $request, Response $response){
+    $vagaProfssional = new VagaProfissional();
+    $vaga = new Vaga();
+    $profissional = new Profissional();
 
+    $vaga->setCdVaga($request->getParsedBody()['cd_vaga']);
+    $profissional->setCdProfissional($request->getParsedBody()['cd_profissional']);
+
+    $vagaProfssional->setTpAcao($request->getParsedBody()['tp_acao']);
+    $vagaProfssional->setVaga($vaga);
+    $vagaProfssional->setProfissional($profissional);
+
+    try{
+        $rnvagapro = new RNVagaProfissional();
+        $result = $rnvagapro->curtirVaga($vagaProfssional);
+        echo json_encode($result);
+    } catch(PDOException $e){
+        echo json_encode(array('erro' => $e->getMessage()));
+    }
+});
 
 //------ cargo
 
