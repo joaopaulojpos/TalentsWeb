@@ -18,14 +18,24 @@
                     }
                 }
             },
-             descricao: {
+             observacao: {
                 validators: {
                      stringLength: {
                         min: 5,
-                        message: 'O titulo da vaga precisa ter mais do que 5 caracteres',
-                    },
+                        message: 'A observação da vaga precisa ter mais do que 5 caracteres',
+                    }
+            },
+            quantidadevagas: {
+                validators: {
                     notEmpty: {
-                        message: 'Por favor, preencha o nome fantasia da empresa'
+                        message: 'Por favor, preencha a quantidade de profissionais que serão contratados'
+                    }
+                }
+            },
+            beneficios: {
+                validators: {
+                    notEmpty: {
+                        message: 'Por favor, preencha os benefícios da vaga'
                     }
                 }
             },
@@ -71,10 +81,31 @@
                     }
                 }
             },
-            state: {
+            cargo: {
                 validators: {
                     notEmpty: {
-                        message: 'Please select your state'
+                        message: 'Por favor, selecione o cargo'
+                    }
+                }
+            },
+            tipocontratacao: {
+                validators: {
+                    notEmpty: {
+                        message: 'Por favor, selecione o tipo de contratação'
+                    }
+                }
+            },
+            jornadatrabalho: {
+                validators: {
+                    notEmpty: {
+                        message: 'Por favor, selecione a jornada de trabalho'
+                    }
+                }
+            },
+            experiencia: {
+                validators: {
+                    notEmpty: {
+                        message: 'Por favor, selecione a experiência'
                     }
                 }
             },

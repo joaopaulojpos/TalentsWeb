@@ -19,7 +19,7 @@ class DAOVaga
 			'ds_titulo' => $vaga->getDsTitulo(),
 			'vl_salario' => $vaga->getVlSalario(),
 			'cd_cargo' => $vaga->getCargo()->getCdCargo(),
-			'cd_empresa' => $vaga->getEmpresa()->getCdEmpresa()));
+			'cd_empresa' => 1));
 	}
 	public function pesquisar(){
 	    //Classe padrão com as configurações para GET/POST

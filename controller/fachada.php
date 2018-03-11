@@ -43,19 +43,12 @@
     //Vaga
     public function publicarVaga($vaga){
         $daovaga = new DAOVaga();
-        $result = json_decode($daovaga->cadastrar($vaga));
-        $mensagem = '';
+        $result = json_decode($daovaga->publicar($vaga));
 
-        foreach ($result as $key => $value) {
-            if ($key == 'sucess'){
-                $mensagem = header("location: cadastro.php"); 
-            }else{
-                unset ($_SESSION['empresa']);
-                $_SESSION['mensagem'] = $value;   
-                $mensagem = header("location: cadastro.php"); 
-            }
-        }
-    }
+        echo var_dump($result);
+        
+        return json_decode(json_encode($result, true));
+    }   
 
     public function pesquisarVagas($vaga){
         $daovaga = new DAOVaga();

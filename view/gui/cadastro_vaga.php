@@ -25,7 +25,7 @@
 
   <div class="container">
 
-    <form class="well form-horizontal" action="" method="post"  id="contact_form">
+    <form class="well form-horizontal" name="contact_form" id="contact_form">
 <fieldset>
 
 <!-- Form Name -->
@@ -38,7 +38,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
-  <input  name="titulo" placeholder="Talents LTDA." class="form-control"  type="text">
+  <input  name="titulo" id="titulo" placeholder="Talents LTDA." class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -50,7 +50,7 @@
   <div class="col-md-4 selectContainer">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-      <select name="state" class="form-control selectpicker" >
+      <select name="cargo" id="cargo" class="form-control selectpicker" >
         <option value="">Selecione o cargo</option>
         <?php 
 
@@ -77,18 +77,6 @@
   </div>
 </div>
 
-<!-- Text input-->
-
-<div class="form-group">
-  <label class="col-md-4 control-label">Descrição</label> 
-    <div class="col-md-4 inputGroupContainer">
-    <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-  <textarea name="descricao" placeholder="Descreva em poucas palavras o que o profissional irá enfrentar nesse novo emprego" class="form-control"  type="text"></textarea>
-    </div>
-  </div>
-</div>
-
 <!-- Select Basic -->
    
 <div class="form-group"> 
@@ -96,7 +84,7 @@
   <div class="col-md-4 selectContainer">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-      <select name="state" class="form-control selectpicker" >
+      <select name="tipocontratacao" id="tipocontratacao" class="form-control selectpicker" >
         <option value="">Selecione o tipo de contratação</option>
         <option value="tempo indeterminado">Tempo indeterminado</option>
         <option value="tempo determinado">Tempo determinado</option>
@@ -113,7 +101,7 @@
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  <input name="salario" placeholder="Valor do salário" class="form-control"  type="text">
+  	<input name="salario" id="salario" placeholder="Valor do salário" class="form-control"  type="text">
     </div>
   </div>
 </div>
@@ -126,7 +114,7 @@
   <div class="col-md-4 selectContainer">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-      <select name="state" class="form-control selectpicker" >
+      <select name="jornadatrabalho" id="jornadatrabalho" class="form-control selectpicker" >
         <option value="">Selecione a jornada de trabalho</option>
         <option value="tempo integral">Regime de tempo integral</option>
         <option value="tempo parcial">Regime de tempo parcial</option>
@@ -142,7 +130,7 @@
   <div class="col-md-4 selectContainer">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-      <select name="state" class="form-control selectpicker" >
+      <select name="experiencia" id="experiencia" class="form-control selectpicker" >
         <option value="">Selecione a experência necessaria</option>
         <option value="tempo integral">Sem experiência</option>
         <option value="tempo parcial">1 ano</option>
@@ -151,6 +139,41 @@
         <option value="tempo parcial">4 anos</option>
         <option value="tempo parcial">Acima de 5 anos</option>
       </select>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+  <div class="form-group">
+  <label class="col-md-4 control-label">Quantidade de vagas</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+  	<input name="quantidadevagas" id="quantidadevagas" placeholder="Quantidade de vagas" class="form-control"  type="number">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Benefícios</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+  <textarea name="beneficios" id="beneficios" placeholder="Descreva os benefícios que os profissionais terão direitos" class="form-control"  type="text"></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Observação</label> 
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+  <textarea name="observacao" id="observacao" placeholder="Descreva em poucas palavras o que o profissional irá enfrentar nesse novo emprego" class="form-control"  type="text"></textarea>
     </div>
   </div>
 </div>
@@ -183,20 +206,31 @@
 <script type='text/javascript'>
     $(document).ready(function(){
       $('#errMessage').hide();
-      $('#formlogin').submit(function(){  //Ao submeter formulário
-        var username=$('#username').val();  //Pega valor do campo login
-        var password=$('#password').val();  //Pega valor do campo senha
+      $('#contact_form').submit(function(){  //Ao submeter formulário
+        
+        var titulo=$('#titulo').val();
+        var cargo=$('#cargo').val();
+        var observacao=$('#observacao').val();
+        var tipocontratacao=$('#tipocontratacao').val();
+        var salario=$('#salario').val();
+        var jornadatrabalho=$('#jornadatrabalho').val();
+        var experiencia=$('#experiencia').val();
+        var quantidadevagas=$('#quantidadevagas').val();
+        var beneficios=$('#beneficios').val();
+  
         $.ajax({      //Função AJAX
-          url:"valida_login.php",      //Arquivo php
+          url:"valida_vaga.php",      //Arquivo php
           type:"post",        //Método de envio
-          data: "username="+username+"&password="+password, //Dados
+          data: "titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios, //Dados
             success: function (result){     //Sucesso no AJAX
-                        if(result==1){        
+                        /*if(result==1){        
                           location.href='vaga.php';  //Redireciona
                         }else{
                           document.getElementById('errMessage').innerHTML = result;
                           $('#errMessage').show();   //Informa o erro
-                        }
+                        }*/
+                        document.getElementById('errMessage').innerHTML = result;
+                        $('#errMessage').show();   //Informa o erro
                     }
         })
         return false; //Evita que a página seja atualizada

@@ -193,7 +193,8 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
 	$vaga->setEmpresa($empresa);
     try{
         $rnvaga = new RNVaga();
-        $rnvaga->publicar($vaga);
+        $rnvaga = $rnvaga->publicar($vaga);
+        echo json_encode($rnvaga); 
     } catch(PDOException $e){
         echo json_encode(array('erro' => $e->getMessage()));
     }
