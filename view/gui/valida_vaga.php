@@ -35,12 +35,17 @@ try{
 
 	$array = $fachada->publicarVaga($vaga);
 
-	foreach ($array as $key => $value) {
-	    if ($key == 'sucess'){
-	        echo 1;
-	    }else{
-	        echo $value; 
-	    }
+	if ($array = 'NULL'){
+		echo 'Vaga cadastrada com sucesso';
+	}else {
+
+		foreach ($array as $key => $value) {
+		    if ($key == 'sucess'){
+		        echo 1;
+		    }else{
+		        echo $value; 
+		    }
+		}
 	}
 }catch(Exception $e){
 	echo $e->getMessage();

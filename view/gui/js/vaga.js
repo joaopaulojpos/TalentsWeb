@@ -24,6 +24,7 @@
                         min: 5,
                         message: 'A observação da vaga precisa ter mais do que 5 caracteres',
                     }
+                }
             },
             quantidadevagas: {
                 validators: {

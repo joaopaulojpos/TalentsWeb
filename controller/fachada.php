@@ -5,6 +5,12 @@
     require_once('../../model/dados/DAOVaga.php');
     require_once('../../model/basica/cargo.php');
     require_once('../../model/dados/DAOCargo.php');
+    require_once('../../model/basica/idioma.php');
+    require_once('../../model/dados/DAOIdioma.php');
+    require_once('../../model/basica/curso.php');
+    require_once('../../model/dados/DAOCurso.php');
+    require_once('../../model/basica/habilidade.php');
+    require_once('../../model/dados/DAOHabilidade.php');
 
 
     class Fachada {
@@ -45,8 +51,6 @@
         $daovaga = new DAOVaga();
         $result = json_decode($daovaga->publicar($vaga));
 
-        echo var_dump($result);
-        
         return json_decode(json_encode($result, true));
     }   
 
@@ -61,6 +65,33 @@
         $cargo = new Cargo();
         $result = json_decode($daocargo->pesquisar($cargo));
         
+        return json_decode(json_encode($result, true));
+    }
+
+    //Idioma
+    public function idiomaPesquisar(){
+        $daoidioma = new DAOIdioma();
+        $idioma = new Idioma();
+        $result = json_decode($daoidioma->pesquisar($idioma));
+
+        return json_decode(json_encode($result, true));
+    }
+
+    //Curso
+    public function cursoPesquisar(){
+        $daocurso = new DAOCurso();
+        $curso = new Curso();
+        $result = json_decode($daocurso->pesquisar($curso));
+
+        return json_decode(json_encode($result, true));
+    }
+
+    //Habilidade
+    public function habilidadePesquisar(){
+        $daohabilidade = new DAOHabilidade();
+        $habilidade = new Habilidade();
+        $result = json_decode($daohabilidade->pesquisar($habilidade));
+
         return json_decode(json_encode($result, true));
     }
 }
