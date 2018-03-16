@@ -1,5 +1,5 @@
 <?php
-class Vaga{
+class Vaga implements JsonSerializable {
 
     private $cd_vaga;
     private $nr_qtd_vaga;
@@ -152,7 +152,7 @@ class Vaga{
         return $this->empresa;
     }
 
-    function setCursos($curso)
+    function setCursos(Curso $curso)
     {
         $this->cursos[] = $curso;
     }
@@ -161,7 +161,7 @@ class Vaga{
         return $this->cursos;
     }
 
-    function setHabilidades($habilidade)
+    function setHabilidades(Habilidade $habilidade)
     {
         $this->habilidades[] = $habilidade;
     }
@@ -170,7 +170,7 @@ class Vaga{
         return $this->habilidades;
     }
 
-    function setIdiomas($idioma)
+    function setIdiomas(idioma $idioma)
     {
         $this->idiomas[] = $idioma;
     }
@@ -179,6 +179,36 @@ class Vaga{
         return $this->idiomas;
     }
 
+    /**
+     * Specify data which should be serialized to JSON
+     * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize()
+    {
+        return
+            [
+                'cd_vaga'=>$this->cd_vaga,
+                'nr_qtd_vaga'=>$this->nr_qtd_vaga,
+                'ds_observacao'=>$this->ds_observacao,
+                'dt_validade'=>$this->dt_validade,
+                'tp_contratacao'=>$this->tp_contratacao,
+                'nr_longitude'=>$this->nr_longitude,
+                'nr_latitude'=>$this->nr_latitude,
+                'ds_beneficios'=>$this->ds_beneficios,
+                'ds_horario_expediente'=>$this->ds_horario_expediente,
+                'dt_criacao'=>$this->dt_criacao,
+                'ds_titulo'=>$this->ds_titulo,
+                'vl_salario'=>$this->vl_salario,
+                'cargo'=>$this->cargo,
+                'empresa'=>$this->empresa,
+                'cursos'=>$this->cursos,
+                'habilidades'=>$this->habilidades,
+                'idiomas'=>$this->idiomas,
+            ];
+    }
 }
 
  ?>

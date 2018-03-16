@@ -1,6 +1,6 @@
 <?php
 
-class Empresa{
+class Empresa implements JsonSerializable {
 	private $cd_empresa;
 	private $nr_cnpj;
 	private $ds_razao_social;
@@ -115,5 +115,30 @@ class Empresa{
 	{
 		return $this->ds_senha;
 	}
+
+    /**
+     * Specify data which should be serialized to JSON
+     * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize()
+    {
+        return
+            [
+                'cd_empresa'=>$this->cd_empresa,
+                'nr_cnpj'=>$this->nr_cnpj,
+                'ds_razao_social'=>$this->ds_razao_social,
+                'ds_nome_fantasia'=>$this->ds_nome_fantasia,
+                'nr_porte'=>$this->nr_porte,
+                'ds_responsavel_cadastro'=>$this->ds_responsavel_cadastro,
+                'ds_area_atuacao'=>$this->ds_area_atuacao,
+                'ds_site'=>$this->ds_site,
+                'ds_telefone'=>$this->ds_telefone,
+                'ds_email'=>$this->ds_email,
+                'ds_senha'=>$this->ds_senha
+            ];
+    }
 }
 ?>

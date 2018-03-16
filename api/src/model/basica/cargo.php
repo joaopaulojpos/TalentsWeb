@@ -1,5 +1,5 @@
 <?php
-class cargo
+class cargo implements JsonSerializable
 {
 
     private $cd_cargo;
@@ -20,6 +20,12 @@ class cargo
     function getDsCargo(){
         return $this->ds_cargo;
     }
+    public function jsonSerialize(){
+        return
+            [
+                'cd_cargo'=>$this->cd_cargo,
+                'ds_cargo'=>$this->ds_cargo
+            ];
+    }
 }
-
  ?>

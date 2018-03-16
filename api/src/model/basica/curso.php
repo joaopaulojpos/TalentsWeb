@@ -1,5 +1,6 @@
 <?php
-class curso{
+class curso implements JsonSerializable
+{
 
     private $cd_curso;
     private $ds_curso;
@@ -36,6 +37,22 @@ class curso{
         return $this->formacao;
     }
 
+    /**
+     * Specify data which should be serialized to JSON
+     * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize()
+    {
+        return
+            [
+                'cd_curso'=>$this->cd_curso,
+                'ds_curso'=>$this->ds_curso,
+                'ds_instituicao'=>$this->ds_instituicao
+            ];
+    }
 }
 
  ?>

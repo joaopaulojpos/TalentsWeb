@@ -1,5 +1,5 @@
 <?php
-class habilidade{
+class habilidade implements JsonSerializable {
 
     private $cd_habilidade;
     private $ds_habilidade;
@@ -20,6 +20,22 @@ class habilidade{
         return $this->ds_habilidade;
     }
 
+    /**
+     * Specify data which should be serialized to JSON
+     * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize()
+    {
+        return
+            [
+                'cd_habilidade'=>$this->cd_habilidade,
+                'nr_nivel'=>$this->nr_nivel,
+                'ds_habilidade'=>$this->ds_habilidade
+            ];
+    }
 }
 
  ?>

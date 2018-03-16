@@ -1,5 +1,5 @@
 <?php
-class Profissional{
+class Profissional implements JsonSerializable {
 	private $cd_profissional;
 	private $b_foto;
 	private $ds_senha;
@@ -103,5 +103,29 @@ class Profissional{
 	{
 		return $this->ds_email;
 	}
+
+    /**
+     * Specify data which should be serialized to JSON
+     * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize()
+    {
+        return
+            [
+                'cd_profissional'=>$this->cd_profissional,
+                'b_foto'=>$this->b_foto,
+                'ds_senha'=>$this->ds_senha,
+                'dt_nascimento'=>$this->dt_nascimento,
+                'ds_email'=>$this->ds_email,
+                'nr_latitude'=>$this->nr_latitude,
+                'nr_longitude'=>$this->nr_longitude,
+                'tp_conta'=>$this->tp_conta,
+                'tp_sexo'=>$this->tp_sexo,
+                'ds_nome'=>$this->ds_nome,
+            ];
+    }
 }
 ?>
