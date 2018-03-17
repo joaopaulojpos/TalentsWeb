@@ -1,0 +1,52 @@
+{
+	"nr_qtd_vaga": 1,
+	"ds_observacao": "Não Há .",
+	"dt_validade": "2018-03-31",
+	"tp_contratacao": "I",
+	"nr_longitude": -7.333333,
+	"nr_latitude": -32.888990,
+	"ds_beneficios": "Plano de Saúde \r\nVale Alimentação / Refeição",
+	"ds_horario_expediente": "A combinar",
+	"dt_criacao": "2018-03-01",
+	"ds_titulo": "Vaga Administrador de Redes Júnior",
+	"vl_salario": "A combinar",
+	"cargo": {
+		"cd_cargo": 15
+	},
+	"empresa": {
+		"cd_empresa": 1
+	},
+	"cursos": null,
+	"habilidades": [
+		{
+			"cd_habilidade": 4,
+			"nr_nivel":1
+		},
+		{
+			"cd_habilidade": 7,
+			"nr_nivel":1
+		},
+		{
+			"cd_habilidade": 2,
+			"nr_nivel":1
+		}
+	],
+	"idiomas": [
+		{
+			"cd_idioma":1,
+			"nr_nivel":1
+		},
+		{
+			"cd_idioma":2,
+			"nr_nivel":1
+		},
+		{
+			"cd_idioma":3,
+			"nr_nivel":1
+		},
+		{
+			"cd_idioma": 4,
+			"nr_nivel":1
+		}
+	]
+}

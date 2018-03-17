@@ -116,15 +116,15 @@ class Profissional implements JsonSerializable {
         return
             [
                 'cd_profissional'=>$this->cd_profissional,
-                'b_foto'=>$this->b_foto,
+                'ds_nome'=>$this->ds_nome,
+                'ds_email'=>$this->ds_email,
                 'ds_senha'=>$this->ds_senha,
                 'dt_nascimento'=>$this->dt_nascimento,
-                'ds_email'=>$this->ds_email,
+                'b_foto'=>$this->b_foto,
                 'nr_latitude'=>$this->nr_latitude,
                 'nr_longitude'=>$this->nr_longitude,
                 'tp_conta'=>$this->tp_conta,
-                'tp_sexo'=>$this->tp_sexo,
-                'ds_nome'=>$this->ds_nome,
+                'tp_sexo'=>$this->tp_sexo
             ];
     }
 }

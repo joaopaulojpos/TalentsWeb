@@ -44,7 +44,7 @@ class DaoVaga implements iDAOVaga
 
             }
 
-            //Pegamdp as habilidades na lista na vagae inserindo associando com o código da vaga
+            //Pegando as habilidades na lista na vagas inserindo associando com o código da vaga
             foreach ($vaga->getHabilidades() as $habil) {
 
                 $daohabilidade = new DaoHabilidade();
@@ -65,13 +65,6 @@ class DaoVaga implements iDAOVaga
      * @return array
      */
     public function pesquisar(Vaga $vaga, $alt='false'){
-        /*$comando = 'select vaga.cd_vaga, vaga.nr_qtd_vaga, vaga.ds_observacao, vaga.dt_validade, vaga.tp_contratacao, vaga.nr_longitude, vaga.nr_latitude,
-                           vaga.ds_beneficios, vaga.ds_horario_expediente, vaga.dt_criacao, vaga.ds_titulo, vaga.vl_salario, vaga.cd_cargo, vaga.cd_empresa,
-                           empresa.ds_nome_fantasia
-                    from vaga
-                    inner join empresa
-                    on vaga.cd_empresa = empresa.cd_empresa
-                    LIMIT 1;';*/
 
         $comando = 'select vaga.cd_vaga,nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_longitude,nr_latitude,
                       ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,cargo.cd_cargo,ds_cargo,
@@ -118,7 +111,7 @@ class DaoVaga implements iDAOVaga
 
 //--------------------------------------------- AUXILIARES -----------------------------------------------------------
     /**
-     * Método responsável por transformar as linhas do banco em classe
+     * Método responsável por transformar as linhas do banco na classe vaga
      * @param $result com o resultado do PDO::Fetch
      * @return ArrayObject uma lista de vagas
      */
@@ -167,6 +160,14 @@ class DaoVaga implements iDAOVaga
                 $empresa->setNrPorte($row['nr_porte']);
                 $empresa->setDsTelefone($row['ds_telefone']);
                 $vaga->setEmpresa($empresa);
+
+                //TODO Listar dos profissionais e cursos
+                /*Profissionais que curtiram a vaga
+                foreach ($daoprofissional->listarProfissionalVaga($vaga->getCdVaga()) as $p) {
+
+                    $vaga->setProfissionais($p);
+
+                }*/
 
                 /*Cursos
                 foreach ($daocurso->listarCursoVaga($vaga->getCdVaga()) as $c) {

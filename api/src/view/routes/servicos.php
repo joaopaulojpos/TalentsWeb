@@ -190,12 +190,23 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
 	$vaga->setCargo($cargo);
 	$empresa->setCdEmpresa($request->getParsedBody()['empresa']['cd_empresa']);
 	$vaga->setEmpresa($empresa);
+
+	//Pegando a lista de idiomas no JSON e colocando na lista de idiomas na vaga
     foreach ($request->getParsedBody()['idiomas'] as $i){
         $idioma = new idioma();
         $idioma->setCdIdioma($i['cd_idioma']);
         $idioma->setNrNivel($i['nr_nivel']);
         $vaga->setIdiomas($idioma);
     }
+
+    //Pegando a lista de habilidades no JSON e colocando na lista de habilidades na vaga
+    foreach ($request->getParsedBody()['habilidades'] as $h){
+        $habilidade = new habilidade();
+        $habilidade->setCdhabilidade($h['cd_habilidade']);
+        $habilidade->setNrNivel($h['nr_nivel']);
+        $vaga->setHabilidades($habilidade);
+    }
+
 	try{
         $rnvaga = new RNVaga();
         $rnvaga = $rnvaga->publicar($vaga);

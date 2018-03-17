@@ -23,6 +23,8 @@ class Vaga implements JsonSerializable {
     private $habilidades;
     //array de idiomas
     private $idiomas;
+    //array de profissionais que curtiram a vaga
+    private $profissionais;
 
     function __construct(){}
 
@@ -180,6 +182,23 @@ class Vaga implements JsonSerializable {
     }
 
     /**
+     * @return mixed
+     */
+    public function getProfissionais()
+    {
+        return $this->profissionais;
+    }
+
+    /**
+     * @param mixed $profissionais
+     */
+    public function setProfissionais(Profissional $profissionais)
+    {
+        $this->profissionais[] = $profissionais;
+    }
+
+
+    /**
      * Specify data which should be serialized to JSON
      * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
      * @return mixed data which can be serialized by <b>json_encode</b>,
@@ -207,6 +226,7 @@ class Vaga implements JsonSerializable {
                 'cursos'=>$this->cursos,
                 'habilidades'=>$this->habilidades,
                 'idiomas'=>$this->idiomas,
+                'profissionais'=>$this->profissionais
             ];
     }
 }

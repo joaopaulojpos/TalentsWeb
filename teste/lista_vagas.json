@@ -1,0 +1,232 @@
+{
+    "sucess": {
+        "0": {
+            "cd_vaga": "2",
+            "nr_qtd_vaga": "1",
+            "ds_observacao": "Disponibilidade para viagem .  ",
+            "dt_validade": "2018-03-31",
+            "tp_contratacao": "I",
+            "nr_longitude": "",
+            "nr_latitude": "",
+            "ds_beneficios": "Plano de Saúde / Odontológico\r\nHorário Flexível\r\nHome Office\r\nVale Alimentação / Refeição",
+            "ds_horario_expediente": "Período Integral",
+            "dt_criacao": "2018-03-09",
+            "ds_titulo": "Vaga Administrador de Banco de Dados Júnior",
+            "vl_salario": "8000,00",
+            "cargo": {
+                "cd_cargo": "5",
+                "ds_cargo": "Administrador de Banco de Dados Sênior"
+            },
+            "empresa": {
+                "cd_empresa": "2",
+                "nr_cnpj": "123",
+                "ds_razao_social": "123",
+                "ds_nome_fantasia": "123",
+                "nr_porte": "123",
+                "ds_responsavel_cadastro": "123",
+                "ds_area_atuacao": "123",
+                "ds_site": "123",
+                "ds_telefone": "123",
+                "ds_email": "123",
+                "ds_senha": "123"
+            },
+            "cursos": null,
+            "habilidades": [
+                {
+                    "cd_habilidade": "3",
+                    "nr_nivel": "2",
+                    "ds_habilidade": "C#"
+                },
+                {
+                    "cd_habilidade": "2",
+                    "nr_nivel": "1",
+                    "ds_habilidade": "Php"
+                }
+            ],
+            "idiomas": [
+                {
+                    "cd_idioma": "1",
+                    "ds_idioma": "Inglês",
+                    "nr_nivel": "2"
+                },
+                {
+                    "cd_idioma": "2",
+                    "ds_idioma": "Português",
+                    "nr_nivel": "1"
+                }
+            ],
+            "profissionais": null
+        },
+        "1": {
+            "cd_vaga": "3",
+            "nr_qtd_vaga": "1",
+            "ds_observacao": "Disponibilidade para viagens de longa duração.",
+            "dt_validade": "2018-05-31",
+            "tp_contratacao": "S",
+            "nr_longitude": "",
+            "nr_latitude": "",
+            "ds_beneficios": "Plano de Saúde \r\nVale Alimentação / Refeição",
+            "ds_horario_expediente": "Home Office",
+            "dt_criacao": "2018-03-01",
+            "ds_titulo": "Vaga Coordenador de Sistemas Urgente",
+            "vl_salario": "10000,00",
+            "cargo": {
+                "cd_cargo": "131",
+                "ds_cargo": "Coordenador de Sistemas (Projetos / Desenvolvimento / Consultoria)"
+            },
+            "empresa": {
+                "cd_empresa": "2",
+                "nr_cnpj": "123",
+                "ds_razao_social": "123",
+                "ds_nome_fantasia": "123",
+                "nr_porte": "123",
+                "ds_responsavel_cadastro": "123",
+                "ds_area_atuacao": "123",
+                "ds_site": "123",
+                "ds_telefone": "123",
+                "ds_email": "123",
+                "ds_senha": "123"
+            },
+            "cursos": null,
+            "habilidades": [
+                {
+                    "cd_habilidade": "4",
+                    "nr_nivel": "1",
+                    "ds_habilidade": "Delphi"
+                },
+                {
+                    "cd_habilidade": "7",
+                    "nr_nivel": "2",
+                    "ds_habilidade": "Ruby on Rails"
+                }
+            ],
+            "idiomas": [
+                {
+                    "cd_idioma": "1",
+                    "ds_idioma": "Inglês",
+                    "nr_nivel": "1"
+                }
+            ],
+            "profissionais": null
+        },
+        "2": {
+            "cd_vaga": "4",
+            "nr_qtd_vaga": "1",
+            "ds_observacao": "Não Há .",
+            "dt_validade": "2018-03-31",
+            "tp_contratacao": "I",
+            "nr_longitude": "",
+            "nr_latitude": "",
+            "ds_beneficios": "Plano de Saúde \r\nVale Alimentação / Refeição",
+            "ds_horario_expediente": "A combinar",
+            "dt_criacao": "2018-03-01",
+            "ds_titulo": "Vaga Administrador de Redes Júnior",
+            "vl_salario": "A combinar",
+            "cargo": {
+                "cd_cargo": "15",
+                "ds_cargo": "Gerente de Administração de Redes"
+            },
+            "empresa": {
+                "cd_empresa": "1",
+                "nr_cnpj": "362935730",
+                "ds_razao_social": "Talents LTDA.",
+                "ds_nome_fantasia": "Talents",
+                "nr_porte": "2",
+                "ds_responsavel_cadastro": "Bruno Felix",
+                "ds_area_atuacao": "Desenvolvimento de sistemas",
+                "ds_site": "www.gotalents.com.br",
+                "ds_telefone": "81995782171",
+                "ds_email": "bruno",
+                "ds_senha": "123456"
+            },
+            "cursos": null,
+            "habilidades": [
+                {
+                    "cd_habilidade": "4",
+                    "nr_nivel": "1",
+                    "ds_habilidade": "Delphi"
+                },
+                {
+                    "cd_habilidade": "7",
+                    "nr_nivel": "2",
+                    "ds_habilidade": "Ruby on Rails"
+                },
+                {
+                    "cd_habilidade": "2",
+                    "nr_nivel": "1",
+                    "ds_habilidade": "Php"
+                }
+            ],
+            "idiomas": [
+                {
+                    "cd_idioma": "1",
+                    "ds_idioma": "Inglês",
+                    "nr_nivel": "1"
+                },
+                {
+                    "cd_idioma": "2",
+                    "ds_idioma": "Português",
+                    "nr_nivel": "1"
+                },
+                {
+                    "cd_idioma": "3",
+                    "ds_idioma": "Espanhol",
+                    "nr_nivel": "1"
+                },
+                {
+                    "cd_idioma": "4",
+                    "ds_idioma": "Mandarim",
+                    "nr_nivel": "1"
+                }
+            ],
+            "profissionais": null
+        },
+        "3": {
+            "cd_vaga": "18",
+            "nr_qtd_vaga": "1",
+            "ds_observacao": "Não Há .",
+            "dt_validade": "2018-03-31",
+            "tp_contratacao": "I",
+            "nr_longitude": "-7.33333",
+            "nr_latitude": "-32.889",
+            "ds_beneficios": "Plano de Saúde \r\nVale Alimentação / Refeição",
+            "ds_horario_expediente": "A combinar",
+            "dt_criacao": "2018-03-01",
+            "ds_titulo": "Vaga Administrador de Redes Júnior",
+            "vl_salario": "A combinar",
+            "cargo": {
+                "cd_cargo": "15",
+                "ds_cargo": "Gerente de Administração de Redes"
+            },
+            "empresa": {
+                "cd_empresa": "1",
+                "nr_cnpj": "362935730",
+                "ds_razao_social": "Talents LTDA.",
+                "ds_nome_fantasia": "Talents",
+                "nr_porte": "2",
+                "ds_responsavel_cadastro": "Bruno Felix",
+                "ds_area_atuacao": "Desenvolvimento de sistemas",
+                "ds_site": "www.gotalents.com.br",
+                "ds_telefone": "81995782171",
+                "ds_email": "bruno",
+                "ds_senha": "123456"
+            },
+            "cursos": null,
+            "habilidades": [
+                {
+                    "cd_habilidade": "4",
+                    "nr_nivel": "1",
+                    "ds_habilidade": "Delphi"
+                }
+            ],
+            "idiomas": [
+                {
+                    "cd_idioma": "1",
+                    "ds_idioma": "Inglês",
+                    "nr_nivel": "1"
+                }
+            ],
+            "profissionais": null
+        }
+    }
+}
