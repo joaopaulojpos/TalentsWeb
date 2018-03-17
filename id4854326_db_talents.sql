@@ -624,6 +624,7 @@ CREATE TABLE `vaga_curso` (
 INSERT INTO `vaga_curso` (`cd_formacao`, `cd_vaga`) VALUES
 (4, 3),
 (4, 2),
+(2, 2),
 (2, 1);
 
 -- --------------------------------------------------------
