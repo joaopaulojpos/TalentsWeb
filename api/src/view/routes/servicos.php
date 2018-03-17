@@ -175,7 +175,6 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
 	$cargo = new Cargo();
 	$empresa = new Empresa();
 
-    $vaga->setCdVaga($request->getParsedBody()['cd_vaga']);
     $vaga->setNrQtdVaga($request->getParsedBody()['nr_qtd_vaga']);
     $vaga->setDsObservacao($request->getParsedBody()['ds_observacao']);
     $vaga->setDtValidade($request->getParsedBody()['dt_validade']);
@@ -187,11 +186,17 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
     $vaga->setDtCriacao($request->getParsedBody()['dt_criacao']);
     $vaga->setDsTitulo($request->getParsedBody()['ds_titulo']);
     $vaga->setVlSalario($request->getParsedBody()['vl_salario']);
-	$cargo->setCdCargo($request->getParsedBody()['cd_cargo']);
+	$cargo->setCdCargo($request->getParsedBody()['cargo']['cd_cargo']);
 	$vaga->setCargo($cargo);
-	$empresa->setCdEmpresa($request->getParsedBody()['cd_empresa']);
+	$empresa->setCdEmpresa($request->getParsedBody()['empresa']['cd_empresa']);
 	$vaga->setEmpresa($empresa);
-    try{
+    foreach ($request->getParsedBody()['idiomas'] as $i){
+        $idioma = new idioma();
+        $idioma->setCdIdioma($i['cd_idioma']);
+        $idioma->setNrNivel($i['nr_nivel']);
+        $vaga->setIdiomas($idioma);
+    }
+	try{
         $rnvaga = new RNVaga();
         $rnvaga = $rnvaga->publicar($vaga);
         echo json_encode($rnvaga); 

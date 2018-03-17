@@ -43,6 +43,22 @@ class DaoIdioma implements iDaoIdioma
 	}
 
     /**
+     * @param $cd_vaga
+     * @param Idioma $idioma
+     * @return array
+     */
+    public function inserirIdiomaVaga($cd_vaga, Idioma $idioma){
+        $sql = "insert into vaga_idioma (nr_nivel,cd_idioma,cd_vaga) values (:nr_nivel,:cd_idioma,:cd_vaga);";
+        $stmt = db::getInstance()->prepare($sql);
+        $run = $stmt->execute(array(
+            ':nr_nivel' => $idioma->getNrNivel(),
+            ':cd_idioma' => $idioma->getCdIdioma(),
+            ':cd_vaga' => $cd_vaga
+        ));
+        return array($run);
+    }
+
+    /**
      * @param $cod_vaga
      * @return ArrayObject
      */

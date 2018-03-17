@@ -57,21 +57,43 @@ class DaoHabilidade implements iDaoHabilidade
         $db = new db();
         $stmt = db::getInstance()->prepare($sql);
 
-        if (!empty($cod_vaga))
+        if (!empty($cod_vaga)) {
+
             $stmt->bindValue(':cod_vaga', $cod_vaga);
 
+        }
         $run = $stmt->execute();
 
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $listaHab = new ArrayObject();
+
         foreach ($result as $row){
+
             $hab = new habilidade();
             $hab->setNrNivel($row['nr_nivel']);
             $hab->setCdHabilidade($row['cd_habilidade']);
             $hab->setDsHabilidade($row['ds_habilidade']);
             $listaHab->append($hab);
+
         }
+
         return $listaHab;
+
+    }
+
+
+    public function inserirHabilidadeVaga($cd_vaga, Habilidade $habilidade){
+        $sql = "insert into vaga_habilidade (nr_nivel,cd_habilidade,cd_vaga) values (:nr_nivel,:cd_habilidade,:cd_vaga);";
+
+        $stmt = db::getInstance()->prepare($sql);
+        $run = $stmt->execute(array(
+            ':nr_nivel' => $habilidade->getNrNivel(),
+            ':cd_habilidade' => $habilidade->getCdHabilidade(),
+            ':cd_vaga' => $cd_vaga
+        ));
+
+        return array($run);
+
     }
 }
 ?>

@@ -8,14 +8,16 @@ class DaoVaga implements iDAOVaga
 
     /**
      * @param vaga $vaga
+     * @return string
      */
     public function publicar(vaga $vaga){
         //Comando para inserir a vaga na base de dados
-        $sql = "insert into vaga (cd_vaga,nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_longitude,nr_latitude,ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,cd_cargo,cd_empresa)
-            values (:cd_vaga,:nr_qtd_vaga,:ds_observacao,:dt_validade,:tp_contratacao,:nr_longitude,:nr_latitude,:ds_beneficios,:ds_horario_expediente,:dt_criacao,:ds_titulo,:vl_salario,:cd_cargo,:cd_empresa);";
-        $stmt = db::getInstance()->prepare($sql);
-        $run = $stmt->execute(array(
-				':cd_vaga' => $vaga->getCdVaga(),
+        $sql = "insert into vaga (nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_longitude,nr_latitude,ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,cd_cargo,cd_empresa)
+            values (:nr_qtd_vaga,:ds_observacao,:dt_validade,:tp_contratacao,:nr_longitude,:nr_latitude,:ds_beneficios,:ds_horario_expediente,:dt_criacao,:ds_titulo,:vl_salario,:cd_cargo,:cd_empresa);";
+        try {
+            $db = db::getInstance();
+            $stmt = $db->prepare($sql);
+            $run = $stmt->execute(array(
                 ':nr_qtd_vaga' => $vaga->getNrQtdVaga(),
                 ':ds_observacao' => $vaga->getDsObservacao(),
                 ':dt_validade' => $vaga->getDtValidade(),
@@ -29,7 +31,32 @@ class DaoVaga implements iDAOVaga
                 ':vl_salario' => $vaga->getVlSalario(),
                 ':cd_cargo' => $vaga->getCargo()->getCdCargo(),
                 ':cd_empresa' => $vaga->getEmpresa()->getCdEmpresa()
-        ));
+
+            ));
+            //Guardando o id da última insersão para utiliza-lo
+            $cdvaga = $db->lastInsertId();
+
+            //Pegando os idiomas na lista na vaga e inserindo associando com o código da vaga
+            foreach ($vaga->getIdiomas() as $idioma) {
+
+                $daoidiomas = new DaoIdioma();
+                $daoidiomas->inserirIdiomaVaga($cdvaga, $idioma);
+
+            }
+
+            //Pegamdp as habilidades na lista na vagae inserindo associando com o código da vaga
+            foreach ($vaga->getHabilidades() as $habil) {
+
+                $daohabilidade = new DaoHabilidade();
+                $daohabilidade->inserirHabilidadeVaga($cdvaga, $habil);
+
+            }
+
+        }catch (Exception $e){
+
+            return $e->getMessage();
+
+        }
     }
 
     /**
@@ -85,13 +112,15 @@ class DaoVaga implements iDAOVaga
 
         $run = $stmt->execute();
 
+        //Lista de objetos vaga
         return $this->parseRowsToObjectVaga($stmt->fetchAll(PDO::FETCH_ASSOC));
     }
 
 //--------------------------------------------- AUXILIARES -----------------------------------------------------------
     /**
-     * @param $result
-     * @return ArrayObject
+     * Método responsável por transformar as linhas do banco em classe
+     * @param $result com o resultado do PDO::Fetch
+     * @return ArrayObject uma lista de vagas
      */
     private function parseRowsToObjectVaga($result){
         $cd_vaga = 0;
@@ -101,7 +130,7 @@ class DaoVaga implements iDAOVaga
 
         foreach ($result as $row) {
 
-            //Valida
+            //Verifica o código da vaga, para não inserir duplicado
             if ($cd_vaga <> $row['cd_vaga']) {
 
                 $vaga = new Vaga();
