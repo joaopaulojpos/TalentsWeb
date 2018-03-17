@@ -623,6 +623,7 @@ CREATE TABLE `vaga_curso` (
 
 INSERT INTO `vaga_curso` (`cd_formacao`, `cd_vaga`) VALUES
 (4, 3),
+(4, 2),
 (2, 1);
 
 -- --------------------------------------------------------
@@ -639,6 +640,24 @@ CREATE TABLE `vaga_habilidade` (
 
 -- --------------------------------------------------------
 
+
+--
+-- Extraindo dados da tabela `vaga_curso`
+--
+
+INSERT INTO `vaga_habilidade` (`nr_nivel`,`cd_habilidade`,`cd_vaga`) VALUES
+  (1, 4, 1),
+  (1, 2, 1),
+  (1, 12, 1),
+  (1, 1, 1),
+  (1, 1, 2),
+  (1, 22, 2),
+  (1, 21, 2),
+  (1, 26, 2),
+  (1, 44, 2),
+  (1, 3, 2),
+  (1, 2, 3);
+
 --
 -- Estrutura da tabela `vaga_idioma`
 --
@@ -649,6 +668,16 @@ CREATE TABLE `vaga_idioma` (
   `cd_vaga` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Extraindo dados da tabela `vaga_curso`
+--
+
+INSERT INTO `vaga_idioma` (`nr_nivel`,`cd_idioma`,`cd_vaga`) VALUES
+  (1, 4, 1),
+  (1, 2, 1),
+  (1, 1, 2),
+  (1, 2, 2),
+  (1, 2, 3);
 --
 -- Indexes for dumped tables
 --

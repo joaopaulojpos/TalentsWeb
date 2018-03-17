@@ -69,6 +69,23 @@ class RNVaga{
 
             }
 
+            //Validar se o idioma existe
+            foreach ($vaga->getIdiomas() as $idioma){
+                $daoidioma = new DaoIdioma();
+                if (empty($daoidioma->pesquisar($idioma))){
+                    return array('erro'=>"Idioma cod:".$idioma->getCdIdioma().", não existe.");
+                }
+            }
+
+            //Validar se o idioma existe
+            foreach ($vaga->getHabilidades() as $habilidade){
+                $daohabilidade = new DaoHabilidade();
+                if (empty($daohabilidade->pesquisar($habilidade))){
+                    return array('erro'=>"Habilidade cod:".$habilidade->getCdHabilidade().", não existe.");
+                }
+            }
+
+
             //Verifica se o cargo existe
             $daocargo = new DaoCargo();
             if (empty($daocargo->pesquisar($vaga->getCargo()))) {
@@ -97,7 +114,8 @@ class RNVaga{
 	}
 
 	public function pesquisar($vaga){
-		try{
+		try
+        {
 			$daovaga = new DAOVaga();
 			$result = $daovaga->pesquisar($vaga);
 			
