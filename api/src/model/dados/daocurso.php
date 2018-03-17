@@ -41,5 +41,37 @@ class DaoCurso implements iDAOCurso
 
 		return ($stmt->fetchAll(PDO::FETCH_ASSOC));
 	}
+
+    /**
+     * @param $cod_vaga
+     * @return ArrayObject
+     */
+    public function listarCursoVaga($cod_vaga)
+    {
+
+        $sql = 'select curso.ds_curso,vc.cd_curso,vc.ds_instituicao from vaga_curso AS vc
+                      JOIN vaga ON vc.cd_vaga = vaga.cd_vaga
+                      JOIN curso ON curso.cd_curso = vc.cd_curso 
+                      where vc.cd_vaga = :cod_vaga;';
+
+        $db = new db();
+        $stmt = db::getInstance()->prepare($sql);
+
+        if (!empty($cod_vaga))
+            $stmt->bindValue(':cod_vaga', $cod_vaga);
+
+        $run = $stmt->execute();
+
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $listaCurso = new ArrayObject();
+        foreach ($result as $row){
+            $curso = new curso();
+            $curso->setDsInstituicao($row['ds_instituicao']);
+            $curso->setCdCurso($row['cd_curso']);
+            $curso->setDsCurso($row['ds_curso']);
+            $listaCurso->append($curso);
+        }
+        return $listaCurso;
+    }
 }
 ?>

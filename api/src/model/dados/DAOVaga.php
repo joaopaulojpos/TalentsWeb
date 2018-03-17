@@ -50,7 +50,7 @@ class DaoVaga implements iDAOVaga
                       ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,cargo.cd_cargo,ds_cargo,
                       empresa.cd_empresa,ds_razao_social,ds_nome_fantasia,nr_porte,ds_nome_responsavel,ds_area_atuacao,ds_site,
                       ds_telefone,nr_cnpj,ds_email,ds_senha,habilidade.cd_habilidade,vaga_habilidade.nr_nivel,
-                      habilidade.ds_habilidade,vi.cd_idioma,ds_idioma
+                      habilidade.ds_habilidade,vi.cd_idioma,ds_idioma,vi.nr_nivel
                       from vaga
                       JOIN cargo ON cargo.cd_cargo = vaga.cd_cargo
                       JOIN empresa ON empresa.cd_empresa = vaga.cd_empresa
@@ -64,16 +64,22 @@ class DaoVaga implements iDAOVaga
         $where = '';
 
         if (!empty($vaga->getCdVaga())){
-            if (empty($where)){
-                $where = ' where vaga.cd_vaga = :cd_vaga';
-            }else{
-                $where = $where . ' and vaga.cd_vaga = :cd_vaga';
-            }
-        }
 
+            if (empty($where)){
+
+                $where = ' where vaga.cd_vaga = :cd_vaga';
+
+            }else{
+
+                $where = $where . ' and vaga.cd_vaga = :cd_vaga';
+
+            }
+
+        }
         
         $db = new db();
         $stmt = db::getInstance()->prepare($comando . $where);
+
         if (!empty($vaga->getCdVaga()))
             $stmt->bindValue(':cd_vaga', $vaga->getCdVaga());
 
@@ -82,23 +88,25 @@ class DaoVaga implements iDAOVaga
         return $this->parseRowsToObjectVaga($stmt->fetchAll(PDO::FETCH_ASSOC));
     }
 
+//--------------------------------------------- AUXILIARES -----------------------------------------------------------
     /**
      * @param $result
      * @return ArrayObject
      */
     private function parseRowsToObjectVaga($result){
-        $vagas = new ArrayObject();
-        $vaga = new Vaga();
-        $cd_vaga = -1;
-        $cargo = new Cargo;
-        $empresa = new Empresa();
-        $curso = new Curso();
-        $idioma = new Idioma();
-        $habilidade = new habilidade();
+        $cd_vaga = 0;
+        $listavagas = new ArrayObject();
+        $daohabilidade = new daohabilidade();
+        $daoidioma = new daoidioma();
 
-        foreach ($result as $row){
-            if ($cd_vaga!=$row['cd_vaga']) {
-                $cd_vaga = $row['cd_vaga'];
+        foreach ($result as $row) {
+
+            //Valida
+            if ($cd_vaga <> $row['cd_vaga']) {
+
+                $vaga = new Vaga();
+                $cargo = new Cargo;
+                $empresa = new Empresa();
                 $vaga->setCdVaga($row['cd_vaga']);
                 $vaga->setNrQtdVaga($row['nr_qtd_vaga']);
                 $vaga->setDsObservacao($row['ds_observacao']);
@@ -111,10 +119,12 @@ class DaoVaga implements iDAOVaga
                 $vaga->setDtCriacao($row['dt_criacao']);
                 $vaga->setDsTitulo($row['ds_titulo']);
                 $vaga->setVlSalario($row['vl_salario']);
+
                 //Cargo
                 $cargo->setCdCargo($row['cd_cargo']);
                 $cargo->setDsCargo($row['ds_cargo']);
                 $vaga->setCargo($cargo);
+
                 //Empresa
                 $empresa->setCdEmpresa($row['cd_empresa']);
                 $empresa->setDsAreaAtuacao($row['ds_area_atuacao']);
@@ -128,41 +138,39 @@ class DaoVaga implements iDAOVaga
                 $empresa->setNrPorte($row['nr_porte']);
                 $empresa->setDsTelefone($row['ds_telefone']);
                 $vaga->setEmpresa($empresa);
+
                 /*Cursos
-                $curso->setCdCurso($row['cd_curso']);
-                $curso->setDsCurso($row['ds_curso']);
-                $curso->setDsInstituicao($row['ds_instituicao']);
-                $vaga->setCursos($curso);*/
-                //Habilidades
-                $habilidade->setCdHabilidade($row['cd_habilidade']);
-                $habilidade->setDsHabilidade($row['ds_habilidade']);
-                $vaga->setHabilidades($habilidade);
-                //Idiomas
-                $idioma->setCdIdioma($row['cd_idioma']);
-                $idioma->setDsIdioma($row['ds_idioma']);
-                $vaga->setIdiomas($idioma);
+                foreach ($daocurso->listarCursoVaga($vaga->getCdVaga()) as $c) {
 
-            }else{
-                /*Cursos não tem relacionamento com ngm no banco
-                $curso->setCdCurso($row['cd_curso']);
-                $curso->setDsCurso($row['ds_curso']);
-                $curso->setDsInstituicao($row['ds_instituicao']);
-                $vaga->setCursos($curso);*/
+                    $vaga->setCursos($c);
+
+                }*/
+
                 //Habilidades
-                $habilidade->setCdHabilidade($row['cd_habilidade']);
-                $habilidade->setDsHabilidade($row['ds_habilidade']);
-                $vaga->setHabilidades($habilidade);
+                foreach ($daohabilidade->listarHabilidadeVaga($vaga->getCdVaga()) as $h) {
+
+                    $vaga->setHabilidades($h);
+
+                }
+
                 //Idiomas
-                $idioma->setCdIdioma($row['cd_idioma']);
-                $idioma->setDsIdioma($row['ds_idioma']);
-                $vaga->setIdiomas($idioma);
+                foreach ($daoidioma->listarIdiomaVaga($vaga->getCdVaga()) as $i) {
+
+                    $vaga->setIdiomas($i);
+
+                }
+
+                //Adiciona uma vaga na lista de vagas
+                $listavagas->append($vaga);
+                //modifica o atributo com o código da vaga atual
+                $cd_vaga=$row['cd_vaga'];
+
             }
-
-            $vagas->append($vaga);
 
         }
 
-        return $vagas;
+        //Retorna a lista de vagas
+        return $listavagas;
 
     }
 

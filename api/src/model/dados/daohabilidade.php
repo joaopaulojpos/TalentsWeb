@@ -41,5 +41,37 @@ class DaoHabilidade implements iDaoHabilidade
 
 		return ($stmt->fetchAll(PDO::FETCH_ASSOC));
 	}
+
+    /**
+     * @param $cod_vaga
+     * @return ArrayObject
+     */
+    public function listarHabilidadeVaga($cod_vaga)
+    {
+
+        $sql = 'select habilidade.ds_habilidade,vh.cd_habilidade,vh.nr_nivel from vaga_habilidade AS vh
+                      JOIN vaga ON vh.cd_vaga = vaga.cd_vaga
+                      JOIN habilidade ON habilidade.cd_habilidade = vh.cd_habilidade 
+                      where vh.cd_vaga = :cod_vaga;';
+
+        $db = new db();
+        $stmt = db::getInstance()->prepare($sql);
+
+        if (!empty($cod_vaga))
+            $stmt->bindValue(':cod_vaga', $cod_vaga);
+
+        $run = $stmt->execute();
+
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $listaHab = new ArrayObject();
+        foreach ($result as $row){
+            $hab = new habilidade();
+            $hab->setNrNivel($row['nr_nivel']);
+            $hab->setCdHabilidade($row['cd_habilidade']);
+            $hab->setDsHabilidade($row['ds_habilidade']);
+            $listaHab->append($hab);
+        }
+        return $listaHab;
+    }
 }
 ?>

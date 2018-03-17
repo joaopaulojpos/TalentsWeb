@@ -2,6 +2,7 @@
 class idioma implements JsonSerializable {
     private $cd_idioma;
     private $ds_idioma;
+    private $nr_nivel;
 
     function __construct(){}
 
@@ -18,6 +19,23 @@ class idioma implements JsonSerializable {
     function getDsIdioma(){
         return $this->ds_idioma;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getNrNivel()
+    {
+        return $this->nr_nivel;
+    }
+
+    /**
+     * @param mixed $nr_nivel
+     */
+    public function setNrNivel($nr_nivel)
+    {
+        $this->nr_nivel = $nr_nivel;
+    }
+
     /**
      * Specify data which should be serialized to JSON
      * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
@@ -30,7 +48,8 @@ class idioma implements JsonSerializable {
         return
             [
                 'cd_idioma'=>$this->cd_idioma,
-                'ds_idioma'=>$this->ds_idioma
+                'ds_idioma'=>$this->ds_idioma,
+                'nr_nivel'=>$this->nr_nivel
             ];
     }
 }
