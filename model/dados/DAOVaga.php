@@ -21,8 +21,8 @@ class DAOVaga
 			'cd_cargo' => $vaga->getCargo()->getCdCargo(),
 			'cd_empresa' => 1,
 			'idiomas'=>json_encode($vaga->getIdiomas()),
-			'habilidades'=>$vaga->getHabilidades(),
-			'cursos'=>$vaga->getCursos()));
+			'habilidades'=>json_encode($vaga->getHabilidades()),
+			'cursos'=>json_encode($vaga->getCursos())));
 	}
 	public function pesquisar(){
 	    //Classe padrão com as configurações para GET/POST

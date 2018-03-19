@@ -614,6 +614,7 @@ INSERT INTO `vaga` (`cd_vaga`, `nr_qtd_vaga`, `ds_observacao`, `dt_validade`, `t
 
 CREATE TABLE `vaga_curso` (
   `cd_formacao` int(11) DEFAULT NULL,
+  `cd_curso` int(11) DEFAULT NULL,
   `cd_vaga` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -852,6 +853,7 @@ ALTER TABLE `opcao_perfil_comportamental`
 ALTER TABLE `vaga`
   ADD CONSTRAINT `FK_CARGO` FOREIGN KEY (`cd_cargo`) REFERENCES `cargo` (`cd_cargo`),
   ADD CONSTRAINT `FK_EMPRESA` FOREIGN KEY (`cd_empresa`) REFERENCES `empresa` (`cd_empresa`);
+  
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

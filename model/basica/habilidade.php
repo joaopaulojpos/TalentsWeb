@@ -3,6 +3,7 @@ class habilidade implements JsonSerializable {
 
     private $cd_habilidade;
     private $ds_habilidade;
+    private $nr_nivel;
 
     function __construct(){}
 
@@ -18,6 +19,13 @@ class habilidade implements JsonSerializable {
     }
     function getDsHabilidade(){
         return $this->ds_habilidade;
+    }
+
+    function setNrNivel($nr_nivel){
+        $this->nr_nivel = $nr_nivel;
+    }
+    function getNrNivel(){
+        return $this->nr_nivel;
     }
 
     /**

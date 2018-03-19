@@ -206,11 +206,27 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
     }
 
     //Pegando a lista de habilidades no JSON e colocando na lista de habilidades na vaga
-    foreach ($request->getParsedBody()['habilidades'] as $h){
-        $habilidade = new habilidade();
-        $habilidade->setCdhabilidade($h['cd_habilidade']);
-        $habilidade->setNrNivel($h['nr_nivel']);
-        $vaga->setHabilidades($habilidade);
+    $habilidades = json_decode($request->getParam('habilidades'), true);
+
+    foreach ($habilidades as $key => $value) {
+        $habilidade = new Habilidade();
+        foreach ($value as $key => $value) {      
+            if($key == 'cd_habilidade')
+                $habilidade->setCdHabilidade($value);           
+        }
+        $vaga->setHabilidades($habilidade); 
+    }
+
+    //Pegando a lista de cursos no JSON e colocando na lista de cursos na vaga
+    $cursos = json_decode($request->getParam('cursos'), true);
+
+    foreach ($cursos as $key => $value) {
+        $curso = new Curso();
+        foreach ($value as $key => $value) {      
+            if($key == 'cd_curso')
+                $curso->setCdCurso($value);           
+        }
+        $vaga->setCursos($curso); 
     }
 
 	try{

@@ -45,20 +45,28 @@ class RNVaga{
                 exit;
             }
 
-            //Validar se o idioma existe
+            //Validar se os idiomas existem
             foreach ($vaga->getIdiomas() as $idioma){
                 $daoidioma = new DaoIdioma();
                 if (empty($daoidioma->pesquisar($idioma)))
                     array_push($validacoes, "Idioma cod:".$idioma->getCdIdioma().", não existe!");
             }
 
-           /*//Validar se o idioma existe
+            //Validar se as habilidades existem
             foreach ($vaga->getHabilidades() as $habilidade){
                 $daohabilidade = new DaoHabilidade();
                 if (empty($daohabilidade->pesquisar($habilidade))){
-                    return array('erro'=>"Habilidade cod:".$habilidade->getCdHabilidade().", não existe.");
+                   array_push($validacoes, "Habilidade cod:".$habilidade->getCdHabilidade().", não existe!");
                 }
-            }*/
+            }
+
+            //Validar se os cursos existem
+            foreach ($vaga->getCursos() as $curso){
+                $daocurso = new DaoCurso();
+                if (empty($daocurso->pesquisar($curso))){
+                    array_push($validacoes, "Curso cod:".$curso->getCdCurso().", não existe!");
+                }
+            }
             
             //------------------------------------------------------------------------------------------------------------\\
 

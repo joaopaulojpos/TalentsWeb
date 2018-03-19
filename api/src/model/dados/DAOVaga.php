@@ -12,7 +12,6 @@ class DaoVaga implements iDAOVaga
      */
     public function publicar(vaga $vaga){
 
-        var_dump("entrou");
         //Comando para inserir a vaga na base de dados
         $sql = "insert into vaga (nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_longitude,nr_latitude,ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,cd_cargo,cd_empresa)
             values (:nr_qtd_vaga,:ds_observacao,:dt_validade,:tp_contratacao,:nr_longitude,:nr_latitude,:ds_beneficios,:ds_horario_expediente,:dt_criacao,:ds_titulo,:vl_salario,:cd_cargo,:cd_empresa)";
@@ -36,7 +35,7 @@ class DaoVaga implements iDAOVaga
 
             ));
             //Guardando o id da última insersão para utiliza-lo
-            /*$cdvaga = $db->lastInsertId();
+            $cdvaga = $db->lastInsertId();
 
             //Pegando os idiomas na lista na vaga e inserindo associando com o código da vaga
             foreach ($vaga->getIdiomas() as $idioma) {
@@ -44,15 +43,23 @@ class DaoVaga implements iDAOVaga
                 $daoidiomas = new DaoIdioma();
                 $daoidiomas->inserirIdiomaVaga($cdvaga, $idioma);
 
-            }*/
+            }
 
-            /*//Pegando as habilidades na lista na vagas inserindo associando com o código da vaga
+            //Pegando as habilidades na lista na vagas inserindo associando com o código da vaga
             foreach ($vaga->getHabilidades() as $habil) {
 
                 $daohabilidade = new DaoHabilidade();
                 $daohabilidade->inserirHabilidadeVaga($cdvaga, $habil);
 
-            }*/
+            }
+
+            //Pegando as habilidades na lista na vagas inserindo associando com o código da vaga
+            foreach ($vaga->getCursos() as $curso) {
+
+                $daocurso = new DaoCurso();
+                $daocurso->inserirCursoVaga($cdvaga, $curso);
+
+            }
 
         }catch (Exception $e){
 

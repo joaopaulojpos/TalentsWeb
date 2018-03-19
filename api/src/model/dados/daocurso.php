@@ -73,5 +73,20 @@ class DaoCurso implements iDAOCurso
         }
         return $listaCurso;
     }
+
+    public function inserirCursoVaga($cd_vaga, Curso $curso){
+        $sql = "insert into vaga_curso (cd_curso,cd_vaga) values (:cd_curso,:cd_vaga);";
+
+        var_dump($curso);
+
+        $stmt = db::getInstance()->prepare($sql);
+        $run = $stmt->execute(array(
+            ':cd_curso' => $curso->getCdCurso(),
+            ':cd_vaga' => $cd_vaga
+        ));
+
+        return array($run);
+
+    }
 }
 ?>
