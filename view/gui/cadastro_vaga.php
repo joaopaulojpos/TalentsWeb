@@ -188,7 +188,7 @@
     <label class="col-md-4 control-label">Curso(s)</label> 
       <tr>
           <th style="width: 100%"><select name="codigo_curso" id="codigo_curso" class="form-control selectpicker">
-                  <option>Selecione o curso necessário a vaga</option>
+                  <option>Selecione o(s) curso(s) necessário(s) a vaga</option>
                   <?php 
 
                       foreach ($arraycurso as $key => $value) {
@@ -232,7 +232,7 @@
                              $arrayhabilidade2 = $value;
                              foreach ($arrayhabilidade2 as $key => $value) { 
                   ?>
-                               <option value="<?php echo $value->cd_habilidade; ?>"> <?php echo $value->ds_habilidade; ?></option>
+                               <option value="<?php echo $value->cd_habilidade; ?>"> <?php echo $value->ds_habilidade.' - '.$value->ds_tipo_habilidade; ?></option>
 
                   <?php         
                                
@@ -260,7 +260,7 @@
     <label class="col-md-4 control-label">Idioma(s)</label> 
 	    <tr>
 	        <th style="width: 75%"><select name="codigo_idioma" id="codigo_idioma" class="form-control selectpicker">
-	                <option>Selecione o idioma necessário a vga</option>
+	                <option>Selecione o(s) idioma(s) necessário(s) a vga</option>
 	                <?php 
 
 	                    foreach ($arrayidioma as $key => $value) {
@@ -305,7 +305,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label"></label>
   <div class="col-md-4">
-    <button type="submit" class="btn btn-warning" >Continuar <span class="glyphicon glyphicon-send"></span></button>
+    <button type="submit" name="buttonSubmit" id="buttonSubmit" class="btn btn-warning" >Continuar <span class="glyphicon glyphicon-send"></span></button>
   </div>
 </div>
 
@@ -325,7 +325,34 @@
     $(document).ready(function(){
       $('#errMessage').hide();
       $('#contact_form').submit(function(){  //Ao submeter formulário
-        
+
+        document.getElementById('buttonSubmit').disabled;
+
+
+        //pega todos códigos dos idiomas
+        var idiomaCodigo = [];
+        $('input[name="itemidioma[codigo]"]').each(function(){
+            idiomaCodigo.push($(this).val());
+        });
+
+        //pega todos niveis dos idiomas
+        var idiomaNivel = [];
+        $('input[name="itemidioma[nivel]"]').each(function(){
+            idiomaNivel.push($(this).val());
+        });
+
+        //pegando todos os códigos das habilidades
+        var habilidadeCodigo = [];
+        $('input[name="itemhabilidade[codigo]"]').each(function(){
+            habilidadeCodigo.push($(this).val());
+        });
+
+        //pegando todos os códigos dos cursos
+        var cursoCodigo = [];
+        $('input[name="itemcurso[codigo]"]').each(function(){
+            cursoCodigo.push($(this).val());
+        });
+
         var titulo=$('#titulo').val();
         var cargo=$('#cargo').val();
         var observacao=$('#observacao').val();
@@ -335,23 +362,18 @@
         var experiencia=$('#experiencia').val();
         var quantidadevagas=$('#quantidadevagas').val();
         var beneficios=$('#beneficios').val();
-  
+
         $.ajax({      //Função AJAX
           url:"valida_vaga.php",      //Arquivo php
           type:"post",        //Método de envio
-          data: "titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios, //Dados
+          data: "titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios+"&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+"&habilidadeCodigo="+JSON.stringify(habilidadeCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados*/
             success: function (result){     //Sucesso no AJAX
-                        /*if(result==1){        
-                          location.href='vaga.php';  //Redireciona
-                        }else{
-                          document.getElementById('errMessage').innerHTML = result;
-                          $('#errMessage').show();   //Informa o erro
-                        }*/
                         document.getElementById('errMessage').innerHTML = result;
-                        $('#errMessage').show();   //Informa o erro
+                        $('#errMessage').show();   //Informa o erro*/
+                        document.getElementById('buttonSubmit').enabled;
                     }
         })
-        return false; //Evita que a página seja atualizada
+        return false; //Evita que a página seja atualizada*/
       })
     });
 
@@ -366,8 +388,8 @@
       var items = "";
       //esse codigo html vai ser inserido para o usuário ver na tela (esse itemidioma vai ser a lista utilizado para pegar os item depois)
       items += "<tr>";
-      items += "<td><input type='hidden' name='itemidioma[codigo][]' value='"+ codigo_idioma +"'>"+descricao_idioma+"</td>";
-      items += "<td><input type='hidden' class='span2' name='itemidioma[nivel][]' value='"+ nivel_idioma +"'>"+ descricao_nivel_idioma +"</td>";
+      items += "<td><input type='hidden' name='itemidioma[codigo]' value='"+ codigo_idioma +"'>"+descricao_idioma+"</td>";
+      items += "<td><input type='hidden' class='span2' name='itemidioma[nivel]' value='"+ nivel_idioma +"'>"+ descricao_nivel_idioma +"</td>";
       items += "<td><a href='javascript:void(0);' id='hapus'>Remove</a></td>";
       items += "</tr>";
 
@@ -394,7 +416,7 @@
 
       //esse codigo html vai ser inserido para o usuário ver na tela (esse itemcurso vai ser a lista utilizado para pegar os item depois)
       items += "<tr>";
-      items += "<td><input type='hidden' name='itemcurso[codigo][]' value='"+ codigo_curso +"'>"+descricao_curso+"</td>";
+      items += "<td><input type='hidden' name='itemcurso[codigo]' value='"+ codigo_curso +"'>"+descricao_curso+"</td>";
       items += "<td><a href='javascript:void(0);' id='hapus'>Remove</a></td>";
       items += "</tr>";
 
@@ -421,7 +443,7 @@
       //esse codigo html vai ser inserido para o usuário ver na tela (esse itemhabilidade vai ser a lista utilizado para pegar os item depois)
       //()
       items += "<tr>";
-      items += "<td><input type='hidden' name='itemhabilidadee[codigo][]' value='"+ codigo_habilidade +"'>"+descricao_habilidade+"</td>";
+      items += "<td><input type='hidden' name='itemhabilidade[codigo]' value='"+ codigo_habilidade +"'>"+descricao_habilidade+"</td>";
       items += "<td><a href='javascript:void(0);' id='hapus'>Remove</a></td>";
       items += "</tr>";
 
@@ -471,7 +493,7 @@
         var cb = true;
         console.log($(codigo_habilidade).val());
     
-        $("#itemlistIdioma tr").each(function(index){
+        $("#itemlistHabilidade tr").each(function(index){
             var input = $(this).find("input[type='hidden']:first");
             if (input.val() == $(codigo_habilidade).val()){
                 cb = false;

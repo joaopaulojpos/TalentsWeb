@@ -49,9 +49,9 @@
     //Vaga
     public function publicarVaga($vaga){
         $daovaga = new DAOVaga();
-        $result = json_decode($daovaga->publicar($vaga));
 
-        return json_decode(json_encode($result, true));
+        var_dump($daovaga->publicar($vaga));
+        //return json_decode($daovaga->publicar($vaga), true);
     }   
 
     public function pesquisarVagas($vaga){

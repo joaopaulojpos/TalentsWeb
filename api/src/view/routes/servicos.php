@@ -175,28 +175,34 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
 	$cargo = new Cargo();
 	$empresa = new Empresa();
 
-    $vaga->setNrQtdVaga($request->getParsedBody()['nr_qtd_vaga']);
-    $vaga->setDsObservacao($request->getParsedBody()['ds_observacao']);
-    $vaga->setDtValidade($request->getParsedBody()['dt_validade']);
-    $vaga->setTpContratacao($request->getParsedBody()['tp_contratacao']);
-    $vaga->setNrLongitude($request->getParsedBody()['nr_longitude']);
-    $vaga->setNrLatitude($request->getParsedBody()['nr_latitude']);
-    $vaga->setDsBeneficios($request->getParsedBody()['ds_beneficios']);
-    $vaga->setDsHorarioExpediente($request->getParsedBody()['ds_horario_expediente']);
-    $vaga->setDtCriacao($request->getParsedBody()['dt_criacao']);
-    $vaga->setDsTitulo($request->getParsedBody()['ds_titulo']);
-    $vaga->setVlSalario($request->getParsedBody()['vl_salario']);
-	$cargo->setCdCargo($request->getParsedBody()['cargo']['cd_cargo']);
+    $vaga->setNrQtdVaga($request->getParam('nr_qtd_vaga'));
+    $vaga->setDsObservacao($request->getParam('ds_observacao'));
+    $vaga->setDtValidade($request->getParam('dt_validade'));
+    $vaga->setTpContratacao($request->getParam('tp_contratacao'));
+    $vaga->setNrLongitude($request->getParam('nr_longitude'));
+    $vaga->setNrLatitude($request->getParam('nr_latitude'));
+    $vaga->setDsBeneficios($request->getParam('ds_beneficios'));
+    $vaga->setDsHorarioExpediente($request->getParam('ds_horario_expediente'));
+    $vaga->setDtCriacao($request->getParam('dt_criacao'));
+    $vaga->setDsTitulo($request->getParam('ds_titulo'));
+    $vaga->setVlSalario($request->getParam('vl_salario'));
+	$cargo->setCdCargo($request->getParam('cd_cargo'));
 	$vaga->setCargo($cargo);
-	$empresa->setCdEmpresa($request->getParsedBody()['empresa']['cd_empresa']);
+	$empresa->setCdEmpresa($request->getParam('cd_empresa'));
 	$vaga->setEmpresa($empresa);
 
-	//Pegando a lista de idiomas no JSON e colocando na lista de idiomas na vaga
-    foreach ($request->getParsedBody()['idiomas'] as $i){
-        $idioma = new idioma();
-        $idioma->setCdIdioma($i['cd_idioma']);
-        $idioma->setNrNivel($i['nr_nivel']);
-        $vaga->setIdiomas($idioma);
+    //Pegando a lista de idiomas no JSON e colocando na lista de idiomas na vaga
+    $idiomas = json_decode($request->getParam('idiomas'), true);
+
+    foreach ($idiomas as $key => $value) {
+        $idioma = new Idioma();
+        foreach ($value as $key => $value) {      
+            if($key == 'cd_idioma')
+                $idioma->setCdIdioma($value);
+            if($key == 'nr_nivel')
+                $idioma->setNrNivel($value);           
+        }
+        $vaga->setIdiomas($idioma); 
     }
 
     //Pegando a lista de habilidades no JSON e colocando na lista de habilidades na vaga
@@ -209,8 +215,8 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
 
 	try{
         $rnvaga = new RNVaga();
-        $rnvaga = $rnvaga->publicar($vaga);
-        echo json_encode($rnvaga); 
+        $response->write(json_encode($rnvaga->publicar($vaga)));
+         
     } catch(PDOException $e){
         echo json_encode(array('erro' => $e->getMessage()));
     }

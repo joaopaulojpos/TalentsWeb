@@ -9,8 +9,11 @@ class DaoHabilidade implements iDaoHabilidade
 	}
 
 	public function pesquisar(Habilidade $habilidade, $alt='false'){
-		$comando = 'select * from habilidade ';
+		$comando = "select cd_habilidade, ds_habilidade, h.cd_tipo_habilidade, ds_tipo_habilidade
+                   from habilidade h
+                   inner join tipo_habilidade th on (th.cd_tipo_habilidade = h.cd_tipo_habilidade) ";
 		$where = '';
+        $orderby = ' order by cd_tipo_habilidade asc, ds_habilidade asc ';
 
 		if (!empty($habilidade->getCdHabilidade())){
 			if (empty($where)){
@@ -29,9 +32,8 @@ class DaoHabilidade implements iDaoHabilidade
 			}
 		}
 
-		
 		$db = new db();
-		$stmt = db::getInstance()->prepare($comando . $where);
+		$stmt = db::getInstance()->prepare($comando . $where . $orderby);
 		if (!empty($habilidade->getCdHabilidade()))
 			$stmt->bindValue(':cd_habilidade', $habilidade->getCdHabilidade());
 		if (!empty($habilidade->getDsHabilidade()))

@@ -4,9 +4,9 @@ require_once('RequestMethods.php');
 class DAOVaga
 {
 	public function publicar(Vaga $vaga){
+
         return $this->post('http://localhost/talentsweb/api/public/api/vaga/publicar',
 			array( 
-			'cd_vaga' => $vaga->getCdVaga(),
 			'nr_qtd_vaga' => $vaga->getNrQtdVaga(),
 			'ds_observacao' => $vaga->getDsObservacao(),
 			'dt_validade' => $vaga->getDtValidade(),
@@ -19,7 +19,10 @@ class DAOVaga
 			'ds_titulo' => $vaga->getDsTitulo(),
 			'vl_salario' => $vaga->getVlSalario(),
 			'cd_cargo' => $vaga->getCargo()->getCdCargo(),
-			'cd_empresa' => 1));
+			'cd_empresa' => 1,
+			'idiomas'=>json_encode($vaga->getIdiomas()),
+			'habilidades'=>$vaga->getHabilidades(),
+			'cursos'=>$vaga->getCursos()));
 	}
 	public function pesquisar(){
 	    //Classe padrão com as configurações para GET/POST
