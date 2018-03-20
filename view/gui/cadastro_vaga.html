@@ -36,7 +36,7 @@
                     </div>
 
                     <div class="input-field col s12 m6">
-                        <select>
+                        <select required>
                             <option value="" disabled selected>Selecione o Cargo</option>
                             <option value="1">Option 1</option>
                             <option value="2">Option 2</option>
@@ -46,7 +46,7 @@
                     </div>
 
                     <div class="input-field col s12 m6">
-                        <select>
+                        <select required>
                             <option value="" disabled selected>Regime de contratação</option>
                             <option value="1">CLT</option>
                             <option value="2">PJ</option>
@@ -69,7 +69,7 @@
                     </div>
 
                     <div class="input-field col s12 m12">
-                        <select>
+                        <select required>
                             <option value="" disabled selected>Jornada de Trabalho</option>
                             <option value="1">Option 1</option>
                             <option value="2">Option 2</option>
@@ -79,7 +79,7 @@
                     </div>
 
                     <div class="input-field col s12 m12">
-                        <select>
+                        <select required>
                             <option value="" disabled selected>Experiência</option>
                             <option value="1">Option 1</option>
                             <option value="2">Option 2</option>
@@ -104,7 +104,7 @@
             <div class="container">
                 <div class="row">
                     <div class="input-field col s12 m12">
-                        <select>
+                        <select required>
                             <option value="" disabled selected>Escolha os cursos</option>
                             <option value="1">Option 1</option>
                             <option value="2">Option 2</option>
@@ -114,7 +114,7 @@
                     </div>
 
                     <div class="input-field col s12 m12">
-                        <select>
+                        <select required>
                             <option value="" disabled selected>Habilidades</option>
                             <option value="1">Option 1</option>
                             <option value="2">Option 2</option>
@@ -124,7 +124,7 @@
                     </div>
 
                     <div class="input-field col s12 m8">
-                        <select>
+                        <select required>
                             <option value="" disabled selected>Idiomas</option>
                             <option value="1">Option 1</option>
                             <option value="2">Option 2</option>
@@ -134,7 +134,7 @@
                     </div>
 
                     <div class="input-field col s12 m4">
-                        <select>
+                        <select required>
                             <option value="" disabled selected>Senioridade</option>
                             <option value="1">Básico</option>
                             <option value="2">Médio</option>
@@ -144,10 +144,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col s4 m4">
-                <button class="pull-m4 btn waves-effect waves-light" type="submit" name="action">Submit
-                    <i class="material-icons right">send</i>
-                </button>         
+            <div class="row">
+                <div class="col s4 m4 offset-s2 offset-m2">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Criar
+                        <i class="material-icons right">send</i>
+                    </button>         
+                </div>
             </div>
         </form>
     </div>
@@ -164,5 +166,4 @@
             });
         </script>
 </body>
-
 </html>
