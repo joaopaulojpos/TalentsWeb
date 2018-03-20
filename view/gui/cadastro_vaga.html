@@ -1,109 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-  <meta charset="UTF-8">
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cadastro de Vaga - Talents</title>
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Vaga - Talents</title>
 </head>
+
 <body>
 
-  <div class="container">
-    <div class="row center">
-      <h5><b>Publicar uma nova vaga</b></h5><br/>
-      Sua vaga e encontramos o talento certo para sua empresa !<br/>
-      Sabe aquela papelada ? aquelas horas e horas conferindo linha a linha cada curriculum ?<br/>
-      Você esta a um passo de acabar com isso só basta publicar a sua vaga,<br/>
-       e a mágica fica por nossa conta.
-    </div>
-
     <div class="container">
-        <div class="row">
-            <div class="input-field col s12 m12">
-                <i class="material-icons prefix">domain</i>
-                <input id="titulo" type="text" class="validate">
-                <label for="titulo">Nome da Empresa</label>
-            </div>  
-            
-            <div class="input-field col s12 m6">
-               <select>
-                    <option value="" disabled selected>Selecione o Cargo</option>
-                      <option value="1">Option 1</option>
-                      <option value="2">Option 2</option>
-                      <option value="3">Option 3</option>
-                    </select>
-                <label>Cargo</label>
-            </div>
-            
-            <div class="input-field col s12 m6">
-                <select>
-                    <option value="" disabled selected>Regime de contratação</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                </select>
-                <label>Contratação</label>
-            </div>
-
-            <div class="input-field col s12 m6">
-                <i class="material-icons prefix">monetization_on</i>
-                <input id="titulo" type="text" class="validate">
-                <label for="titulo">Salário</label>
-            </div>
-            
-            <div class="input-field col s12 m6">
-                <i class="material-icons prefix">filter_1</i>
-                <input id="titulo" type="text" class="validate">
-                <label for="titulo">Quantidade de vagas</label>
-            </div>    
-
-            <div class="input-field col s12 m12">
-                <select>
-                    <option value="" disabled selected>Jornada de Trabalho</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                </select>
-                <label>Jornada</label>
-            </div>
-            
-            <div class="input-field col s12 m12">
-                <select>
-                    <option value="" disabled selected>Experiência</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                </select>
-                <label>Experiência</label>
-            </div>
-
-            <div class="input-field col s12 m12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Benefícios</label>
-            </div>
-
-            <div class="input-field col s12 m12">
-                <textarea id="textarea1" class="materialize-textarea"></textarea>
-                <label for="textarea1">Descrição das atividades</label>
-            </div>
-
+        <div class="row center">
+            <h5>
+                <b>Publicar uma nova vaga</b>
+            </h5>
+            <br/> Sua vaga e encontramos o talento certo para sua empresa !
+            <br/> Sabe aquela papelada ? aquelas horas e horas conferindo linha a linha cada curriculum ?
+            <br/> Você esta a um passo de acabar com isso só basta publicar a sua vaga,
+            <br/> e a mágica fica por nossa conta.
         </div>
+
+        <form>
+            <div class="container">
+                <div class="row">
+                    <div class="input-field col s12 m12">
+                        <i class="material-icons prefix">domain</i>
+                        <input id="titulo" type="text" class="validate" required>
+                        <label for="titulo">Nome da Empresa</label>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                        <select>
+                            <option value="" disabled selected>Selecione o Cargo</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Cargo</label>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                        <select>
+                            <option value="" disabled selected>Regime de contratação</option>
+                            <option value="1">CLT</option>
+                            <option value="2">PJ</option>
+                            <option value="3">Freelancer</option>
+                            <option value="3">Estágio</option>
+                        </select>
+                        <label>Contratação</label>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">monetization_on</i>
+                        <input id="titulo" type="text" class="validate" required>
+                        <label for="titulo">Salário</label>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">filter_1</i>
+                        <input id="titulo" type="text" class="validate" required>
+                        <label for="titulo">Quantidade de vagas</label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <select>
+                            <option value="" disabled selected>Jornada de Trabalho</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Jornada</label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <select>
+                            <option value="" disabled selected>Experiência</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Experiência</label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <textarea id="textarea1" class="materialize-textarea" required></textarea>
+                        <label for="textarea1">Benefícios</label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <textarea id="textarea1" class="materialize-textarea" required></textarea>
+                        <label for="textarea1">Descrição das atividades</label>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="input-field col s12 m12">
+                        <select>
+                            <option value="" disabled selected>Escolha os cursos</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Cursos Desejado Para Vaga</label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <select>
+                            <option value="" disabled selected>Habilidades</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Escolha as Habilidades</label>
+                    </div>
+
+                    <div class="input-field col s12 m8">
+                        <select>
+                            <option value="" disabled selected>Idiomas</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Escolha os idiomas desejáveis</label>
+                    </div>
+
+                    <div class="input-field col s12 m4">
+                        <select>
+                            <option value="" disabled selected>Senioridade</option>
+                            <option value="1">Básico</option>
+                            <option value="2">Médio</option>
+                            <option value="3">Avançado</option>
+                        </select>
+                        <label>Escolha o nível</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col s4 m4">
+                <button class="pull-m4 btn waves-effect waves-light" type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>         
+            </div>
+        </form>
     </div>
 
-    <!-- JQUERY do Materialize -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- JavaScript do Materialize -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    
-    <!-- Materialize Compentes -->
-  <script>
-      $(document).ready(function(){
-          $('select').material_select();
-      });
-  </script>
+        <!-- JQUERY do Materialize -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <!-- JavaScript do Materialize -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+        <!-- Materialize Compentes -->
+        <script>
+            $(document).ready(function () {
+                $('select').material_select();
+            });
+        </script>
 </body>
+
 </html>
