@@ -118,7 +118,7 @@ class DaoVaga implements iDAOVaga
         $run = $stmt->execute();
 
         //Lista de objetos vaga
-        return $this->parseRowsToObjectVaga($stmt->fetchAll(PDO::FETCH_ASSOC));
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
 //--------------------------------------------- AUXILIARES -----------------------------------------------------------
