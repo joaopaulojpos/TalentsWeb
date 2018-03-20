@@ -194,39 +194,45 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
     //Pegando a lista de idiomas no JSON e colocando na lista de idiomas na vaga
     $idiomas = json_decode($request->getParam('idiomas'), true);
 
-    foreach ($idiomas as $key => $value) {
-        $idioma = new Idioma();
-        foreach ($value as $key => $value) {      
-            if($key == 'cd_idioma')
-                $idioma->setCdIdioma($value);
-            if($key == 'nr_nivel')
-                $idioma->setNrNivel($value);           
+    if ($idiomas != NULL){
+        foreach ($idiomas as $key => $value) {
+            $idioma = new Idioma();
+            foreach ($value as $key => $value) {      
+                if($key == 'cd_idioma')
+                    $idioma->setCdIdioma($value);
+                if($key == 'nr_nivel')
+                    $idioma->setNrNivel($value);           
+            }
+            $vaga->setIdiomas($idioma); 
         }
-        $vaga->setIdiomas($idioma); 
     }
 
     //Pegando a lista de habilidades no JSON e colocando na lista de habilidades na vaga
     $habilidades = json_decode($request->getParam('habilidades'), true);
 
-    foreach ($habilidades as $key => $value) {
-        $habilidade = new Habilidade();
-        foreach ($value as $key => $value) {      
-            if($key == 'cd_habilidade')
-                $habilidade->setCdHabilidade($value);           
+    if ($habilidades != NULL){
+        foreach ($habilidades as $key => $value) {
+            $habilidade = new Habilidade();
+            foreach ($value as $key => $value) {      
+                if($key == 'cd_habilidade')
+                    $habilidade->setCdHabilidade($value);           
+            }
+            $vaga->setHabilidades($habilidade); 
         }
-        $vaga->setHabilidades($habilidade); 
     }
 
     //Pegando a lista de cursos no JSON e colocando na lista de cursos na vaga
     $cursos = json_decode($request->getParam('cursos'), true);
 
-    foreach ($cursos as $key => $value) {
-        $curso = new Curso();
-        foreach ($value as $key => $value) {      
-            if($key == 'cd_curso')
-                $curso->setCdCurso($value);           
+    if ($cursos != NULL){
+        foreach ($cursos as $key => $value) {
+            $curso = new Curso();
+            foreach ($value as $key => $value) {      
+                if($key == 'cd_curso')
+                    $curso->setCdCurso($value);           
+            }
+            $vaga->setCursos($curso); 
         }
-        $vaga->setCursos($curso); 
     }
 
 	try{

@@ -4,16 +4,17 @@
 }
 
 .table-idiomas{
-	width: 80%;
 	margin: 0 auto;
 }
 
 .table-cursos{
-	width: 80%;
 	margin: 0 auto;
 }
 
 .table-habilidades{
-	width: 80%;
 	margin: 0 auto;
+}
+
+.col-md-4{
+	width: 38%;
 }

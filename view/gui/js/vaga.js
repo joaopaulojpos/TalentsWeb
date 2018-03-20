@@ -11,10 +11,10 @@
                 validators: {
                         stringLength: {
                         min: 5,
-                        message: 'O titulo da vaga precisa ter mais do que 5 caracteres',
+                        message: ' ',
                     },
                         notEmpty: {
-                        message: 'Por favor, preencha o titulo da vaga'
+                        message: ' '
                     }
                 }
             },
@@ -22,122 +22,75 @@
                 validators: {
                      stringLength: {
                         min: 5,
-                        message: 'A observação da vaga precisa ter mais do que 5 caracteres',
+                        message: ' ',
                     }
                 }
             },
             quantidadevagas: {
                 validators: {
                     notEmpty: {
-                        message: 'Por favor, preencha a quantidade de profissionais que serão contratados'
+                        message: ' '
                     }
                 }
             },
             beneficios: {
                 validators: {
                     notEmpty: {
-                        message: 'Por favor, preencha os benefícios da vaga'
+                        message: ' '
                     }
                 }
             },
             salario: {
                 validators: {
-                     stringLength: {
-                        min: 2,
-                        message: 'O salário da vaga precisa ter mais do que 2 caracteres',
-                    },
                     notEmpty: {
-                        message: 'Por favor, preencha o salário da vaga'
+                        message: ' '
                     }
                 }
             },
             phone: {
                 validators: {
                     notEmpty: {
-                        message: 'Please supply your phone number'
+                        message: ' '
                     },
                     phone: {
-                        country: 'US',
-                        message: 'Please supply a vaild phone number with area code'
-                    }
-                }
-            },
-            address: {
-                validators: {
-                     stringLength: {
-                        min: 8,
-                    },
-                    notEmpty: {
-                        message: 'Please supply your street address'
-                    }
-                }
-            },
-            city: {
-                validators: {
-                     stringLength: {
-                        min: 4,
-                    },
-                    notEmpty: {
-                        message: 'Please supply your city'
+                        message: ' '
                     }
                 }
             },
             cargo: {
                 validators: {
                     notEmpty: {
-                        message: 'Por favor, selecione o cargo'
+                        message: ' '
                     }
                 }
             },
             tipocontratacao: {
                 validators: {
                     notEmpty: {
-                        message: 'Por favor, selecione o tipo de contratação'
+                        message: ' '
                     }
                 }
             },
             jornadatrabalho: {
                 validators: {
                     notEmpty: {
-                        message: 'Por favor, selecione a jornada de trabalho'
+                        message: ' '
                     }
                 }
             },
             experiencia: {
                 validators: {
                     notEmpty: {
-                        message: 'Por favor, selecione a experiência'
+                        message: ' '
                     }
                 }
             },
-            zip: {
-                validators: {
-                    notEmpty: {
-                        message: 'Please supply your zip code'
-                    },
-                    zipCode: {
-                        country: 'US',
-                        message: 'Please supply a vaild zip code'
-                    }
-                }
-            },
-            comment: {
-                validators: {
-                      stringLength: {
-                        min: 10,
-                        max: 200,
-                        message:'Please enter at least 10 characters and no more than 200'
-                    },
-                    notEmpty: {
-                        message: 'Please supply a description of your project'
-                    }
-                    }
-                }
-            }
-        })
-        .on('success.form.bv', function(e) {
-            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
-                $('#contact_form').data('bootstrapValidator').resetForm();
+
+        }
+    })
+    .on('success.form.bv', function(e) {
+        $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+            $('#contact_form').data('bootstrapValidator').resetForm();
 
             // Prevent form submission
             e.preventDefault();

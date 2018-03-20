@@ -16,30 +16,41 @@ class RNVaga{
 
             $validacoes = array();
 
-            if (empty($vaga->getNrQtdVaga()))
-                array_push($validacoes, 'Número de vagas inválido!');
-            if ($vaga->getNrQtdVaga() < 0)
-                array_push($validacoes, 'Número de vagas precisa ser maior do que zero!');
-            if (strlen($vaga->getDsObservacao()) > 1000)
-                array_push($validacoes, 'Não é possível inserir um texto de observação tão grande, permitido no máximo 1000 caracteres!');
+            if (empty($vaga->getDsTitulo()))
+                array_push($validacoes, 'Título inválido!');
+            if (strlen($vaga->getDsTitulo()) > 100)
+                array_push($validacoes, 'Não é possível inserir um texto de título tão grande, permitido no máximo 100 caracteres!');
+            
+            if (Empty($vaga->getCargo()->getCdCargo()))
+                array_push($validacoes, 'Cargo inválido!');
             if (empty($vaga->getTpContratacao() || strlen($vaga->getTpContratacao()) > 1))
                 array_push($validacoes, 'Tipo de contratação inválido!');
-            if (strlen($vaga->getDsBeneficios()) > 1000)
-                array_push($validacoes, 'Não é possível inserir um texto de beneficíos tão grande, permitido no máximo 1000 caracteres!');
-            if (empty($vaga->getDsTitulo()) || strlen($vaga->getDsTitulo()) > 100)
-                array_push($validacoes, 'Não é possível inserir um texto de título tão grande, permitido no máximo 100 caracteres!');
             if (empty($vaga->getVlSalario()))
                 array_push($validacoes, 'Salário inválido!');
             if ($vaga->getVlSalario() < 0)
                 array_push($validacoes, 'Salário precisa ser maior do que zero!');
+            if (empty($vaga->getDsHorarioExpediente() || strlen($vaga->getDsHorarioExpediente()) > 1))
+                array_push($validacoes, 'Jornada de trabalho inválido!');
+            if (empty($vaga->getNrQtdVaga()))
+                array_push($validacoes, 'Número de vagas inválido!');
+            if ($vaga->getNrQtdVaga() < 0)
+                array_push($validacoes, 'Número de vagas precisa ser maior do que zero!');
+            if (empty($vaga->getDsBeneficios()))
+                array_push($validacoes, 'Benefícios inválidos!');
+            if (strlen($vaga->getDsBeneficios()) > 1000)
+                array_push($validacoes, 'Não é possível inserir um texto de beneficíos tão grande, permitido no máximo 1000 caracteres!');
+            if (strlen($vaga->getDsObservacao()) > 1000)
+                array_push($validacoes, 'Não é possível inserir um texto de observação tão grande, permitido no máximo 1000 caracteres!');
+            
+            /**/
             $daocargo = new DaoCargo();
             if (empty($daocargo->pesquisar($vaga->getCargo())))
                 array_push($validacoes, 'Cargo inválido!');
-            //Verifica se a empresa existe
             $daoempresa = new DaoEmpresa();
             if (empty($daoempresa->pesquisar($vaga->getEmpresa()))) 
                  array_push($validacoes, 'Empresa não existe');
 
+            //Verifica se tem algum elemento dentro do array de validações
             if ($validacoes != null){
                 return array('erro' => $validacoes);
                 exit;

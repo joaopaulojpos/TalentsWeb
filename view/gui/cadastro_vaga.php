@@ -40,7 +40,7 @@
   <label class="col-md-4 control-label">Título</label>  
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+  <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
   <input  name="titulo" id="titulo" placeholder="Talents LTDA." class="form-control"  type="text">
     </div>
   </div>
@@ -52,7 +52,7 @@
   <label class="col-md-4 control-label">Cargo</label>
   <div class="col-md-4 selectContainer">
     <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+      <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
       <select name="cargo" id="cargo" class="form-control selectpicker" >
         <option value="">Selecione o cargo</option>
         <?php 
@@ -86,13 +86,13 @@
   <label class="col-md-4 control-label">Tipo de contratação</label>
   <div class="col-md-4 selectContainer">
     <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+      <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
       <select name="tipocontratacao" id="tipocontratacao" class="form-control selectpicker" >
         <option value="">Selecione o tipo de contratação</option>
-        <option value="tempo indeterminado">Tempo indeterminado</option>
-        <option value="tempo determinado">Tempo determinado</option>
-        <option value="temporario">Temporário</option>
-        <option value="aprendizagem">Aprendizagem</option>
+        <option value="1">Tempo indeterminado</option>
+        <option value="2">Tempo determinado</option>
+        <option value="3">Temporário</option>
+        <option value="4">Aprendizagem</option>
       </select>
     </div>
   </div>
@@ -103,7 +103,7 @@
   <label class="col-md-4 control-label">Salário</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+        <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
   	<input name="salario" id="salario" placeholder="Valor do salário" class="form-control"  type="text">
     </div>
   </div>
@@ -116,11 +116,11 @@
   <label class="col-md-4 control-label">Jornada de trabalho</label>
   <div class="col-md-4 selectContainer">
     <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+      <span class="input-group-addon"><i class="glyphicon glyphicon-dashboard"></i></span>
       <select name="jornadatrabalho" id="jornadatrabalho" class="form-control selectpicker" >
         <option value="">Selecione a jornada de trabalho</option>
-        <option value="tempo integral">Regime de tempo integral</option>
-        <option value="tempo parcial">Regime de tempo parcial</option>
+        <option value="1">Regime de tempo integral</option>
+        <option value="2">Regime de tempo parcial</option>
       </select>
     </div>
   </div>
@@ -132,15 +132,15 @@
   <label class="col-md-4 control-label">Experiência</label>
   <div class="col-md-4 selectContainer">
     <div class="input-group">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+      <span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
       <select name="experiencia" id="experiencia" class="form-control selectpicker" >
         <option value="">Selecione a experência necessaria</option>
-        <option value="tempo integral">Sem experiência</option>
-        <option value="tempo parcial">1 ano</option>
-        <option value="tempo parcial">2 anos</option>
-        <option value="tempo parcial">3 anos</option>
-        <option value="tempo parcial">4 anos</option>
-        <option value="tempo parcial">Acima de 5 anos</option>
+        <option value="0">Sem experiência</option>
+        <option value="1">menos de 1 ano</option>
+        <option value="2">entre 1 a 2 anos</option>
+        <option value="3">entre 2 a 3 anos</option>
+        <option value="4">entre 3 a 4 anos</option>
+        <option value="5">Acima de 5 anos</option>
       </select>
     </div>
   </div>
@@ -151,8 +151,8 @@
   <label class="col-md-4 control-label">Quantidade de vagas</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-  	<input name="quantidadevagas" id="quantidadevagas" placeholder="Quantidade de vagas" class="form-control"  type="number">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  	<input style="padding-right: 0" name="quantidadevagas" id="quantidadevagas" placeholder="Quantidade de vagas" class="form-control"  type="number">
     </div>
   </div>
 </div>
@@ -163,8 +163,8 @@
   <label class="col-md-4 control-label">Benefícios</label> 
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-  <textarea name="beneficios" id="beneficios" placeholder="Descreva os benefícios que os profissionais terão direitos" class="form-control"  type="text"></textarea>
+  <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
+  <textarea name="beneficios" id="beneficios" placeholder="Descreva os Benefícios destinados aos profissionais." class="form-control"  type="text"></textarea>
     </div>
   </div>
 </div>
@@ -175,8 +175,8 @@
   <label class="col-md-4 control-label">Observação</label> 
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
-  <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-  <textarea name="observacao" id="observacao" placeholder="Descreva em poucas palavras o que o profissional irá enfrentar nesse novo emprego" class="form-control"  type="text"></textarea>
+  <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
+  <textarea name="observacao" id="observacao" placeholder="Descreva aqui algo que ainda não foi mencionado." class="form-control"  type="text"></textarea>
     </div>
   </div>
 </div>
@@ -184,116 +184,112 @@
 <!-- Cursos -->
 
 <div class="form-group" id="form-group">
-  <table class="table-cursos" id="table-cursos">
-    <label class="col-md-4 control-label">Curso(s)</label> 
-      <tr>
-          <th style="width: 100%"><select name="codigo_curso" id="codigo_curso" class="form-control selectpicker">
-                  <option>Selecione o(s) curso(s) necessário(s) a vaga</option>
-                  <?php 
+	<label class="col-md-4 control-label">Curso(s)</label> 
+	<div class="col-md-4 inputGroupContainer">
+		<div class="input-group" style="width: 100%">
+	    	<table class="table-cursos" id="table-cursos" style="width: 100%">
+		    	<tr style="width: 100%">
+		        	<th style="width: 100%"><select name="codigo_curso" id="codigo_curso" class="form-control selectpicker">
+		                  <option>Curso(s) necessário(s)</option>
+		                  <?php 
 
-                      foreach ($arraycurso as $key => $value) {
-                          if ($key == 'sucess'){
-                             $arraycurso2 = $value;
-                             foreach ($arraycurso2 as $key => $value) { 
-                  ?>
-                               <option value="<?php echo $value->cd_curso; ?>"> <?php echo $value->ds_curso; ?></option>
+		                      foreach ($arraycurso as $key => $value) {
+		                          if ($key == 'sucess'){
+		                             $arraycurso2 = $value;
+		                             foreach ($arraycurso2 as $key => $value) { 
+		                  ?>
+		                               <option value="<?php echo $value->cd_curso; ?>"> <?php echo $value->ds_curso; ?></option>
 
-                  <?php         
-                               
-                             }
-                          }
-                      }
+		                  <?php         
+		                               
+		                             }
+		                          }
+		                      }
 
-
-
-
-                  ?>
-              </select></th>
-
-          <th><input type="BUTTON" class="btn btn-warning" id="adicionar_curso" name="adicionar_curso" value="Adicionar" onclick="adicionarCurso()"/></th>
-      </tr>
-      <tbody id="itemlistCurso">
-      </tbody>
-  </table>
+		                  ?>
+		            </select></th>
+		            <th style="width: 100%"><input type="BUTTON" class="btn btn-warning" id="adicionar_curso" name="adicionar_curso" value="Adicionar" onclick="adicionarCurso()"/></th>
+		      	</tr>
+		      	<tbody id="itemlistCurso">
+		      	</tbody>
+	        </table>
+        </div>
+    </div>
+  
 </div>
 
 <!-- Habilidades -->
 
 <div class="form-group" id="form-group">
-  <table class="table-habilidades" id="table-habilidades">
-    <label class="col-md-4 control-label">Habilidade(s)</label> 
-      <tr>
-          <th style="width: 100%"><select name="codigo_habilidade" id="codigo_habilidade" class="form-control selectpicker">
-                  <option>Selecione a(s) habilidade(s) necessária(s) a vaga</option>
-                  <?php 
+	<label class="col-md-4 control-label">Habilidade(s)</label> 
+	<div class="col-md-4 inputGroupContainer">
+		<div class="input-group" style="width: 100%">
+			<table class="table-habilidades" id="table-habilidades" style="width: 100%">  
+		    	<tr style="width: 100%">
+		        	<th style="width: 100%"><select name="codigo_habilidade" id="codigo_habilidade" class="form-control selectpicker">
+	                	<option>Habilidade(s) necessária(s)</option>
+	                  	<?php 
+	                    	foreach ($arrayhabilidade as $key => $value) {
+	                        	if ($key == 'sucess'){
+	                            	$arrayhabilidade2 = $value;
+	                            	foreach ($arrayhabilidade2 as $key => $value) { 
+	                  	?>
+	                                	<option value="<?php echo $value->cd_habilidade; ?>"> <?php echo $value->ds_habilidade.' - '.$value->ds_tipo_habilidade; ?></option>
 
-                      foreach ($arrayhabilidade as $key => $value) {
-                          if ($key == 'sucess'){
-                             $arrayhabilidade2 = $value;
-                             foreach ($arrayhabilidade2 as $key => $value) { 
-                  ?>
-                               <option value="<?php echo $value->cd_habilidade; ?>"> <?php echo $value->ds_habilidade.' - '.$value->ds_tipo_habilidade; ?></option>
-
-                  <?php         
-                               
-                             }
-                          }
-                      }
-
-
-
-
-                  ?>
-              </select></th>
-
-          <th><input type="BUTTON" class="btn btn-warning" id="adicionar_habilidade" name="adicionar_habilidade" value="Adicionar" onclick="adicionarHabilidade()"/></th>
-      </tr>
-      <tbody id="itemlistHabilidade">
-      </tbody>
-  </table>
+	                  <?php         
+	                               
+	                             	}
+	                          	}
+	                      	}
+	                  ?>
+		            </select></th>
+		          	<th style="width: 100%"><input type="BUTTON" class="btn btn-warning" id="adicionar_habilidade" name="adicionar_habilidade" value="Adicionar" onclick="adicionarHabilidade()"/></th>
+		      	</tr>
+		      	<tbody id="itemlistHabilidade">
+		      	</tbody>
+		  	</table>
+		</div>
+	</div>
 </div>
 
 <!-- idiomas -->
 
 <div class="form-group" id="form-group">
-	<table class="table-idiomas" id="table-idiomas">
-    <label class="col-md-4 control-label">Idioma(s)</label> 
-	    <tr>
-	        <th style="width: 75%"><select name="codigo_idioma" id="codigo_idioma" class="form-control selectpicker">
-	                <option>Selecione o(s) idioma(s) necessário(s) a vga</option>
-	                <?php 
-
-	                    foreach ($arrayidioma as $key => $value) {
-	                        if ($key == 'sucess'){
-	                           $arrayidioma2 = $value;
-	                           foreach ($arrayidioma2 as $key => $value) { 
-	                ?>
-	                             <option value="<?php echo $value->cd_idioma; ?>"> <?php echo $value->ds_idioma; ?></option>
-
-	                <?php         
+	<label class="col-md-4 control-label">Idioma(s)</label>
+	<div class="col-md-4 inputGroupContainer">
+		<div class="input-group" style="width: 100%"> 
+			<table class="table-idiomas" id="table-idiomas" style="width: 100%">
+	    		<tr>
+	        		<th style="width: 70%"><select name="codigo_idioma" id="codigo_idioma" class="form-control selectpicker">
+	                	<option>Idioma(s) necessário(s)</option>
+	                	<?php 
+	                    	foreach ($arrayidioma as $key => $value) {
+	                        	if ($key == 'sucess'){
+	                           		$arrayidioma2 = $value;
+	                           		foreach ($arrayidioma2 as $key => $value) { 
+	                	?>
+	                             		<option value="<?php echo $value->cd_idioma; ?>"> <?php echo $value->ds_idioma; ?></option>
+	                	<?php         
 	                             
-	                           }
-	                        }
-	                    }
-
-
-
-
-	                ?>
-	            </select></th>
-
-	        <th style="width: 25%"><select name="nivel_idioma" id="nivel_idioma" class="form-control selectpicker">
-    					<option value="">Selecione o nível</option>
+	                           		}
+	                        	}
+	                    	}
+	                	?>
+	            		</select></th>
+	       			<th style="width: 30%"><select name="nivel_idioma" id="nivel_idioma" class="form-control selectpicker">
+    					<option value="">Nível</option>
     					<option value="1">Básico</option>
     					<option value="2">Médio</option>
     					<option value="3">Avançado</option>
-    				  </select>
-	        </th>
-          <th><input type="BUTTON" class="btn btn-warning" id="adicionar_idioma" name="adicionar_idioma" value="Adicionar" onclick="adicionarIdioma()"/></th>
-	    </tr>
-	    <tbody id="itemlistIdioma">
-	    </tbody>
-	</table>
+    					</select>
+	        		</th>
+          			<th style="width: 100%"><input type="BUTTON" class="btn btn-warning" id="adicionar_idioma" name="adicionar_idioma" value="Adicionar" onclick="adicionarIdioma()"/></th>
+	    		</tr>
+	    		<tbody id="itemlistIdioma">
+	    		</tbody>
+			</table>
+		</div>
+	</div>
 </div>
 
 <!-- Success message -->
