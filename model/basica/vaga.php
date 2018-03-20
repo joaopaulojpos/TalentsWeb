@@ -14,6 +14,7 @@ class Vaga implements JsonSerializable {
     private $dt_criacao;
     private $dt_validade;
     private $ds_observacao;
+    private $nr_experiencia;
     //classe cargo
     public $cargo;
     //classe empresa
@@ -124,6 +125,15 @@ class Vaga implements JsonSerializable {
     public function getDsTitulo()
     {
         return $this->ds_titulo;
+    }
+
+    public function setNrExperiencia($nr_experiencia)
+    {
+        $this->nr_experiencia = $nr_experiencia;
+    }
+    public function getNrExperiencia()
+    {
+        return $this->nr_experiencia;
     }
 
     public function setVlSalario($vl_salario)

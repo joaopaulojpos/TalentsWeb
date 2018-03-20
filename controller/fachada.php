@@ -48,8 +48,12 @@
 
     //Vaga
     public function publicarVaga($vaga){
-        $daovaga = new DAOVaga();
-        return json_decode($daovaga->publicar($vaga), true);
+        try{
+            $daovaga = new DAOVaga();
+            return json_decode($daovaga->publicar($vaga), true);
+        }catch(Exception $e){
+            return array('erro' => 'Erro publicação' );
+        }
     }   
 
     public function pesquisarVagas($vaga){

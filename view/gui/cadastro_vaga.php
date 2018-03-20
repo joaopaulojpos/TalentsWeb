@@ -148,7 +148,7 @@
 
 <!-- Text input-->
   <div class="form-group">
-  <label class="col-md-4 control-label">Quantidade de vagas</label>  
+  <label class="col-md-4 control-label">Número de vagas</label>  
     <div class="col-md-4 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -190,7 +190,7 @@
 	    	<table class="table-cursos" id="table-cursos" style="width: 100%">
 		    	<tr style="width: 100%">
 		        	<th style="width: 100%"><select name="codigo_curso" id="codigo_curso" class="form-control selectpicker">
-		                  <option>Curso(s) necessário(s)</option>
+		                  <option value="">Curso(s) necessário(s)</option>
 		                  <?php 
 
 		                      foreach ($arraycurso as $key => $value) {
@@ -198,7 +198,7 @@
 		                             $arraycurso2 = $value;
 		                             foreach ($arraycurso2 as $key => $value) { 
 		                  ?>
-		                               <option value="<?php echo $value->cd_curso; ?>"> <?php echo $value->ds_curso; ?></option>
+		                               <option value="<?php echo $value->cd_curso; ?>"> <?php echo $value->ds_curso.' - '.$value->ds_formacao; ?></option>
 
 		                  <?php         
 		                               
@@ -227,7 +227,7 @@
 			<table class="table-habilidades" id="table-habilidades" style="width: 100%">  
 		    	<tr style="width: 100%">
 		        	<th style="width: 100%"><select name="codigo_habilidade" id="codigo_habilidade" class="form-control selectpicker">
-	                	<option>Habilidade(s) necessária(s)</option>
+	                	<option value="">Habilidade(s) necessária(s)</option>
 	                  	<?php 
 	                    	foreach ($arrayhabilidade as $key => $value) {
 	                        	if ($key == 'sucess'){
@@ -261,7 +261,7 @@
 			<table class="table-idiomas" id="table-idiomas" style="width: 100%">
 	    		<tr>
 	        		<th style="width: 70%"><select name="codigo_idioma" id="codigo_idioma" class="form-control selectpicker">
-	                	<option>Idioma(s) necessário(s)</option>
+	                	<option value="">Idioma(s) necessário(s)</option>
 	                	<?php 
 	                    	foreach ($arrayidioma as $key => $value) {
 	                        	if ($key == 'sucess'){
@@ -382,6 +382,12 @@
       var nivel_idioma = $("#nivel_idioma").val();
       var descricao_nivel_idioma = $("#nivel_idioma option:selected").text();
       var items = "";
+
+
+      
+      if ((!codigo_idioma) || (!nivel_idioma))
+      		return false;
+
       //esse codigo html vai ser inserido para o usuário ver na tela (esse itemidioma vai ser a lista utilizado para pegar os item depois)
       items += "<tr>";
       items += "<td><input type='hidden' name='itemidioma[codigo]' value='"+ codigo_idioma +"'>"+descricao_idioma+"</td>";
@@ -410,6 +416,9 @@
       var descricao_curso = $("#codigo_curso option:selected").text();
       var items = "";
 
+      if (!codigo_curso)
+      		return false;
+
       //esse codigo html vai ser inserido para o usuário ver na tela (esse itemcurso vai ser a lista utilizado para pegar os item depois)
       items += "<tr>";
       items += "<td><input type='hidden' name='itemcurso[codigo]' value='"+ codigo_curso +"'>"+descricao_curso+"</td>";
@@ -435,6 +444,9 @@
       var codigo_habilidade = $("#codigo_habilidade").val();
       var descricao_habilidade = $("#codigo_habilidade option:selected").text();
       var items = "";
+
+      if (!codigo_habilidade)
+      		return false;
 
       //esse codigo html vai ser inserido para o usuário ver na tela (esse itemhabilidade vai ser a lista utilizado para pegar os item depois)
       //()

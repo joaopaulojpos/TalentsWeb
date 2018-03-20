@@ -181,6 +181,7 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
     $vaga->setTpContratacao($request->getParam('tp_contratacao'));
     $vaga->setNrLongitude($request->getParam('nr_longitude'));
     $vaga->setNrLatitude($request->getParam('nr_latitude'));
+    $vaga->setNrExperiencia($request->getParam('nr_experiencia'));
     $vaga->setDsBeneficios($request->getParam('ds_beneficios'));
     $vaga->setDsHorarioExpediente($request->getParam('ds_horario_expediente'));
     $vaga->setDtCriacao($request->getParam('dt_criacao'));
@@ -190,6 +191,8 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
 	$vaga->setCargo($cargo);
 	$empresa->setCdEmpresa($request->getParam('cd_empresa'));
 	$vaga->setEmpresa($empresa);
+
+
 
     //Pegando a lista de idiomas no JSON e colocando na lista de idiomas na vaga
     $idiomas = json_decode($request->getParam('idiomas'), true);

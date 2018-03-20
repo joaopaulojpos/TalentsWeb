@@ -9,8 +9,9 @@ class DaoCurso implements iDAOCurso
 	}
 
 	public function pesquisar(Curso $curso, $alt='false'){
-		$comando = 'select * from curso ';
+		$comando = 'select cd_curso, ds_curso, f.ds_formacao from curso c inner join formacao f on (f.cd_formacao = c.cd_formacao) ';
 		$where = '';
+        $orderby = ' order by ds_formacao asc, ds_curso asc ';
 
 		if (!empty($curso->getCdCurso())){
 			if (empty($where)){
@@ -31,7 +32,7 @@ class DaoCurso implements iDAOCurso
 
 		
 		$db = new db();
-		$stmt = db::getInstance()->prepare($comando . $where);
+		$stmt = db::getInstance()->prepare($comando . $where . $orderby);
 		if (!empty($curso->getCdCurso()))
 			$stmt->bindValue(':cd_curso', $curso->getCdCurso());
 		if (!empty($curso->getDsCurso()))

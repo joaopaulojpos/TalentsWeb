@@ -36,9 +36,10 @@ try{
 	$vaga->setDsBeneficios($beneficios);
 	$vaga->setDsHorarioExpediente($jornada_trabalho);
 	$vaga->setVlSalario($salario);
-	$vaga->setDtCriacao(date("d/m/Y"));
-	$vaga->setDtValidade(date("d/m/Y"));
+	$vaga->setDtCriacao(date("Y-m-d"));
+	$vaga->setDtValidade(date("Y-m-d"));
 	$vaga->setDsObservacao($observacao);
+	$vaga->setNrExperiencia($experiencia);
 
 	//prenchendo os campos do objeto cargo 
 	$cargo->setCdCargo($cd_cargo);
@@ -72,6 +73,12 @@ try{
 
 	$array = $fachada->publicarVaga($vaga);
 
+	if ($array == null){
+		echo 'Cadastrado com sucesso!';
+		exit;
+	}
+
+
 	foreach ($array as $key => $value) {
 	    if ($key == 'sucess'){
 	        echo 1;
@@ -83,6 +90,7 @@ try{
 	    	echo $texto; 
 	    }
 	}
+	
 	
 }catch(Exception $e){
 	echo $e->getMessage();

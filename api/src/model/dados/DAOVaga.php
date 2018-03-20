@@ -13,8 +13,8 @@ class DaoVaga implements iDAOVaga
     public function publicar(vaga $vaga){
 
         //Comando para inserir a vaga na base de dados
-        $sql = "insert into vaga (nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_longitude,nr_latitude,ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,cd_cargo,cd_empresa)
-            values (:nr_qtd_vaga,:ds_observacao,:dt_validade,:tp_contratacao,:nr_longitude,:nr_latitude,:ds_beneficios,:ds_horario_expediente,:dt_criacao,:ds_titulo,:vl_salario,:cd_cargo,:cd_empresa)";
+        $sql = "insert into vaga (nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_experiencia,nr_longitude,nr_latitude,ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,cd_cargo,cd_empresa)
+            values (:nr_qtd_vaga,:ds_observacao,:dt_validade,:tp_contratacao,:nr_experiencia,:nr_longitude,:nr_latitude,:ds_beneficios,:ds_horario_expediente,:dt_criacao,:ds_titulo,:vl_salario,:cd_cargo,:cd_empresa)";
         try {
             $db = db::getInstance();
             $stmt = $db->prepare($sql);
@@ -23,6 +23,7 @@ class DaoVaga implements iDAOVaga
                 ':ds_observacao' => $vaga->getDsObservacao(),
                 ':dt_validade' => $vaga->getDtValidade(),
                 ':tp_contratacao' => $vaga->getTpContratacao(),
+                ':nr_experiencia' => $vaga->getNrExperiencia(),
                 ':nr_longitude' => $vaga->getNrLongitude(),
                 ':nr_latitude' => $vaga->getNrLatitude(),
                 ':ds_beneficios' => $vaga->getDsBeneficios(),
@@ -61,9 +62,11 @@ class DaoVaga implements iDAOVaga
 
             }
 
+            return array('sucess' => 'Cadastrado com sucesso!');
+
         }catch (Exception $e){
 
-            return $e->getMessage();
+            return array('erro' => $e->getMessage());
 
         }
     }
