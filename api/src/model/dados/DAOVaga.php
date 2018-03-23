@@ -79,17 +79,20 @@ class DaoVaga implements iDAOVaga
     public function pesquisar(Vaga $vaga, $alt='false'){
 
         $comando = 'select vaga.cd_vaga,nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_longitude,nr_latitude,
-                      ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,cargo.cd_cargo,ds_cargo,
+                      ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,
+                      cargo.cd_cargo,ds_cargo,
                       empresa.cd_empresa,ds_razao_social,ds_nome_fantasia,nr_porte,ds_nome_responsavel,ds_area_atuacao,ds_site,
                       ds_telefone,nr_cnpj,ds_email,ds_senha,habilidade.cd_habilidade,vaga_habilidade.nr_nivel,
-                      habilidade.ds_habilidade,vi.cd_idioma,ds_idioma,vi.nr_nivel
+                      habilidade.ds_habilidade,
+                      vi.cd_idioma,ds_idioma,vi.nr_nivel
                       from vaga
                       JOIN cargo ON cargo.cd_cargo = vaga.cd_cargo
                       JOIN empresa ON empresa.cd_empresa = vaga.cd_empresa
                       JOIN vaga_habilidade AS vaga_habilidade ON vaga_habilidade.cd_vaga = vaga.cd_vaga
                       JOIN habilidade ON habilidade.cd_habilidade = vaga_habilidade.cd_habilidade
                       JOIN vaga_idioma AS vi ON vi.cd_vaga = vaga.cd_vaga
-                      JOIN idioma ON vi.cd_idioma = idioma.cd_idioma;';
+                      JOIN idioma ON vi.cd_idioma = idioma.cd_idioma
+                      LIMIT 1;';
 
 //TODO JOIN vaga_curso AS vcurso ON vaga.cd_vaga = vcurso.cd_vaga , JOIN formacao AS f ON f.cd_formacao = vcurso.cd_formacao
 
@@ -118,7 +121,7 @@ class DaoVaga implements iDAOVaga
         $run = $stmt->execute();
 
         //Lista de objetos vaga
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $this->parseRowsToObjectVaga($stmt->fetchAll(PDO::FETCH_ASSOC)); //$stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
 //--------------------------------------------- AUXILIARES -----------------------------------------------------------
@@ -129,7 +132,7 @@ class DaoVaga implements iDAOVaga
      */
     private function parseRowsToObjectVaga($result){
         $cd_vaga = 0;
-        $listavagas = new ArrayObject();
+        $listavagas = [];
         $daohabilidade = new daohabilidade();
         $daoidioma = new daoidioma();
 
@@ -203,7 +206,7 @@ class DaoVaga implements iDAOVaga
                 }
 
                 //Adiciona uma vaga na lista de vagas
-                $listavagas->append($vaga);
+                array_push($listavagas, $vaga);
                 //modifica o atributo com o código da vaga atual
                 $cd_vaga=$row['cd_vaga'];
 
