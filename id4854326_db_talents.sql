@@ -127,7 +127,7 @@ cd_vaga Integer DEFAULT NULL
 
 CREATE TABLE profissional_vaga (
 tp_acao Varchar(10),
-dt_inclusao DATE,
+dt_inclusao timestamp DEFAULT current_timestamp(),
 cd_profissional_vaga Integer PRIMARY KEY AUTO_INCREMENT,
 cd_profissional Integer,
 cd_vaga Integer,
