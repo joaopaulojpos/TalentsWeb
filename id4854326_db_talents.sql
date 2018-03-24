@@ -183,6 +183,31 @@ FOREIGN KEY(cd_profissional) REFERENCES profissional (cd_profissional),
 FOREIGN KEY(cd_habilidade) REFERENCES Habilidade (cd_habilidade)
 );
 
+
+CREATE TABLE tipo_competencia_comport ( cd_tipo_competencia_comport Integer PRIMARY KEY AUTO_INCREMENT,
+                                       ds_tipo_competencia_comport Varchar(20));
+
+CREATE TABLE competencia_comport ( cd_competencia_comport Integer PRIMARY KEY AUTO_INCREMENT,
+                                  ds_descricao varchar(100),
+                                  cd_tipo_competencia_comport Integer,       
+                                  ds_competencia_comport varchar(200),
+                                 FOREIGN KEY(cd_tipo_competencia_comport) REFERENCES tipo_competencia_comport (cd_tipo_competencia_comport));
+
+
+
+CREATE TABLE vaga_competencia_comport ( cd_vaga_competencia_comport integer PRIMARY KEY            AUTO_INCREMENT,
+                                              cd_competencia_comport Integer,
+                                              cd_vaga Integer,
+                                              FOREIGN KEY(cd_competencia_comport) REFERENCES              competencia_comport (cd_competencia_comport),
+                                              FOREIGN KEY(cd_vaga) REFERENCES vaga (cd_vaga));
+                                              
+CREATE TABLE profissional_competencia_comport (cd_profissional_competencia_comport integer PRIMARY KEY            AUTO_INCREMENT,
+                                               cd_profissional integer,
+                                               cd_competencia_comport integer,
+                                                FOREIGN KEY(cd_competencia_comport) REFERENCES              competencia_comport (cd_competencia_comport),
+                                              FOREIGN KEY(profissional) REFERENCES profissional (cd_profissional));
+                                              
+
 ALTER TABLE vaga ADD FOREIGN KEY(cd_empresa) REFERENCES empresa (cd_empresa);
 ALTER TABLE opcao_perfil_comportamental ADD FOREIGN KEY(cd_pergunta_perfil_comportamental) REFERENCES pergunta_perfil_comportamental (cd_pergunta_perfil_comportamental);
 
