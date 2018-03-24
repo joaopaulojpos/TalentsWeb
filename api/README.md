@@ -17,7 +17,7 @@ Edit db/config params
 Install SlimPHP and dependencies
 
 ```sh
-$ composer
+$ composer install
 ```
 ### API Endpints
 ```sh
