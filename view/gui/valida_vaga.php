@@ -3,7 +3,8 @@
 require_once('../../model/basica/vaga.php');
 require_once('../../model/basica/cargo.php');
 require_once('../../model/basica/idioma.php');
-require_once('../../model/basica/habilidade.php');
+require_once('../../model/basica/competenciatecnica.php');
+require_once('../../model/basica/competenciacomport.php');
 require_once('../../model/basica/curso.php');
 require_once('../../controller/fachada.php');
 
@@ -21,7 +22,8 @@ try{
 	$beneficios = $_POST['beneficios'];
 	$idiomaCodigo = json_decode(stripslashes($_POST['idiomaCodigo']));
 	$idiomaNivel = json_decode(stripslashes($_POST['idiomaNivel']));
-	$habilidadeCodigo = json_decode(stripslashes($_POST['habilidadeCodigo']));
+	$tecnicaCodigo = json_decode(stripslashes($_POST['tecnicaCodigo']));
+	$comportCodigo = json_decode(stripslashes($_POST['comportCodigo']));
 	$cursoCodigo = json_decode(stripslashes($_POST['cursoCodigo']));
 
 	//Inicializando os objetos
@@ -54,13 +56,21 @@ try{
 	}
 
 	//preenchendo na vaga as habilidades
-	for ($i = 0; $i < sizeof($habilidadeCodigo); $i++) {
-    	$habilidade = new Habilidade();
-    	$habilidade->setCdHabilidade($habilidadeCodigo[$i]);
+	for ($i = 0; $i < sizeof($tecnicaCodigo); $i++) {
+    	$competenciatecnica = new CompetenciaTecnica();
+    	$competenciatecnica->setCdCompetenciaTecnica($tecnicaCodigo[$i]);
 
-		$vaga->setHabilidades($habilidade); 
+		$vaga->setCompetenciasTecnicas($competenciatecnica); 
 	}
-	
+
+	//preenchendo na vaga as habilidades
+	for ($i = 0; $i < sizeof($comportCodigo); $i++) {
+    	$competenciacomport = new CompetenciaComport();
+    	$competenciacomport->setCdCompetenciaComport($comportCodigo[$i]);
+
+		$vaga->setCompetenciasComport($competenciacomport); 
+	}
+
 	//preenchendo na vaga os cursos
 	for ($i = 0; $i < sizeof($cursoCodigo); $i++) {
     	$curso = new Curso();

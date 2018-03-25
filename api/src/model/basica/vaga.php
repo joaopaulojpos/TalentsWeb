@@ -244,7 +244,8 @@ class Vaga implements JsonSerializable {
                 'cargo'=>$this->cargo,
                 'empresa'=>$this->empresa,
                 'cursos'=>$this->cursos,
-                'habilidades'=>$this->habilidades,
+                'competencias_tecnicas'=>$this->competenciastecnicas,
+                'competencias_comp'=>$this->competenciascomport,
                 'idiomas'=>$this->idiomas,
                 'profissionais'=>$this->profissionais
             ];

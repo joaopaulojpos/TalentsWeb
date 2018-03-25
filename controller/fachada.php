@@ -52,7 +52,7 @@
     public function publicarVaga($vaga){
         try{
             $daovaga = new DAOVaga();
-            return json_decode($daovaga->publicar($vaga), true);
+            var_dump(json_decode($daovaga->publicar($vaga), true));
         }catch(Exception $e){
             return array('erro' => 'Erro publicação' );
         }

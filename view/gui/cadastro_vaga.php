@@ -15,7 +15,6 @@
 <head>
   <title>Cadastro de vaga - Talents</title>
   <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
   <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
@@ -225,27 +224,9 @@
 	<label class="col-md-4 control-label">Competência(s) Técnica(s)</label> 
 	<div class="col-md-4 inputGroupContainer">
 		<div class="input-group" style="width: 100%">
-			<table class="table-habilidades" id="table-habilidades" style="width: 100%">  
+			<table class="table-tecnicas" id="table-tecnicas" style="width: 100%">  
 		    	<tr style="width: 100%">
-            <th style="width: 30%"><select name="codigo_habilidade" id="codigo_habilidade" class="form-control selectpicker">
-                    <option value="">Todos</option>
-                      <?php 
-                        foreach ($arraycompetenciatecnica as $key => $value) {
-                            if ($key == 'sucess'){
-                                $arraycompetenciatecnica2 = $value;
-                                foreach ($arraycompetenciatecnica2 as $key => $value) { 
-                      ?>
-                                    <option value="<?php echo $value->cd_competencia_tecnica; ?>"> <?php echo $value->ds_competencia_tecnica.' - '.$value->ds_tipo_competencia_tecnica; ?></option>
-
-                    <?php         
-                                 
-                                }
-                              }
-                          }
-                    ?>
-                </select></th>
-
-		        	  <th style="width: 70%"><select name="codigo_habilidade" id="codigo_habilidade" class="form-control selectpicker">
+		        	  <th style="width: 100%"><select name="codigo_tecnica" id="codigo_tecnica" class="form-control selectpicker">
 	                	<option value="">Técnica(s) necessária(s)</option>
 	                  	<?php 
 	                    	foreach ($arraycompetenciatecnica as $key => $value) {
@@ -262,9 +243,9 @@
 	                      	}
 	                  ?>
 		            </select></th>
-		          	<th style="width: 100%"><input type="BUTTON" class="btn btn-warning" id="adicionar_habilidade" name="adicionar_habilidade" value="Adicionar" onclick="adicionarHabilidade()"/></th>
+		          	<th style="width: 100%"><input type="BUTTON" class="btn btn-warning" id="adicionar_tecnica" name="adicionar_tecnica" value="Adicionar" onclick="adicionarTecnica()"/></th>
 		      	</tr>
-		      	<tbody id="itemlistHabilidade">
+		      	<tbody id="itemlistTecnica">
 		      	</tbody>
 		  	</table>
 		</div>
@@ -277,26 +258,9 @@
   <label class="col-md-4 control-label">Competência(s) Comportamentais</label> 
   <div class="col-md-4 inputGroupContainer">
     <div class="input-group" style="width: 100%">
-      <table class="table-habilidades" id="table-habilidades" style="width: 100%">  
+      <table class="table-comport" id="table-comport" style="width: 100%">  
           <tr style="width: 100%">
-                <th style="width: 30%"><select name="codigo_habilidade" id="codigo_habilidade" class="form-control selectpicker">
-                    <option value="">Todos</option>
-                      <?php 
-                        foreach ($arraycompetenciacomport as $key => $value) {
-                            if ($key == 'sucess'){
-                                $arraycompetenciacomport2 = $value;
-                                foreach ($arraycompetenciacomport2 as $key => $value) { 
-                      ?>
-                                    <option value="<?php echo $value->cd_competencia_comport; ?>"> <?php echo $value->ds_competencia_comport.' - '.$value->ds_tipo_competencia_comport; ?></option>
-
-                    <?php         
-                                 
-                                }
-                              }
-                          }
-                    ?>
-                </select></th>
-              <th style="width: 70%"><select name="codigo_habilidade" id="codigo_habilidade" class="form-control selectpicker">
+              <th style="width: 100%"><select name="codigo_comport" id="codigo_comport" class="form-control selectpicker">
                     <option value="">Comportamento(s) necessária(s)</option>
                       <?php 
                         foreach ($arraycompetenciacomport as $key => $value) {
@@ -313,9 +277,9 @@
                           }
                     ?>
                 </select></th>
-                <th style="width: 100%"><input type="BUTTON" class="btn btn-warning" id="adicionar_habilidade" name="adicionar_habilidade" value="Adicionar" onclick="adicionarHabilidade()"/></th>
+                <th style="width: 100%"><input type="BUTTON" class="btn btn-warning" id="adicionar_comport" name="adicionar_comport" value="Adicionar" onclick="adicionarComport()"/></th>
             </tr>
-            <tbody id="itemlistHabilidade">
+            <tbody id="itemlistComport">
             </tbody>
         </table>
     </div>
@@ -408,9 +372,15 @@
         });
 
         //pegando todos os códigos das habilidades
-        var habilidadeCodigo = [];
-        $('input[name="itemhabilidade[codigo]"]').each(function(){
-            habilidadeCodigo.push($(this).val());
+        var tecnicaCodigo = [];
+        $('input[name="itemtecnica[codigo]"]').each(function(){
+            tecnicaCodigo.push($(this).val());
+        });
+
+        //pegando todos os códigos das habilidades
+        var comportCodigo = [];
+        $('input[name="itemcomport[codigo]"]').each(function(){
+            comportCodigo.push($(this).val());
         });
 
         //pegando todos os códigos dos cursos
@@ -432,7 +402,7 @@
         $.ajax({      //Função AJAX
           url:"valida_vaga.php",      //Arquivo php
           type:"post",        //Método de envio
-          data: "titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios+"&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+"&habilidadeCodigo="+JSON.stringify(habilidadeCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados*/
+          data: "titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios+"&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+"&tecnicaCodigo="+JSON.stringify(tecnicaCodigo)+"&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados*/
             success: function (result){     //Sucesso no AJAX
                         document.getElementById('errMessage').innerHTML = result;
                         $('#errMessage').show();   //Informa o erro*/
@@ -446,6 +416,7 @@
     //função que adiciona o idioma na tela
     function adicionarIdioma()
     {
+
       //pega o valor dos componentes html que possuem esses id
       var codigo_idioma = $("#codigo_idioma").val();
       var descricao_idioma = $("#codigo_idioma option:selected").text();
@@ -508,30 +479,60 @@
     }
 
     //função que adiciona o habilidade na tela
-    function adicionarHabilidade()
+    function adicionarTecnica()
     {
       //pega o valor dos componentes html que possuem esses id
-      var codigo_habilidade = $("#codigo_habilidade").val();
-      var descricao_habilidade = $("#codigo_habilidade option:selected").text();
+      var codigo_tecnica = $("#codigo_tecnica").val();
+      var descricao_tecnica = $("#codigo_tecnica option:selected").text();
       var items = "";
 
-      if (!codigo_habilidade)
+      if (!codigo_tecnica)
       		return false;
 
       //esse codigo html vai ser inserido para o usuário ver na tela (esse itemhabilidade vai ser a lista utilizado para pegar os item depois)
       //()
       items += "<tr>";
-      items += "<td><input type='hidden' name='itemhabilidade[codigo]' value='"+ codigo_habilidade +"'>"+descricao_habilidade+"</td>";
+      items += "<td><input type='hidden' name='itemtecnica[codigo]' value='"+ codigo_tecnica +"'>"+descricao_tecnica+"</td>";
       items += "<td><a href='javascript:void(0);' id='hapus'>Remove</a></td>";
       items += "</tr>";
 
-      if ($("#itemlistHabilidade tr").length == 0)
+      if ($("#itemlistTecnica tr").length == 0)
       {
-          $("#itemlistHabilidade").append(items);
+          $("#itemlistTecnica").append(items);
       }else{
-          var callback = checkListHabilidade(codigo_habilidade);
+          var callback = checkListTecnica(codigo_tecnica);
           if(callback === true){
-              $("#itemlistHabilidade").append(items);
+              $("#itemlistTecnica").append(items);
+              return false;
+          }
+      }
+    }
+
+    //função que adiciona o habilidade na tela
+    function adicionarComport()
+    {
+      //pega o valor dos componentes html que possuem esses id
+      var codigo_comport = $("#codigo_comport").val();
+      var descricao_comport = $("#codigo_comport option:selected").text();
+      var items = "";
+
+      if (!codigo_comport)
+          return false;
+
+      //esse codigo html vai ser inserido para o usuário ver na tela (esse itemhabilidade vai ser a lista utilizado para pegar os item depois)
+      //()
+      items += "<tr>";
+      items += "<td><input type='hidden' name='itemcomport[codigo]' value='"+ codigo_comport +"'>"+descricao_comport+"</td>";
+      items += "<td><a href='javascript:void(0);' id='hapus'>Remove</a></td>";
+      items += "</tr>";
+
+      if ($("#itemlistComport tr").length == 0)
+      {
+          $("#itemlistComport").append(items);
+      }else{
+          var callback = checkListComport(codigo_comport);
+          if(callback === true){
+              $("#itemlistComport").append(items);
               return false;
           }
       }
@@ -567,13 +568,27 @@
     }
 
     //função para evitar de inserir 2 habilidades iguais
-    function checkListHabilidade(val){
+    function checkListTecnica(val){
         var cb = true;
-        console.log($(codigo_habilidade).val());
+        console.log($(codigo_tecnica).val());
     
-        $("#itemlistHabilidade tr").each(function(index){
+        $("#itemlistTecnica tr").each(function(index){
             var input = $(this).find("input[type='hidden']:first");
-            if (input.val() == $(codigo_habilidade).val()){
+            if (input.val() == $(codigo_tecnica).val()){
+                cb = false;
+            }
+        });
+        return cb;
+    }
+
+    //função para evitar de inserir 2 habilidades iguais
+    function checkListComport(val){
+        var cb = true;
+        console.log($(codigo_comport).val());
+    
+        $("#itemlistComport tr").each(function(index){
+            var input = $(this).find("input[type='hidden']:first");
+            if (input.val() == $(codigo_comport).val()){
                 cb = false;
             }
         });
@@ -591,7 +606,12 @@
     });
 
     //função de remover habilidade adicionado
-    $("#itemlistHabilidade").on("click","#hapus",function(){
+    $("#itemlistTecnica").on("click","#hapus",function(){
+        $(this).parent().parent().remove();
+    });
+
+    //função de remover habilidade adicionado
+    $("#itemlistComport").on("click","#hapus",function(){
         $(this).parent().parent().remove();
     });
 

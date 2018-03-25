@@ -49,8 +49,8 @@ class CompetenciaTecnica implements JsonSerializable {
         return
             [
                 'cd_competencia_tecnica'=>$this->cd_competencia_tecnica,
-                'nr_nivel'=>$this->nr_nivel,
-                'ds_competencia_tecnica'=>$this->ds_competencia_tecnica
+                'ds_competencia_tecnica'=>$this->ds_competencia_tecnica,
+                'nr_nivel'=>$this->nr_nivel
             ];
     }
 }

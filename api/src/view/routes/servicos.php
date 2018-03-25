@@ -251,7 +251,7 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
     }
 
 	try{
-        $rnvaga = new RNVaga();
+        $rnvaga = new RNVaga();  
         $response->write(json_encode($rnvaga->publicar($vaga)));
          
     } catch(PDOException $e){

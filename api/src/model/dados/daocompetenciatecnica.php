@@ -92,7 +92,7 @@ class DAOCompetenciaTecnica implements iDAOCompetenciaTecnica
         $run = $stmt->execute(array(
             ':cd_vaga' => $cd_vaga,
             ':cd_competencia_tecnica' => $ct->getCdCompetenciaTecnica(),
-            ':nr_nivel' => $habilidade->getNrNivel()
+            ':nr_nivel' => $ct->getNrNivel()
         ));
 
         return array($run);

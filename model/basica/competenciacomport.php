@@ -2,7 +2,6 @@
 class CompetenciaComport implements JsonSerializable {
 
     private $cd_competencia_comport;
-    private $nr_nivel;
     private $ds_competencia_comport;
 
     function __construct(){}
@@ -13,23 +12,7 @@ class CompetenciaComport implements JsonSerializable {
     function getCdCompetenciaComport(){
         return $this->cd_competencia_comport;
     }
-
-    /**
-     * @return mixed
-     */
-    public function getNrNivel()
-    {
-        return $this->nr_nivel;
-    }
-
-    /**
-     * @param mixed $nr_nivel
-     */
-    public function setNrNivel($nr_nivel)
-    {
-        $this->nr_nivel = $nr_nivel;
-    }
-
+    
     function setDsCompetenciaComport($ds_competencia_comport){
         $this->ds_competencia_comport = $ds_competencia_comport;
     }
@@ -49,7 +32,6 @@ class CompetenciaComport implements JsonSerializable {
         return
             [
                 'cd_competencia_comport'=>$this->cd_competencia_comport,
-                'nr_nivel'=>$this->nr_nivel,
                 'ds_competencia_comport'=>$this->ds_competencia_comport
             ];
     }
