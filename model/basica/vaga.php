@@ -21,8 +21,9 @@ class Vaga implements JsonSerializable {
     private $empresa;
     //array de cursos
     private $cursos;
-    //array de habilidades
-    private $habilidades;
+    //array de competencias
+    private $competenciastecnicas;
+    private $competenciascomport;
     //array de idiomas
     private $idiomas;
 
@@ -172,13 +173,22 @@ class Vaga implements JsonSerializable {
         return $this->cursos;
     }
 
-    public function setHabilidades(habilidade $habilidade)
+    function setCompetenciasTecnicas(CompetenciaTecnica $ct)
     {
-        $this->habilidades[] = $habilidade;
+        $this->competenciastecnicas[] = $ct;
     }
-    public function getHabilidades()
+    function getCompetenciasTecnicas()
     {
-        return $this->habilidades;
+        return $this->competenciastecnicas;
+    }
+
+    function setCompetenciasComport(CompetenciaComport $cc)
+    {
+        $this->competenciascomport[] = $cc;
+    }
+    function getCompetenciasComport()
+    {
+        return $this->competenciascomport;
     }
 
     public function setIdiomas(Idioma $idioma)

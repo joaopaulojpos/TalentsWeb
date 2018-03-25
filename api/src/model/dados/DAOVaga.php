@@ -46,11 +46,18 @@ class DaoVaga implements iDAOVaga
 
             }
 
-            //Pegando as habilidades na lista na vagas inserindo associando com o código da vaga
-            foreach ($vaga->getHabilidades() as $habil) {
+            //Pegando as competencias na lista na vagas inserindo associando com o código da vaga
+            foreach ($vaga->getCompetenciasTecnicas() as $ct) {
 
-                $daohabilidade = new DaoHabilidade();
-                $daohabilidade->inserirHabilidadeVaga($cdvaga, $habil);
+                $daocompetenciatecnica = new DAOCompetenciaTecnica();
+                $daocompetenciatecnica->inserirCompetenciaTecnicaVaga($cdvaga, $ct);
+
+            }
+
+            foreach ($vaga->getCompetenciasComport() as $cc) {
+
+                $daocompetenciacomport = new DAOCompetenciaComport();
+                $daocompetenciacomport->inserirCompetenciaComportVaga($cdvaga, $cc);
 
             }
 
@@ -78,21 +85,23 @@ class DaoVaga implements iDAOVaga
      */
     public function pesquisar(Vaga $vaga, $alt='false'){
 
-        $comando = 'select vaga.cd_vaga,nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_longitude,nr_latitude,
-                      ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,
-                      cargo.cd_cargo,ds_cargo,
-                      empresa.cd_empresa,ds_razao_social,ds_nome_fantasia,nr_porte,ds_nome_responsavel,ds_area_atuacao,ds_site,
-                      ds_telefone,nr_cnpj,ds_email,ds_senha,habilidade.cd_habilidade,vaga_habilidade.nr_nivel,
-                      habilidade.ds_habilidade,
-                      vi.cd_idioma,ds_idioma,vi.nr_nivel
-                      from vaga
-                      JOIN cargo ON cargo.cd_cargo = vaga.cd_cargo
-                      JOIN empresa ON empresa.cd_empresa = vaga.cd_empresa
-                      JOIN vaga_habilidade AS vaga_habilidade ON vaga_habilidade.cd_vaga = vaga.cd_vaga
-                      JOIN habilidade ON habilidade.cd_habilidade = vaga_habilidade.cd_habilidade
-                      JOIN vaga_idioma AS vi ON vi.cd_vaga = vaga.cd_vaga
-                      JOIN idioma ON vi.cd_idioma = idioma.cd_idioma
-                      LIMIT 1;';
+        $comando = 'select 
+                      v.cd_vaga,v.nr_qtd_vaga,v.ds_observacao,v.dt_validade,v.tp_contratacao,v.nr_longitude,v.nr_latitude,v.ds_beneficios,v.ds_horario_expediente,v.dt_criacao,v.ds_titulo,v.vl_salario,
+                      c.cd_cargo,c.ds_cargo,
+                      e.cd_empresa,e.ds_razao_social,e.ds_nome_fantasia,e.nr_porte,e.ds_nome_responsavel,e.ds_area_atuacao,e.ds_site,e.ds_telefone,e.nr_cnpj,e.ds_email,e.ds_senha,
+                      ct.cd_competencia_tecnica,vct.nr_nivel,ct.ds_competencia_tecnica,
+                      cc.cd_competencia_comport,cc.ds_competencia_comport,
+                      vi.cd_idioma,i.ds_idioma,vi.nr_nivel
+                    from vaga v
+                    inner join cargo c ON c.cd_cargo = v.cd_cargo
+                    inner join empresa e ON e.cd_empresa = v.cd_empresa
+                    inner join vaga_competencia_tecnica vct ON vct.cd_vaga = v.cd_vaga
+                    inner join competencia_tecnica ct ON ct.cd_competencia_tecnica = vct.cd_competencia_tecnica
+                    inner join vaga_competencia_comport vcc ON vcc.cd_vaga = v.cd_vaga
+                    inner join competencia_comport cc ON cc.cd_competencia_comport = vcc.cd_competencia_comport
+                    inner join vaga_idioma AS vi ON vi.cd_vaga = v.cd_vaga
+                    inner join idioma i ON vi.cd_idioma = i.cd_idioma
+                    LIMIT 1;';
 
 //TODO JOIN vaga_curso AS vcurso ON vaga.cd_vaga = vcurso.cd_vaga , JOIN formacao AS f ON f.cd_formacao = vcurso.cd_formacao
 
@@ -133,8 +142,9 @@ class DaoVaga implements iDAOVaga
     private function parseRowsToObjectVaga($result){
         $cd_vaga = 0;
         $listavagas = [];
-        $daohabilidade = new daohabilidade();
-        $daoidioma = new daoidioma();
+        $daocompetenciatecnica = new DAOCompetenciaTecnica();
+        $daocompetenciacomport = new DAOCompetenciaComport();
+        $daoidioma = new DAOIdioma();
 
         foreach ($result as $row) {
 
@@ -191,10 +201,15 @@ class DaoVaga implements iDAOVaga
 
                 }*/
 
-                //Habilidades
-                foreach ($daohabilidade->listarHabilidadeVaga($vaga->getCdVaga()) as $h) {
+                //competencias
+                foreach ($daocompetenciatecnica->listarCompetenciasTecnicaVaga($vaga->getCdVaga()) as $ct) {
 
-                    $vaga->setHabilidades($h);
+                    $vaga->setCompetenciasTecnicas($ct);
+
+                }
+                foreach ($daocompetenciacomport->listarCompetenciasComportVaga($vaga->getCdVaga()) as $cc) {
+
+                    $vaga->setCompetenciasComport($cc);
 
                 }
 

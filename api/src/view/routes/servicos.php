@@ -192,8 +192,6 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
 	$empresa->setCdEmpresa($request->getParam('cd_empresa'));
 	$vaga->setEmpresa($empresa);
 
-
-
     //Pegando a lista de idiomas no JSON e colocando na lista de idiomas na vaga
     $idiomas = json_decode($request->getParam('idiomas'), true);
 
@@ -210,17 +208,31 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
         }
     }
 
-    //Pegando a lista de habilidades no JSON e colocando na lista de habilidades na vaga
-    $habilidades = json_decode($request->getParam('habilidades'), true);
+    //Pegando a lista de competencias_tecnicas no JSON e colocando na lista de competencias_tecnicas na vaga
+    $competenciastecnicas = json_decode($request->getParam('competencias_tecnicas'), true);
 
-    if ($habilidades != NULL){
-        foreach ($habilidades as $key => $value) {
-            $habilidade = new Habilidade();
+    if ($competenciastecnicas != NULL){
+        foreach ($competenciastecnicas as $key => $value) {
+            $competenciatecnica = new CompetenciaTecnica();
             foreach ($value as $key => $value) {      
-                if($key == 'cd_habilidade')
-                    $habilidade->setCdHabilidade($value);           
+                if($key == 'cd_competencia_tecnica')
+                    $competenciatecnica->setCdCompetenciaTecnica($value);           
             }
-            $vaga->setHabilidades($habilidade); 
+            $vaga->setCompetenciasTecnicas($competenciatecnica); 
+        }
+    }
+
+    //Pegando a lista de competencias_comport no JSON e colocando na lista de competencias_comport na vaga
+    $competenciascomport = json_decode($request->getParam('competencias_comport'), true);
+
+    if ($competenciascomport != NULL){
+        foreach ($competenciascomport as $key => $value) {
+            $competenciacomport = new CompetenciaComport();
+            foreach ($value as $key => $value) {      
+                if($key == 'cd_competencia_comport')
+                    $competenciacomport->setCdCompetenciaComport($value);           
+            }
+            $vaga->setCompetenciasComport($competenciacomport); 
         }
     }
 
@@ -310,18 +322,31 @@ $app->get('/api/idiomas', function(Request $request, Response $response){
     }
 });
 
-//------ habilidade
+//------ competencias
 
-$app->get('/api/habilidades', function(Request $request, Response $response){
+$app->get('/api/competencias_tecnicas', function(Request $request, Response $response){
     try{
-        $habilidade = new Habilidade();
-        $rnhabilidade = new RNHabilidade();        
-        $rnhabilidade = $rnhabilidade->pesquisar($habilidade);
-        echo json_encode($rnhabilidade);  
+        $competenciatecnica = new CompetenciaTecnica();
+        $rncompetenciatecnica = new RNCompetenciaTecnica();        
+        $rncompetenciatecnica = $rncompetenciatecnica->pesquisar($competenciatecnica);
+        echo json_encode($rncompetenciatecnica);  
     } catch(Exception $e){
         echo json_encode(array('erro' => $e->getMessage()));
     }
 });
+
+
+$app->get('/api/competencias_comport', function(Request $request, Response $response){
+    try{
+        $competenciacomport = new CompetenciaComport();
+        $rncompetenciacomport = new RNCompetenciaComport();        
+        $rncompetenciacomport = $rncompetenciacomport->pesquisar($competenciacomport);
+        echo json_encode($rncompetenciacomport);  
+    } catch(Exception $e){
+        echo json_encode(array('erro' => $e->getMessage()));
+    }
+});
+
 
 
 

@@ -1,13 +1,11 @@
 <?php
 
-require_once('../src/model/dados/daoidioma.php');
+class RNCompetenciaComport{
 
-class RNIdioma{
-
-	public function pesquisar($idioma){
+	public function pesquisar(CompetenciaComport $cc){
 		try{
-			$daoidioma = new DAOIdioma();
-			$result = $daoidioma->pesquisar($idioma);
+			$daocompetenciacomport = new DAOCompetenciaComport();
+			$result = $daocompetenciacomport->pesquisar($cc);
 			
 			if (!empty($result)){
 				return array('sucess' => $result);

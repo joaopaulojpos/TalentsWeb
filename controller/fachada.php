@@ -9,8 +9,10 @@
     require_once('../../model/dados/DAOIdioma.php');
     require_once('../../model/basica/curso.php');
     require_once('../../model/dados/DAOCurso.php');
-    require_once('../../model/basica/habilidade.php');
-    require_once('../../model/dados/DAOHabilidade.php');
+    require_once('../../model/basica/competenciatecnica.php');
+    require_once('../../model/dados/daocompetenciatecnica.php');
+    require_once('../../model/basica/competenciacomport.php');
+    require_once('../../model/dados/daocompetenciacomport.php');
 
 
     class Fachada {
@@ -88,11 +90,18 @@
         return json_decode(json_encode($result, true));
     }
 
-    //Habilidade
-    public function habilidadePesquisar(){
-        $daohabilidade = new DAOHabilidade();
-        $habilidade = new Habilidade();
-        $result = json_decode($daohabilidade->pesquisar($habilidade));
+    //competencias
+    public function competenciaTecnicaPesquisar(){
+        $daocompetenciatecnica = new DAOCompetenciaTecnica();
+        $competenciatecnica = new competenciaTecnica();
+        $result = json_decode($daocompetenciatecnica->pesquisar($competenciatecnica));
+
+        return json_decode(json_encode($result, true));
+    }
+    public function competenciaComportPesquisar(){
+        $daocompetenciacomport = new DAOCompetenciaComport();
+        $competenciacomport = new competenciaComport();
+        $result = json_decode($daocompetenciacomport->pesquisar($competenciacomport));
 
         return json_decode(json_encode($result, true));
     }

@@ -1,17 +1,17 @@
 <?php
-class habilidade implements JsonSerializable {
+class CompetenciaComport implements JsonSerializable {
 
-    private $cd_habilidade;
+    private $cd_competencia_comport;
     private $nr_nivel;
-    private $ds_habilidade;
+    private $ds_competencia_comport;
 
     function __construct(){}
 
-    function setCdHabilidade($cd_habilidade){
-        $this->cd_habilidade = trim($cd_habilidade);
+    function setCdCompetenciaComport($cd_competencia_comport){
+        $this->cd_competencia_comport = trim($cd_competencia_comport);
     }
-    function getCdHabilidade(){
-        return $this->cd_habilidade;
+    function getCdCompetenciaComport(){
+        return $this->cd_competencia_comport;
     }
 
     /**
@@ -30,11 +30,11 @@ class habilidade implements JsonSerializable {
         $this->nr_nivel = $nr_nivel;
     }
 
-    function setDsHabilidade($ds_habilidade){
-        $this->ds_habilidade = $ds_habilidade;
+    function setDsCompetenciaComport($ds_competencia_comport){
+        $this->ds_competencia_comport = $ds_competencia_comport;
     }
-    function getDsHabilidade(){
-        return $this->ds_habilidade;
+    function getDsCompetenciaComport(){
+        return $this->ds_competencia_comport;
     }
 
     /**
@@ -48,9 +48,9 @@ class habilidade implements JsonSerializable {
     {
         return
             [
-                'cd_habilidade'=>$this->cd_habilidade,
+                'cd_competencia_comport'=>$this->cd_competencia_comport,
                 'nr_nivel'=>$this->nr_nivel,
-                'ds_habilidade'=>$this->ds_habilidade
+                'ds_competencia_comport'=>$this->ds_competencia_comport
             ];
     }
 }

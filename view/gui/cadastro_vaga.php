@@ -6,7 +6,8 @@
     $arraycargo = $fachada->cargoPesquisar();
     $arrayidioma = $fachada->idiomaPesquisar();
     $arraycurso = $fachada->cursoPesquisar();
-    $arrayhabilidade = $fachada->habilidadePesquisar();
+    $arraycompetenciatecnica = $fachada->competenciaTecnicaPesquisar();
+    $arraycompetenciacomport = $fachada->competenciaComportPesquisar();
 ?>
 
 <!DOCTYPE html>
@@ -218,23 +219,41 @@
   
 </div>
 
-<!-- Habilidades -->
+<!-- competencias técnicas -->
 
 <div class="form-group" id="form-group">
-	<label class="col-md-4 control-label">Habilidade(s)</label> 
+	<label class="col-md-4 control-label">Competência(s) Técnica(s)</label> 
 	<div class="col-md-4 inputGroupContainer">
 		<div class="input-group" style="width: 100%">
 			<table class="table-habilidades" id="table-habilidades" style="width: 100%">  
 		    	<tr style="width: 100%">
-		        	<th style="width: 100%"><select name="codigo_habilidade" id="codigo_habilidade" class="form-control selectpicker">
-	                	<option value="">Habilidade(s) necessária(s)</option>
+            <th style="width: 30%"><select name="codigo_habilidade" id="codigo_habilidade" class="form-control selectpicker">
+                    <option value="">Todos</option>
+                      <?php 
+                        foreach ($arraycompetenciatecnica as $key => $value) {
+                            if ($key == 'sucess'){
+                                $arraycompetenciatecnica2 = $value;
+                                foreach ($arraycompetenciatecnica2 as $key => $value) { 
+                      ?>
+                                    <option value="<?php echo $value->cd_competencia_tecnica; ?>"> <?php echo $value->ds_competencia_tecnica.' - '.$value->ds_tipo_competencia_tecnica; ?></option>
+
+                    <?php         
+                                 
+                                }
+                              }
+                          }
+                    ?>
+                </select></th>
+
+		        	  <th style="width: 70%"><select name="codigo_habilidade" id="codigo_habilidade" class="form-control selectpicker">
+	                	<option value="">Técnica(s) necessária(s)</option>
 	                  	<?php 
-	                    	foreach ($arrayhabilidade as $key => $value) {
+	                    	foreach ($arraycompetenciatecnica as $key => $value) {
 	                        	if ($key == 'sucess'){
-	                            	$arrayhabilidade2 = $value;
-	                            	foreach ($arrayhabilidade2 as $key => $value) { 
+	                            	$arraycompetenciatecnica2 = $value;
+	                            	foreach ($arraycompetenciatecnica2 as $key => $value) { 
 	                  	?>
-	                                	<option value="<?php echo $value->cd_habilidade; ?>"> <?php echo $value->ds_habilidade.' - '.$value->ds_tipo_habilidade; ?></option>
+	                                	<option value="<?php echo $value->cd_competencia_tecnica; ?>"> <?php echo $value->ds_competencia_tecnica.' - '.$value->ds_tipo_competencia_tecnica; ?></option>
 
 	                  <?php         
 	                               
@@ -250,6 +269,57 @@
 		  	</table>
 		</div>
 	</div>
+</div>
+
+<!-- Habilidades -->
+
+<div class="form-group" id="form-group">
+  <label class="col-md-4 control-label">Competência(s) Comportamentais</label> 
+  <div class="col-md-4 inputGroupContainer">
+    <div class="input-group" style="width: 100%">
+      <table class="table-habilidades" id="table-habilidades" style="width: 100%">  
+          <tr style="width: 100%">
+                <th style="width: 30%"><select name="codigo_habilidade" id="codigo_habilidade" class="form-control selectpicker">
+                    <option value="">Todos</option>
+                      <?php 
+                        foreach ($arraycompetenciacomport as $key => $value) {
+                            if ($key == 'sucess'){
+                                $arraycompetenciacomport2 = $value;
+                                foreach ($arraycompetenciacomport2 as $key => $value) { 
+                      ?>
+                                    <option value="<?php echo $value->cd_competencia_comport; ?>"> <?php echo $value->ds_competencia_comport.' - '.$value->ds_tipo_competencia_comport; ?></option>
+
+                    <?php         
+                                 
+                                }
+                              }
+                          }
+                    ?>
+                </select></th>
+              <th style="width: 70%"><select name="codigo_habilidade" id="codigo_habilidade" class="form-control selectpicker">
+                    <option value="">Comportamento(s) necessária(s)</option>
+                      <?php 
+                        foreach ($arraycompetenciacomport as $key => $value) {
+                            if ($key == 'sucess'){
+                                $arraycompetenciacomport2 = $value;
+                                foreach ($arraycompetenciacomport2 as $key => $value) { 
+                      ?>
+                                    <option value="<?php echo $value->cd_competencia_comport; ?>"> <?php echo $value->ds_competencia_comport.' - '.$value->ds_tipo_competencia_comport; ?></option>
+
+                    <?php         
+                                 
+                                }
+                              }
+                          }
+                    ?>
+                </select></th>
+                <th style="width: 100%"><input type="BUTTON" class="btn btn-warning" id="adicionar_habilidade" name="adicionar_habilidade" value="Adicionar" onclick="adicionarHabilidade()"/></th>
+            </tr>
+            <tbody id="itemlistHabilidade">
+            </tbody>
+        </table>
+    </div>
+  </div>
 </div>
 
 <!-- idiomas -->

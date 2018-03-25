@@ -37,7 +37,7 @@ CREATE TABLE competencia_tecnica (
 
 CREATE TABLE tipo_competencia_comport (
   cd_tipo_competencia_comport Integer PRIMARY KEY AUTO_INCREMENT,
-  ds_tipo_competencia_comport Varchar(20) not null
+  ds_tipo_competencia_comport Varchar(100) not null
 );
 
 CREATE TABLE competencia_comport (

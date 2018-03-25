@@ -60,14 +60,21 @@ class RNVaga{
             foreach ($vaga->getIdiomas() as $idioma){
                 $daoidioma = new DaoIdioma();
                 if (empty($daoidioma->pesquisar($idioma)))
-                    array_push($validacoes, "Idioma cod:".$idioma->getCdIdioma().", não existe!");
+                    array_push($validacoes, "Idioma - cód:".$idioma->getCdIdioma().", não existe!");
             }
 
-            //Validar se as habilidades existem
-            foreach ($vaga->getHabilidades() as $habilidade){
-                $daohabilidade = new DaoHabilidade();
-                if (empty($daohabilidade->pesquisar($habilidade))){
-                   array_push($validacoes, "Habilidade cod:".$habilidade->getCdHabilidade().", não existe!");
+            //Validar se as competencias existem
+            foreach ($vaga->getCompetenciasTecnicas() as $ct){
+                $daocompetenciatecnica = new DAOCompetenciaTecnica();
+                if (empty($daocompetenciatecnica->pesquisar($ct))){
+                   array_push($validacoes, "Competência técnica - cód:".$ct->getCdCompetenciaTecnica().", não existe!");
+                }
+            }
+
+            foreach ($vaga->getCompetenciasComport() as $cc){
+                $daocompetenciacomport = new DAOCompetenciaComport();
+                if (empty($daocompetenciacomport->pesquisar($cc))){
+                   array_push($validacoes, "Competência comportamental - cód:".$cc->getCdCompetenciaComport().", não existe!");
                 }
             }
 
@@ -75,7 +82,7 @@ class RNVaga{
             foreach ($vaga->getCursos() as $curso){
                 $daocurso = new DaoCurso();
                 if (empty($daocurso->pesquisar($curso))){
-                    array_push($validacoes, "Curso cod:".$curso->getCdCurso().", não existe!");
+                    array_push($validacoes, "Curso - cód:".$curso->getCdCurso().", não existe!");
                 }
             }
             
@@ -99,7 +106,7 @@ class RNVaga{
 			if (!empty($result)){
 				return array('sucess' => $result);
 			}else{
-				return array('erro' => 'Não existe vaga com o código selecionado!');
+				return array('erro' => 'A pesquisa não retornou nenhum registro!');
 			}
 		}
 		catch (Exception $e)

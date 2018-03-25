@@ -12,7 +12,7 @@ class RNCargo{
 			if (!empty($result)){
 				return array('sucess' => $result);
 			}else{
-				return array('erro' => 'Não existe cargo com o código selecionado!');
+				return array('erro' => 'A pesquisa não retornou nenhum registro!');
 			}
 		}
 		catch (Exception $e)

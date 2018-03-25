@@ -121,7 +121,7 @@ class RNEmpresa{
 			if (!empty($result)){
 				return array('sucess' => $result);
 			}else{
-				return array('erro' => 'Não existe empresa com o código selecionado!');
+				return array('erro' => 'A pesquisa não retornou nenhum registro!');
 			}
 		}
 		catch (Exception $e)
