@@ -3,9 +3,6 @@
 require_once('../../model/basica/empresa.php');
 require_once('../../controller/fachada.php');
 
-session_name('sessao');
-session_start();
-
 try{
 	$fachada = Fachada::getInstance();
 
@@ -34,11 +31,14 @@ try{
 
 	$array = $fachada->empresaCadastrar($empresa);
 
+	$texto = '';
+
 	foreach ($array as $key => $value) {
 	    if ($key == 'sucess'){
 	    	$empresalogada = $fachada->empresaLogar($empresa->getDsEmail(), $empresa->getDsSenha());
 
 	    	foreach ($empresalogada as $key => $value) {
+
 			    if ($key == 'sucess'){
 			        $_SESSION['empresaLogada'] = json_decode(json_encode($value), true);
 			    }else{
@@ -46,11 +46,21 @@ try{
 			        exit;   
 			    }
 			}
+
 	        echo 1;
 	    }else{
-	        echo $value; 
+	    	if (is_array($value)){	
+	    		$texto = 'Verifique as mensagens abaixo para prosseguir com o cadastro da empresa: <br>';
+		    	foreach ($value as $key => $value2) {
+		        	$texto = $texto.'<br>*'.$value2;
+		    	}
+	    	}else{
+	    		$texto = $value;
+	    	}
+	    	echo $texto; 
 	    }
 	}
+
 }catch(Exception $e){
 	echo $e->getMessage();
 }

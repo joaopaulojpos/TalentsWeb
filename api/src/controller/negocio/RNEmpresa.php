@@ -66,7 +66,7 @@ class RNEmpresa{
 			array_push($validacoes, 'Senha precisa ser preenchido!');
 
 		if ($validacoes != null){
-			return json_encode(array('erro' => $validacoes));
+			return array('erro' => $validacoes);
 			exit;
 		}
 

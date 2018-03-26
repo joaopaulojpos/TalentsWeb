@@ -71,7 +71,7 @@ CREATE TABLE empresa (
   ds_area_atuacao Varchar(100),
   ds_site Varchar(100),
   ds_telefone Varchar(15),
-  nr_cnpj Integer,
+  nr_cnpj Varchar(18),
   ds_email Varchar(100),
   ds_senha varchar(50)
 );

@@ -70,7 +70,7 @@ ob_start();
 				<div class="form-group">
 					<label class="col-md-4 control-label"></label>
 				  	<div class="col-md-4" style="text-align: center">
-						<p>Ainda não possui um cadastro? <a href="cadastro.php">Cadastre-se!</a></p>
+						<p>Sua empresa ainda não possui um cadastro? <a href="cadastro.php">Cadastre-se!</a></p>
 					</div>
 				</div>
 

@@ -107,6 +107,123 @@
                     }
                 }
             },
+            cnpj: {
+                validators: {
+                     stringLength: {
+                        min: 14,
+                        message: ' ',
+                    },
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            razaosocial: {
+                validators: {
+                     stringLength: {
+                        min: 3,
+                        message: ' ',
+                    },
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            nomefantasia: {
+                validators: {
+                     stringLength: {
+                        min: 3,
+                        message: ' ',
+                    },
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            porte: {
+                validators: {
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            areaatuacao: {
+                validators: {
+                     stringLength: {
+                        min: 3,
+                        message: ' ',
+                    },
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            responsavel: {
+                validators: {
+                     stringLength: {
+                        min: 3,
+                        message: ' ',
+                    },
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            telefone: {
+                validators: {
+                     stringLength: {
+                        min: 3,
+                        message: ' ',
+                    },
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            email: {
+                validators: {
+                     stringLength: {
+                        min: 3,
+                        message: ' ',
+                    },
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            site: {
+                validators: {
+                     stringLength: {
+                        min: 3,
+                        message: ' ',
+                    },
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            senha: {
+                validators: {
+                     stringLength: {
+                        min: 3,
+                        message: ' ',
+                    },
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            senhaconfirmacao: {
+                validators: {
+                     stringLength: {
+                        min: 3,
+                        message: ' ',
+                    },
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
 
 
         }
