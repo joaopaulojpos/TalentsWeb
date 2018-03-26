@@ -81,13 +81,15 @@ class RNEmpresa{
 
 		try{
 
+			$validacoes = array();
 			//valida se login e senha foram passados por parametros
-			if (empty($login)){
-				return json_encode(array('erro' => 'Login precisa ser preenchido!'));
-				exit;
-			}
-			if (empty($senha)){
-				return json_encode(array('erro' => 'Senha precisa ser preenchido!'));
+			if (empty($login))
+				array_push($validacoes, 'Login precisa ser preenchido!');
+			if (empty($senha))
+				array_push($validacoes, 'Senha precisa ser preenchido!');
+
+			if ($validacoes != null){
+				return array('erro' => $validacoes);
 				exit;
 			}
 

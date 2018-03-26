@@ -19,8 +19,6 @@
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
   <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
   <link rel="stylesheet" href="css/vaga.css">
-  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-
   
 </head>
 
@@ -28,7 +26,7 @@
 
   <div class="container">
 
-    <form class="well form-horizontal" name="contact_form" id="contact_form">
+    <form class="well form-horizontal" name="formulario" id="formulario">
 <fieldset>
 
 <!-- Form Name -->
@@ -354,7 +352,7 @@
 <script type='text/javascript'>
     $(document).ready(function(){
       $('#errMessage').hide();
-      $('#contact_form').submit(function(){  //Ao submeter formulário
+      $('#formulario').submit(function(){  //Ao submeter formulário
 
         document.getElementById('buttonSubmit').disabled;
 

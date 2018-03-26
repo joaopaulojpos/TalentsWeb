@@ -1,5 +1,5 @@
   $(document).ready(function() {
-    $('#contact_form').bootstrapValidator({
+    $('#formulario').bootstrapValidator({
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -18,7 +18,7 @@
                     }
                 }
             },
-             observacao: {
+            observacao: {
                 validators: {
                      stringLength: {
                         min: 5,
@@ -85,12 +85,35 @@
                     }
                 }
             },
+            username: {
+                validators: {
+                     stringLength: {
+                        min: 3,
+                        message: ' ',
+                    },
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+            password: {
+                validators: {
+                     stringLength: {
+                        min: 3,
+                        message: ' ',
+                    },
+                    notEmpty: {
+                        message: ' '
+                    }
+                }
+            },
+
 
         }
     })
     .on('success.form.bv', function(e) {
         $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
-            $('#contact_form').data('bootstrapValidator').resetForm();
+            $('#formulario').data('bootstrapValidator').resetForm();
 
             // Prevent form submission
             e.preventDefault();

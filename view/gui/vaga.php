@@ -1,11 +1,9 @@
 <?php
 
-session_name('sessao');
-session_start();
 
 if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
   session_destroy();            //Destroi a seção por segurança
-  header("Location: index.php"); 
+  header("Location: login.php"); 
   exit; //Redireciona o visitante para login
 }
 

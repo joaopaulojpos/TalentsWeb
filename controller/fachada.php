@@ -43,9 +43,7 @@
         $empresa = new Empresa();
         $empresa->setDsEmail($login);
         $empresa->setDsSenha($senha);
-        $result = json_decode($daoempresa->logar($empresa));
-        
-        return json_decode(json_encode($result, true));
+        return json_decode($daoempresa->logar($empresa), true);
     }
 
     //Vaga

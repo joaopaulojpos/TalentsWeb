@@ -47,11 +47,10 @@ $app->post('/api/empresa/login', function(Request $request, Response $response){
 
     try{
         $rnempresa = new RNEmpresa();        
-        $rnempresa = $rnempresa->logar($login, $senha);
-        echo json_encode($rnempresa);   
+        $response->write(json_encode($rnempresa->logar($login, $senha)));   
 
     } catch(Exception $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 
@@ -255,7 +254,7 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
         $response->write(json_encode($rnvaga->publicar($vaga)));
          
     } catch(PDOException $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 
