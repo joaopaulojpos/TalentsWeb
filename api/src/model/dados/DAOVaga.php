@@ -101,9 +101,11 @@ class DaoVaga implements iDAOVaga
                     inner join competencia_comport cc ON cc.cd_competencia_comport = vcc.cd_competencia_comport
                     inner join vaga_idioma AS vi ON vi.cd_vaga = v.cd_vaga
                     inner join idioma i ON vi.cd_idioma = i.cd_idioma
+                    ORDER BY v.cd_vaga DESC
                     LIMIT 1;';
 
 //TODO JOIN vaga_curso AS vcurso ON vaga.cd_vaga = vcurso.cd_vaga , JOIN formacao AS f ON f.cd_formacao = vcurso.cd_formacao
+//TODO where v.cd_vaga not in (SELECT cd_vaga from profissional_vaga where cd_profissional = 1) ORDER BY v.cd_vaga DESC
 
         $where = '';
 
@@ -120,7 +122,7 @@ class DaoVaga implements iDAOVaga
             }
 
         }
-        
+
         $db = new db();
         $stmt = db::getInstance()->prepare($comando . $where);
 

@@ -163,7 +163,15 @@ $app->get('/api/vagas', function(Request $request, Response $response){
     }
 });
 
-
+$app->get('/api/profissional/vagas', function(Request $request, Response $response){
+    try{
+        $rnvagaprofissional = new RNVagaProfissional();
+        $rnvagaprofissional = $rnvagaprofissional->listarVagasParaCandidatos($request->getParam('cd_profissional'));
+        echo json_encode($rnvagaprofissional);
+    } catch(Exception $e){
+        echo json_encode(array('erro' => $e->getMessage()));
+    }
+});
 
 /**
  * Cadastro da vaga

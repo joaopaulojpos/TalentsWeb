@@ -70,4 +70,15 @@ class RNVagaProfissional
         return array('sucess' => 'Vaga curtida!');
     }
 
+    public function listarVagasParaCandidatos($cd_profissional)
+    {
+        $daovagapro = new DAOVagaProfissional();
+        $daoprofissional = new DaoProfissional();
+
+        $result = $daovagapro->pesquisaa($cd_profissional,false);
+
+        return array('sucess'=> $result);
+
+    }
+
 }
