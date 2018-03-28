@@ -8,90 +8,79 @@ ob_start();
 ?>
 
 <!DOCTYPE html>
-<html xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="pt-br">
+
 <head>
-  <title>Login Empresa - Talents</title>
-  <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
-  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
-  <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
-  <link rel="stylesheet" href="css/vaga.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-  <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-  <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
-
-
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Talents - Faça login</title>
 </head>
-<body >
-	<div class="container">
-    	<form class="well form-horizontal" name="formulario" id="formulario">
-			<fieldset>
 
-				<legend>Login</legend>
+<body class="teal darken-2">
 
-				<div class="form-group">
-				  <label class="col-md-4 control-label">Usuário</label>  
-				  <div class="col-md-4 inputGroupContainer">
-				  <div class="input-group">
-				  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-				  <input name="username" id="username" placeholder="Email ou CNPJ" class="form-control"  type="text">
-				    </div>
-				  </div>
-				</div>
+    <div class="row login">
+        <div class="col s12 m4 z-depth-4 card-panel offset-m4">
+            <form name="formulario" id="formulario">
+              <div class="section">
 
-				<div class="form-group">
-				  <label class="col-md-4 control-label">Senha</label>  
-				  <div class="col-md-4 inputGroupContainer">
-				  <div class="input-group">
-				  <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
-				  <input name="password" id="password" placeholder="Senha" class="form-control"  type="password">
-				    </div>
-				  </div>
-				</div>
+              </div>
+              
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">perm_identity</i>
+                  <input name="username" id="username" type="text">
+                  <label for="username" class="center-align">Email ou CNPJ</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <i class="material-icons prefix">https</i>
+                  <input name="password" id="password" type="password">
+                  <label for="password">Password</label>
+                </div>
 
-				<!-- Loader -->
-				<div class="form-group">
-					<label class="col-md-4 control-label"></label>
-				  	<div class="col-md-4" style="text-align: center">
-						<div class="loader" id="loader"></div>
-					</div>
-				</div>
-			
-				<!-- Success message -->
-				<div class="form-group"> 
-					<label class="col-md-4 control-label"></label>
-				  	<div class="col-md-4" style="text-align: center">
-				  		<span class="errMessage" id="errMessage"></span>
-				  	</div>
-				</div>
+                <div class="section">
+                  <p class="errMessage red-text center-align" id="errMessage"></p>
+                </div>
 
-				<!-- Link -->
-				<div class="form-group">
-					<label class="col-md-4 control-label"></label>
-				  	<div class="col-md-4" style="text-align: center">
-						<p>Sua empresa ainda não possui um cadastro? <a href="cadastro.php">Cadastre-se!</a></p>
-					</div>
-				</div>
+              </div>
+              <div class="row">
+                <div class="input-field col s12">
+                  <button class="btn waves-effect waves-light col s12 teal darken-1" type="submit" name="buttonSubmit">LOGIN</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="input-field col s6 m6 l6">
+                  <p><a href="cadastro.php">Inscreva-se</a></p>
+                </div>
+                <div class="input-field col s6 m6 l6">
+                  <p class="right-align"><a href="#">Esqueceu sua senha ?</a></p>
+                </div>          
+              </div>   
+            </form>
+        </div>
+    </div>
 
-				<!-- Button -->
-				<div class="form-group">
-				  <label class="col-md-4 control-label"></label>
-				  <div class="col-md-4">
-				    <button type="submit" name="buttonSubmit" id="buttonSubmit" class="btn btn-warning" >Entrar<span class="glyphicon glyphicon-send"></span></button>
-				  </div>
-				</div>
+    <!-- JQUERY do Materialize -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- JavaScript do Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-			</fieldset>
-		</form>
-	</div>
+    <!-- Materialize Compentes -->
+    <script>
+        $(document).ready(function () {
+           $('select').material_select();
+        });
+    </script>
 
-
-  <?php /*include "footer.php"*/ ?>
-
-  <!--  Scripts-->
-
-  <script src="js/vaga.js"></script>
+    <!-- SCRIPT MANUAIS -->
+    <script src="js/vaga.js"></script>
   <script type='text/javascript'>
     $(document).ready(function(){
       $('#errMessage').hide(); //Esconde o elemento com id errolog
@@ -119,6 +108,5 @@ ob_start();
     })
 
   </script>
-
-  </body>
+</body>
 </html>
