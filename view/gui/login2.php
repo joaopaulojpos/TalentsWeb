@@ -44,6 +44,11 @@ ob_start();
                   <input name="password" id="password" type="password">
                   <label for="password">Password</label>
                 </div>
+
+                <div class="section">
+                  <p class="errMessage red-text center-align" id="errMessage"></p>
+                </div>
+
               </div>
               <div class="row">
                 <div class="input-field col s12">
@@ -52,7 +57,7 @@ ob_start();
               </div>
               <div class="row">
                 <div class="input-field col s6 m6 l6">
-                  <p><a href="#">Inscreva-se</a></p>
+                  <p><a href="cadastro.php">Inscreva-se</a></p>
                 </div>
                 <div class="input-field col s6 m6 l6">
                   <p class="right-align"><a href="#">Esqueceu sua senha ?</a></p>
