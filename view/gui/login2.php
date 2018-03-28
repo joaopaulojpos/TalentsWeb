@@ -26,8 +26,7 @@ ob_start();
 
     <div class="row login">
         <div class="col s12 m4 z-depth-4 card-panel offset-m4">
-            <form>
-
+            <form name="formulario" id="formulario">
               <div class="section">
 
               </div>
