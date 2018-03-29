@@ -8,7 +8,7 @@
 
 interface IDAOVagaProfissional
 {
-    public function curtirVaga(VagaProfissional $vagaProfissional);
+    public function curtirVaga($tp_acao,$cd_vaga,$cd_profissional);
 
-    public function isCurtidaByProfissional(VagaProfissional $vagaProfissional);
+    public function isCurtidaByProfissional($cd_vaga,$cd_profissional);
 }

@@ -69,6 +69,7 @@ class DAOCompetenciaComport implements iDAOCompetenciaComport
 
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $listaCc = new ArrayObject();
+        $stmt->closeCursor();
 
         foreach ($result as $row){
 
@@ -79,7 +80,6 @@ class DAOCompetenciaComport implements iDAOCompetenciaComport
             $listaCc->append($cc);
 
         }
-
         return $listaCc;
 
     }

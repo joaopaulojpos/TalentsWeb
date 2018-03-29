@@ -14,35 +14,37 @@ class RNVagaProfissional
      * @param VagaProfissional $vagaprofissional
      * @return array
      */
-    public function curtirVaga(VagaProfissional $vagaprofissional){
+    public function curtirVaga($tp_acao,$cd_vaga,$cd_profissional){
         $daovagapro = new DAOVagaProfissional();
         $daoprofissional = new DaoProfissional();
         $daovaga = new DaoVaga();
 
 
         //Verifica se o campo tipo de ação está vazio
-        if (empty($vagaprofissional->getTpAcao())){
+        if (empty($tp_acao)){
 
             return array('erro' => 'Código do tipo de ação inválido');
 
         }
 
         //Verifica se o campo código do profissional está vazio
-        if (empty($vagaprofissional->getProfissional()->getCdProfissional())){
+        if (empty($cd_profissional)){
 
             return array('erro' => 'Código do profissional inválido');
 
         }
 
         //Verifica se o campo código da vaga está vazio
-        if (empty($vagaprofissional->getVaga()->getCdVaga())){
+        if (empty($cd_vaga)){
 
             return array('erro' => 'Código da vaga inválido');
 
         }
 
         //Verifica se a vaga existe
-        $vaga = $daovaga->pesquisar($vagaprofissional->getVaga());
+        $vaga1 = new Vaga();
+        $vaga1->setCdVaga($cd_vaga);
+        $vaga = $daovaga->pesquisar($vaga1);
         if (empty($vaga)){
 
             return array('erro' => 'Vaga não encontrada');
@@ -50,7 +52,9 @@ class RNVagaProfissional
         }
 
         //Verifica se o profissional existe
-        $profissional = $daoprofissional->pesquisarById($vagaprofissional->getProfissional());
+        $prof = new Profissional();
+        $prof->setCdProfissional($cd_profissional);
+        $profissional = $daoprofissional->pesquisarById($prof);
         if (empty($profissional)){
 
             return array('erro' => "Profissional não existe");
@@ -58,14 +62,14 @@ class RNVagaProfissional
         }
 
         //Verifica se a vaga já foi curtida pelo profissional
-        $result = $daovagapro->isCurtidaByProfissional($vagaprofissional);
+        $result = $daovagapro->isCurtidaByProfissional($cd_vaga,$cd_profissional);
         if (!empty($result)){
 
             return array('erro'=> "A vaga já foi curtida");
 
         }
 
-        $result = $daovagapro->curtirVaga($vagaprofissional);
+        $result = $daovagapro->curtirVaga($tp_acao,$cd_vaga,$cd_profissional);
 
         return array('sucess' => 'Vaga curtida!');
     }
@@ -76,7 +80,7 @@ class RNVagaProfissional
         $daoprofissional = new DaoProfissional();
 
         $result = $daovagapro->pesquisaa($cd_profissional,false);
-
+//TODO validar se o profissional já curtiu alguma vaga antes.Pq Se colocar um cod_pro que não está na tabela N-N ele tras todos os registros.
         return array('sucess'=> $result);
 
     }

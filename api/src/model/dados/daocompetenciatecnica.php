@@ -68,6 +68,7 @@ class DAOCompetenciaTecnica implements iDAOCompetenciaTecnica
         $run = $stmt->execute();
 
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->closeCursor();
         $listaCt = new ArrayObject();
 
         foreach ($result as $row){
