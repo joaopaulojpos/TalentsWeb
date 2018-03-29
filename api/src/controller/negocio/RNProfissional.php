@@ -4,6 +4,25 @@ require_once('../src/model/dados/daoprofissional.php');
 
 class RNProfissional{
 
+
+	public function cadastrar($u){
+		
+		try{
+
+			$daoprofissional = new daoprofissional();
+			$result = $daoprofissional->cadastrar($u);
+
+			return array('sucess' => 'Cadastrado com sucesso!');
+
+		}
+		catch (Exception $e)
+		{
+			return array('erro' => $e->getMessage());
+		}
+
+	}
+
+
 	public function logar($login, $senha){
 
 		if (empty($login) || empty($senha)){

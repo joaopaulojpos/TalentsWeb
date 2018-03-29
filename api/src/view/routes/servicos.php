@@ -159,6 +159,41 @@ $app->get('/api/profissional/login', function(Request $request, Response $respon
         $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
+$app->post('/api/profissional/salvar', function(Request $request, Response $response){
+
+    $b_foto = $request->getParam('b_foto');
+    $ds_senha = $request->getParam('ds_senha');
+    $dt_nascimento = $request->getParam('dt_nascimento');
+    $ds_email = $request->getParam('ds_email');
+    $nr_latitude = $request->getParam('nr_latitude');
+    $nr_longitude = $request->getParam('nr_longitude');
+    $tp_conta = $request->getParam('tp_conta');
+    $tp_sexo = $request->getParam('tp_sexo');
+    $ds_nome = $request->getParam('ds_nome');   
+
+    try{
+        $profissional = new Profisisonal();
+        if ($codigo != null){
+            $profissional->setCdProfissional($codigo); 
+        }
+        $profissional->setBfoto($b_foto);
+        $profissional->setDsSenha($ds_senha);
+        $profissional->setDtNascimento($dt_nascimento);
+        $profissional->setDsEmail($ds_email);
+        $profissional->setNrlatitude($nr_latitude);
+        $profissional->setNrlogitude($nr_longitude);
+        $profissional->setTpconta($tp_conta);   
+        $profissional->setTpsexo($tp_sexo);
+        $profissional->setDsnome($ds_nome);
+
+        $rnprofissional = new RNProfissional(); 
+        $rnprofissional = $rnprofissional->salvar($profissional);
+        $response->write(json_encode($rnprofissional)); 
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
 
 //----- Vaga
 
