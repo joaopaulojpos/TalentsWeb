@@ -114,3 +114,13 @@ Stack trace:
 Stack trace:
 #0 {main}
   thrown in /storage/ssd1/326/4854326/public_html/view/gui/vaga.php on line 35
+[29-Mar-2018 04:18:46 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 52
+[29-Mar-2018 04:19:06 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 52
+[29-Mar-2018 04:19:10 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 52
+[29-Mar-2018 04:19:12 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 52
+[29-Mar-2018 04:21:31 Europe/Berlin] PHP Notice:  Trying to get property 'ds_titulo' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 61
+[29-Mar-2018 04:21:31 Europe/Berlin] PHP Notice:  Trying to get property 'ds_titulo' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 61
+[29-Mar-2018 04:21:31 Europe/Berlin] PHP Notice:  Trying to get property 'ds_titulo' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 61
+[29-Mar-2018 04:22:21 Europe/Berlin] PHP Notice:  Trying to get property 'ds_titulo' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 64
+[29-Mar-2018 04:22:21 Europe/Berlin] PHP Notice:  Trying to get property 'ds_titulo' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 64
+[29-Mar-2018 04:22:21 Europe/Berlin] PHP Notice:  Trying to get property 'ds_titulo' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 64

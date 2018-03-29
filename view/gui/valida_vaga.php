@@ -3,6 +3,7 @@
 require_once('../../model/basica/vaga.php');
 require_once('../../model/basica/cargo.php');
 require_once('../../model/basica/idioma.php');
+require_once('../../model/basica/empresa.php');
 require_once('../../model/basica/competenciatecnica.php');
 require_once('../../model/basica/competenciacomport.php');
 require_once('../../model/basica/curso.php');
@@ -11,6 +12,7 @@ require_once('../../controller/fachada.php');
 try{
 	$fachada = Fachada::getInstance();
 
+	$cd_empresa = $_POST['cd_empresa'];
 	$titulo = $_POST['titulo'];
 	$cd_cargo = $_POST['cargo'];
 	$observacao = $_POST['observacao'];
@@ -30,6 +32,7 @@ try{
 	$vaga = new Vaga();
 	$cargo = new Cargo();
 	$idioma = new Idioma();
+	$empresa = new Empresa();
 
 	//preenchendo os campos do objeto vaga
 	$vaga->setDsTitulo($titulo);
@@ -45,6 +48,9 @@ try{
 
 	//prenchendo os campos do objeto cargo 
 	$cargo->setCdCargo($cd_cargo);
+
+	//preenchendo os campos do objeto empresa
+	$empresa->setCdEmpresa($cd_empresa);
 
 	//preenchendo na vaga os idiomas
 	for ($i = 0; $i < sizeof($idiomaCodigo); $i++) {
@@ -80,11 +86,12 @@ try{
 	}
 
 	$vaga->setCargo($cargo);
+	$vaga->setEmpresa($empresa);
 
 	$array = $fachada->publicarVaga($vaga);
 
 	if ($array == null){
-		echo 'Cadastrado com sucesso!';
+		echo 1;
 		exit;
 	}
 

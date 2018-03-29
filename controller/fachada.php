@@ -50,15 +50,15 @@
     public function publicarVaga($vaga){
         try{
             $daovaga = new DAOVaga();
-            var_dump(json_decode($daovaga->publicar($vaga), true));
+            return json_decode($daovaga->publicar($vaga), true);
         }catch(Exception $e){
             return array('erro' => 'Erro publicação' );
         }
     }   
 
-    public function pesquisarVagas($vaga){
-        $daovaga = new DAOVaga();
-        return $daovaga->pesquisar($vaga);
+    public function vagasEmpresaPesquisar($cd_empresa){
+        $daoempresa = new DaoEmpresa();
+        return json_decode($daoempresa->vagasEmpresaPesquisar($cd_empresa), true);
     }
 
     //Cargo

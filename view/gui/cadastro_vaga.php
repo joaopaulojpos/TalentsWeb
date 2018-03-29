@@ -1,13 +1,28 @@
 ﻿<?php
+  
+  if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
+    session_destroy();            //Destroi a seção por segurança
+    header("Location: login.php"); 
+    exit; //Redireciona o visitante para login
+  }
 
-    require_once('../../controller/fachada.php');
-    $fachada = Fachada::getInstance();
+  require_once('../../controller/fachada.php');
+  $fachada = Fachada::getInstance();
 
-    $arraycargo = $fachada->cargoPesquisar();
-    $arrayidioma = $fachada->idiomaPesquisar();
-    $arraycurso = $fachada->cursoPesquisar();
-    $arraycompetenciatecnica = $fachada->competenciaTecnicaPesquisar();
-    $arraycompetenciacomport = $fachada->competenciaComportPesquisar();
+  $cd_empresa = '';
+
+  if (isset($_SESSION['empresaLogada'])) {
+    $empresa = $_SESSION['empresaLogada']; 
+
+    $cd_empresa = $empresa[0]['cd_empresa'];
+  }
+
+  $arraycargo = $fachada->cargoPesquisar();
+  $arrayidioma = $fachada->idiomaPesquisar();
+  $arraycurso = $fachada->cursoPesquisar();
+  $arraycompetenciatecnica = $fachada->competenciaTecnicaPesquisar();
+  $arraycompetenciacomport = $fachada->competenciaComportPesquisar();
+
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +46,8 @@
 
 <!-- Form Name -->
 <legend>Cadastro de vaga</legend>
+
+<input type="hidden" value="<?php echo $cd_empresa ?>" name="cd_empresa" id="cd_empresa"/>
 
 <!-- Text input-->
 
@@ -387,6 +404,7 @@
             cursoCodigo.push($(this).val());
         });
 
+        var cd_empresa=$('#cd_empresa').val();
         var titulo=$('#titulo').val();
         var cargo=$('#cargo').val();
         var observacao=$('#observacao').val();
@@ -400,11 +418,14 @@
         $.ajax({      //Função AJAX
           url:"valida_vaga.php",      //Arquivo php
           type:"post",        //Método de envio
-          data: "titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios+"&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+"&tecnicaCodigo="+JSON.stringify(tecnicaCodigo)+"&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados*/
+          data: "cd_empresa="+cd_empresa+"&titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios+"&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+"&tecnicaCodigo="+JSON.stringify(tecnicaCodigo)+"&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados*/
             success: function (result){     //Sucesso no AJAX
-                        document.getElementById('errMessage').innerHTML = result;
-                        $('#errMessage').show();   //Informa o erro*/
-                        document.getElementById('buttonSubmit').enabled;
+                        if (result == 1){
+                          location.href='vaga.php';
+                        }else{
+                          document.getElementById('errMessage').innerHTML = result;
+                          $('#errMessage').show();   //Informa o erro*/                      
+                        }
                     }
         })
         return false; //Evita que a página seja atualizada*/

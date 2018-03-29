@@ -7,21 +7,25 @@ error_reporting(E_ALL);
 
 ?>
 
-<nav class="grey" role="navigation">
-  <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><span class="logo-text">T</span>alents</a>
+<nav class="menu" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="#"><span class="logo-text">T</span>alents</a>
     <?php if (!isset($_SESSION['empresaLogada'])) { ?>
-      <ul class="right hide-on-med-and-down">
+      <ul class="right">
         <li><a href="login.php">Entrar</a></li>
       </ul>
-      <ul class="right hide-on-med-and-down">
+      <ul class="right">
         <li><a href="cadastro.php">Cadastrar</a></li>
       </ul>
     <?php }else { ?>
-      <ul class="right hide-on-med-and-down">
+      <ul class="right">
         <li><a href="login.php">Sair</a></li>
       </ul>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="perfil.php">Perfil</a></li>
+      <ul class="right">
+        <li><a href="cadastro.php">Perfil</a></li>
+      </ul>
+      <ul class="right">
+        <li><a href="cadastro_vaga.php">Cadastrar Vaga</a></li>
       </ul>
     <?php } ?>
   </div>

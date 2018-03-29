@@ -23,7 +23,7 @@ class DAOVaga
 				'ds_titulo' => $vaga->getDsTitulo(),
 				'vl_salario' => $vaga->getVlSalario(),
 				'cd_cargo' => $vaga->getCargo()->getCdCargo(),
-				'cd_empresa' => 1,
+				'cd_empresa' => $vaga->getEmpresa()->getCdEmpresa(),
 				'idiomas'=>json_encode($vaga->getIdiomas()),
 				'competencias_tecnicas'=>json_encode($vaga->getCompetenciasTecnicas()),
 				'competencias_comport'=>json_encode($vaga->getCompetenciasComport()),

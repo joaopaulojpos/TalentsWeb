@@ -8,7 +8,8 @@ class DaoEmpresa
 		$request = new RequestMethods();
 
 		return $request->post('http://localhost/talentsweb/api/public/api/empresa/salvar', 
-			array( 'cnpj' => $emp->getNrCnpj(), 
+			array( 'cd_empresa' => $emp->getCdEmpresa(),
+				   'cnpj' => $emp->getNrCnpj(), 
 				   'razaosocial' => $emp->getDsRazaoSocial(),
 				   'nomefantasia' => $emp->getDsNomeFantasia(),
 				   'porte' => $emp->getNrPorte(),
@@ -25,5 +26,12 @@ class DaoEmpresa
 
 		return $request->post('http://localhost/talentsweb/api/public/api/empresa/login', array( 'login' => $emp->getDsEmail(), 'senha' => $emp->getDsSenha()));
 	}
+
+	public function vagasEmpresaPesquisar($cd_empresa){
+		$request = new RequestMethods();
+
+		return $request->get('http://localhost/talentsweb/api/public/api/empresa/'.$cd_empresa.'/vagas');
+	}
+
 }
 ?>
