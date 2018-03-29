@@ -34,9 +34,9 @@ $app->get('/api/empresas', function(Request $request, Response $response){
         $stmt = $db->query($sql);
         $empresa = $stmt->fetchAll(PDO::FETCH_OBJ);
         $db = null;
-        echo json_encode($empresa);
+        $response->write(json_encode($empresa));
     } catch(Exception $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 
@@ -72,11 +72,6 @@ $app->post('/api/empresa/salvar', function(Request $request, Response $response)
         $empresa = new Empresa();
         if ($codigo != null){
             $empresa->setCdEmpresa($codigo); 
-            /*$rnempresa = new RNEmpresa(); 
-            $rnempresa = $rnempresa->pesquisar($empresa);
-            if ($rnempresa == null){
-               echo json_encode(array('erro' => 'Código da empresa não existe!')); 
-            }*/
         }
         $empresa->setNrCnpj($cnpj);
         $empresa->setDsRazaoSocial($razao_social);
@@ -91,10 +86,10 @@ $app->post('/api/empresa/salvar', function(Request $request, Response $response)
 
         $rnempresa = new RNEmpresa(); 
         $rnempresa = $rnempresa->salvar($empresa);
-        echo json_encode($rnempresa); 
+        $response->write(json_encode($rnempresa)); 
 
     } catch(Exception $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 
@@ -107,12 +102,30 @@ $app->get('/api/empresa/{id}', function(Request $request, Response $response){
         $empresa = new Empresa();
         $empresa->setCdEmpresa($id);
         $rnempresa = $rnempresa->pesquisar($empresa);
-        echo json_encode($rnempresa);   
+        $response->write(json_encode($rnempresa));   
 
     } catch(Exception $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
+
+$app->get('/api/empresa/{id}/vagas', function(Request $request, Response $response){
+
+    $id = $request->getAttribute('id');
+
+    try{
+        $rnempresa = new RNEmpresa();        
+        $empresa = new Empresa();
+        $empresa->setCdEmpresa($id);
+        $rnempresa = $rnempresa->pesquisarVagas($empresa);
+        $response->write(json_encode($rnempresa));   
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
+
 
 //------- Profissional
 
@@ -127,9 +140,9 @@ $app->get('/api/profissionais', function(Request $request, Response $response){
         $stmt = $db->query($sql);
         $profissional = $stmt->fetchAll(PDO::FETCH_OBJ);
         $db = null;
-        echo json_encode($profissional);
+        $response->write(json_encode($profissional));
     } catch(PDOException $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 $app->get('/api/profissional/login', function(Request $request, Response $response){
@@ -140,10 +153,10 @@ $app->get('/api/profissional/login', function(Request $request, Response $respon
     try{
         $rnprofissional = new RNProfissional();        
         $rnprofissional = $rnprofissional->logar($login, $senha);
-        echo json_encode($rnprofissional);
+        $response->write(json_encode($rnprofissional));
 
     } catch(PDOException $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 
@@ -157,9 +170,9 @@ $app->get('/api/vagas', function(Request $request, Response $response){
         $vaga = new Vaga();
         $rnvaga = new RNVaga();        
         $rnvaga = $rnvaga->pesquisar($vaga);
-        echo json_encode($rnvaga);
+        $response->write(json_encode($rnvaga));
     } catch(Exception $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 
@@ -167,9 +180,9 @@ $app->get('/api/profissional/vagas', function(Request $request, Response $respon
     try{
         $rnvagaprofissional = new RNVagaProfissional();
         $rnvagaprofissional = $rnvagaprofissional->listarVagasParaCandidatos($request->getParam('cd_profissional'));
-        echo json_encode($rnvagaprofissional);
+        $response->write(json_encode($rnvagaprofissional));
     } catch(Exception $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 
@@ -284,9 +297,9 @@ $app->post('/api/vaga/curtirVaga', function(Request $request, Response $response
     try{
         $rnvagapro = new RNVagaProfissional();
         $result = $rnvagapro->curtirVaga($vagaProfssional);
-        echo json_encode($result);
+        $response->write(json_encode($result));
     } catch(PDOException $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 
@@ -297,9 +310,9 @@ $app->get('/api/cargos', function(Request $request, Response $response){
         $cargo = new Cargo();
         $rncargo = new RNCargo();        
         $rncargo = $rncargo->pesquisar($cargo);
-        echo json_encode($rncargo);  
+        $response->write(json_encode($rncargo));  
     } catch(Exception $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 
@@ -310,9 +323,9 @@ $app->get('/api/cursos', function(Request $request, Response $response){
         $curso = new Curso();
         $rncurso = new RNCurso();        
         $rncurso = $rncurso->pesquisar($curso);
-        echo json_encode($rncurso);  
+        $response->write(json_encode($rncurso));  
     } catch(Exception $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 
@@ -323,9 +336,9 @@ $app->get('/api/idiomas', function(Request $request, Response $response){
         $idioma = new Idioma();
         $rnidioma = new RNIdioma();        
         $rnidioma = $rnidioma->pesquisar($idioma);
-        echo json_encode($rnidioma);  
+        $response->write(json_encode($rnidioma));  
     } catch(Exception $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 
@@ -336,9 +349,9 @@ $app->get('/api/competencias_tecnicas', function(Request $request, Response $res
         $competenciatecnica = new CompetenciaTecnica();
         $rncompetenciatecnica = new RNCompetenciaTecnica();        
         $rncompetenciatecnica = $rncompetenciatecnica->pesquisar($competenciatecnica);
-        echo json_encode($rncompetenciatecnica);  
+        $response->write(json_encode($rncompetenciatecnica));  
     } catch(Exception $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 
@@ -348,9 +361,9 @@ $app->get('/api/competencias_comport', function(Request $request, Response $resp
         $competenciacomport = new CompetenciaComport();
         $rncompetenciacomport = new RNCompetenciaComport();        
         $rncompetenciacomport = $rncompetenciacomport->pesquisar($competenciacomport);
-        echo json_encode($rncompetenciacomport);  
+        $response->write(json_encode($rncompetenciacomport));  
     } catch(Exception $e){
-        echo json_encode(array('erro' => $e->getMessage()));
+        $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
 

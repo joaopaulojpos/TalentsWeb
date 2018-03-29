@@ -13,8 +13,8 @@ class DaoVaga implements iDAOVaga
     public function publicar(vaga $vaga){
 
         //Comando para inserir a vaga na base de dados
-        $sql = "insert into vaga (nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_experiencia,nr_longitude,nr_latitude,ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,cd_cargo,cd_empresa)
-            values (:nr_qtd_vaga,:ds_observacao,:dt_validade,:tp_contratacao,:nr_experiencia,:nr_longitude,:nr_latitude,:ds_beneficios,:ds_horario_expediente,:dt_criacao,:ds_titulo,:vl_salario,:cd_cargo,:cd_empresa)";
+        $sql = "insert into vaga (nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_experiencia,nr_longitude,nr_latitude,ds_beneficios,ds_horario_expediente,dt_criacao,ds_titulo,vl_salario,cd_cargo,cd_empresa,tp_status)
+            values (:nr_qtd_vaga,:ds_observacao,:dt_validade,:tp_contratacao,:nr_experiencia,:nr_longitude,:nr_latitude,:ds_beneficios,:ds_horario_expediente,:dt_criacao,:ds_titulo,:vl_salario,:cd_cargo,:cd_empresa,:tp_status)";
         try {
             $db = db::getInstance();
             $stmt = $db->prepare($sql);
@@ -32,7 +32,8 @@ class DaoVaga implements iDAOVaga
                 ':ds_titulo' => $vaga->getDsTitulo(),
                 ':vl_salario' => $vaga->getVlSalario(),
                 ':cd_cargo' => $vaga->getCargo()->getCdCargo(),
-                ':cd_empresa' => $vaga->getEmpresa()->getCdEmpresa()
+                ':cd_empresa' => $vaga->getEmpresa()->getCdEmpresa(),
+                ':tp_status' => 'A'
 
             ));
             //Guardando o id da última insersão para utiliza-lo

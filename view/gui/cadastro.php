@@ -177,7 +177,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
           <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
-          <input name="senhaconfirmacao" id="senhaconfirmacao" class="form-control"  type="password">
+          <input name="senhaconfirmacao" id="senhaconfirmacao" value="<?php echo $ds_senha ?>" class="form-control"  type="password">
             </div>
           </div>
         </div>

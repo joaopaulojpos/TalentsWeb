@@ -86,5 +86,29 @@ class DaoEmpresa implements iDAOEmpresa
 
 		return ($stmt->fetchAll(PDO::FETCH_ASSOC));
 	}
+
+	public function pesquisarVagas(Empresa $emp){
+		$comando = 'select v.*, c.ds_cargo 
+					  from vaga v
+					inner join cargo c on c.cd_cargo = v.cd_cargo ';
+		$where = '';
+
+		if (!empty($emp->getCdEmpresa())){
+			if (empty($where)){
+				$where = ' where v.cd_empresa = :cd_empresa';
+			}else{
+				$where = $where . ' and v.cd_empresa = :cd_empresa';
+			}
+		}
+
+		
+		$db = new db();
+		$stmt = db::getInstance()->prepare($comando . $where);
+		if (!empty($emp->getCdEmpresa()))
+			$stmt->bindValue(':cd_empresa', $emp->getCdEmpresa());
+		$run = $stmt->execute();
+
+		return ($stmt->fetchAll(PDO::FETCH_ASSOC));
+	}
 }
 ?>

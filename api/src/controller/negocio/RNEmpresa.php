@@ -131,6 +131,32 @@ class RNEmpresa{
 			return array('erro' => $e->getMessage());
 		}
 	}
+
+	public function pesquisarVagas($empresa){
+		try{
+			$validacoes = array();
+			if (empty($empresa->getCdEmpresa()))
+			array_push($validacoes, 'Não foi possivel carregar vagas pois o código da empresa não foi localizado!');
+
+			if ($validacoes != null){
+				return array('erro' => $validacoes);
+				exit;
+			}
+
+			$daoempresa = new DaoEmpresa();
+			$result = $daoempresa->pesquisarVagas($empresa);
+			
+			if (!empty($result)){
+				return array('sucess' => $result);
+			}else{
+				return array('erro' => 'A pesquisa não retornou nenhum registro!');
+			}
+		}
+		catch (Exception $e)
+		{
+			return array('erro' => $e->getMessage());
+		}
+	}
 }
 
 ?>

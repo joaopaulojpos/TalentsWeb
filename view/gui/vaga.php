@@ -1,13 +1,21 @@
 <?php
 
 
-if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
-  session_destroy();            //Destroi a seção por segurança
-  header("Location: login.php"); 
-  exit; //Redireciona o visitante para login
-}
+  if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
+    session_destroy();            //Destroi a seção por segurança
+    header("Location: login.php"); 
+    exit; //Redireciona o visitante para login
+  }
 
-$empresa = $_SESSION['empresaLogada']; 
+  $empresa = $_SESSION['empresaLogada']; 
+
+  require_once('../../controller/fachada.php');
+
+  $fachada = Fachada::getInstance();
+  $arrayvagas = $fachada->vagasEmpresaPesquisar($empresa[0]['cd_empresa']);
+
+  //var_dump($arrayvagas);
+  //var_dump($empresa[0]['cd_empresa']);
 
 ?>
 
@@ -19,20 +27,188 @@ $empresa = $_SESSION['empresaLogada'];
   <title>Vagas - Talents</title>
 
   <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css'>
+  
   <link href="css/menu.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="description" content="Materialize is a Material Design Admin Template,It's modern, responsive and based on Material Design by Google. ">
+
+  <link rel="stylesheet" href="css/card.css">
 </head>
 <body>
   <?php include "menu.php" ?>
   
   <div class="container">
     
-  <h2>Bem vindo</h2>  
-  <span>Empresa </span><?php echo $empresa[0]['ds_razao_social'] ?>
+    <?php echo $empresa[0]['ds_razao_social'] ?>
  
   </div>
+
+  <?php foreach ($arrayvagas as $key => $value) {
+          if ($key == 'sucess'){
+            $arrayvagas2 = $value;
+            foreach ($arrayvagas2 as $key => $value) { 
+
+              $ds_titulo = $value["ds_titulo"];
+              $dt_cricacao = (new DateTime($value["dt_criacao"]))->format('d/m/Y');
+              $ds_cargo = $value['ds_cargo'];
+              $vl_salario = 'R$'.number_format($value["vl_salario"], 2, ',', '.');
+              $nr_qtd_vaga = $value["nr_qtd_vaga"];
+              $ds_beneficios = $value["ds_beneficios"];
+              $ds_observacao = $value["ds_observacao"];
+
+              if ($value["tp_contratacao"] == '1'){
+                $tp_contratacao = 'Tempo indeterminado';
+              }else if ($value["tp_contratacao"] == '2'){
+                $tp_contratacao = 'Tempo determinado';
+              }else if ($value["tp_contratacao"] == '3'){
+                $tp_contratacao = 'Temporário';
+              }else{
+                $tp_contratacao = 'Aprendizagem';
+              }
+
+              if ($value["ds_horario_expediente"] == '1'){
+                $ds_horario_expediente = 'Regime de tempo integral';
+              }else{
+                $ds_horario_expediente = 'Regime de tempo parcial';
+              }
+
+              if ($value["nr_experiencia"] == '0'){
+                $nr_experiencia = 'Sem experiência';
+              }else if ($value["nr_experiencia"] == '1'){
+                $nr_experiencia = 'menos de 1 ano';
+              }else if ($value["nr_experiencia"] == '2'){
+                $nr_experiencia = 'entre 1 a 2 anos';
+              }else if ($value["nr_experiencia"] == '3'){
+                $nr_experiencia = 'entre 2 a 3 anos';
+              }else if ($value["nr_experiencia"] == '4'){
+                $nr_experiencia = 'entre 3 a 4 anos';
+              }else{
+                $nr_experiencia = 'Acima de 5 anos';
+              }
+              
+  ?>
+
+              <div class="row">
+                <div class="col-xs-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                  <div class="card">
+                    <div class="card-move-up waves-effect waves-block waves-light">
+                      <div class="move-up cyan darken-1">
+                        <div>
+                          <a class="chart-title white-text" href="https://github.com/jkomyno"><?php echo $ds_titulo; ?></a>
+                          <div class="chart-revenue cyan darken-2 white-text">
+                            <p class="chart-revenue-total"><?php echo $dt_cricacao; ?></p>
+                          </div>
+
+                        </div>
+                        <div class="trending-line-chart-wrapper">
+                          <p>
+                            <?php echo $ds_cargo; ?>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="material-icons activator">search</i></i></a>
+                      <div class="col-sx-12 col-md-20 col-lg-20 col-sm-offset-0">
+                        <div id="doughnut-chart-wrapper" >
+                          <p><b>Tipo de contratação:</b><span> <?php echo $tp_contratacao; ?></span></p>
+                          <p><b>Salário:</b><span> <?php echo $vl_salario; ?></span></p>
+                          <p><b>Jornada de trabalho:</b><span> <?php echo $ds_horario_expediente; ?></span></p>
+                          <p><b>Experiência:</b><span> <?php echo $nr_experiencia; ?></span></p>
+                          <p><b>Quantidade de vagas:</b><span> <?php echo $nr_qtd_vaga; ?></span></p>
+                          <p><b>Benefícios:</b><span> <?php echo $ds_beneficios; ?></span></p>
+                          <p><b>Observação:</b><span> <?php echo $ds_observacao; ?></span></p>
+                        </div>
+                      </div>
+                    </div>
+
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Requisitos <i class="material-icons right orange-text text-darken-2">Fechar</i></span>
+                        <table class="">
+                          <thead>
+                            <tr>
+                              <th data-field="port">Curso</th>
+                              <th data-field="protocol">Formação</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Análise e desenvolvimento de sistemas</td>
+                              <td>Ensino Superior</td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <table class="">
+                          <thead>
+                            <tr>
+                              <th data-field="port">Competência Técnica</th>
+                              <th data-field="protocol">Nível</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Java</td>
+                              <td>Nível 3</td>
+                            </tr>
+                            <tr>
+                              <td>SQLServer</td>
+                              <td>Nível 2</td>
+                            </tr>
+                          </tbody>
+                        </table>
+
+                        <table class="">
+                            <thead>
+                              <tr>
+                                <th data-field="port">Competência Comportamental</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Trabalhar em equipe</td>
+                              </tr>
+                              <tr>
+                                <td>Proatividade</td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                        <table class="">
+                            <thead>
+                              <tr>
+                                <th data-field="port">Idioma</th>
+                                <th data-field="protocol">Nível</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Inglês</td>
+                                <td>Básico</td>
+                              </tr>
+                              <tr>
+                                <td>Português</td>
+                                <td>Fluente</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      </div>
+
+                  </div>
+                </div>
+              </div>
+
+  <?php
+          }
+        }
+      }
+  ?>
 
   
   <?php include "footer.php" ?>
@@ -42,7 +218,8 @@ $empresa = $_SESSION['empresaLogada'];
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 
 
   </body>
