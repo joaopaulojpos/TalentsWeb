@@ -66,7 +66,7 @@ $app->post('/api/empresa/salvar', function(Request $request, Response $response)
     $site = $request->getParam('site');
     $email = $request->getParam('email');
     $senha = $request->getParam('senha'); 
-    $codigo = $request->getParam('codigo');   
+    $codigo = $request->getParam('cd_empresa');   
 
     try{
         $empresa = new Empresa();

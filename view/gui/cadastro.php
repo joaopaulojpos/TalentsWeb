@@ -3,9 +3,33 @@
 if (isset($_SESSION['empresa'])) 
 session_destroy();
 
-header("Access-Control-Allow-Origin: *");
-header("Access-Control-Allow-Headers: Content-Type");
+$cd_empresa              = '';
+$nr_cnpj                 = '';
+$ds_razao_social         = '';
+$ds_nome_fantasia        = '';
+$nr_porte                = '';
+$ds_area_atuacao         = '';
+$ds_responsavel_cadastro = '';
+$ds_telefone             = '';
+$ds_site                 = '';
+$ds_email                = '';
+$ds_senha                = '';
 
+if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
+  $empresa = $_SESSION['empresaLogada']; 
+
+  $cd_empresa = $empresa[0]['cd_empresa'];
+  $nr_cnpj = $empresa[0]['nr_cnpj'];
+  $ds_razao_social = $empresa[0]['ds_razao_social'];
+  $ds_nome_fantasia = $empresa[0]['ds_nome_fantasia'];
+  $nr_porte = $empresa[0]['nr_porte'];
+  $ds_area_atuacao = $empresa[0]['ds_area_atuacao'];
+  $ds_responsavel_cadastro = $empresa[0]['ds_nome_responsavel'];
+  $ds_telefone = $empresa[0]['ds_telefone'];
+  $ds_site = $empresa[0]['ds_site'];
+  $ds_email = $empresa[0]['ds_email'];
+  $ds_senha = $empresa[0]['ds_senha'];
+}
 
 
 
@@ -37,12 +61,14 @@ header("Access-Control-Allow-Headers: Content-Type");
       <fieldset>
         <legend>Cadastro</legend>
 
+        <input type="hidden" value="<?php echo $cd_empresa ?>" name="cd_empresa" id="cd_empresa"/>
+
         <div class="form-group">
           <label class="col-md-4 control-label">CNPJ</label>  
           <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-info-sign"></i></span>
-          <input style="width:70%;height: 100%;" name="cnpj" id="cnpj" placeholder="Ex: 00.000.000/0000-00" class="form-control"  type="text">
+          <input style="width:70%;height: 100%;" value="<?php echo $nr_cnpj ?>" name="cnpj" id="cnpj" placeholder="Ex: 00.000.000/0000-00" class="form-control"  type="text">
           <input style="width:30%;height: 100%;" name="buttonCarregarDados" class="btn btn-warning" id="buttonCarregarDados" type="button" value="Carregar" onclick="carregarDadosViaWebService()">
             </div>
           </div>
@@ -53,7 +79,7 @@ header("Access-Control-Allow-Headers: Content-Type");
           <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
-          <input name="razaosocial" id="razaosocial" placeholder="Ex: Talents LTDA." class="form-control"  type="text">
+          <input name="razaosocial" id="razaosocial" value="<?php echo $ds_razao_social ?>" placeholder="Ex: Talents LTDA." class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -63,7 +89,7 @@ header("Access-Control-Allow-Headers: Content-Type");
           <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
-          <input name="nomefantasia" id="nomefantasia" placeholder="Ex: Talents" class="form-control"  type="text">
+          <input name="nomefantasia" id="nomefantasia" value="<?php echo $ds_nome_fantasia ?>" placeholder="Ex: Talents" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -73,14 +99,14 @@ header("Access-Control-Allow-Headers: Content-Type");
           <div class="col-md-4 selectContainer">
             <div class="input-group">
               <span class="input-group-addon"><i class="glyphicon glyphicon-stats"></i></span>
-              <select name="porte" id="porte" class="form-control selectpicker" >
+              <select name="porte" id="porte" class="form-control selectpicker">
                 <option value="">Selecione o porte atual</option>
-                <option value="1">1 - 5</option>
-                <option value="2">6 - 10</option>
-                <option value="3">11 - 50</option>
-                <option value="4">51 - 100</option>
-                <option value="5">101 - 500</option>
-                <option value="6">501 +</option>
+                <option value="1" <?php echo $nr_porte=='1'?'selected':'';?> >1 - 5</option>
+                <option value="2" <?php echo $nr_porte=='2'?'selected':'';?> >6 - 10</option>
+                <option value="3" <?php echo $nr_porte=='3'?'selected':'';?> >11 - 50</option>
+                <option value="4" <?php echo $nr_porte=='4'?'selected':'';?> >51 - 100</option>
+                <option value="5" <?php echo $nr_porte=='5'?'selected':'';?> >101 - 500</option>
+                <option value="6" <?php echo $nr_porte=='6'?'selected':'';?> >501 +</option>
               </select>
             </div>
           </div>
@@ -91,7 +117,7 @@ header("Access-Control-Allow-Headers: Content-Type");
           <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
-          <input name="areaatuacao" id="areaatuacao" placeholder="Ex: Técnologia da informação, saúde" class="form-control"  type="text">
+          <input name="areaatuacao" id="areaatuacao" value="<?php echo $ds_area_atuacao ?>" placeholder="Ex: Técnologia da informação, saúde" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -101,7 +127,7 @@ header("Access-Control-Allow-Headers: Content-Type");
           <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-          <input name="responsavel" id="responsavel" placeholder="Ex: Tiago batera" class="form-control"  type="text">
+          <input name="responsavel" id="responsavel" value="<?php echo $ds_responsavel_cadastro ?>" placeholder="Ex: Tiago batera" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -111,7 +137,7 @@ header("Access-Control-Allow-Headers: Content-Type");
           <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-          <input name="telefone" id="telefone" placeholder="Ex: 99 999999999" class="form-control"  type="text">
+          <input name="telefone" id="telefone" value="<?php echo $ds_telefone ?>" placeholder="Ex: 99 999999999" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -121,7 +147,7 @@ header("Access-Control-Allow-Headers: Content-Type");
           <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-          <input name="email" id="email" placeholder="Ex: suporte@talents.com.br" class="form-control"  type="text">
+          <input name="email" id="email" value="<?php echo $ds_email ?>" placeholder="Ex: suporte@talents.com.br" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -131,7 +157,7 @@ header("Access-Control-Allow-Headers: Content-Type");
           <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-          <input name="site" id="site" placeholder="Ex: talents.com.br" class="form-control"  type="text">
+          <input name="site" id="site" value="<?php echo $ds_site ?>" placeholder="Ex: talents.com.br" class="form-control"  type="text">
             </div>
           </div>
         </div>
@@ -141,7 +167,7 @@ header("Access-Control-Allow-Headers: Content-Type");
           <div class="col-md-4 inputGroupContainer">
           <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-asterisk"></i></span>
-          <input name="senha" id="senha" class="form-control"  type="password">
+          <input name="senha" id="senha" value="<?php echo $ds_senha ?>" class="form-control"  type="password">
             </div>
           </div>
         </div>
@@ -218,6 +244,7 @@ header("Access-Control-Allow-Headers: Content-Type");
 
       $('#formulario').submit(function(){  //Ao submeter formulário
         $('#loader').show();
+        var codigo_empresa=$('#cd_empresa').val();
         var cnpj=$('#cnpj').val();
         var razao_social=$('#razaosocial').val();
         var nome_fantasia=$('#nomefantasia').val();
@@ -240,7 +267,7 @@ header("Access-Control-Allow-Headers: Content-Type");
         $.ajax({      //Função AJAX
           url:"valida_cadastro.php",      //Arquivo php
           type:"post",        //Método de envio
-          data: "cnpj="+cnpj+"&razaosocial="+razao_social+"&nomefantasia="+nome_fantasia+"&porte="+porte+"&areaatuacao="+area_atuacao+"&responsavel="+responsavel+"&telefone="+telefone+"&site="+site+"&email="+email+"&senha="+senha, //Dados
+          data: "cd_empresa="+codigo_empresa+"&cnpj="+cnpj+"&razaosocial="+razao_social+"&nomefantasia="+nome_fantasia+"&porte="+porte+"&areaatuacao="+area_atuacao+"&responsavel="+responsavel+"&telefone="+telefone+"&site="+site+"&email="+email+"&senha="+senha, //Dados
             success: function (result){     //Sucesso no AJAX
                         if(result==1){            
                           location.href='vaga.php';  //Redireciona

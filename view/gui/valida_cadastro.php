@@ -6,6 +6,7 @@ require_once('../../controller/fachada.php');
 try{
 	$fachada = Fachada::getInstance();
 
+	$cd_empresa = $_POST['cd_empresa'];
 	$cnpj = $_POST['cnpj'];
 	$razao_social = $_POST['razaosocial'];
 	$nome_fantasia = $_POST['nomefantasia'];
@@ -18,6 +19,7 @@ try{
 	$senha = $_POST['senha'];
 
 	$empresa = new Empresa();
+	$empresa->setCdEmpresa($cd_empresa);
 	$empresa->setNrCnpj($cnpj);
 	$empresa->setDsRazaoSocial($razao_social);
 	$empresa->setDsNomeFantasia($nome_fantasia);

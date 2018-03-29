@@ -21,7 +21,7 @@ error_reporting(E_ALL);
         <li><a href="login.php">Sair</a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
-        <li><a href="perfil.php">Perfil</a></li>
+        <li><a href="cadastro.php">Perfil</a></li>
       </ul>
     <?php } ?>
   </div>
