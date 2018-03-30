@@ -8,10 +8,10 @@ require_once('../src/model/dados/daovaga.php');
 class RNVaga{
 
 	public function publicar(Vaga $vaga){
-		
-        $daovaga = new DAOVaga();
+		try {
 
-        try {
+            $daovaga = new DAOVaga();
+        
             //Validações de campo
 
             $validacoes = array();
@@ -88,12 +88,12 @@ class RNVaga{
             
             //------------------------------------------------------------------------------------------------------------\
 
-            return $daovaga->publicar($vaga);
+            $daovaga->publicar($vaga);
+
+            return array('sucess' => 'Cadastrado com sucesso!');
 
         }catch (Exception $e){
-
-            return array('erro' => 'Não foi possível publicar a vaga');
-
+            return array('erro' => $e->getMessage());
         }
 	}
 
@@ -108,9 +108,8 @@ class RNVaga{
 			}else{
 				return array('erro' => 'A pesquisa não retornou nenhum registro!');
 			}
-		}
-		catch (Exception $e)
-		{
+            
+		}catch (Exception $e){
 			return array('erro' => $e->getMessage());
 		}
 	

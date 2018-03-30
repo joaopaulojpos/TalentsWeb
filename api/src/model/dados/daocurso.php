@@ -9,38 +9,42 @@ class DaoCurso implements iDAOCurso
 	}
 
 	public function pesquisar(Curso $curso, $alt='false'){
-		$comando = 'select cd_curso, ds_curso, f.ds_formacao from curso c inner join formacao f on (f.cd_formacao = c.cd_formacao) ';
-		$where = '';
-        $orderby = ' order by ds_formacao asc, ds_curso asc ';
+    try{
+  		$comando = 'select cd_curso, ds_curso, f.ds_formacao from curso c inner join formacao f on (f.cd_formacao = c.cd_formacao) ';
+  		$where = '';
+      $orderby = ' order by ds_formacao asc, ds_curso asc ';
 
-		if (!empty($curso->getCdCurso())){
-			if (empty($where)){
-				$where = ' where cd_curso = :cd_curso';
-			}else{
-				$where = $where . ' and cd_curso = :cd_curso';
-			}
-		}
-
+  		if (!empty($curso->getCdCurso())){
+  			if (empty($where)){
+  				$where = ' where cd_curso = :cd_curso';
+  			}else{
+  				$where = $where . ' and cd_curso = :cd_curso';
+  			}
+  		}
 		
-		if (!empty($curso->getDsCurso())){
-			if (empty($where)){
-				$where = ' where ds_curso like :descricao';
-			}else{
-				$where = $where . ' and ds_curso like :descricao';
-			}
-		}
+  		if (!empty($curso->getDsCurso())){
+  			if (empty($where)){
+  				$where = ' where ds_curso like :descricao';
+  			}else{
+  				$where = $where . ' and ds_curso like :descricao';
+  			}
+  		}
 
-		
-		$db = new db();
-		$stmt = db::getInstance()->prepare($comando . $where . $orderby);
-		if (!empty($curso->getCdCurso()))
-			$stmt->bindValue(':cd_curso', $curso->getCdCurso());
-		if (!empty($curso->getDsCurso()))
-			$stmt->bindValue(':descricao', '%'.$curso->getDsCurso().'%');
+  		$stmt = db::getInstance()->prepare($comando . $where . $orderby);
+  		if (!empty($curso->getCdCurso()))
+  			$stmt->bindValue(':cd_curso', $curso->getCdCurso());
+  		if (!empty($curso->getDsCurso()))
+  			$stmt->bindValue(':descricao', '%'.$curso->getDsCurso().'%');
 
-		$run = $stmt->execute();
+  		$run = $stmt->execute();
 
-		return ($stmt->fetchAll(PDO::FETCH_ASSOC));
+  		return ($stmt->fetchAll(PDO::FETCH_ASSOC));
+
+    }catch(Exception $e){
+      throw new Exception($e->getMessage());
+    }finally{
+      $stmt->closeCursor();
+    }
 	}
 
     /**
@@ -49,15 +53,14 @@ class DaoCurso implements iDAOCurso
      */
     public function listarCursoVaga($cod_vaga)
     {
-
+      try{
         $sql = 'select curso.ds_curso,vc.cd_curso, formacao.ds_formacao 
                   from vaga_curso AS vc
-                  JOIN vaga ON vc.cd_vaga = vaga.cd_vaga
-                  JOIN curso ON curso.cd_curso = vc.cd_curso
-                  JOIN formacao on formacao.cd_formacao = curso.cd_formacao
+            inner join vaga ON vc.cd_vaga = vaga.cd_vaga
+            inner join curso ON curso.cd_curso = vc.cd_curso
+            inner join formacao on formacao.cd_formacao = curso.cd_formacao
                  where vc.cd_vaga = :cod_vaga;';
 
-        $db = new db();
         $stmt = db::getInstance()->prepare($sql);
 
         if (!empty($cod_vaga))
@@ -67,6 +70,7 @@ class DaoCurso implements iDAOCurso
 
         $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
         $listaCurso = new ArrayObject();
+
         foreach ($result as $row){
             $curso = new curso();
             $curso->setCdCurso($row['cd_curso']);
@@ -75,12 +79,17 @@ class DaoCurso implements iDAOCurso
             $listaCurso->append($curso);
         }
         return $listaCurso;
+
+      }catch(Exception $e){
+        throw new Exception($e->getMessage());
+      }finally{
+        $stmt->closeCursor();
+      }
     }
 
     public function inserirCursoVaga($cd_vaga, Curso $curso){
+      try{
         $sql = "insert into vaga_curso (cd_curso,cd_vaga) values (:cd_curso,:cd_vaga);";
-
-        var_dump($curso);
 
         $stmt = db::getInstance()->prepare($sql);
         $run = $stmt->execute(array(
@@ -90,6 +99,11 @@ class DaoCurso implements iDAOCurso
 
         return array($run);
 
+      }catch(Exception $e){
+        throw new Exception($e->getMessage());
+      }finally{
+        $stmt->closeCursor();
+      }
     }
 }
 ?>

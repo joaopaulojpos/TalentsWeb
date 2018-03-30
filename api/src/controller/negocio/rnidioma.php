@@ -14,9 +14,7 @@ class RNIdioma{
 			}else{
 				return array('erro' => 'A pesquisa não retornou nenhum registro!');
 			}
-		}
-		catch (Exception $e)
-		{
+		}catch (Exception $e){
 			return array('erro' => $e->getMessage());
 		}
 	}

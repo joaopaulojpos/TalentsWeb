@@ -1,6 +1,6 @@
 <?php
 
-class conversorDeObjetosVaga{
+class conversorDeObjetos{
 
     //--------------------------------------------- AUXILIARES -----------------------------------------------------------
     /**

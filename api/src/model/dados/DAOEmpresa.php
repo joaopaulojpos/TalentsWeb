@@ -9,7 +9,8 @@ class DaoEmpresa implements iDAOEmpresa
 	}
 	public function cadastrar(Empresa $emp){
 		try{
-			$comando = "insert into empresa (nr_cnpj, ds_razao_social, ds_nome_fantasia, nr_porte, ds_nome_responsavel, ds_area_atuacao, ds_site, ds_telefone, ds_email, ds_senha) values (:nr_cnpj, :ds_razao_social, :ds_nome_fantasia, :nr_porte, :ds_nome_responsavel, :ds_area_atuacao, :ds_site, :ds_telefone, :ds_email, :ds_senha)";
+			$comando = "insert into empresa (nr_cnpj, ds_razao_social, ds_nome_fantasia, nr_porte, ds_nome_responsavel, ds_area_atuacao, ds_site, ds_telefone, ds_email, ds_senha) 
+							 values (:nr_cnpj, :ds_razao_social, :ds_nome_fantasia, :nr_porte, :ds_nome_responsavel, :ds_area_atuacao, :ds_site, :ds_telefone, :ds_email, :ds_senha)";
 			$stmt = db::getInstance()->prepare($comando);
 
 			$stmt->bindValue(':nr_cnpj', $emp->getNrCnpj());
@@ -109,7 +110,7 @@ class DaoEmpresa implements iDAOEmpresa
 		try{
 			$comando = 'select v.*, c.ds_cargo 
 						  from vaga v
-						inner join cargo c on c.cd_cargo = v.cd_cargo ';
+					inner join cargo c on c.cd_cargo = v.cd_cargo ';
 			$where = '';
 			$orderBy = ' order by v.dt_criacao desc, v.ds_titulo asc ';
 
@@ -128,7 +129,7 @@ class DaoEmpresa implements iDAOEmpresa
 			$run = $stmt->execute();
 	        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-			$conversor = new conversorDeObjetosVaga();
+			$conversor = new conversorDeObjetos();
 
 			return $conversor->parseRowsToObjectVaga($result);
 		}catch(Exception $e){

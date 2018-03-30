@@ -114,7 +114,7 @@ class DaoVaga implements iDAOVaga
             $run = $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            $conversor = new conversorDeObjetosVaga();
+            $conversor = new conversorDeObjetos();
 
             return $conversor->parseRowsToObjectVaga($result); //$stmt->fetchAll(PDO::FETCH_ASSOC);
         }catch(Exception $e){
