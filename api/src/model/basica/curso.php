@@ -50,7 +50,7 @@ class curso implements JsonSerializable
             [
                 'cd_curso'=>$this->cd_curso,
                 'ds_curso'=>$this->ds_curso,
-                'ds_instituicao'=>$this->ds_instituicao
+                'ds_formacao'=>$this->formacao
             ];
     }
 }

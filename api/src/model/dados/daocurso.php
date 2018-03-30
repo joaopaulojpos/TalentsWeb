@@ -50,10 +50,12 @@ class DaoCurso implements iDAOCurso
     public function listarCursoVaga($cod_vaga)
     {
 
-        $sql = 'select curso.ds_curso,vc.cd_curso,vc.ds_instituicao from vaga_curso AS vc
-                      JOIN vaga ON vc.cd_vaga = vaga.cd_vaga
-                      JOIN curso ON curso.cd_curso = vc.cd_curso 
-                      where vc.cd_vaga = :cod_vaga;';
+        $sql = 'select curso.ds_curso,vc.cd_curso, formacao.ds_formacao 
+                  from vaga_curso AS vc
+                  JOIN vaga ON vc.cd_vaga = vaga.cd_vaga
+                  JOIN curso ON curso.cd_curso = vc.cd_curso
+                  JOIN formacao on formacao.cd_formacao = curso.cd_formacao
+                 where vc.cd_vaga = :cod_vaga;';
 
         $db = new db();
         $stmt = db::getInstance()->prepare($sql);
@@ -67,9 +69,9 @@ class DaoCurso implements iDAOCurso
         $listaCurso = new ArrayObject();
         foreach ($result as $row){
             $curso = new curso();
-            $curso->setDsInstituicao($row['ds_instituicao']);
             $curso->setCdCurso($row['cd_curso']);
             $curso->setDsCurso($row['ds_curso']);
+            $curso->setFormacao($row['ds_formacao']);
             $listaCurso->append($curso);
         }
         return $listaCurso;

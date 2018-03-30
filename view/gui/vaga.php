@@ -55,8 +55,10 @@
             foreach ($arrayvagas2 as $key => $value) { 
 
               $ds_titulo = $value["ds_titulo"];
-              $dt_cricacao = (new DateTime($value["dt_criacao"]))->format('d/m/Y');
-              $ds_cargo = $value['ds_cargo'];
+              $dt_cricacao = 'Criado em: '.(new DateTime($value["dt_criacao"]))->format('d/m/Y');
+              if ($value["cargo"]){
+                $ds_cargo = 'Cargo: '.$value["cargo"]['ds_cargo'];
+              }
               $vl_salario = 'R$'.number_format($value["vl_salario"], 2, ',', '.');
               $nr_qtd_vaga = $value["nr_qtd_vaga"];
               $ds_beneficios = $value["ds_beneficios"];
@@ -114,7 +116,7 @@
                       </div>
                     </div>
                     <div class="card-content">
-                      <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="material-icons activator">search</i></i></a>
+                      <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="material-icons activator">+</i></i></a>
                       <div class="col-sx-12 col-md-20 col-lg-20 col-sm-offset-0">
                         <div id="doughnut-chart-wrapper" >
                           <p><b>Tipo de contratação:</b><span> <?php echo $tp_contratacao; ?></span></p>
@@ -138,10 +140,18 @@
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td>Análise e desenvolvimento de sistemas</td>
-                              <td>Ensino Superior</td>
-                            </tr>
+                            <?php if ($value["cursos"]){ 
+                                    foreach ($value["cursos"] as $key => $cursos) {    
+                            ?>
+                              <tr>
+                                <td> <?php echo $cursos['ds_curso']; ?></td>
+                                <td> <?php echo $cursos['ds_formacao']; ?></td>
+                              </tr>
+                            <?php 
+                                    }
+                                  } 
+
+                            ?> 
                           </tbody>
                         </table>
 
@@ -153,14 +163,18 @@
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td>Java</td>
-                              <td>Nível 3</td>
-                            </tr>
-                            <tr>
-                              <td>SQLServer</td>
-                              <td>Nível 2</td>
-                            </tr>
+                            <?php if ($value["competencias_tecnicas"]){ 
+                                    foreach ($value["competencias_tecnicas"] as $key => $comp_tec) {    
+                            ?>
+                              <tr>
+                                <td> <?php echo $comp_tec['ds_competencia_tecnica']; ?></td>
+                                <td> <?php echo $comp_tec['nr_nivel']; ?></td>
+                              </tr>
+                            <?php 
+                                    }
+                                  } 
+
+                            ?>
                           </tbody>
                         </table>
 
@@ -171,12 +185,17 @@
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td>Trabalhar em equipe</td>
-                              </tr>
-                              <tr>
-                                <td>Proatividade</td>
-                              </tr>
+                              <?php if ($value["competencias_comp"]){ 
+                                      foreach ($value["competencias_comp"] as $key => $comp_comport) {    
+                              ?>
+                                <tr>
+                                  <td> <?php echo $comp_comport['ds_competencia_comport']; ?></td>
+                                </tr>
+                              <?php 
+                                      }
+                                    } 
+
+                              ?>
                             </tbody>
                           </table>
 
@@ -188,14 +207,18 @@
                               </tr>
                             </thead>
                             <tbody>
-                              <tr>
-                                <td>Inglês</td>
-                                <td>Básico</td>
-                              </tr>
-                              <tr>
-                                <td>Português</td>
-                                <td>Fluente</td>
-                              </tr>
+                              <?php if ($value["idiomas"]){ 
+                                      foreach ($value["idiomas"] as $key => $comp_tec) {    
+                              ?>
+                                <tr>
+                                  <td> <?php echo $comp_tec['ds_idioma']; ?></td>
+                                  <td> <?php echo $comp_tec['nr_nivel']; ?></td>
+                                </tr>
+                              <?php 
+                                      }
+                                    } 
+
+                              ?>
                             </tbody>
                           </table>
                       </div>

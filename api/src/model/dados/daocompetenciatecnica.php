@@ -13,7 +13,7 @@ class DAOCompetenciaTecnica implements iDAOCompetenciaTecnica
                       from competencia_tecnica ct
                       inner join tipo_competencia_tecnica tct on (tct.cd_tipo_competencia_tecnica = ct.cd_tipo_competencia_tecnica) ";
 		$where = '';
-        $orderby = ' order by ds_tipo_competencia_tecnica asc, ds_competencia_tecnica asc ';
+        $orderby = ' order by ds_competencia_tecnica asc, ds_tipo_competencia_tecnica asc ';
 
 		if (!empty($ct->getCdCompetenciaTecnica())){
 			if (empty($where)){

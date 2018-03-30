@@ -14,6 +14,9 @@ class Vaga implements JsonSerializable {
     private $ds_titulo;
     private $vl_salario;
     private $nr_experiencia;
+
+    private $tp_status;
+
     //classe cargo
     private $cargo;
     //classe empresa
@@ -147,6 +150,15 @@ class Vaga implements JsonSerializable {
         return $this->vl_salario;
     }
 
+    function setTpStatus($tp_status)
+    {
+        $this->tp_status = trim($tp_status);
+    }
+    function getTpStatus()
+    {
+        return $this->tp_status;
+    }
+
     function setCargo($cargo)
     {
         $this->cargo = $cargo;
@@ -238,9 +250,11 @@ class Vaga implements JsonSerializable {
                 'nr_latitude'=>$this->nr_latitude,
                 'ds_beneficios'=>$this->ds_beneficios,
                 'ds_horario_expediente'=>$this->ds_horario_expediente,
+                'nr_experiencia'=>$this->nr_experiencia,
                 'dt_criacao'=>$this->dt_criacao,
                 'ds_titulo'=>$this->ds_titulo,
                 'vl_salario'=>$this->vl_salario,
+                'tp_status'=>$this->tp_status,
                 'cargo'=>$this->cargo,
                 'empresa'=>$this->empresa,
                 'cursos'=>$this->cursos,

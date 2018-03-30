@@ -23,6 +23,8 @@ require '../src/model/basica/vagaprofissional.php';
 require '../src/model/dados/daocompetenciatecnica.php';
 require '../src/model/dados/daocompetenciacomport.php';
 
+require '../src/model/dados/conversordeobjetosVaga.php';
+
 require '../src/controller/negocio/rnempresa.php';
 require '../src/controller/negocio/rnvaga.php';
 require '../src/controller/negocio/rnprofissional.php';

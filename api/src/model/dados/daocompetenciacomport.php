@@ -13,7 +13,7 @@ class DAOCompetenciaComport implements iDAOCompetenciaComport
                       from competencia_comport cc
                       inner join tipo_competencia_comport tct on (tct.cd_tipo_competencia_comport = cc.cd_tipo_competencia_comport) ";
 		$where = '';
-        $orderby = ' order by ds_tipo_competencia_comport asc, ds_competencia_comport asc ';
+        $orderby = ' order by ds_competencia_comport asc, ds_tipo_competencia_comport asc ';
 
 		if (!empty($cc->getCdCompetenciaComport())){
 			if (empty($where)){
@@ -53,9 +53,9 @@ class DAOCompetenciaComport implements iDAOCompetenciaComport
 
         $sql = 'select cc.ds_competencia_comport,vct.cd_competencia_comport 
                   from vaga_competencia_comport vct
-                  inner join vaga v ON vct.cd_vaga = v.cd_vaga
-                  inner join competencia_comport cc ON cc.cd_competencia_comport = vct.cd_competencia_comport 
-                      where vct.cd_vaga = :cod_vaga;';
+                 inner join vaga v ON vct.cd_vaga = v.cd_vaga
+                 inner join competencia_comport cc ON cc.cd_competencia_comport = vct.cd_competencia_comport 
+                 where vct.cd_vaga = :cod_vaga;';
 
         $db = new db();
         $stmt = db::getInstance()->prepare($sql);
@@ -76,7 +76,7 @@ class DAOCompetenciaComport implements iDAOCompetenciaComport
             $cc = new CompetenciaComport();
             //$cc->setNrNivel($row['nr_nivel']);
             $cc->setCdCompetenciaComport($row['cd_competencia_comport']);
-            $cc->getDsCompetenciaComport($row['ds_competencia_comport']);
+            $cc->setDsCompetenciaComport($row['ds_competencia_comport']);
             $listaCc->append($cc);
 
         }
