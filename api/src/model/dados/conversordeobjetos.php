@@ -44,6 +44,10 @@ class conversorDeObjetos{
                 $cargo->setDsCargo($row['ds_cargo']);
                 $vaga->setCargo($cargo);
 
+                //Empresa
+                $empresa->setDsNomeFantasia($row['ds_nome_fantasia']);
+                $vaga->setEmpresa($empresa);
+
                 //TODO Listar dos profissionais e cursos
                 /*Profissionais que curtiram a vaga
                 foreach ($daoprofissional->listarProfissionalVaga($vaga->getCdVaga()) as $p) {

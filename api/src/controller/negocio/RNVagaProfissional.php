@@ -63,7 +63,7 @@ class RNVagaProfissional
             return array('sucess' => 'Vaga curtida!');
             
         }catch (Exception $e){
-            return array('erro' => $e->getMessage());
+            return array('erro' => $e->getTrace());
         }
     }
 
@@ -73,7 +73,7 @@ class RNVagaProfissional
             $daovagapro = new DAOVagaProfissional();
             $daoprofissional = new DaoProfissional();
 
-            $result = $daovagapro->pesquisaa($cd_profissional,false);
+            $result = $daovagapro->pesquisa($cd_profissional,false);
             //TODO validar se o profissional já curtiu alguma vaga antes.Pq Se colocar um cod_pro que não está na tabela N-N ele tras todos os registros.
             return array('sucess'=> $result);
 

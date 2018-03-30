@@ -107,7 +107,7 @@ class DAOVagaProfissional implements IDAOVagaProfissional
      * @param string $alt
      * @return array
      */
-    public function pesquisaa($cd_profissional, $alt='false'){
+    public function pesquisa($cd_profissional, $alt='false'){
         try{
             $comando = 'select v.cd_vaga,v.nr_qtd_vaga,v.ds_observacao,v.dt_validade,v.tp_contratacao,v.nr_longitude,v.nr_latitude,v.ds_beneficios,
                                v.ds_horario_expediente,v.dt_criacao,v.ds_titulo,v.vl_salario,v.tp_status,v.nr_experiencia,
@@ -141,7 +141,7 @@ class DAOVagaProfissional implements IDAOVagaProfissional
             $conversor = new conversorDeObjetos();
 
             //Lista de objetos vaga
-            return $conversor-parseRowsToObjectVaga($stmt->fetchAll(PDO::FETCH_ASSOC)); 
+            return $conversor->parseRowsToObjectVaga($stmt->fetchAll(PDO::FETCH_ASSOC));
 
         }catch(Exception $e){
             throw new Exception($e->getMessage());
