@@ -27,125 +27,83 @@
 
         <form name="formulario" id="formulario">
             <div class="container">
+                    <input type="hidden" value="<?php echo $cd_empresa ?>" name="cd_empresa" id="cd_empresa"/>
                 <div class="row">
                     <div class="input-field col s12 m12">
-                        <i class="material-icons prefix">domain</i>
+                        <i class="material-icons prefix">info</i>
                         <input name="cnpj" id="cnpj" type="text" class="validate" minlength="3" required>
                         <label for="titulo">CNPJ</label>
                     </div>
 
+                    <div class="input-field col s12 m12">
+                        <i class="material-icons prefix">business_center</i>
+                        <input name="razaosocial" id="razaosocial" type="text" required>
+                        <label for="razaosocial">Razão Social</label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <i class="material-icons prefix">business_center</i>
+                        <input name="nomefantasia" id="nomefantasia" type="text" required>
+                        <label for="nomefantasia">Nome Fantasia</label>
+                    </div>
+
+                    <div class="input-field col s12 m6">
+                        <i class="material-icons prefix">book</i>
+                        <input id="areaatuacao" name="areaatuacao" type="text" class="validate" required>
+                        <label for="titulo">Área de atuação</label>
+                    </div>
+
                     <div class="input-field col s12 m6">
                         <select required>
-                            <option value="" disabled selected>Selecione o Cargo</option>
-                            <option value="1">Option 1</option>
+                            <option value="" disabled selected>Selecione o porte atual</option>
+                            <option value="1" <?php echo $nr_porte=='1'?'selected':'';?></option>> 1 - 5</option>
                             <option value="2">Option 2</option>
                             <option value="3">Option 3</option>
                         </select>
-                        <label>Cargo</label>
-                    </div>
-
-                    <div class="input-field col s12 m6">
-                        <select required>
-                            <option value="" disabled selected>Regime de contratação</option>
-                            <option value="1">CLT</option>
-                            <option value="2">PJ</option>
-                            <option value="3">Freelancer</option>
-                            <option value="3">Estágio</option>
-                        </select>
-                        <label>Contratação</label>
-                    </div>
-
-                    <div class="input-field col s12 m6">
-                        <i class="material-icons prefix">monetization_on</i>
-                        <input id="titulo" type="text" class="validate" required>
-                        <label for="titulo">Salário</label>
-                    </div>
-
-                    <div class="input-field col s12 m6">
-                        <i class="material-icons prefix">filter_1</i>
-                        <input id="titulo" type="text" class="validate" required>
-                        <label for="titulo">Quantidade de vagas</label>
+                        <label>Porte</label>
                     </div>
 
                     <div class="input-field col s12 m12">
-                        <select required>
-                            <option value="" disabled selected>Jornada de Trabalho</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                        </select>
-                        <label>Jornada</label>
+                        <i class="material-icons prefix">assignment_ind</i>
+                        <input id="responsavel" name="responsavel" type="text" class="validate" required>
+                        <label for="titulo">Responsável pelo cadastro</label>
                     </div>
 
                     <div class="input-field col s12 m12">
-                        <select required>
-                            <option value="" disabled selected>Experiência</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                        </select>
-                        <label>Experiência</label>
+                        <i class="material-icons prefix">contacts</i>
+                        <input id="telefone" name="telefone" type="tel" class="validate" required>
+                        <label for="titulo">Contato</label>
                     </div>
 
                     <div class="input-field col s12 m12">
-                        <textarea id="textarea1" class="materialize-textarea" minlength="5" required></textarea>
-                        <label for="textarea1">Benefícios</label>
+                        <i class="material-icons prefix">email</i>
+                        <input id="email" name="email" type="email" class="validate" required>
+                        <label for="titulo">Email</label>
                     </div>
 
                     <div class="input-field col s12 m12">
-                        <textarea id="textarea1" class="materialize-textarea" minlength="10" required></textarea>
-                        <label for="textarea1">Descrição das atividades</label>
+                        <i class="material-icons prefix">language</i>
+                        <input id="site" name="site" type="text" class="validate" required>
+                        <label for="titulo">Site</label>
                     </div>
 
+                    <div class="input-field col s12 m12">
+                        <i class="material-icons prefix">https</i>
+                        <input id="senha" name="senha" type="password" class="validate" required>
+                        <label for="titulo">Senha</label>
+                    </div>
+
+                    <div class="input-field col s12 m12">
+                        <i class="material-icons prefix">https</i>
+                        <input id="senhaconfirmacao" name="senhaconfirmacao" type="password" class="validate" required>
+                        <label for="titulo">Confirmar Senha</label>
+                    </div>
                 </div>
             </div>
 
-            <div class="container">
-                <div class="row">
-                    <div class="input-field col s12 m12">
-                        <select required>
-                            <option value="" disabled selected>Escolha os cursos</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                        </select>
-                        <label>Cursos Desejado Para Vaga</label>
-                    </div>
-
-                    <div class="input-field col s12 m12">
-                        <select required>
-                            <option value="" disabled selected>Habilidades</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                        </select>
-                        <label>Escolha as Habilidades</label>
-                    </div>
-
-                    <div class="input-field col s12 m8">
-                        <select required>
-                            <option value="" disabled selected>Idiomas</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                        </select>
-                        <label>Escolha os idiomas desejáveis</label>
-                    </div>
-
-                    <div class="input-field col s12 m4">
-                        <select required>
-                            <option value="" disabled selected>Senioridade</option>
-                            <option value="1">Básico</option>
-                            <option value="2">Médio</option>
-                            <option value="3">Avançado</option>
-                        </select>
-                        <label>Escolha o nível</label>
-                    </div>
-                </div>
-            </div>
             <div class="row">
-                <div class="col s4 m4 offset-s2 offset-m2">
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Criar
+                <div class="col s6 m6 offset-s2 offset-m2">
+                    <button class="btn waves-effect waves-light" type="submit" name="buttonSubmit" id="buttonSubmit">Cadastrar
                         <i class="material-icons right">send</i>
                     </button>         
                 </div>
