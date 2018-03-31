@@ -28,7 +28,7 @@ class DAOVaga
 				'competencias_tecnicas'=>json_encode($vaga->getCompetenciasTecnicas()),
 				'competencias_comport'=>json_encode($vaga->getCompetenciasComport()),
 				'cursos'=>json_encode($vaga->getCursos())));
-    	}catch(Exception $e){
+        }catch(Exception $e){
             return array('erro' => 'Erro publicação da vaga' );
         }
 

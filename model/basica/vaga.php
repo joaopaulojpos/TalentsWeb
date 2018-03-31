@@ -1,22 +1,24 @@
 <?php
-
 class Vaga implements JsonSerializable {
 
     private $cd_vaga;
-    private $ds_titulo;
     private $nr_qtd_vaga;
+    private $ds_observacao;
+    private $dt_validade;
     private $tp_contratacao;
     private $nr_longitude;
     private $nr_latitude;
     private $ds_beneficios;
     private $ds_horario_expediente;
-    private $vl_salario;
     private $dt_criacao;
-    private $dt_validade;
-    private $ds_observacao;
+    private $ds_titulo;
+    private $vl_salario;
     private $nr_experiencia;
+
+    private $tp_status;
+
     //classe cargo
-    public $cargo;
+    private $cargo;
     //classe empresa
     private $empresa;
     //array de cursos
@@ -26,104 +28,106 @@ class Vaga implements JsonSerializable {
     private $competenciascomport;
     //array de idiomas
     private $idiomas;
+    //array de profissionais que curtiram a vaga
+    private $profissionais;
 
-    public function __construct(){}
+    function __construct(){}
 
-    public function setCdVaga($cd_vaga)
+    function setCdVaga($cd_vaga)
     {
         $this->cd_vaga = trim($cd_vaga);
     }
-    public function getCdVaga()
+    function getCdVaga()
     {
         return $this->cd_vaga;
     }
 
-    public function setNrQtdVaga($nr_qtd_vaga)
+    function setNrQtdVaga($nr_qtd_vaga)
     {
         $this->nr_qtd_vaga = trim($nr_qtd_vaga);
     }
-    public function getNrQtdVaga()
+    function getNrQtdVaga()
     {
         return $this->nr_qtd_vaga;
     }
 
-    public function setDsObservacao($ds_observacao)
+    function setDsObservacao($ds_observacao)
     {
         $this->ds_observacao = $ds_observacao;
     }
-    public function getDsObservacao()
+    function getDsObservacao()
     {
         return $this->ds_observacao;
     }
 
-    public function setDtValidade($dt_validade)
+    function setDtValidade($dt_validade)
     {
         $this->dt_validade = trim($dt_validade);
     }
-    public function getDtValidade()
+    function getDtValidade()
     {
         return $this->dt_validade;
     }
 
-    public function setTpContratacao($tp_contratacao)
+    function setTpContratacao($tp_contratacao)
     {
         $this->tp_contratacao = $tp_contratacao;
     }
-    public function getTpContratacao()
+    function getTpContratacao()
     {
         return $this->tp_contratacao;
     }
 
-    public function setNrLongitude($nr_longitude)
+    function setNrLongitude($nr_longitude)
     {
         $this->nr_longitude = trim($nr_longitude);
     }
-    public function getNrLongitude()
+    function getNrLongitude()
     {
         return $this->nr_longitude;
     }
 
-    public function setNrLatitude($nr_latitude)
+    function setNrLatitude($nr_latitude)
     {
         $this->nr_latitude = trim($nr_latitude);
     }
-    public function getNrLatitude()
+    function getNrLatitude()
     {
         return $this->nr_latitude;
     }
 
-    public function setDsBeneficios($ds_beneficios)
+    function setDsBeneficios($ds_beneficios)
     {
         $this->ds_beneficios = $ds_beneficios;
     }
-    public function getDsBeneficios()
+    function getDsBeneficios()
     {
         return $this->ds_beneficios;
     }
 
-    public function setDsHorarioExpediente($ds_horario_expediente)
+    function setDsHorarioExpediente($ds_horario_expediente)
     {
         $this->ds_horario_expediente = $ds_horario_expediente;
     }
-    public function getDsHorarioExpediente()
+    function getDsHorarioExpediente()
     {
         return $this->ds_horario_expediente;
     }
 
-    public function setDtCriacao($dt_criacao)
+    function setDtCriacao($dt_criacao)
     {
         $this->dt_criacao = trim($dt_criacao);
     }
-    public function getDtCriacao()
+    function getDtCriacao()
     {
         return $this->dt_criacao;
     }
 
-    public function setDsTitulo($ds_titulo)
+    function setDsTitulo($ds_titulo)
     {
         $this->ds_titulo = $ds_titulo;
     }
-    public function getDsTitulo()
+    function getDsTitulo()
     {
         return $this->ds_titulo;
     }
@@ -137,38 +141,47 @@ class Vaga implements JsonSerializable {
         return $this->nr_experiencia;
     }
 
-    public function setVlSalario($vl_salario)
+    function setVlSalario($vl_salario)
     {
         $this->vl_salario = trim($vl_salario);
     }
-    public function getVlSalario()
+    function getVlSalario()
     {
         return $this->vl_salario;
     }
 
-    public function setCargo($cargo)
+    function setTpStatus($tp_status)
+    {
+        $this->tp_status = trim($tp_status);
+    }
+    function getTpStatus()
+    {
+        return $this->tp_status;
+    }
+
+    function setCargo($cargo)
     {
         $this->cargo = $cargo;
     }
-    public function getCargo()
+    function getCargo()
     {
         return $this->cargo;
     }
 
-    public function setEmpresa($empresa)
+    function setEmpresa($empresa)
     {
         $this->empresa = $empresa;
     }
-    public function getEmpresa()
+    function getEmpresa()
     {
         return $this->empresa;
     }
 
-    public function setCursos(Curso $curso)
+    function setCursos(Curso $curso)
     {
         $this->cursos[] = $curso;
     }
-    public function getCursos()
+    function getCursos()
     {
         return $this->cursos;
     }
@@ -191,14 +204,31 @@ class Vaga implements JsonSerializable {
         return $this->competenciascomport;
     }
 
-    public function setIdiomas(Idioma $idioma)
+    function setIdiomas(idioma $idioma)
     {
         $this->idiomas[] = $idioma;
     }
-    public function getIdiomas()
+    function getIdiomas()
     {
         return $this->idiomas;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getProfissionais()
+    {
+        return $this->profissionais;
+    }
+
+    /**
+     * @param mixed $profissionais
+     */
+    public function setProfissionais(Profissional $profissionais)
+    {
+        $this->profissionais[] = $profissionais;
+    }
+
 
     /**
      * Specify data which should be serialized to JSON
@@ -220,14 +250,18 @@ class Vaga implements JsonSerializable {
                 'nr_latitude'=>$this->nr_latitude,
                 'ds_beneficios'=>$this->ds_beneficios,
                 'ds_horario_expediente'=>$this->ds_horario_expediente,
+                'nr_experiencia'=>$this->nr_experiencia,
                 'dt_criacao'=>$this->dt_criacao,
                 'ds_titulo'=>$this->ds_titulo,
                 'vl_salario'=>$this->vl_salario,
+                'tp_status'=>$this->tp_status,
                 'cargo'=>$this->cargo,
                 'empresa'=>$this->empresa,
                 'cursos'=>$this->cursos,
-                'habilidades'=>$this->habilidades,
+                'competencias_tecnicas'=>$this->competenciastecnicas,
+                'competencias_comp'=>$this->competenciascomport,
                 'idiomas'=>$this->idiomas,
+                'profissionais'=>$this->profissionais
             ];
     }
 }
