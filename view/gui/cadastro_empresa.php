@@ -29,10 +29,14 @@
             <div class="container">
                     <input type="hidden" value="<?php echo $cd_empresa ?>" name="cd_empresa" id="cd_empresa"/>
                 <div class="row">
-                    <div class="input-field col s12 m12">
+                    <div class="input-field col s12 m10">
                         <i class="material-icons prefix">info</i>
                         <input name="cnpj" id="cnpj" type="text" class="validate" minlength="3" required>
                         <label for="titulo">CNPJ</label>
+                    </div>
+
+                    <div class="input-field col s12 m2">
+                        <a class="waves-effect waves-light btn btn-small teal darken-1">Buscar</a>
                     </div>
 
                     <div class="input-field col s12 m12">
