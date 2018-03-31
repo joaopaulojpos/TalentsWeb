@@ -95,7 +95,7 @@ CREATE TABLE vaga (
   dt_validade Date,
   nr_longitude Double,
   nr_latitude Double,
-  ds_beneficios Varchar(100),
+  ds_beneficios Varchar(300),
   ds_horario_expediente Varchar(100),
   dt_criacao timestamp default current_timestamp(),
   ds_titulo Varchar(100),
@@ -571,3 +571,53 @@ INSERT INTO `competencia_comport` (`cd_competencia_comport`, `cd_tipo_competenci
 (31, 7, 'Gestão de dados', 'Capacidade de verificação de todos os dados disponíveis para obter uma visão mais completa, utilizar os dados para propor soluções eficazes e identificar riscos potenciais'),
 (32, 7, 'Conhecimento de equipamentos e programas', 'Entender como equipamentos e programas específicos podem beneficiar o negócio e seus clientes, capacidade de usar o conhecimento existente para diagnosticar problemas técnicos'),
 (33, 7, 'Políticas e planejamento', 'Conhecer como e porque a política é importante, capacidade de comunicar eficazmente os valores e cultura do negócio');
+
+INSERT INTO `id4854326_db_talents`.`vaga`
+(`nr_qtd_vaga`,
+ `ds_observacao`,
+ `nr_longitude`,
+ `nr_latitude`,
+ `ds_beneficios`,
+ `ds_horario_expediente`,
+ `ds_titulo`,
+ `vl_salario`,
+ `tp_contratacao`,
+ `tp_status`,
+ `nr_experiencia`,
+ `cd_cargo`,
+ `cd_empresa`)
+VALUES
+  (2,'Nenhuma',-6.444442,-22.333333,'Plano de Saúde, Plano odontológico,Seguro de vida, Vale alimentação, Vale transporte, Plano de carreira','Integral','Desenvolvedor Php',2000.00,'A','A',2,1,1),
+  (1,'Nenhuma',-6.444442,-22.333333,'Plano de Saúde, Plano odontológico, Seguro de vida, Vale alimentação, Vale transporte, Plano de carreira','Integral','Engenheiro de Dados',2000.00,'A','A',2,2,1),
+  (1,'Nenhuma',-6.444442,-22.333333,'Plano de Saúde, Plano odontológico, Seguro de vida, Vale alimentação, Vale transporte, Plano de carreira','Integral','Engenheiro de Processos',2000.00,'A','A',2,2,1);
+
+INSERT INTO `id4854326_db_talents`.`vaga_competencia_comport`
+(`cd_competencia_comport`,
+ `cd_vaga`)
+VALUES
+  (2,1),
+  (4,1),
+  (10,2),
+  (20,3);
+
+
+INSERT INTO `id4854326_db_talents`.`vaga_competencia_tecnica`
+(`cd_competencia_tecnica`,
+ `cd_vaga`,
+ `nr_nivel`)
+VALUES
+  (3,1,1),
+  (5,2,1),
+  (11,2,1),
+  (1,2,1),
+  (12,1,1);
+
+
+INSERT INTO `id4854326_db_talents`.`vaga_idioma`
+(`nr_nivel`,
+ `cd_idioma`,
+ `cd_vaga`)
+VALUES
+  (1,3,1),
+  (1,5,2),
+  (1,2,3);
