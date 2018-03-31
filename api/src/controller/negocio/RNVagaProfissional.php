@@ -73,6 +73,14 @@ class RNVagaProfissional
             $daovagapro = new DAOVagaProfissional();
             $daoprofissional = new DaoProfissional();
 
+            //Verifica se o profissional existe
+            $prof = new Profissional();
+            $prof->setCdProfissional($cd_profissional);
+            $profissional = $daoprofissional->pesquisarById($prof);
+            if (empty($profissional)){
+                return array('erro' => "Profissional não existe");
+            }
+
             $result = $daovagapro->pesquisa($cd_profissional,false);
             //TODO validar se o profissional já curtiu alguma vaga antes.Pq Se colocar um cod_pro que não está na tabela N-N ele tras todos os registros.
             return array('sucess'=> $result);
