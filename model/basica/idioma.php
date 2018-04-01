@@ -20,13 +20,21 @@ class idioma implements JsonSerializable {
         return $this->ds_idioma;
     }
 
-    function setNrNivel($nr_nivel){
-        $this->nr_nivel = $nr_nivel;
-    }
-    function getNrNivel(){
+    /**
+     * @return mixed
+     */
+    public function getNrNivel()
+    {
         return $this->nr_nivel;
     }
 
+    /**
+     * @param mixed $nr_nivel
+     */
+    public function setNrNivel($nr_nivel)
+    {
+        $this->nr_nivel = $nr_nivel;
+    }
 
     /**
      * Specify data which should be serialized to JSON

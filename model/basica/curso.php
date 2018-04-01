@@ -1,5 +1,6 @@
 <?php
-class curso implements JsonSerializable {
+class curso implements JsonSerializable
+{
 
     private $cd_curso;
     private $ds_curso;
@@ -49,9 +50,8 @@ class curso implements JsonSerializable {
             [
                 'cd_curso'=>$this->cd_curso,
                 'ds_curso'=>$this->ds_curso,
-                'ds_instituicao'=>$this->ds_instituicao
+                'ds_formacao'=>$this->formacao
             ];
-        //TODO implementar Formação
     }
 }
 

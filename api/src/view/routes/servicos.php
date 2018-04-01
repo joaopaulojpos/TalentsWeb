@@ -25,14 +25,18 @@ $app->add(function ($req, $res, $next) {
 
 $app->get('/api/empresas', function(Request $request, Response $response){
     try{
-        $sql = "SELECT * FROM empresa";
+        /*$sql = "SELECT * FROM empresa";
     
         $db = db::getInstance();
 
         $stmt = $db->query($sql);
         $empresa = $stmt->fetchAll(PDO::FETCH_OBJ);
-        $db = null;
-        $response->write(json_encode($empresa));
+        $db = null;*/
+
+        $rnempresa = new RNEmpresa();
+        $empresa = new Empresa();
+        $rnempresa = $rnempresa->pesquisar($empresa);
+        $response->write(json_encode($rnempresa));
     } catch(Exception $e){
         $response->write(json_encode(array('erro' => $e->getMessage())));
     }
@@ -130,14 +134,18 @@ $app->get('/api/empresa/{id}/vagas', function(Request $request, Response $respon
 $app->get('/api/profissionais', function(Request $request, Response $response){
     
     try{
-        $sql = "SELECT * FROM profissional";
+        /*$sql = "SELECT * FROM profissional";
 
         $db = db::getInstance();
 
         $stmt = $db->query($sql);
         $profissional = $stmt->fetchAll(PDO::FETCH_OBJ);
-        $db = null;
-        $response->write(json_encode($profissional));
+        $db = null;*/
+
+        $rnprofissional = new RNProfissional();
+        $profissional = new Profissional();
+        $rnprofissional = $rnprofissional->pesquisar($profissional);
+        $response->write(json_encode($rnprofissional));
 
     } catch(PDOException $e){
         $response->write(json_encode(array('erro' => $e->getMessage())));
@@ -171,9 +179,7 @@ $app->post('/api/profissional/salvar', function(Request $request, Response $resp
         $ds_nome = $request->getParam('ds_nome');   
     
         $profissional = new Profisisonal();
-        if ($codigo != null){
-            $profissional->setCdProfissional($codigo); 
-        }
+
         $profissional->setBfoto($b_foto);
         $profissional->setDsSenha($ds_senha);
         $profissional->setDtNascimento($dt_nascimento);

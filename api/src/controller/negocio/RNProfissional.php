@@ -43,6 +43,21 @@ class RNProfissional{
 			return array('erro' => $e->getMessage());
 		}
 	}
+
+    public function pesquisar($profissional){
+        try{
+            $daoprofissional = new DaoProfissional();
+            $result = $daoprofissional->pesquisar($profissional,false);
+
+            if (!empty($result)){
+                return array('sucess' => $result);
+            }else{
+                return array('erro' => 'A pesquisa não retornou nenhum registro!');
+            }
+        }catch (Exception $e){
+            return array('erro' => $e->getMessage());
+        }
+    }
 }
 
 ?>

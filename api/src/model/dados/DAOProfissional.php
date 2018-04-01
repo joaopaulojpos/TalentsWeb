@@ -84,7 +84,7 @@ class DaoProfissional implements iDAOProfissional
 
 			$run = $stmt->execute();
 			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
+			$stmt->closeCursor();
 	        return $result;
 
         }catch(Exception $e){
