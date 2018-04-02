@@ -63,6 +63,9 @@
               $nr_qtd_vaga = $value["nr_qtd_vaga"];
               $ds_beneficios = $value["ds_beneficios"];
               $ds_observacao = $value["ds_observacao"];
+              $nr_latitude = $value["nr_latitude"];
+              $nr_longitude = $value["nr_longitude"];
+              $ds_localizacao = 'N/A';
 
               if ($value["tp_contratacao"] == '1'){
                 $tp_contratacao = 'Tempo indeterminado';
@@ -93,6 +96,34 @@
               }else{
                 $nr_experiencia = 'Acima de 5 anos';
               }
+
+              if ($value["tp_status"] == 'A'){
+                $tp_status = 'Disponível';
+              }else{
+                $tp_status = 'Indisponível';
+              }
+
+
+              //Buscando localização da vaga
+              try{
+                //criando o recurso cURL
+                $cr = curl_init();
+                //definindo a url de busca 
+                curl_setopt($cr, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?latlng=".$nr_latitude.",".$nr_longitude);
+                //definindo a url de busca 
+                curl_setopt($cr, CURLOPT_RETURNTRANSFER, true);
+                //definindo uma variável para receber o conteúdo da página...
+                $retorno = json_decode(curl_exec($cr), true);
+                //fechando-o para liberação do sistema.
+                curl_close($cr); //fechamos o recurso e liberamos o sistema...
+                //mostrando o conteúdo...          
+                foreach ($retorno["results"] as $key => $retorno) {
+                  $ds_localizacao = $retorno["formatted_address"];
+                  break;
+                }
+              }catch(Exception $e){
+                //
+              }
               
   ?>
 
@@ -119,6 +150,7 @@
                       <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="material-icons activator">+</i></i></a>
                       <div class="col-sx-12 col-md-20 col-lg-20 col-sm-offset-0">
                         <div id="doughnut-chart-wrapper" >
+                          <p><b>Status:</b><span class=<?php echo $tp_status=="Disponível"?"disponivel":"indisponivel";?>> <?php echo $tp_status; ?></span></p>
                           <p><b>Tipo de contratação:</b><span> <?php echo $tp_contratacao; ?></span></p>
                           <p><b>Salário:</b><span> <?php echo $vl_salario; ?></span></p>
                           <p><b>Jornada de trabalho:</b><span> <?php echo $ds_horario_expediente; ?></span></p>
@@ -126,6 +158,7 @@
                           <p><b>Quantidade de vagas:</b><span> <?php echo $nr_qtd_vaga; ?></span></p>
                           <p><b>Benefícios:</b><span> <?php echo $ds_beneficios; ?></span></p>
                           <p><b>Observação:</b><span> <?php echo $ds_observacao; ?></span></p>
+                          <p><b>Endereço:</b><span> <?php echo $ds_localizacao; ?></span></p>
                         </div>
                       </div>
                     </div>
@@ -144,8 +177,8 @@
                                     foreach ($value["cursos"] as $key => $cursos) {    
                             ?>
                               <tr>
-                                <td> <?php echo $cursos['ds_curso']; ?></td>
-                                <td> <?php echo $cursos['ds_formacao']; ?></td>
+                                <td class='primeiro'> <?php echo $cursos['ds_curso']; ?></td>
+                                <td class='segundo'> <?php echo $cursos['ds_formacao']; ?></td>
                               </tr>
                             <?php 
                                     }
@@ -167,8 +200,8 @@
                                     foreach ($value["competencias_tecnicas"] as $key => $comp_tec) {    
                             ?>
                               <tr>
-                                <td> <?php echo $comp_tec['ds_competencia_tecnica']; ?></td>
-                                <td> <?php echo $comp_tec['nr_nivel']; ?></td>
+                                <td class='primeiro'> <?php echo $comp_tec['ds_competencia_tecnica']; ?></td>
+                                <td class='segundo'> <?php echo $comp_tec['nr_nivel']; ?></td>
                               </tr>
                             <?php 
                                     }
@@ -211,8 +244,8 @@
                                       foreach ($value["idiomas"] as $key => $comp_tec) {    
                               ?>
                                 <tr>
-                                  <td> <?php echo $comp_tec['ds_idioma']; ?></td>
-                                  <td> <?php echo $comp_tec['nr_nivel']; ?></td>
+                                  <td class='primeiro'> <?php echo $comp_tec['ds_idioma']; ?></td>
+                                  <td class='segundo'> <?php echo $comp_tec['nr_nivel']; ?></td>
                                 </tr>
                               <?php 
                                       }
