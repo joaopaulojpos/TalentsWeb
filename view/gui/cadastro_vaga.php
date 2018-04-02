@@ -6,10 +6,17 @@
     exit; //Redireciona o visitante para login
   }
 
+  if(empty($_POST['txtLatitude']) && empty($_POST['txtLongitude'])){
+    header("Location: cadastro_vaga_localizacao.php"); 
+    exit; //Redireciona o visitante para login
+  }
+
   require_once('../../controller/fachada.php');
   $fachada = Fachada::getInstance();
 
   $cd_empresa = '';
+  $latitude = $_POST['txtLatitude'];
+  $longitude = $_POST['txtLongitude'];
 
   if (isset($_SESSION['empresaLogada'])) {
     $empresa = $_SESSION['empresaLogada']; 
@@ -48,6 +55,8 @@
 <legend>Cadastro de vaga</legend>
 
 <input type="hidden" value="<?php echo $cd_empresa ?>" name="cd_empresa" id="cd_empresa"/>
+<input type="hidden" value="<?php echo $latitude ?>" name="latitude" id="latitude"/>
+<input type="hidden" value="<?php echo $longitude ?>" name="longitude" id="longitude"/>
 
 <!-- Text input-->
 
@@ -414,11 +423,13 @@
         var experiencia=$('#experiencia').val();
         var quantidadevagas=$('#quantidadevagas').val();
         var beneficios=$('#beneficios').val();
+        var latitude=$('#latitude').val();
+        var longitude=$('#longitude').val();
 
         $.ajax({      //Função AJAX
           url:"valida_vaga.php",      //Arquivo php
           type:"post",        //Método de envio
-          data: "cd_empresa="+cd_empresa+"&titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios+"&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+"&tecnicaCodigo="+JSON.stringify(tecnicaCodigo)+"&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados*/
+          data: "cd_empresa="+cd_empresa+"&titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios+"&latitude="+latitude+"&longitude="+longitude+"&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+"&tecnicaCodigo="+JSON.stringify(tecnicaCodigo)+"&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados*/
             success: function (result){     //Sucesso no AJAX
                         if (result == 1){
                           location.href='vaga.php';

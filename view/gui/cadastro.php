@@ -40,7 +40,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 <html xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>Cadastro empresa - Talents</title>
 
   <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
   <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
