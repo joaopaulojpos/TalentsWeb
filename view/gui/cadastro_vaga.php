@@ -371,6 +371,15 @@
   </div>
 </div>
 
+<!-- information message -->
+<div class="form-group" style="text-align: center"> 
+  <span>*Para níveis de competência:</span><br>
+  <span><b>Pouco conhecimento &nbsp 1 &nbsp 2 &nbsp 3 &nbsp 4 &nbsp 5 &nbsp 6 &nbsp Extremo conhecimento</b></span><br>
+  <span>Quanto mais próximo do número <b>UM</b>, <b>menor</b> o grau de conhecimento. Quanto mais próximo do número <b>SEIS</b>, <b>maior</b> o grau de conhecimento.</span>
+</div>
+
+
+
 </fieldset>
 </form>
 </div>
