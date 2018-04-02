@@ -178,7 +178,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
       $('#errMessage').hide(); //Esconde o elemento com id errolog
       $('#loader').hide();
 
-      /*$('#telefone').mask('(00) 00000-0000');
+      $('#telefone').mask('(00) 00000-0000');
       $('#cnpj').mask('00.000.000/0000-00');
 
       $('#email').mask("A", {
@@ -191,7 +191,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
         translation: {
           "A": { pattern: /[\w@\-.+]/, recursive: true }
         }
-      });*/
+      });
 
       $('#formulario').submit(function(){  //Ao submeter formulário
         $('#loader').show();
