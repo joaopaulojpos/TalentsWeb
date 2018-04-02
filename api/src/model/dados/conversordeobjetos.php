@@ -45,7 +45,7 @@ class conversorDeObjetos{
                 $vaga->setCargo($cargo);
 
                 //Empresa
-                //$empresa->setDsNomeFantasia($row['ds_nome_fantasia']);
+                $empresa->setDsNomeFantasia($row['ds_nome_fantasia']);
                 $vaga->setEmpresa($empresa);
 
                 //TODO Listar dos profissionais e cursos
