@@ -23,7 +23,7 @@ class DaoProfissional implements iDAOProfissional
 					':tp_sexo' => $u->getTpsexo(),
 					':ds_nome' => $u->getDsnome(),
 	 		));
-
+            $stmt->closeCursor();
 	 	}catch(Exception $e){
 			throw new Exception($e->getMessage());
 		}finally{
