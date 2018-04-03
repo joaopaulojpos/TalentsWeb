@@ -14,9 +14,9 @@ class DaoVaga implements iDAOVaga
         try{
             //Comando para inserir a vaga na base de dados
             $sql = "insert into vaga (nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_experiencia,nr_longitude,nr_latitude,ds_beneficios,ds_horario_expediente,
-                                      dt_criacao,ds_titulo,vl_salario,cd_cargo,cd_empresa,tp_status)
+                                      dt_criacao,ds_titulo,vl_salario,ds_endereco,cd_cargo,cd_empresa,tp_status)
                          values (:nr_qtd_vaga,:ds_observacao,:dt_validade,:tp_contratacao,:nr_experiencia,:nr_longitude,:nr_latitude,:ds_beneficios,:ds_horario_expediente,
-                                 :dt_criacao,:ds_titulo,:vl_salario,:cd_cargo,:cd_empresa,:tp_status)";
+                                 :dt_criacao,:ds_titulo,:vl_salario,:ds_endereco,:cd_cargo,:cd_empresa,:tp_status)";
                 $db = db::getInstance();
                 $stmt = $db->prepare($sql);
                 $run = $stmt->execute(array(
@@ -32,6 +32,7 @@ class DaoVaga implements iDAOVaga
                     ':dt_criacao' => $vaga->getDtCriacao(),
                     ':ds_titulo' => $vaga->getDsTitulo(),
                     ':vl_salario' => $vaga->getVlSalario(),
+                    ':ds_endereco' => $vaga->getDsEndereco(),
                     ':cd_cargo' => $vaga->getCargo()->getCdCargo(),
                     ':cd_empresa' => $vaga->getEmpresa()->getCdEmpresa(),
                     ':tp_status' => 'A'
@@ -70,6 +71,59 @@ class DaoVaga implements iDAOVaga
         }
     }
 
+    public function duplicidade(Vaga $vaga){
+        try{
+            $comando = 'select * from vaga v ';
+            $where = '';
+            $orderBy = '';
+
+            if (!empty($vaga->getCdVaga())){
+                if (empty($where)){
+                    $where = ' where v.cd_vaga = :cd_vaga';
+                }else{
+                    $where = $where . ' and v.cd_vaga = :cd_vaga';
+                }
+            }
+
+            if (!empty($vaga->getDsTitulo())){
+                if (empty($where)){
+                    $where = ' where v.ds_titulo = :ds_titulo';
+                }else{
+                    $where = $where . ' and v.ds_titulo = :ds_titulo';
+                }
+            }
+
+            if (!empty($vaga->getDtCriacao())){
+                if (empty($where)){
+                    $where = ' where v.dt_criacao = :dt_criacao';
+                }else{
+                    $where = $where . ' and v.dt_criacao = :dt_criacao';
+                }
+            }
+
+            $db = new db();
+            $stmt = db::getInstance()->prepare($comando . $where. $orderBy);
+
+            if (!empty($vaga->getCdVaga()))
+                $stmt->bindValue(':cd_vaga', $vaga->getCdVaga());
+            if (!empty($vaga->getDsTitulo()))
+                $stmt->bindValue(':ds_titulo', $vaga->getDsTitulo());
+            if (!empty($vaga->getDtCriacao()))
+                $stmt->bindValue(':dt_criacao', $vaga->getDtCriacao());
+
+            $run = $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            $conversor = new conversorDeObjetos();
+            $stmt->closeCursor();
+            return $conversor->parseRowsToObjectVaga($result); //$stmt->fetchAll(PDO::FETCH_ASSOC);
+        }catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
+
     /**
      * @param Vaga $vaga
      * @param string $alt
@@ -78,7 +132,7 @@ class DaoVaga implements iDAOVaga
     public function pesquisar(Vaga $vaga, $alt='false'){
         try{
             $comando = 'select v.cd_vaga,v.nr_qtd_vaga,v.ds_observacao,v.dt_validade,v.tp_contratacao,v.nr_longitude,v.nr_latitude,v.ds_beneficios,
-                               v.ds_horario_expediente,v.dt_criacao,v.ds_titulo,v.vl_salario,v.tp_status,v.nr_experiencia,
+                               v.ds_horario_expediente,v.dt_criacao,v.ds_titulo,v.vl_salario,v.tp_status,v.nr_experiencia,v.ds_endereco,
                                c.cd_cargo,c.ds_cargo,
                                e.cd_empresa,e.ds_razao_social,e.ds_nome_fantasia,e.nr_porte,e.ds_nome_responsavel,e.ds_area_atuacao,e.ds_site,e.ds_telefone,e.nr_cnpj,e.ds_email,e.ds_senha,
                                ct.cd_competencia_tecnica,vct.nr_nivel,ct.ds_competencia_tecnica,

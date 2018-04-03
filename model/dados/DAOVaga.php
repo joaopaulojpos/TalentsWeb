@@ -22,6 +22,7 @@ class DAOVaga
 				'dt_criacao' => $vaga->getDtCriacao(),
 				'ds_titulo' => $vaga->getDsTitulo(),
 				'vl_salario' => $vaga->getVlSalario(),
+				'ds_endereco' => $vaga->getDsEndereco(),
 				'cd_cargo' => $vaga->getCargo()->getCdCargo(),
 				'cd_empresa' => $vaga->getEmpresa()->getCdEmpresa(),
 				'idiomas'=>json_encode($vaga->getIdiomas()),

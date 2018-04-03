@@ -251,6 +251,7 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
         $vaga->setDtCriacao($request->getParam('dt_criacao'));
         $vaga->setDsTitulo($request->getParam('ds_titulo'));
         $vaga->setVlSalario($request->getParam('vl_salario'));
+        $vaga->setDsEndereco($request->getParam('ds_endereco'));
     	$cargo->setCdCargo($request->getParam('cd_cargo'));
     	$vaga->setCargo($cargo);
     	$empresa->setCdEmpresa($request->getParam('cd_empresa'));

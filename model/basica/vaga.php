@@ -14,6 +14,7 @@ class Vaga implements JsonSerializable {
     private $ds_titulo;
     private $vl_salario;
     private $nr_experiencia;
+    private $ds_endereco;
 
     private $tp_status;
 
@@ -150,6 +151,15 @@ class Vaga implements JsonSerializable {
         return $this->vl_salario;
     }
 
+    function setDsEndereco($ds_endereco)
+    {
+        $this->ds_endereco = trim($ds_endereco);
+    }
+    function getDsEndereco()
+    {
+        return $this->ds_endereco;
+    }
+
     function setTpStatus($tp_status)
     {
         $this->tp_status = trim($tp_status);
@@ -254,6 +264,7 @@ class Vaga implements JsonSerializable {
                 'dt_criacao'=>$this->dt_criacao,
                 'ds_titulo'=>$this->ds_titulo,
                 'vl_salario'=>$this->vl_salario,
+                'ds_endereco'=>$this->ds_endereco,
                 'tp_status'=>$this->tp_status,
                 'cargo'=>$this->cargo,
                 'empresa'=>$this->empresa,

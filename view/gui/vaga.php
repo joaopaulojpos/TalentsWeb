@@ -65,7 +65,7 @@
               $ds_observacao = $value["ds_observacao"];
               $nr_latitude = $value["nr_latitude"];
               $nr_longitude = $value["nr_longitude"];
-              $ds_localizacao = 'N/A';
+              $ds_localizacao = $value["ds_endereco"];
 
               if ($value["tp_contratacao"] == '1'){
                 $tp_contratacao = 'Tempo indeterminado';
@@ -102,29 +102,7 @@
               }else{
                 $tp_status = 'Indisponível';
               }
-
-
-              //Buscando localização da vaga
-              try{
-                //criando o recurso cURL
-                $cr = curl_init();
-                //definindo a url de busca 
-                curl_setopt($cr, CURLOPT_URL, "https://maps.googleapis.com/maps/api/geocode/json?latlng=".$nr_latitude.",".$nr_longitude);
-                //definindo a url de busca 
-                curl_setopt($cr, CURLOPT_RETURNTRANSFER, true);
-                //definindo uma variável para receber o conteúdo da página...
-                $retorno = json_decode(curl_exec($cr), true);
-                //fechando-o para liberação do sistema.
-                curl_close($cr); //fechamos o recurso e liberamos o sistema...
-                //mostrando o conteúdo...          
-                foreach ($retorno["results"] as $key => $retorno) {
-                  $ds_localizacao = $retorno["formatted_address"];
-                  break;
-                }
-              }catch(Exception $e){
-                //
-              }
-              
+             
   ?>
 
               <div class="row">

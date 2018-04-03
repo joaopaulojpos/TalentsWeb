@@ -17,6 +17,7 @@
   $cd_empresa = '';
   $latitude = $_POST['txtLatitude'];
   $longitude = $_POST['txtLongitude'];
+  $endereco = trim($_POST['txtEndereco']);
 
   if (isset($_SESSION['empresaLogada'])) {
     $empresa = $_SESSION['empresaLogada']; 
@@ -57,6 +58,7 @@
 <input type="hidden" value="<?php echo $cd_empresa ?>" name="cd_empresa" id="cd_empresa"/>
 <input type="hidden" value="<?php echo $latitude ?>" name="latitude" id="latitude"/>
 <input type="hidden" value="<?php echo $longitude ?>" name="longitude" id="longitude"/>
+<input type="hidden" value="<?php echo $endereco ?>" name="endereco" id="endereco"/>
 
 <!-- Text input-->
 
@@ -448,11 +450,12 @@
         var beneficios=$('#beneficios').val();
         var latitude=$('#latitude').val();
         var longitude=$('#longitude').val();
+        var endereco=$('#endereco').val();
 
         $.ajax({      //Função AJAX
           url:"valida_vaga.php",      //Arquivo php
           type:"post",        //Método de envio
-          data: "cd_empresa="+cd_empresa+"&titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios+"&latitude="+latitude+"&longitude="+longitude+"&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+"&tecnicaCodigo="+JSON.stringify(tecnicaCodigo)+"&tecnicaNivel="+JSON.stringify(tecnicaNivel)+"&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados*/
+          data: "cd_empresa="+cd_empresa+"&titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios+"&latitude="+latitude+"&longitude="+longitude+"&endereco="+endereco+"&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+"&tecnicaCodigo="+JSON.stringify(tecnicaCodigo)+"&tecnicaNivel="+JSON.stringify(tecnicaNivel)+"&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados*/
             success: function (result){     //Sucesso no AJAX
                         if (result == 1){
                           location.href='vaga.php';

@@ -70,7 +70,7 @@ CREATE TABLE empresa (
   ds_nome_responsavel Varchar(100),
   ds_area_atuacao Varchar(100),
   ds_site Varchar(100),
-  ds_telefone Varchar(15),
+  ds_telefone Varchar(40),
   nr_cnpj Varchar(18),
   ds_email Varchar(100),
   ds_senha varchar(50)
@@ -105,6 +105,7 @@ CREATE TABLE vaga (
   nr_experiencia varchar(50),
   cd_cargo Integer,
   cd_empresa Integer,
+  ds_endereco varchar(200),
   FOREIGN KEY(cd_cargo) REFERENCES cargo (cd_cargo),
   FOREIGN KEY(cd_empresa) REFERENCES empresa (cd_empresa)
 );

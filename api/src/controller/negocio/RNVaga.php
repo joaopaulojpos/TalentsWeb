@@ -41,7 +41,15 @@ class RNVaga{
                 array_push($validacoes, 'Não é possível inserir um texto de beneficíos tão grande, permitido no máximo 1000 caracteres!');
             if (strlen($vaga->getDsObservacao()) > 1000)
                 array_push($validacoes, 'Não é possível inserir um texto de observação tão grande, permitido no máximo 1000 caracteres!');
-            
+
+            $vagavalidar = new Vaga();
+            $vagavalidar->setDsTitulo($vaga->getDsTitulo());
+            $vagavalidar->setDtCriacao($vaga->getDtCriacao());
+            $result = $daovaga->duplicidade($vagavalidar);
+            if (!empty($result))
+                array_push($validacoes, $result);
+
+
             /**/
             $daocargo = new DaoCargo();
             if (empty($daocargo->pesquisar($vaga->getCargo())))

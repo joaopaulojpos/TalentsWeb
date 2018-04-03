@@ -64,11 +64,22 @@ class DaoEmpresa implements iDAOEmpresa
 			$where = '';
 			$orderBy = ' order by ds_nome_fantasia asc ';
 
-			if (!empty($emp->getCdEmpresa())){
-				if (empty($where)){
-					$where = ' where cd_empresa = :cd_empresa';
-				}else{
-					$where = $where . ' and cd_empresa = :cd_empresa';
+
+			if ($alt){
+				if (!empty($emp->getCdEmpresa())){
+					if (empty($where)){
+						$where = ' where cd_empresa <> :cd_empresa';
+					}else{
+						$where = $where . ' and cd_empresa <> :cd_empresa';
+					}
+				}
+			}else{
+				if (!empty($emp->getCdEmpresa())){
+					if (empty($where)){
+						$where = ' where cd_empresa = :cd_empresa';
+					}else{
+						$where = $where . ' and cd_empresa = :cd_empresa';
+					}
 				}
 			}
 
@@ -79,10 +90,18 @@ class DaoEmpresa implements iDAOEmpresa
 					$where = $where . ' and ds_senha = :senha';
 				}
 			}
-			
+
+			if (!empty($emp->getNrCnpj())){
+				if (empty($where)){
+					$where = ' where nr_cnpj = :cnpj';
+				}else{
+					$where = $where . ' and nr_cnpj = :cnpj';
+				}
+			}
+
 			if (!empty($emp->getDsEmail())){
 				if (empty($where)){
-					$where = ' where (ds_email = :login or ds_cnpj = :login)';
+					$where = ' where (ds_email = :login or nr_cnpj = :login)';
 				}else{
 					$where = $where . ' and (ds_email = :login or nr_cnpj = :login)';
 				}
@@ -93,6 +112,8 @@ class DaoEmpresa implements iDAOEmpresa
 				$stmt->bindValue(':cd_empresa', $emp->getCdEmpresa());
 			if (!empty($emp->getDsSenha()))
 				$stmt->bindValue(':senha', $emp->getDsSenha());
+			if (!empty($emp->getNrCnpj()))
+				$stmt->bindValue(':cnpj', $emp->getNrCnpj());
 			if (!empty($emp->getDsEmail()))
 				$stmt->bindValue(':login', $emp->getDsEmail());
 
@@ -108,7 +129,7 @@ class DaoEmpresa implements iDAOEmpresa
 
 	public function pesquisarVagas(Empresa $emp){
 		try{
-			$comando = 'select v.*, c.ds_cargo 
+			$comando = 'select v.*, "" as ds_nome_fantasia, c.ds_cargo 
 						  from vaga v
 					inner join cargo c on c.cd_cargo = v.cd_cargo ';
 			$where = '';

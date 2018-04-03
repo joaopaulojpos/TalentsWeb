@@ -32,6 +32,7 @@ class RNEmpresa{
 	public function salvar(Empresa $empresa){
 		try{
 			$validacoes = array();
+			$alterar = ($empresa->getCdEmpresa() != null) && ($empresa->getCdEmpresa() > 0);
 
 			if($empresa == null)
 				array_push($validacoes, 'Todos os campos precisam ser preenchido!');
@@ -61,7 +62,29 @@ class RNEmpresa{
 				exit;
 			}
 
-			if (($empresa->getCdEmpresa() != null) && ($empresa->getCdEmpresa() > 0)){
+			if ($alterar){
+				$empresavalidar = new Empresa();
+				$empresavalidar->setCdEmpresa($empresa->getCdEmpresa());
+				$empresavalidar->setNrCnpj($empresa->getNrCnpj());
+				$daoempresa = new DaoEmpresa();
+				$result = $daoempresa->pesquisar($empresavalidar, true);
+				if (!empty($result))
+					array_push($validacoes, 'Já existe uma outra empresa cadastrada com esses mesmos dados!');
+			}else{
+				$empresavalidar = new Empresa();
+				$empresavalidar->setNrCnpj($empresa->getNrCnpj());
+				$daoempresa = new DaoEmpresa();
+				$result = $daoempresa->pesquisar($empresavalidar);
+				if (!empty($result))
+					array_push($validacoes, 'Já existe uma empresa cadastrada com esses dados!');
+			}
+
+			if ($validacoes != null){
+				return array('erro' => $validacoes);
+				exit;
+			}
+
+			if ($alterar){
 				return $this->alterar($empresa);
 			}else{
 				return $this->cadastrar($empresa);

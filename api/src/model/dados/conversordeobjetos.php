@@ -38,6 +38,7 @@ class conversorDeObjetos{
                 $vaga->setVlSalario($row['vl_salario']);
                 $vaga->setNrExperiencia($row['nr_experiencia']);
                 $vaga->setTpStatus($row['tp_status']);
+                $vaga->setDsEndereco($row['ds_endereco']);
 
                 //Cargo
                 $cargo->setCdCargo($row['cd_cargo']);

@@ -89,7 +89,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 		</div>
 
 		<input type="hidden" id="txtLatitude" name="txtLatitude" />
-        <input type="hidden" id="txtLongitude" name="txtLongitude" />
+    <input type="hidden" id="txtLongitude" name="txtLongitude" />
 
         <!-- Loader -->
         <div class="form-group">

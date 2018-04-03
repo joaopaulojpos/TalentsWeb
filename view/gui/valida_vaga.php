@@ -24,6 +24,7 @@ try{
 	$beneficios = $_POST['beneficios'];
 	$latitude = $_POST['latitude'];
 	$longitude = $_POST['longitude'];
+	$endereco = $_POST['endereco'];
 	$idiomaCodigo = json_decode(stripslashes($_POST['idiomaCodigo']));
 	$idiomaNivel = json_decode(stripslashes($_POST['idiomaNivel']));
 	$tecnicaCodigo = json_decode(stripslashes($_POST['tecnicaCodigo']));
@@ -50,6 +51,7 @@ try{
 	$vaga->setNrExperiencia($experiencia);
 	$vaga->setNrLatitude($latitude);
 	$vaga->setNrLongitude($longitude);
+	$vaga->setDsEndereco($endereco);
 
 	//prenchendo os campos do objeto cargo 
 	$cargo->setCdCargo($cd_cargo);
