@@ -31,6 +31,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
   $ds_senha = $empresa[0]['ds_senha'];
 }
 
+
 ?>
 
 <!DOCTYPE html>
@@ -45,6 +46,10 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
     <link rel="stylesheet" href="css/custom.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+    <script type="text/javascript" src="js/jquery.mask.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
     <title>Talents - Cadastre sua Empresa</title>
 </head>
 
@@ -62,17 +67,16 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
         <form name="formulario" id="formulario">
             <div class="container">
-                    <input type="hidden" value="<?php echo $cd_empresa ?>" name="cd_empresa" id="cd_empresa"/>
+                <input type="hidden" value="<?php echo $cd_empresa ?>" name="cd_empresa" id="cd_empresa"/>
                 <div class="row">
                     <div class="input-field col s12 m10">
                         <i class="material-icons prefix">info</i>
-                        <input name="cnpj" id="cnpj" type="text" value="<?php echo $nr_cnpj ?>" title="Digite o CNPJ no formato nn.nnn.nnn/nnnn-nn" placeholder="00.000.000/0000-00" class="validate">
-                        <label for="titulo">CNPJ</label>
+                        <input name="cnpj" id="cnpj" type="text" value="<?php echo $nr_cnpj ?>" title="Digite o CNPJ no formato nn.nnn.nnn/nnnn-nn" placeholder="00.000.000/0000-00">
+                        <label for="cnpj">CNPJ</label>
                     </div>
 
                     <div class="input-field col s12 m2">
-                        <button class="btn waves-effect waves-light btn-small teal darken-1" type="submit" name="buttonCarregarDados" id="buttonCarregarDados" onclick="carregarDadosViaWebService()">Buscar
-                        </button>
+                        <input class="btn waves-effect waves-light teal darken-1" type="button" name="buttonCarregarDados" id="buttonCarregarDados" value="Buscar" onclick="carregarDadosViaWebService()">
                     </div>
 
                     <div class="input-field col s12 m12">
@@ -89,12 +93,12 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">book</i>
-                        <input id="areaatuacao" name="areaatuacao" type="text" value="<?php echo $ds_area_atuacao ?>" class="validate">
-                        <label for="titulo">Área de atuação</label>
+                        <input id="areaatuacao" name="areaatuacao" type="text" value="<?php echo $ds_area_atuacao ?>">
+                        <label for="areaatuacao">Área de atuação</label>
                     </div>
 
                     <div class="input-field col s12 m6">
-                        <select required>
+                        <select name="porte" id="porte">
                             <option value="" disabled selected>Selecione o porte atual</option>
                             <option value="1" <?php echo $nr_porte=='1'?'selected':'';?>> 1 - 5 </option>
                             <option value="2" <?php echo $nr_porte=='2'?'selected':'';?>> 6 - 10 </option>
@@ -108,38 +112,38 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">assignment_ind</i>
-                        <input id="responsavel" name="responsavel" type="text" value="<?php echo $ds_responsavel_cadastro ?>" class="validate">
-                        <label for="titulo">Responsável pelo cadastro</label>
+                        <input id="responsavel" name="responsavel" type="text" value="<?php echo $ds_responsavel_cadastro ?>">
+                        <label for="responsavel">Responsável pelo cadastro</label>
                     </div>
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">contacts</i>
-                        <input id="telefone" name="telefone" type="text" value="<?php echo $ds_telefone ?>" placeholder="99 999999999" class="validate">
-                        <label for="titulo">Contato</label>
+                        <input id="telefone" name="telefone" type="text" value="<?php echo $ds_telefone ?>" placeholder="99 999999999">
+                        <label for="telefone">Contato</label>
                     </div>
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">email</i>
-                        <input id="email" name="email" type="text" value="<?php echo $ds_email ?>" class="validate">
-                        <label for="titulo">Email</label>
+                        <input id="email" name="email" type="text" value="<?php echo $ds_email ?>">
+                        <label for="email">Email</label>
                     </div>
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">language</i>
-                        <input id="site" name="site" type="text" value="<?php echo $ds_site ?>" class="validate">
-                        <label for="titulo">Site</label>
+                        <input id="site" name="site" value="<?php echo $ds_site ?>">
+                        <label for="site">Site</label>
                     </div>
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">https</i>
-                        <input id="senha" name="senha" type="password" value="<?php echo $ds_senha ?>" class="validate">
-                        <label for="titulo">Senha</label>
+                        <input id="senha" name="senha" type="password" value="<?php echo $ds_senha ?>">
+                        <label for="senha">Senha</label>
                     </div>
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">https</i>
-                        <input id="senhaconfirmacao" name="senhaconfirmacao" type="password" value="<?php echo $ds_senha ?>" class="validate">
-                        <label for="titulo">Confirmar Senha</label>
+                        <input id="senhaconfirmacao" name="senhaconfirmacao" type="password" value="<?php echo $ds_senha ?>">
+                        <label for="senhaconfirmacao">Confirmar Senha</label>
                     </div>
 
                     <div class="input-field col s12 m12">
@@ -162,26 +166,17 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
         </form>
     </div>
 
-        <!-- JQUERY do Materialize -->
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
         <!-- JavaScript do Materialize -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-        <!-- Materialize Compentes -->
-        <script>
-            $(document).ready(function () {
-                $('select').material_select();
-            });
-        </script>
-
-        <!--  Scripts-->
-  <script src="js/vaga.js"></script>
-
+    <!-- Materialize Compentes -->
   <script type='text/javascript'>
     $(document).ready(function(){
+      
+      $('select').material_select();
       $('#errMessage').hide(); //Esconde o elemento com id errolog
       $('#loader').hide();
-
 
       $('#telefone').mask('(00) 00000-0000');
       $('#cnpj').mask('00.000.000/0000-00');
@@ -259,8 +254,8 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                         for (key in dados) {  
                           if (key == 'status'){
                             if (dados[key] == 'ERROR'){
-                              //document.getElementById('errMessage').innerHTML = 'Não foi possível carregar os dados do CNPJ digitado!';
-                              Materialize.toast('Não foi possível carregar os dados do cnpj digitado!', 4000)
+                              document.getElementById('errMessage').innerHTML = 'Não foi possível carregar os dados do cnpj digitado!';
+                              Materialize.toast('Não foi possível carregar os dados do cnpj digitado!', 4000);
                               $('#loader').hide();
                               $('#errMessage').show();   //Informa o erro 
                               return false;
@@ -283,8 +278,8 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                           }
                         }
                       }catch (e) {
-                        //document.getElementById('errMessage').innerHTML = 'Não foi possível carregar os dados do CNPJ digitado!';
-                        Materialize.toast('Não foi possível carregar os dados do cnpj digitado!', 4000)
+                        //document.getElementById('errMessage').innerHTML = 'Não foi possível carregar os dados do cnpj digitado!';
+                        Materialize.toast('Não foi possível carregar os dados do cnpj digitado!', 4000);
                         $('#loader').hide();
                         $('#errMessage').show();   //Informa o erro
                       }finally {

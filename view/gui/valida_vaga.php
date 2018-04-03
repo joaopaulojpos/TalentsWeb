@@ -22,9 +22,12 @@ try{
 	$experiencia = $_POST['experiencia'];
 	$quantidadevaga = $_POST['quantidadevagas'];
 	$beneficios = $_POST['beneficios'];
+	$latitude = $_POST['latitude'];
+	$longitude = $_POST['longitude'];
 	$idiomaCodigo = json_decode(stripslashes($_POST['idiomaCodigo']));
 	$idiomaNivel = json_decode(stripslashes($_POST['idiomaNivel']));
 	$tecnicaCodigo = json_decode(stripslashes($_POST['tecnicaCodigo']));
+	$tecnicaNivel = json_decode(stripslashes($_POST['tecnicaNivel']));
 	$comportCodigo = json_decode(stripslashes($_POST['comportCodigo']));
 	$cursoCodigo = json_decode(stripslashes($_POST['cursoCodigo']));
 
@@ -45,6 +48,8 @@ try{
 	$vaga->setDtValidade(date("Y-m-d"));
 	$vaga->setDsObservacao($observacao);
 	$vaga->setNrExperiencia($experiencia);
+	$vaga->setNrLatitude($latitude);
+	$vaga->setNrLongitude($longitude);
 
 	//prenchendo os campos do objeto cargo 
 	$cargo->setCdCargo($cd_cargo);
@@ -65,6 +70,7 @@ try{
 	for ($i = 0; $i < sizeof($tecnicaCodigo); $i++) {
     	$competenciatecnica = new CompetenciaTecnica();
     	$competenciatecnica->setCdCompetenciaTecnica($tecnicaCodigo[$i]);
+    	$competenciatecnica->setNrNivel($tecnicaNivel[$i]);
 
 		$vaga->setCompetenciasTecnicas($competenciatecnica); 
 	}

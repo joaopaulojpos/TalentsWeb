@@ -861,6 +861,15 @@ nav ul a {
     color: inherit;
 	margin-bottom: 8px;!important; 
 }
+
+.card .card-content .disponivel{
+    color: green;
+}
+
+.card .card-content .indisponivel{
+    color: red;
+}
+
 .card .card-content .card-title {
     line-height: 48px;
 }
@@ -888,6 +897,15 @@ nav ul a {
     display: none;
     background-color: rgb(255, 255, 255);
 }
+
+.card .card-reveal .primeiro{
+    width: 85%;
+}
+
+.card .card-reveal .segundo{
+    width: 15%;
+}
+
 .card .card-reveal .card-title {
     cursor: pointer;
     display: block;

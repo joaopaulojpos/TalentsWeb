@@ -6,10 +6,17 @@
     exit; //Redireciona o visitante para login
   }
 
+  if(empty($_POST['txtLatitude']) && empty($_POST['txtLongitude'])){
+    header("Location: cadastro_vaga_localizacao.php"); 
+    exit; //Redireciona o visitante para login
+  }
+
   require_once('../../controller/fachada.php');
   $fachada = Fachada::getInstance();
 
   $cd_empresa = '';
+  $latitude = $_POST['txtLatitude'];
+  $longitude = $_POST['txtLongitude'];
 
   if (isset($_SESSION['empresaLogada'])) {
     $empresa = $_SESSION['empresaLogada']; 
@@ -48,12 +55,14 @@
 <legend>Cadastro de vaga</legend>
 
 <input type="hidden" value="<?php echo $cd_empresa ?>" name="cd_empresa" id="cd_empresa"/>
+<input type="hidden" value="<?php echo $latitude ?>" name="latitude" id="latitude"/>
+<input type="hidden" value="<?php echo $longitude ?>" name="longitude" id="longitude"/>
 
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Título</label>  
-  <div class="col-md-4 inputGroupContainer">
+  <label class="col-md-3 control-label">Título</label>  
+  <div class="col-md-7 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
   <input  name="titulo" id="titulo" placeholder="Talents LTDA." class="form-control"  type="text">
@@ -64,8 +73,8 @@
 <!-- Select Basic -->
    
 <div class="form-group"> 
-  <label class="col-md-4 control-label">Cargo</label>
-  <div class="col-md-4 selectContainer">
+  <label class="col-md-3 control-label">Cargo</label>
+  <div class="col-md-7 selectContainer">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
       <select name="cargo" id="cargo" class="form-control selectpicker" >
@@ -98,8 +107,8 @@
 <!-- Select Basic -->
    
 <div class="form-group"> 
-  <label class="col-md-4 control-label">Tipo de contratação</label>
-  <div class="col-md-4 selectContainer">
+  <label class="col-md-3 control-label">Tipo de contratação</label>
+  <div class="col-md-7 selectContainer">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-list-alt"></i></span>
       <select name="tipocontratacao" id="tipocontratacao" class="form-control selectpicker" >
@@ -115,8 +124,8 @@
 
 <!-- Text input-->
   <div class="form-group">
-  <label class="col-md-4 control-label">Salário</label>  
-    <div class="col-md-4 inputGroupContainer">
+  <label class="col-md-3 control-label">Salário</label>  
+    <div class="col-md-7 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
   	<input name="salario" id="salario" placeholder="Valor do salário" class="form-control"  type="text">
@@ -128,8 +137,8 @@
 <!-- Select Basic -->
    
 <div class="form-group"> 
-  <label class="col-md-4 control-label">Jornada de trabalho</label>
-  <div class="col-md-4 selectContainer">
+  <label class="col-md-3 control-label">Jornada de trabalho</label>
+  <div class="col-md-7 selectContainer">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-dashboard"></i></span>
       <select name="jornadatrabalho" id="jornadatrabalho" class="form-control selectpicker" >
@@ -144,8 +153,8 @@
 <!-- Select Basic -->
    
 <div class="form-group"> 
-  <label class="col-md-4 control-label">Experiência</label>
-  <div class="col-md-4 selectContainer">
+  <label class="col-md-3 control-label">Experiência</label>
+  <div class="col-md-7 selectContainer">
     <div class="input-group">
       <span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
       <select name="experiencia" id="experiencia" class="form-control selectpicker" >
@@ -163,8 +172,8 @@
 
 <!-- Text input-->
   <div class="form-group">
-  <label class="col-md-4 control-label">Número de vagas</label>  
-    <div class="col-md-4 inputGroupContainer">
+  <label class="col-md-3 control-label">Número de vagas</label>  
+    <div class="col-md-7 inputGroupContainer">
     <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
   	<input style="padding-right: 0" name="quantidadevagas" id="quantidadevagas" placeholder="Quantidade de vagas" class="form-control"  type="number">
@@ -175,8 +184,8 @@
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Benefícios</label> 
-    <div class="col-md-4 inputGroupContainer">
+  <label class="col-md-3 control-label">Benefícios</label> 
+    <div class="col-md-7 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
   <textarea name="beneficios" id="beneficios" placeholder="Descreva os Benefícios destinados aos profissionais." class="form-control"  type="text"></textarea>
@@ -187,8 +196,8 @@
 <!-- Text input-->
 
 <div class="form-group">
-  <label class="col-md-4 control-label">Observação</label> 
-    <div class="col-md-4 inputGroupContainer">
+  <label class="col-md-3 control-label">Observação</label> 
+    <div class="col-md-7 inputGroupContainer">
     <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
   <textarea name="observacao" id="observacao" placeholder="Descreva aqui algo que ainda não foi mencionado." class="form-control"  type="text"></textarea>
@@ -199,8 +208,8 @@
 <!-- Cursos -->
 
 <div class="form-group" id="form-group">
-	<label class="col-md-4 control-label">Curso(s)</label> 
-	<div class="col-md-4 inputGroupContainer">
+	<label class="col-md-3 control-label">Curso(s)</label> 
+	<div class="col-md-7 inputGroupContainer">
 		<div class="input-group" style="width: 100%">
 	    	<table class="table-cursos" id="table-cursos" style="width: 100%">
 		    	<tr style="width: 100%">
@@ -236,12 +245,12 @@
 <!-- competencias técnicas -->
 
 <div class="form-group" id="form-group">
-	<label class="col-md-4 control-label">Competência(s) Técnica(s)</label> 
-	<div class="col-md-4 inputGroupContainer">
+	<label class="col-md-3 control-label">Competência(s) Técnica(s)</label> 
+	<div class="col-md-7 inputGroupContainer">
 		<div class="input-group" style="width: 100%">
 			<table class="table-tecnicas" id="table-tecnicas" style="width: 100%">  
 		    	<tr style="width: 100%">
-		        	  <th style="width: 100%"><select name="codigo_tecnica" id="codigo_tecnica" class="form-control selectpicker">
+		        	  <th style="width: 75%"><select name="codigo_tecnica" id="codigo_tecnica" class="form-control selectpicker">
 	                	<option value="">Técnica(s) necessária(s)</option>
 	                  	<?php 
 	                    	foreach ($arraycompetenciatecnica as $key => $value) {
@@ -258,6 +267,14 @@
 	                      	}
 	                  ?>
 		            </select></th>
+                <th style="width: 25%"><select name="nivel_tecnica" id="nivel_tecnica" class="form-control selectpicker">
+                <option value="">Nível</option>
+                <option value="1">Nível 1</option>
+                <option value="2">Nível 2</option>
+                <option value="3">Nivel 3</option>
+                <option value="4">Nivel 4</option>
+                <option value="5">Nivel 5</option>
+                </select>
 		          	<th style="width: 100%"><input type="BUTTON" class="btn btn-warning" id="adicionar_tecnica" name="adicionar_tecnica" value="Adicionar" onclick="adicionarTecnica()"/></th>
 		      	</tr>
 		      	<tbody id="itemlistTecnica">
@@ -270,8 +287,8 @@
 <!-- Habilidades -->
 
 <div class="form-group" id="form-group">
-  <label class="col-md-4 control-label">Competência(s) Comportamentais</label> 
-  <div class="col-md-4 inputGroupContainer">
+  <label class="col-md-3 control-label">Competência(s) Comportamentais</label> 
+  <div class="col-md-7 inputGroupContainer">
     <div class="input-group" style="width: 100%">
       <table class="table-comport" id="table-comport" style="width: 100%">  
           <tr style="width: 100%">
@@ -304,34 +321,34 @@
 <!-- idiomas -->
 
 <div class="form-group" id="form-group">
-	<label class="col-md-4 control-label">Idioma(s)</label>
-	<div class="col-md-4 inputGroupContainer">
+	<label class="col-md-3 control-label">Idioma(s)</label>
+	<div class="col-md-7 inputGroupContainer">
 		<div class="input-group" style="width: 100%"> 
 			<table class="table-idiomas" id="table-idiomas" style="width: 100%">
 	    		<tr>
-	        		<th style="width: 70%"><select name="codigo_idioma" id="codigo_idioma" class="form-control selectpicker">
-	                	<option value="">Idioma(s) necessário(s)</option>
-	                	<?php 
-	                    	foreach ($arrayidioma as $key => $value) {
-	                        	if ($key == 'sucess'){
-	                           		$arrayidioma2 = $value;
-	                           		foreach ($arrayidioma2 as $key => $value) { 
-	                	?>
-	                             		<option value="<?php echo $value->cd_idioma; ?>"> <?php echo $value->ds_idioma; ?></option>
-	                	<?php         
-	                             
-	                           		}
-	                        	}
-	                    	}
-	                	?>
-	            		</select></th>
-	       			<th style="width: 30%"><select name="nivel_idioma" id="nivel_idioma" class="form-control selectpicker">
-    					<option value="">Nível</option>
-    					<option value="1">Básico</option>
-    					<option value="2">Médio</option>
-    					<option value="3">Avançado</option>
-    					</select>
-	        		</th>
+	        		<th style="width: 75%"><select name="codigo_idioma" id="codigo_idioma" class="form-control selectpicker">
+                	<option value="">Idioma(s) necessário(s)</option>
+                	<?php 
+                    	foreach ($arrayidioma as $key => $value) {
+                        	if ($key == 'sucess'){
+                           		$arrayidioma2 = $value;
+                           		foreach ($arrayidioma2 as $key => $value) { 
+                	?>
+                             		<option value="<?php echo $value->cd_idioma; ?>"> <?php echo $value->ds_idioma; ?></option>
+                	<?php         
+                             
+                           		}
+                        	}
+                    	}
+                	?>
+            		</select></th>
+  	       			<th style="width: 25%"><select name="nivel_idioma" id="nivel_idioma" class="form-control selectpicker">
+      					<option value="">Nível</option>
+      					<option value="1">Básico</option>
+      					<option value="2">Médio</option>
+      					<option value="3">Avançado</option>
+      					</select>
+  	        		</th>
           			<th style="width: 100%"><input type="BUTTON" class="btn btn-warning" id="adicionar_idioma" name="adicionar_idioma" value="Adicionar" onclick="adicionarIdioma()"/></th>
 	    		</tr>
 	    		<tbody id="itemlistIdioma">
@@ -353,6 +370,15 @@
     <button type="submit" name="buttonSubmit" id="buttonSubmit" class="btn btn-warning" >Continuar <span class="glyphicon glyphicon-send"></span></button>
   </div>
 </div>
+
+<!-- information message -->
+<div class="form-group" style="text-align: center"> 
+  <span>*Para níveis de competência:</span><br>
+  <span><b>Pouco conhecimento &nbsp 1 &nbsp 2 &nbsp 3 &nbsp 4 &nbsp 5 &nbsp 6 &nbsp Extremo conhecimento</b></span><br>
+  <span>Quanto mais próximo do número <b>UM</b>, <b>menor</b> o grau de conhecimento. Quanto mais próximo do número <b>SEIS</b>, <b>maior</b> o grau de conhecimento.</span>
+</div>
+
+
 
 </fieldset>
 </form>
@@ -392,6 +418,12 @@
             tecnicaCodigo.push($(this).val());
         });
 
+        //pega todos niveis das habilidades
+        var tecnicaNivel = [];
+        $('input[name="itemtecnica[nivel]"]').each(function(){
+            tecnicaNivel.push($(this).val());
+        });
+
         //pegando todos os códigos das habilidades
         var comportCodigo = [];
         $('input[name="itemcomport[codigo]"]').each(function(){
@@ -414,11 +446,13 @@
         var experiencia=$('#experiencia').val();
         var quantidadevagas=$('#quantidadevagas').val();
         var beneficios=$('#beneficios').val();
+        var latitude=$('#latitude').val();
+        var longitude=$('#longitude').val();
 
         $.ajax({      //Função AJAX
           url:"valida_vaga.php",      //Arquivo php
           type:"post",        //Método de envio
-          data: "cd_empresa="+cd_empresa+"&titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios+"&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+"&tecnicaCodigo="+JSON.stringify(tecnicaCodigo)+"&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados*/
+          data: "cd_empresa="+cd_empresa+"&titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios+"&latitude="+latitude+"&longitude="+longitude+"&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+"&tecnicaCodigo="+JSON.stringify(tecnicaCodigo)+"&tecnicaNivel="+JSON.stringify(tecnicaNivel)+"&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados*/
             success: function (result){     //Sucesso no AJAX
                         if (result == 1){
                           location.href='vaga.php';
@@ -443,8 +477,6 @@
       var descricao_nivel_idioma = $("#nivel_idioma option:selected").text();
       var items = "";
 
-
-      
       if ((!codigo_idioma) || (!nivel_idioma))
       		return false;
 
@@ -503,15 +535,18 @@
       //pega o valor dos componentes html que possuem esses id
       var codigo_tecnica = $("#codigo_tecnica").val();
       var descricao_tecnica = $("#codigo_tecnica option:selected").text();
+      var nivel_tecnica = $("#nivel_tecnica").val();
+      var descricao_nivel_tecnica = $("#nivel_tecnica option:selected").text();
       var items = "";
 
-      if (!codigo_tecnica)
-      		return false;
+      if ((!codigo_tecnica) || (!nivel_tecnica))
+          return false;
 
       //esse codigo html vai ser inserido para o usuário ver na tela (esse itemhabilidade vai ser a lista utilizado para pegar os item depois)
       //()
       items += "<tr>";
       items += "<td><input type='hidden' name='itemtecnica[codigo]' value='"+ codigo_tecnica +"'>"+descricao_tecnica+"</td>";
+      items += "<td><input type='hidden' class='span2' name='itemtecnica[nivel]' value='"+ nivel_tecnica +"'>"+ descricao_nivel_tecnica +"</td>";
       items += "<td><a href='javascript:void(0);' id='hapus'>Remove</a></td>";
       items += "</tr>";
 

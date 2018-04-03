@@ -301,3 +301,1144 @@ Stack trace:
 [30-Mar-2018 04:35:35 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 166
 [30-Mar-2018 04:36:10 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 167
 [30-Mar-2018 04:36:10 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 167
+[02-Apr-2018 02:27:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_localizacao in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 129
+[02-Apr-2018 02:27:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_localizacao in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 129
+[02-Apr-2018 02:27:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_localizacao in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 129
+[02-Apr-2018 02:27:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_localizacao in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 129
+[02-Apr-2018 02:27:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_localizacao in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 129
+[02-Apr-2018 02:27:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_localizacao in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 129
+[02-Apr-2018 02:27:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_localizacao in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 129
+[02-Apr-2018 02:27:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_localizacao in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 129
+[02-Apr-2018 02:27:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_localizacao in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 129
+[02-Apr-2018 02:27:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_localizacao in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 129
+[02-Apr-2018 02:27:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_localizacao in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 129
+[02-Apr-2018 02:27:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_localizacao in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 129
+[02-Apr-2018 02:27:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_localizacao in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 129
+[02-Apr-2018 02:28:40 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 98
+[02-Apr-2018 02:28:41 Europe/Berlin] PHP Notice:  Undefined variable: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 149
+[02-Apr-2018 02:28:41 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 98
+[02-Apr-2018 02:28:41 Europe/Berlin] PHP Notice:  Undefined variable: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 149
+[02-Apr-2018 02:28:41 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 98
+[02-Apr-2018 02:28:42 Europe/Berlin] PHP Notice:  Undefined variable: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 149
+[02-Apr-2018 02:28:42 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 98
+[02-Apr-2018 02:28:43 Europe/Berlin] PHP Notice:  Undefined variable: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 149
+[02-Apr-2018 02:28:43 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 98
+[02-Apr-2018 02:28:43 Europe/Berlin] PHP Notice:  Undefined variable: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 149
+[02-Apr-2018 02:28:43 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 98
+[02-Apr-2018 02:28:44 Europe/Berlin] PHP Notice:  Undefined variable: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 149
+[02-Apr-2018 02:28:44 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 98
+[02-Apr-2018 02:28:45 Europe/Berlin] PHP Notice:  Undefined variable: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 149
+[02-Apr-2018 02:28:45 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 98
+[02-Apr-2018 02:28:46 Europe/Berlin] PHP Notice:  Undefined variable: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 149
+[02-Apr-2018 02:28:46 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 98
+[02-Apr-2018 02:28:46 Europe/Berlin] PHP Notice:  Undefined variable: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 149
+[02-Apr-2018 02:28:46 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 98
+[02-Apr-2018 02:28:47 Europe/Berlin] PHP Notice:  Undefined variable: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 149
+[02-Apr-2018 02:28:47 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 98
+[02-Apr-2018 02:28:48 Europe/Berlin] PHP Notice:  Undefined variable: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 149
+[02-Apr-2018 02:28:48 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 98
+[02-Apr-2018 02:28:48 Europe/Berlin] PHP Notice:  Undefined variable: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 149
+[02-Apr-2018 02:28:48 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 98
+[02-Apr-2018 02:28:49 Europe/Berlin] PHP Notice:  Undefined variable: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 149
+[02-Apr-2018 02:29:36 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 100
+[02-Apr-2018 02:29:36 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 100
+[02-Apr-2018 02:29:37 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 100
+[02-Apr-2018 02:29:38 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 100
+[02-Apr-2018 02:29:38 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 100
+[02-Apr-2018 02:29:39 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 100
+[02-Apr-2018 02:29:40 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 100
+[02-Apr-2018 02:29:40 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 100
+[02-Apr-2018 02:29:41 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 100
+[02-Apr-2018 02:29:42 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 100
+[02-Apr-2018 02:29:42 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 100
+[02-Apr-2018 02:29:43 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 100
+[02-Apr-2018 02:29:44 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 100
+[02-Apr-2018 02:31:50 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:31:51 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:31:52 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:31:52 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:31:53 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:31:53 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:31:54 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:31:55 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:31:55 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:31:56 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:31:56 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:31:57 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:31:57 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:16 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:17 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:17 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:18 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:18 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:18 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:18 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:19 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:19 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:19 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:19 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:20 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:20 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:20 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:20 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:21 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:21 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:22 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:22 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:22 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:22 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:23 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:23 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:23 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:23 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:24 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:32 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:33 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:33 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:33 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:33 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:34 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:34 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:35 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:35 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:35 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:35 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:36 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:36 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:37 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:37 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:37 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:37 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:38 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:38 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:38 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:38 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:39 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:39 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:39 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:39 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:40 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:40 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:40 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:40 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:41 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:41 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:42 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:42 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:42 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:42 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:43 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:43 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:43 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:43 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:44 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:44 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:45 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:45 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:45 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:45 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:46 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:46 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:46 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:46 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:47 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:32:47 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:47 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:48 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:49 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:49 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:50 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:50 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:51 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:51 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:52 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:53 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:53 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:32:54 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:00 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:00 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:01 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:02 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:02 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:03 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:03 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:04 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:05 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:05 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:06 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:06 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:07 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:07 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:08 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:08 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:09 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:10 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:10 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:11 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:11 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:12 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:12 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:13 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:13 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:14 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:21 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:22 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:22 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:23 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:23 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:23 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:23 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:24 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:24 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:24 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:24 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:25 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:25 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:26 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:26 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:26 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:26 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:27 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:27 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:27 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:27 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:28 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:28 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:28 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:28 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:29 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:36 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:37 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:37 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:38 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:38 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:39 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:39 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:39 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:39 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:40 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:40 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:40 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:40 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:41 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:41 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:42 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:42 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:42 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:42 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:43 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:43 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:43 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:43 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:44 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:33:44 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:33:44 Europe/Berlin] PHP Warning:  Illegal string offset 'results' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:22 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:23 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:23 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:24 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:24 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:24 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:24 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:25 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:25 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:25 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:25 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:26 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:26 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:26 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:26 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:27 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:27 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:27 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:27 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:28 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:28 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:29 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:29 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:29 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:29 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:30 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:34:38 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:39 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:40 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:40 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:41 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:41 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:42 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:43 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:43 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:44 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:44 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:45 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:34:45 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:01 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:02 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:02 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:03 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:04 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:04 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:05 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:06 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:06 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:07 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:08 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:08 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:09 Europe/Berlin] PHP Notice:  Undefined index: cnpj in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 102
+[02-Apr-2018 02:35:44 Europe/Berlin] PHP Notice:  Trying to get property 'formatted_address' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:35:45 Europe/Berlin] PHP Notice:  Trying to get property 'formatted_address' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:35:45 Europe/Berlin] PHP Notice:  Trying to get property 'formatted_address' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:35:46 Europe/Berlin] PHP Notice:  Trying to get property 'formatted_address' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:35:47 Europe/Berlin] PHP Notice:  Trying to get property 'formatted_address' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:35:47 Europe/Berlin] PHP Notice:  Trying to get property 'formatted_address' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:35:48 Europe/Berlin] PHP Notice:  Trying to get property 'formatted_address' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:35:48 Europe/Berlin] PHP Notice:  Trying to get property 'formatted_address' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:35:49 Europe/Berlin] PHP Notice:  Trying to get property 'formatted_address' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:35:49 Europe/Berlin] PHP Notice:  Trying to get property 'formatted_address' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:35:50 Europe/Berlin] PHP Notice:  Trying to get property 'formatted_address' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:35:50 Europe/Berlin] PHP Notice:  Trying to get property 'formatted_address' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:35:51 Europe/Berlin] PHP Notice:  Trying to get property 'formatted_address' of non-object in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:35:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function formatted_address() on string in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php:118
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:36:08 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:36:09 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:36:10 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:36:11 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:36:29 Europe/Berlin] PHP Warning:  Illegal string offset 'formatted_address' in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:36:38 Europe/Berlin] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 112
+[02-Apr-2018 02:37:22 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:37:23 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:37:24 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:37:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:37:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:37:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:37:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:37:28 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:37:29 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:37:29 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:37:30 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:37:30 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:37:31 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:37:54 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:01 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:02 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:03 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:03 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:04 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:05 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:05 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:06 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:06 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:07 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:07 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:08 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:18 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:20 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:21 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:22 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:22 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:23 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:24 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:24 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:42 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:43 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:44 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:44 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:45 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:46 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:46 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:47 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:47 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:48 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:49 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:49 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:38:50 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 118
+[02-Apr-2018 02:39:24 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:24 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:24 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:24 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:24 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:24 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:24 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:24 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:24 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:24 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 178
+[02-Apr-2018 02:39:24 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 201
+[02-Apr-2018 02:39:24 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 223
+[02-Apr-2018 02:39:24 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 245
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 178
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 201
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 223
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 245
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 178
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 201
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 223
+[02-Apr-2018 02:39:25 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 245
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 178
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 201
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 223
+[02-Apr-2018 02:39:26 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 245
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 178
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 201
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 223
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 245
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 178
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 201
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 223
+[02-Apr-2018 02:39:27 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 245
+[02-Apr-2018 02:39:28 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:28 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:28 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:28 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:28 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:28 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:28 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:28 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:28 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:39:28 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 178
+[02-Apr-2018 02:39:28 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 201
+[02-Apr-2018 02:39:28 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 223
+[02-Apr-2018 02:39:28 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 245
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 182
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 205
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 227
+[02-Apr-2018 02:40:15 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 249
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 182
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 205
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 227
+[02-Apr-2018 02:40:16 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 249
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 182
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 205
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 227
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 249
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 182
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 205
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 227
+[02-Apr-2018 02:40:17 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 249
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 123
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 126
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 182
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 205
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 227
+[02-Apr-2018 02:40:19 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 249
+[02-Apr-2018 02:41:29 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 180
+[02-Apr-2018 02:41:29 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 203
+[02-Apr-2018 02:41:29 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 225
+[02-Apr-2018 02:41:29 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 247
+[02-Apr-2018 02:41:29 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 180
+[02-Apr-2018 02:41:29 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 203
+[02-Apr-2018 02:41:29 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 225
+[02-Apr-2018 02:41:29 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 247
+[02-Apr-2018 02:41:30 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 180
+[02-Apr-2018 02:41:30 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 203
+[02-Apr-2018 02:41:30 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 225
+[02-Apr-2018 02:41:30 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 247
+[02-Apr-2018 02:41:31 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 180
+[02-Apr-2018 02:41:31 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 203
+[02-Apr-2018 02:41:31 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 225
+[02-Apr-2018 02:41:31 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 247
+[02-Apr-2018 02:41:32 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 180
+[02-Apr-2018 02:41:32 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 203
+[02-Apr-2018 02:41:32 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 225
+[02-Apr-2018 02:41:32 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 247
+[02-Apr-2018 02:41:33 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 180
+[02-Apr-2018 02:41:33 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 203
+[02-Apr-2018 02:41:33 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 225
+[02-Apr-2018 02:41:33 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 247
+[02-Apr-2018 02:42:54 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 181
+[02-Apr-2018 02:42:54 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 204
+[02-Apr-2018 02:42:54 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 226
+[02-Apr-2018 02:42:54 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 248
+[02-Apr-2018 02:42:55 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 181
+[02-Apr-2018 02:42:55 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 204
+[02-Apr-2018 02:42:55 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 226
+[02-Apr-2018 02:42:55 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 248
+[02-Apr-2018 02:42:56 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 181
+[02-Apr-2018 02:42:56 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 204
+[02-Apr-2018 02:42:56 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 226
+[02-Apr-2018 02:42:56 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 248
+[02-Apr-2018 02:42:58 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 181
+[02-Apr-2018 02:42:58 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 204
+[02-Apr-2018 02:42:58 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 226
+[02-Apr-2018 02:42:58 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 248
+[02-Apr-2018 02:42:59 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 181
+[02-Apr-2018 02:42:59 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 204
+[02-Apr-2018 02:42:59 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 226
+[02-Apr-2018 02:42:59 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 248
+[02-Apr-2018 02:43:17 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 181
+[02-Apr-2018 02:43:17 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 204
+[02-Apr-2018 02:43:17 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 226
+[02-Apr-2018 02:43:17 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 248
+[02-Apr-2018 02:43:20 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:43:21 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:43:22 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:43:22 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:43:23 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:43:24 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:43:25 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:43:25 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:43:26 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:43:26 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:43:27 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:43:27 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:43:28 Europe/Berlin] PHP Notice:  Undefined index: formatted_address in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 119
+[02-Apr-2018 02:44:04 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:44:04 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 181
+[02-Apr-2018 02:44:04 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 204
+[02-Apr-2018 02:44:04 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 226
+[02-Apr-2018 02:44:04 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 248
+[02-Apr-2018 02:44:05 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:44:05 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 181
+[02-Apr-2018 02:44:05 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 204
+[02-Apr-2018 02:44:05 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 226
+[02-Apr-2018 02:44:05 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 248
+[02-Apr-2018 02:44:06 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:44:06 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 181
+[02-Apr-2018 02:44:06 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 204
+[02-Apr-2018 02:44:06 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 226
+[02-Apr-2018 02:44:06 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 248
+[02-Apr-2018 02:44:07 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 122
+[02-Apr-2018 02:44:07 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 181
+[02-Apr-2018 02:44:07 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 204
+[02-Apr-2018 02:44:07 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 226
+[02-Apr-2018 02:44:07 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 248
+[02-Apr-2018 02:45:02 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:45:02 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:45:02 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:45:02 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:45:03 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:45:03 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:45:03 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:45:03 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:45:04 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:45:04 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:45:04 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:45:04 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:45:04 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:45:04 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:45:04 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:45:04 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:45:05 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:45:05 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:45:05 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:45:05 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:45:06 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:45:06 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:45:06 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:45:06 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:45:56 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 168
+[02-Apr-2018 02:45:56 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 191
+[02-Apr-2018 02:45:56 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 213
+[02-Apr-2018 02:45:56 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 235
+[02-Apr-2018 02:45:57 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 168
+[02-Apr-2018 02:45:57 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 191
+[02-Apr-2018 02:45:57 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 213
+[02-Apr-2018 02:45:57 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 235
+[02-Apr-2018 02:45:58 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 168
+[02-Apr-2018 02:45:58 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 191
+[02-Apr-2018 02:45:58 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 213
+[02-Apr-2018 02:45:58 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 235
+[02-Apr-2018 02:45:58 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 168
+[02-Apr-2018 02:45:58 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 191
+[02-Apr-2018 02:45:58 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 213
+[02-Apr-2018 02:45:58 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 235
+[02-Apr-2018 02:45:59 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 168
+[02-Apr-2018 02:45:59 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 191
+[02-Apr-2018 02:45:59 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 213
+[02-Apr-2018 02:45:59 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 235
+[02-Apr-2018 02:46:01 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 168
+[02-Apr-2018 02:46:01 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 191
+[02-Apr-2018 02:46:01 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 213
+[02-Apr-2018 02:46:01 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 235
+[02-Apr-2018 02:46:29 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 168
+[02-Apr-2018 02:46:29 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 191
+[02-Apr-2018 02:46:29 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 213
+[02-Apr-2018 02:46:29 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 235
+[02-Apr-2018 02:46:30 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 168
+[02-Apr-2018 02:46:30 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 191
+[02-Apr-2018 02:46:30 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 213
+[02-Apr-2018 02:46:30 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 235
+[02-Apr-2018 02:46:31 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 168
+[02-Apr-2018 02:46:31 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 191
+[02-Apr-2018 02:46:31 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 213
+[02-Apr-2018 02:46:31 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 235
+[02-Apr-2018 02:46:31 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 168
+[02-Apr-2018 02:46:31 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 191
+[02-Apr-2018 02:46:31 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 213
+[02-Apr-2018 02:46:31 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 235
+[02-Apr-2018 02:46:32 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 168
+[02-Apr-2018 02:46:32 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 191
+[02-Apr-2018 02:46:32 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 213
+[02-Apr-2018 02:46:32 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 235
+[02-Apr-2018 02:46:33 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 168
+[02-Apr-2018 02:46:33 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 191
+[02-Apr-2018 02:46:33 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 213
+[02-Apr-2018 02:46:33 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 235
+[02-Apr-2018 02:51:11 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 170
+[02-Apr-2018 02:51:11 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 193
+[02-Apr-2018 02:51:11 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 215
+[02-Apr-2018 02:51:11 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 237
+[02-Apr-2018 02:51:11 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 170
+[02-Apr-2018 02:51:11 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 193
+[02-Apr-2018 02:51:11 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 215
+[02-Apr-2018 02:51:11 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 237
+[02-Apr-2018 02:51:12 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 170
+[02-Apr-2018 02:51:12 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 193
+[02-Apr-2018 02:51:12 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 215
+[02-Apr-2018 02:51:12 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 237
+[02-Apr-2018 02:51:13 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 170
+[02-Apr-2018 02:51:13 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 193
+[02-Apr-2018 02:51:13 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 215
+[02-Apr-2018 02:51:13 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 237
+[02-Apr-2018 02:51:14 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 170
+[02-Apr-2018 02:51:14 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 193
+[02-Apr-2018 02:51:14 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 215
+[02-Apr-2018 02:51:14 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 237
+[02-Apr-2018 02:51:15 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 170
+[02-Apr-2018 02:51:15 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 193
+[02-Apr-2018 02:51:15 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 215
+[02-Apr-2018 02:51:15 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 237
+[02-Apr-2018 02:53:51 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:53:51 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:53:51 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:53:51 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:53:52 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:53:52 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:53:52 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:53:52 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:53:53 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:53:53 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:53:53 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:53:53 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:53:54 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:53:54 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:53:54 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:53:54 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:53:55 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:53:55 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:53:55 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:53:55 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:53:55 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:53:55 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:53:55 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:53:55 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:53:56 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:53:56 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:53:56 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:53:56 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:55:31 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:55:31 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:55:31 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:55:31 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:55:31 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:55:31 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:55:31 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:55:31 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:55:32 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:55:32 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:55:32 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:55:32 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:55:33 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:55:33 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:55:33 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:55:33 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:55:34 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:55:34 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:55:34 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:55:34 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:55:35 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:55:35 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:55:35 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:55:35 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:55:36 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:55:36 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:55:36 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:55:36 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:55:47 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:55:47 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:55:47 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:55:47 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:55:48 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:55:48 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:55:48 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:55:48 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:55:49 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:55:49 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:55:49 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:55:49 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:55:50 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:55:50 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:55:50 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:55:50 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:55:51 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:55:51 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:55:51 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:55:51 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:55:51 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:55:51 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:55:51 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:55:51 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:34 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:34 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:34 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:34 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:35 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:35 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:35 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:35 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:36 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:36 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:36 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:36 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:36 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:36 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:36 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:36 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:37 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:37 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:37 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:37 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:38 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:38 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:38 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:38 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:39 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:39 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:39 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:39 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:55 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:55 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:55 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:55 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:55 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:55 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:55 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:55 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:56 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:56 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:56 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:56 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:57 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:57 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:57 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:57 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:58 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:58 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:58 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:58 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:58 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:58 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:58 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:58 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:57:59 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:57:59 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:57:59 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:57:59 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:58:58 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:58:58 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:58:58 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:58:58 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:58:59 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:58:59 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:58:59 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:58:59 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:59:00 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:59:00 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:59:00 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:59:00 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:59:01 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:59:01 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:59:01 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:59:01 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:59:01 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:59:01 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:59:01 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:59:01 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:59:02 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:59:02 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:59:02 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:59:02 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
+[02-Apr-2018 02:59:03 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 176
+[02-Apr-2018 02:59:03 Europe/Berlin] PHP Notice:  Undefined index: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 199
+[02-Apr-2018 02:59:03 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
+[02-Apr-2018 02:59:03 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243

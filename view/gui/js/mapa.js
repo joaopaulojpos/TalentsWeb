@@ -1,10 +1,11 @@
 var geocoder;
 var map;
 var marker;
-
-
+var lat;
+var lng;
 
 function initialize() {
+
 	var latlng = new google.maps.LatLng(-18.8800397, -47.05878999999999);
 	var options = {
 		zoom: 5,
@@ -22,9 +23,14 @@ function initialize() {
 	});
 	
 	marker.setPosition(latlng);
+	
 }
 
+
+
 $(document).ready(function () {
+
+	$('#loader').show();
 
 	initialize();
 	
@@ -47,7 +53,31 @@ $(document).ready(function () {
 			}
 		})
 	}
-	
+
+	if (navigator.geolocation)
+    {
+    	navigator.geolocation.getCurrentPosition(showPosition);
+
+    }else{
+    	//alert("O seu navegador não suporta Geolocalização.");
+    	$('#loader').hide();
+    }
+
+    function showPosition(position){
+		lat = position.coords.latitude; 
+		lng = position.coords.longitude;
+
+		$('#txtLatitude').val(lat);
+       	$('#txtLongitude').val(lng);
+
+		var location = new google.maps.LatLng(lat, lng);
+		marker.setPosition(location);
+		map.setCenter(location);
+		map.setZoom(16);
+
+		$('#loader').hide();
+	}
+
 	$("#btnEndereco").click(function() {
 		if($(this).val() != "")
 			carregarNoMapa($("#txtEndereco").val());
@@ -93,7 +123,7 @@ $(document).ready(function () {
 		}
 	});
 	
-	$("form").submit(function(event) {
+	/*$("form").submit(function(event) {
 		event.preventDefault();
 		
 		var endereco = $("#txtEndereco").val();
@@ -101,6 +131,6 @@ $(document).ready(function () {
 		var longitude = $("#txtLongitude").val();
 		
 		alert("Endereço: " + endereco + "\nLatitude: " + latitude + "\nLongitude: " + longitude);
-	});
+	});*/
 
 });

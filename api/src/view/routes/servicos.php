@@ -280,7 +280,9 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
                 $competenciatecnica = new CompetenciaTecnica();
                 foreach ($value as $key => $value) {      
                     if($key == 'cd_competencia_tecnica')
-                        $competenciatecnica->setCdCompetenciaTecnica($value);           
+                        $competenciatecnica->setCdCompetenciaTecnica($value); 
+                    if($key == 'nr_nivel')
+                        $competenciatecnica->setNrNivel($value);            
                 }
                 $vaga->setCompetenciasTecnicas($competenciatecnica); 
             }
