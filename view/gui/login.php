@@ -57,7 +57,7 @@ ob_start();
               </div>
               <div class="row">
                 <div class="input-field col s6 m6 l6">
-                  <p><a href="cadastro.php">Inscreva-se</a></p>
+                  <p><a href="cadastro_empresa.php">Inscreva-se</a></p>
                 </div>
                 <div class="input-field col s6 m6 l6">
                   <p class="right-align"><a href="#">Esqueceu sua senha ?</a></p>
