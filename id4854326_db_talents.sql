@@ -182,6 +182,12 @@ CREATE TABLE profissional_alternativa_perfil_comp (
   FOREIGN KEY(cd_profissional) REFERENCES profissional (cd_profissional)
 );
 
+CREATE TABLE resultado_perfil_comp ( 
+  cd_resultado Integer PRIMARY KEY AUTO_INCREMENT,
+  cd_profissional Integer, ds_resultado Varchar(20), 
+  FOREIGN KEY(cd_profissional) REFERENCES profissional(cd_profissional) 
+);
+
 CREATE TABLE vaga_idioma (
   cd_idioma Integer,
   cd_vaga Integer,
@@ -661,8 +667,8 @@ VALUES
 (25, '25. Eu penso que...');
 
 insert into alternativa_perfil_comp(cd_pergunta_perfil_comp,ds_resposta,nr_letra_ref) VALUES 
-        (1,'Idealista, criativo e visionário','I'),
-	      (1,'Divertido, espiritual e benéfico','C'),
+                          (1,'Idealista, criativo e visionário','I'),
+	                  (1,'Divertido, espiritual e benéfico','C'),
 			  (1,'Confiável, meticuloso e previsível','O'),
 			  (1,'Focado, determinado e persistente','A'),
 			  (2,'Ser piloto','A'),
