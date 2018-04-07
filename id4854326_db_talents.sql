@@ -60,7 +60,6 @@ CREATE TABLE profissional (
   nr_latitude Double,
   nr_longitude Double,
   cd_resultado_comp Integer,
-  FOREIGN KEY(cd_resultado_comp) REFERENCES resultado_perfil_comp (cd_resultado_comp),	
   dt_cadastro timestamp default current_timestamp()
 );
 
