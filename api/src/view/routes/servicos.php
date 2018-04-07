@@ -220,9 +220,9 @@ $app->get('/api/vagas', function(Request $request, Response $response){
 $app->get('/api/profissional/vagas', function(Request $request, Response $response){
     
     try{
-        $rnvagaprofissional = new RNVagaProfissional();
-        $rnvagaprofissional = $rnvagaprofissional->listarVagasParaCandidatos($request->getParam('cd_profissional'));
-        $response->write(json_encode($rnvagaprofissional));
+        $rnprofissional = new RNProfissional();
+        $rnprofissional = $rnprofissional->listarVagasParaCandidatos($request->getParam('cd_profissional'));
+        $response->write(json_encode($rnprofissional));
 
     } catch(Exception $e){
         $response->write(json_encode(array('erro' => $e->getMessage())));
@@ -334,8 +334,8 @@ $app->post('/api/vaga/curtirVaga', function(Request $request, Response $response
         $cd_profissional = ($request->getParam('cd_profissional'));
         $tp_acao = ($request->getParam('tp_acao'));
     
-        $rnvagapro = new RNVagaProfissional();
-        $result = $rnvagapro->curtirVaga($tp_acao,$cd_vaga,$cd_profissional);
+        $rnvaga = new RNVaga();
+        $result = $rnvaga->curtirVaga($tp_acao,$cd_vaga,$cd_profissional);
         $response->write(json_encode($result));
 
     } catch(PDOException $e){

@@ -58,6 +58,27 @@ class RNProfissional{
             return array('erro' => $e->getMessage());
         }
     }
+
+    public function listarVagasParaCandidatos($cd_profissional)
+    {
+        try{
+            $daoprofissional = new DaoProfissional();
+
+            //Verifica se o profissional existe
+            $prof = new Profissional();
+            $prof->setCdProfissional($cd_profissional);
+            $profissional = $daoprofissional->pesquisarById($prof);
+            if (empty($profissional)){
+                return array('erro' => "Profissional não existe");
+            }
+
+            $result = $daoprofissional->listarVagaProfissional($cd_profissional,false);
+            return array('sucess'=> $result);
+
+        }catch (Exception $e){
+            return array('erro' => $e->getMessage());
+        }
+    }
 }
 
 ?>

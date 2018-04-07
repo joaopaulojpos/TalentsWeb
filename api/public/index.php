@@ -18,7 +18,6 @@ require '../src/model/basica/curso.php';
 require '../src/model/basica/idioma.php';
 require '../src/model/basica/competenciatecnica.php';
 require '../src/model/basica/competenciacomport.php';
-require '../src/model/basica/vagaprofissional.php';
 
 require '../src/model/dados/daocompetenciatecnica.php';
 require '../src/model/dados/daocompetenciacomport.php';
@@ -33,7 +32,6 @@ require '../src/controller/negocio/rncurso.php';
 require '../src/controller/negocio/rnidioma.php';
 require '../src/controller/negocio/rncompetenciatecnica.php';
 require '../src/controller/negocio/rncompetenciacomport.php';
-require '../src/controller/negocio/rnvagaprofissional.php';
 
 
 $app = new \Slim\App(['settings' => $config]);
