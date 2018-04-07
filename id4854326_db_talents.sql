@@ -59,6 +59,8 @@ CREATE TABLE profissional (
   b_foto varchar(100),
   nr_latitude Double,
   nr_longitude Double,
+  cd_resultado_comp Integer,
+  FOREIGN KEY(cd_resultado_comp) REFERENCES resultado_perfil_comp (cd_resultado_comp),	
   dt_cadastro timestamp default current_timestamp()
 );
 
@@ -183,7 +185,7 @@ CREATE TABLE profissional_alternativa_perfil_comp (
 );
 
 CREATE TABLE resultado_perfil_comp ( 
-  cd_resultado Integer PRIMARY KEY AUTO_INCREMENT,
+  cd_resultado_comp Integer PRIMARY KEY AUTO_INCREMENT,
   cd_profissional Integer, ds_resultado Varchar(20), 
   FOREIGN KEY(cd_profissional) REFERENCES profissional(cd_profissional) 
 );
