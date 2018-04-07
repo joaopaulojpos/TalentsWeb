@@ -105,6 +105,57 @@ class RNVaga{
         }
 	}
 
+    /**
+     * @param $tp_acao
+     * @param $cd_vaga
+     * @param $cd_profissional
+     * @return array
+     */
+    public function curtirVaga($tp_acao,$cd_vaga,$cd_profissional){
+        try{
+            $daoprofissional = new DaoProfissional();
+            $daovaga = new DaoVaga();
+
+
+            //Verifica se o campo tipo de ação está vazio
+            if (empty($tp_acao)){
+                return array('erro' => 'Código do tipo de ação inválido');
+            }
+
+            //Verifica se o campo código do profissional está vazio
+            if (empty($cd_profissional)){
+                return array('erro' => 'Código do profissional inválido');
+            }
+
+            //Verifica se o campo código da vaga está vazio
+            if (empty($cd_vaga)){
+                return array('erro' => 'Código da vaga inválido');
+            }
+
+
+            //Verifica se o profissional existe
+            $prof = new Profissional();
+            $prof->setCdProfissional($cd_profissional);
+            $profissional = $daoprofissional->pesquisarById($prof);
+            if (empty($profissional)){
+                return array('erro' => "Profissional não existe");
+            }
+
+            //Verifica se a vaga já foi curtida pelo profissional
+            $result = $daovaga->isCurtidaByProfissional($cd_vaga,$cd_profissional);
+            if (!empty($result)){
+                return array('erro'=> "A vaga já foi curtida");
+            }
+
+            $result = $daovaga->curtirVaga($tp_acao,$cd_vaga,$cd_profissional);
+
+            return array('sucess' => 'Vaga curtida!');
+
+        }catch (Exception $e){
+            return array('erro' => $e->getTrace());
+        }
+    }
+
 	public function pesquisar($vaga){
 		try
         {

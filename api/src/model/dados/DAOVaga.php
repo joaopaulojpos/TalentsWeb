@@ -137,7 +137,9 @@ class DaoVaga implements iDAOVaga
                                e.cd_empresa,e.ds_razao_social,e.ds_nome_fantasia,e.nr_porte,e.ds_nome_responsavel,e.ds_area_atuacao,e.ds_site,e.ds_telefone,e.nr_cnpj,e.ds_email,e.ds_senha,
                                ct.cd_competencia_tecnica,vct.nr_nivel,ct.ds_competencia_tecnica,
                                cc.cd_competencia_comport,cc.ds_competencia_comport,
-                               vi.cd_idioma,i.ds_idioma,vi.nr_nivel
+                               vi.cd_idioma,i.ds_idioma,vi.nr_nivel,
+                               p.b_foto,p.ds_senha,p.dt_nascimento,p.ds_email,p.nr_latitude,p.nr_longitude,
+                               p.tp_conta,p.tp_sexo,p.ds_nome
                           from vaga v
                     inner join cargo c ON c.cd_cargo = v.cd_cargo
                     inner join empresa e ON e.cd_empresa = v.cd_empresa
@@ -147,8 +149,9 @@ class DaoVaga implements iDAOVaga
                     inner join competencia_comport cc ON cc.cd_competencia_comport = vcc.cd_competencia_comport
                     inner join vaga_idioma AS vi ON vi.cd_vaga = v.cd_vaga
                     inner join idioma i ON vi.cd_idioma = i.cd_idioma
-                      ORDER BY RAND()
-                         LIMIT 1;';
+                    left join profissional_vaga as pv ON pv.cd_vaga = v.cd_vaga
+                    left join profissional as p ON p.cd_profissional = pv.cd_profissional';
+
             $where = '';
 
             if (!empty($vaga->getCdVaga())){
@@ -171,6 +174,54 @@ class DaoVaga implements iDAOVaga
             $conversor = new conversorDeObjetos();
             $stmt->closeCursor();
             return $conversor->parseRowsToObjectVaga($result); //$stmt->fetchAll(PDO::FETCH_ASSOC);
+        }catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
+
+    public function curtirVaga($tp_acao,$cd_vaga,$cd_profissional){
+        try{
+            $sql = "insert into profissional_vaga (tp_acao,cd_vaga,cd_profissional) 
+                         values (:tp_acao,:cd_vaga,:cd_profissional);";
+
+            $stmt = db::getInstance()->prepare($sql);
+            $run = $stmt->execute(array(
+                ':tp_acao' => $tp_acao,
+                ':cd_vaga' => $cd_vaga,
+                ':cd_profissional' => $cd_profissional
+            ));
+
+        }catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
+
+    /**
+     * @param $cd_vaga
+     * @param $cd_profissional
+     * @return array
+     * @throws Exception
+     */
+     public function isCurtidaByProfissional($cd_vaga,$cd_profissional)
+    {
+        try{
+            $sql = 'select * from profissional_vaga
+                    WHERE cd_vaga = :cd_vaga 
+                      AND cd_profissional = :cd_profissional';
+
+            $stmt = db::getInstance()->prepare($sql);
+            $run = $stmt->execute(array(
+                'cd_vaga' => $cd_vaga,
+                'cd_profissional' => $cd_profissional
+            ));
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $result;
+
         }catch(Exception $e){
             throw new Exception($e->getMessage());
         }finally{
