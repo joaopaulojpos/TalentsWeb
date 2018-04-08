@@ -132,7 +132,9 @@ class DaoProfissional implements iDAOProfissional
                       from profissional_vaga AS vp
                 inner join vaga ON vp.cd_vaga = vaga.cd_vaga
                 inner join profissional ON profissional.cd_profissional = vp.cd_profissional 
-                     where vp.cd_vaga = :cod_vaga;';
+                     where 
+                      vp.cd_vaga = :cod_vaga and 
+                      vp.tp_acao = "Like";';
 
             $stmt = db::getInstance()->prepare($sql);
 
