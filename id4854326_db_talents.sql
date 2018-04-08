@@ -155,6 +155,7 @@ CREATE TABLE profissional_idioma (
 CREATE TABLE profissional_vaga (
   tp_acao Varchar(10),
   dt_inclusao timestamp DEFAULT current_timestamp(),
+  match_empresa bit,
   cd_profissional Integer,
   cd_vaga Integer,
   FOREIGN KEY(cd_vaga) REFERENCES vaga (cd_vaga),
