@@ -127,6 +127,21 @@ $app->get('/api/empresa/{id}/vagas', function(Request $request, Response $respon
     }
 });
 
+$app->post('/api/empresa/match', function(Request $request, Response $response){
+
+    try{
+
+        $cd_vaga = $request->getParam('cd_vaga');
+        $cd_profissional = $request->getParam('cd_profissional');
+
+        $rnempresa = new RNEmpresa();
+        $rnempresa = $rnempresa->match($cd_vaga,$cd_profissional);
+        $response->write(json_encode($rnempresa));
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
 
 
 //------- Profissional
