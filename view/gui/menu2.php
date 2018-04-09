@@ -1,19 +1,10 @@
 <?php
-  if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
-    session_destroy();            //Destroi a seção por segurança
-    header("Location: login.php"); 
-    exit; //Redireciona o visitante para login
-  }
 
-  $empresa = $_SESSION['empresaLogada']; 
+ini_set('display_errors', 1);
+ini_set('log_errors', 1);
+ini_set('error_log', dirname(__FILE__) . '/error_log.txt');
+error_reporting(E_ALL);
 
-  require_once('../../controller/fachada.php');
-
-  $fachada = Fachada::getInstance();
-  $arrayvagas = $fachada->vagasEmpresaPesquisar($empresa[0]['cd_empresa']);
-
-  //var_dump($arrayvagas);
-  //var_dump($empresa[0]['cd_empresa']);
 ?>
 
 <!DOCTYPE html>
@@ -35,14 +26,17 @@
             <nav class="teal darken-1">
                 <div class="nav-wrapper">
                   <a href="#!" class="brand-logo">&nbsp; Talents</a>
+                  <?php if (!isset($_SESSION['empresaLogada'])) { ?>
                   <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                   <ul class="right hide-on-med-and-down">
                     <li><a href="#">Sass</a></li>
                     <li><a href="#">Components</a></li>
                     <li><a href="#">Javascript</a></li>
+                    <?php }else { ?>
                     <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Perfil"><a href="#"><i class="material-icons">person</i></a></li>
                     <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="#"><i class="material-icons">exit_to_app</i></a></li>
                   </ul>
+                  <?php } ?>
                   <ul class="side-nav" id="mobile-demo">
                     <li><a href="#!">Sass</a></li>
                     <li><a href="#!">Components</a></li>
