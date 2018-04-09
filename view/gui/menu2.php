@@ -1,3 +1,21 @@
+<?php
+  if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
+    session_destroy();            //Destroi a seção por segurança
+    header("Location: login.php"); 
+    exit; //Redireciona o visitante para login
+  }
+
+  $empresa = $_SESSION['empresaLogada']; 
+
+  require_once('../../controller/fachada.php');
+
+  $fachada = Fachada::getInstance();
+  $arrayvagas = $fachada->vagasEmpresaPesquisar($empresa[0]['cd_empresa']);
+
+  //var_dump($arrayvagas);
+  //var_dump($empresa[0]['cd_empresa']);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
