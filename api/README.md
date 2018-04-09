@@ -24,6 +24,7 @@ $ http://localhost/talentsweb/api/public/api/empresas
 $ http://localhost/talentsweb/api/public/api/empresa/salvar
 $ http://localhost/talentsweb/api/public/api/empresa/{id}
 $ http://localhost/talentsweb/api/public/api/empresa/{id}/vagas
+$ http://localhost/talentsweb/api/public/api/empresa/match
 $ http://localhost/talentsweb/api/public/api/vaga/publicar
 $ http://localhost/talentsweb/api/public/api/vaga/curtirVaga
 $ http://localhost/talentsweb/api/public/api/vagas

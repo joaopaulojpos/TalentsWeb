@@ -159,5 +159,32 @@ class DaoEmpresa implements iDAOEmpresa
 			$stmt->closeCursor();
 		}
 	}
+
+	public function match($cd_vaga, $cd_profissional)
+    {
+        try {
+            $sql = 'UPDATE 
+                      profissional_vaga 
+                    SET 
+                      match_empresa = 1 
+                    WHERE 
+                      cd_profissional = :cd_profissional AND
+                      cd_vaga = :cd_vaga';
+
+            $stmt = db::getInstance()->prepare($sql);
+            $stmt->bindValue(':cd_profissional', $cd_profissional);
+            $stmt->bindValue(':cd_vaga', $cd_vaga);
+            $run = $stmt->execute();
+            $this->notificarCandidato($cd_profissional);
+        }catch (PDOException $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
+
+    private function notificarCandidato($cd_profissional){
+	    //TODO implementar código de notificação
+    }
 }
 ?>

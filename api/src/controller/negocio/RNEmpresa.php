@@ -169,6 +169,17 @@ class RNEmpresa{
 			return array('erro' => $e->getMessage());
 		}
 	}
+
+	public function match($cd_vaga,$cd_profissional){
+	    try{
+	        $dao = new DaoEmpresa();
+
+	        $dao->match($cd_vaga,$cd_profissional);
+	        return array('sucess' => 'Match!');
+        }catch (Exception $e){
+            return array('erro' => $e->getMessage());
+        }
+    }
 }
 
 ?>
