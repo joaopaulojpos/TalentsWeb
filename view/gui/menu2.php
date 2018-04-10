@@ -26,17 +26,14 @@ error_reporting(E_ALL);
             <nav class="teal darken-1">
                 <div class="nav-wrapper">
                   <a href="#!" class="brand-logo">&nbsp; Talents</a>
-                  <?php if (!isset($_SESSION['empresaLogada'])) { ?>
                   <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                   <ul class="right hide-on-med-and-down">
                     <li><a href="#">Sass</a></li>
                     <li><a href="#">Components</a></li>
                     <li><a href="#">Javascript</a></li>
-                    <?php }else { ?>
                     <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Perfil"><a href="#"><i class="material-icons">person</i></a></li>
                     <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="#"><i class="material-icons">exit_to_app</i></a></li>
                   </ul>
-                  <?php } ?>
                   <ul class="side-nav" id="mobile-demo">
                     <li><a href="#!">Sass</a></li>
                     <li><a href="#!">Components</a></li>
