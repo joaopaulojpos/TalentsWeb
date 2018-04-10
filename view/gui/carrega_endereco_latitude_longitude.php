@@ -1,8 +1,8 @@
 <?php       	  
 
 //Buscando localização da vaga
-$latitude = $_POST['latitude'];
-$longitude = $_POST['longitude'];
+$latitude = $_GET['latitude'];
+$longitude = $_GET['longitude'];
 
 $ds_localizacao = '';
 
@@ -17,6 +17,8 @@ try{
   $retorno = json_decode(curl_exec($cr), true);
   //fechando-o para liberação do sistema.
   curl_close($cr); //fechamos o recurso e liberamos o sistema...
+
+  var_dump($retorno);
   //mostrando o conteúdo...          
   foreach ($retorno["results"] as $key => $retorno) {
     $ds_localizacao = $retorno["formatted_address"];
@@ -25,7 +27,7 @@ try{
 
   echo trim($ds_localizacao);
 }catch(Exception $e){
-//
+  echo trim($e->getMessage());
 }
 
 ?>              

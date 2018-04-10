@@ -79,6 +79,15 @@ class RNProfissional{
             return array('erro' => $e->getMessage());
         }
     }
+
+    public function listarProfissionalVaga($cd_vaga){
+        $daoprofissional = new DaoProfissional();
+        $result = $daoprofissional->listarProfissionalVaga($cd_vaga);
+        if (empty($result)){
+            return array('erro' => "Ainda não existem profissionais interessados nesta vaga!");
+        }
+        return array('sucess' => $result);
+    }
 }
 
 ?>

@@ -143,12 +143,12 @@ class DaoVaga implements iDAOVaga
                           from vaga v
                     inner join cargo c ON c.cd_cargo = v.cd_cargo
                     inner join empresa e ON e.cd_empresa = v.cd_empresa
-                    inner join vaga_competencia_tecnica vct ON vct.cd_vaga = v.cd_vaga
-                    inner join competencia_tecnica ct ON ct.cd_competencia_tecnica = vct.cd_competencia_tecnica
-                    inner join vaga_competencia_comport vcc ON vcc.cd_vaga = v.cd_vaga
-                    inner join competencia_comport cc ON cc.cd_competencia_comport = vcc.cd_competencia_comport
-                    inner join vaga_idioma AS vi ON vi.cd_vaga = v.cd_vaga
-                    inner join idioma i ON vi.cd_idioma = i.cd_idioma
+                    left join vaga_competencia_tecnica vct ON vct.cd_vaga = v.cd_vaga
+                    left join competencia_tecnica ct ON ct.cd_competencia_tecnica = vct.cd_competencia_tecnica
+                    left join vaga_competencia_comport vcc ON vcc.cd_vaga = v.cd_vaga
+                    left join competencia_comport cc ON cc.cd_competencia_comport = vcc.cd_competencia_comport
+                    left join vaga_idioma AS vi ON vi.cd_vaga = v.cd_vaga
+                    left join idioma i ON vi.cd_idioma = i.cd_idioma
                     left join profissional_vaga as pv ON pv.cd_vaga = v.cd_vaga
                     left join profissional as p ON p.cd_profissional = pv.cd_profissional';
 
@@ -156,9 +156,17 @@ class DaoVaga implements iDAOVaga
 
             if (!empty($vaga->getCdVaga())){
                 if (empty($where)){
-                    $where = ' where vaga.cd_vaga = :cd_vaga';
+                    $where = ' where v.cd_vaga = :cd_vaga';
                 }else{
-                    $where = $where . ' and vaga.cd_vaga = :cd_vaga';
+                    $where = $where . ' and v.cd_vaga = :cd_vaga';
+                }
+            }
+
+            if (!empty($vaga->getEmpresa()->getCdEmpresa())){
+                if (empty($where)){
+                    $where = ' where v.cd_empresa = :cd_empresa';
+                }else{
+                    $where = $where . ' and v.cd_empresa = :cd_empresa';
                 }
             }
 
@@ -167,6 +175,8 @@ class DaoVaga implements iDAOVaga
 
             if (!empty($vaga->getCdVaga()))
                 $stmt->bindValue(':cd_vaga', $vaga->getCdVaga());
+            if (!empty($vaga->getEmpresa()->getCdEmpresa()))
+                $stmt->bindValue(':cd_empresa', $vaga->getEmpresa()->getCdEmpresa());
 
             $run = $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

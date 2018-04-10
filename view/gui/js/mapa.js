@@ -68,15 +68,16 @@ $(document).ready(function () {
 			lat = position.coords.latitude; 
 			lng = position.coords.longitude;
 
+
 			$('#txtLatitude').val(lat);
 	       	$('#txtLongitude').val(lng);
 
 	       	$.ajax({      //Função AJAX
 	        url:"carrega_endereco_latitude_longitude.php",      //Arquivo php
-	        type:"post",        //Método de envio
+	        type:"GET",        //Método de envio
 	        data: "latitude="+lat+"&longitude="+lng, //Dados
 	          success: function (result){     //Sucesso no AJAX
-	               $('#txtEndereco').val(result);
+	               $('#txtEndereco').val(trim(result));         
 	          }
 	        });
 

@@ -68,8 +68,8 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
         <!-- Text input-->
 		<div class="form-group">
-		  <label class="col-md-4 control-label">Endereço</label>  
-		  <div class="col-md-4 inputGroupContainer">
+		  <label class="col-md-2 control-label">Endereço</label>  
+		  <div class="col-md-9 inputGroupContainer">
 		  	<div class="input-group">
 		  		<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
 				<input style="width:70%;height: 100%;" type="text" id="txtEndereco" name="txtEndereco" class="form-control" />
@@ -79,8 +79,8 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 		</div>
 
 		<div class="form-group">
-		  <label class="col-md-4 control-label">Mapa</label>  
-		  <div class="col-md-4 inputGroupContainer">
+		  <label class="col-md-2 control-label">Mapa</label>  
+		  <div class="col-md-9 inputGroupContainer">
 		  	<div class="input-group">
 		  		<span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
 		  		<div style="width: 100%; height: 400px" id="mapa"></div>
@@ -88,8 +88,8 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 		  </div>
 		</div>
 
-		<input type="hidden" id="txtLatitude" name="txtLatitude" />
-    <input type="hidden" id="txtLongitude" name="txtLongitude" />
+		<input type="text" id="txtLatitude" name="txtLatitude" />
+    <input type="text" id="txtLongitude" name="txtLongitude" />
 
         <!-- Loader -->
         <div class="form-group">
@@ -123,17 +123,16 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
       function enviardados(){
       	$('#loader').show();
       	$('#errMessage').hide();
-      	if($('input[name="txtLatitude"]').val() == '')
-		{	
-			$('#loader').hide();
-			document.getElementById('errMessage').innerHTML = 'Nenhuma localização encontrada!';
-        	$('#errMessage').show();   //Informa o erro*/    
-		return false;
-		}
-		$('#loader').hide();
-		return true;
+      	if(trim($('input[name="txtLatitude"]').val()) == '' || trim($('input[name="txtEndereco"]').val()) == ''){	
+    			$('#loader').hide();
+    			document.getElementById('errMessage').innerHTML = 'Endereço não localizado, por favor digite um endereço!';
+          $('#errMessage').show();   //Informa o erro*/  
+          $('input[name="txtEndereco"]').focus();  
+    		return false;
+    		}
+		    $('#loader').hide();
+		    return true;
       }
-
   </script>
 
   </body>

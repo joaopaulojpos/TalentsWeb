@@ -244,6 +244,21 @@ $app->get('/api/profissional/vagas', function(Request $request, Response $respon
     }
 });
 
+$app->get('/api/vaga/{id}/profissionais', function(Request $request, Response $response){
+    
+    try{
+        $id = $request->getAttribute('id');
+
+        $rnprofissional = new RNProfissional();
+        $result = $rnprofissional->listarProfissionalVaga($id);
+        $response->write(json_encode($result));
+        
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
 /**
  * Cadastro da vaga
  */
