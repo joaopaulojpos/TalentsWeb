@@ -39,5 +39,11 @@ class DAOVaga
 
         return $request->get("http://localhost/talentsweb/api/public/api/vagas",array());
     }
+
+    public function listarProfissionaisVaga($cd_vaga){
+    	$request = new RequestMethods();
+    	
+    	return $request->get("http://localhost/talentsweb/api/public/api/vaga/".$cd_vaga."/profissionais",array());
+    }
 }
 ?>

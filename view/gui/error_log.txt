@@ -1443,3 +1443,8 @@ Stack trace:
 [02-Apr-2018 02:59:03 Europe/Berlin] PHP Notice:  Undefined index: competencias_comp in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 221
 [02-Apr-2018 02:59:03 Europe/Berlin] PHP Notice:  Undefined index: idiomas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 243
 [03-Apr-2018 05:33:21 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 52
+[11-Apr-2018 01:49:53 Europe/Berlin] PHP Notice:  Undefined variable: empresa in C:\xampp\htdocs\TalentsWeb\view\gui\vaga_profissionais.php on line 56
+[11-Apr-2018 01:49:53 Europe/Berlin] PHP Notice:  Undefined variable: arrayvagas in C:\xampp\htdocs\TalentsWeb\view\gui\vaga_profissionais.php on line 60
+[11-Apr-2018 01:49:53 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga_profissionais.php on line 60
+[11-Apr-2018 01:51:09 Europe/Berlin] PHP Notice:  Undefined variable: empresa in C:\xampp\htdocs\TalentsWeb\view\gui\vaga_profissionais.php on line 56
+[11-Apr-2018 01:51:42 Europe/Berlin] PHP Notice:  Undefined variable: empresa in C:\xampp\htdocs\TalentsWeb\view\gui\vaga_profissionais.php on line 56

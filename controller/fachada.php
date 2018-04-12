@@ -61,6 +61,11 @@
         return json_decode($daoempresa->vagasEmpresaPesquisar($cd_empresa), true);
     }
 
+    public function listarProfissionaisVaga($cd_vaga){
+        $daovaga = new DAOVaga();
+        return json_decode($daovaga->listarProfissionaisVaga($cd_vaga), true);
+    }
+
     //Cargo
     public function cargoPesquisar(){
         $daocargo = new DAOCargo();
