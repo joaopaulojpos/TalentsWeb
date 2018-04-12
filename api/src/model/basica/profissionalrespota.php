@@ -42,7 +42,7 @@ class profissionalrespota implements JsonSerializable
         return
             [
                 'cd_alternativa_perfil_comp'=>$this->cd_alternativa_perfil_comp,
-                'cd_profissional'=>$this->cd_profissional.
+                'cd_profissional'=>$this->cd_profissional,
                 'cd_pergunta_perfil_comp'=>$this->cd_pergunta_perfil_comp
             ];
     }

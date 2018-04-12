@@ -450,4 +450,33 @@ $app->get('/api/competencias_comport', function(Request $request, Response $resp
 
 
 
+$app->get('/api/pergunta_perfil_comp', function(Request $request, Response $response){
+
+    try{
+        $perguntaperfilcomp = new perguntaperfilcomp();
+        $rNPerguntaperfilcomp = new RNPerguntaperfilcomp();        
+        $rNPerguntaperfilcomp = $rNPerguntaperfilcomp->pesquisar($perguntaperfilcomp);
+        $response->write(json_encode($rNPerguntaperfilcomp));
+        
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
+
+
+
+$app->get('/api/alternativa_perfil_comp', function(Request $request, Response $response){
+
+    try{
+        $alternativaperfilcomp = new alternativaperfilcomp();
+        $rNalternativaperfilcomp = new RNalternativaperfilcomp();        
+        $rNalternativaperfilcomp = $rNalternativaperfilcomp->pesquisar($alternativaperfilcomp);
+        $response->write(json_encode($rNalternativaperfilcomp));
+        
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
 ?>
