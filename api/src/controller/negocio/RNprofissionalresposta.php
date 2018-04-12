@@ -4,10 +4,10 @@ require_once('../src/model/dados/DAOProfissionalresposta.php');
 
 class RNprofissionalresposta{
 
-	public function cadastrar($profissionalresposta){	
+	public function cadastrarResposta($profissionalresposta){	
 		try{
 			$daoProfissionalresposta = new DAOProfissionalresposta();
-			$result = $daoProfissionalresposta->cadastrar($profissionalresposta);
+			$result = $daoProfissionalresposta->cadastrarResposta($profissionalresposta);
 
 			return array('sucess' => 'Cadastrado com sucesso!');
 

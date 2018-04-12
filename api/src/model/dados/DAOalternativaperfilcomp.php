@@ -8,7 +8,7 @@ class Daoalternativaperfilcomp implements iDAOalternativaperfilcomp
 		
 	}
 
-	public function pesquisar(Daoalternativaperfilcomp $alternativaperfilcomp, $alt='false'){
+	public function pesquisar(alternativaperfilcomp $alternativaperfilcomp, $alt='false'){
 		try{
 			$comando = 'select * from alternativa_perfil_comp ';
 			$where = '';

@@ -7,7 +7,7 @@ class DAOProfissionalresposta implements iDAOProfissionalresposta
 	function __construct(){
 		
 	}
-	public function cadastrar(Empresa $emp){
+	public function cadastrarResposta(Profissionalrespota $emp){
 		try{
 			$comando = "insert into profissional_alternativa_perfil_comp (cd_alternativa_perfil_comp,cd_profissional,cd_pergunta_perfil_comp) 
 							 values (:cd_alternativa_perfil_comp,:cd_profissional,:cd_pergunta_perfil_comp)";
