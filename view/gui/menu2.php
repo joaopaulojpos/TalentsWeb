@@ -32,7 +32,7 @@ error_reporting(E_ALL);
                     <li><a href="#">Components</a></li>
                     <li><a href="#">Javascript</a></li>
                     <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Perfil"><a href="#"><i class="material-icons">person</i></a></li>
-                    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="#"><i class="material-icons">exit_to_app</i></a></li>
+                    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="login.php"><i class="material-icons">exit_to_app</i></a></li>
                   </ul>
                   <ul class="side-nav" id="mobile-demo">
                     <li><a href="#!">Sass</a></li>
