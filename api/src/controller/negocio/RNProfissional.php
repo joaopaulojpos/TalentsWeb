@@ -83,7 +83,7 @@ class RNProfissional{
     public function listarProfissionalVaga($cd_vaga){
         $daoprofissional = new DaoProfissional();
         $result = $daoprofissional->listarProfissionalVaga($cd_vaga);
-        if (empty($result)){
+        if (count($result) <= 0){
             return array('erro' => "Ainda não existem profissionais interessados nesta vaga!");
         }
         return array('sucess' => $result);

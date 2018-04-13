@@ -30,7 +30,7 @@ error_reporting(E_ALL);
                   <ul class="right hide-on-med-and-down">
                     <li><a href="#">Sass</a></li>
                     <li><a href="#">Components</a></li>
-                    <li><a href="#">Javascript</a></li>
+                    <li><a href="vaga.php">Vagas</a></li>
                     <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Perfil"><a href="#"><i class="material-icons">person</i></a></li>
                     <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="login.php"><i class="material-icons">exit_to_app</i></a></li>
                   </ul>

@@ -54,6 +54,7 @@
             $arrayvagas2 = $value;
             foreach ($arrayvagas2 as $key => $value) { 
 
+              $cd_vaga = $value["cd_vaga"];
               $ds_titulo = $value["ds_titulo"];
               $dt_cricacao = 'Criado em: '.(new DateTime($value["dt_criacao"]))->format('d/m/Y');
               if ($value["cargo"]){
@@ -111,7 +112,7 @@
                     <div class="card-move-up waves-effect waves-block waves-light">
                       <div class="move-up cyan darken-1">
                         <div>
-                          <a class="chart-title white-text" href="https://github.com/jkomyno"><?php echo $ds_titulo; ?></a>
+                          <a class="chart-title white-text" href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>&nr_latitude=<?php echo $nr_latitude; ?>&nr_longitude=<?php echo $nr_longitude; ?>"><?php echo $ds_titulo; ?></a>
                           <div class="chart-revenue cyan darken-2 white-text">
                             <p class="chart-revenue-total"><?php echo $dt_cricacao; ?></p>
                           </div>

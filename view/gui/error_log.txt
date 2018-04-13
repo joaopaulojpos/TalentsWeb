@@ -1448,3 +1448,8 @@ Stack trace:
 [11-Apr-2018 01:49:53 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga_profissionais.php on line 60
 [11-Apr-2018 01:51:09 Europe/Berlin] PHP Notice:  Undefined variable: empresa in C:\xampp\htdocs\TalentsWeb\view\gui\vaga_profissionais.php on line 56
 [11-Apr-2018 01:51:42 Europe/Berlin] PHP Notice:  Undefined variable: empresa in C:\xampp\htdocs\TalentsWeb\view\gui\vaga_profissionais.php on line 56
+[13-Apr-2018 05:09:20 Europe/Berlin] PHP Fatal error:  Uncaught Error: Using $this when not in object context in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php:100
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 100
+[13-Apr-2018 05:20:33 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 52
