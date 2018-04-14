@@ -25,14 +25,6 @@ $app->add(function ($req, $res, $next) {
 
 $app->get('/api/empresas', function(Request $request, Response $response){
     try{
-        /*$sql = "SELECT * FROM empresa";
-    
-        $db = db::getInstance();
-
-        $stmt = $db->query($sql);
-        $empresa = $stmt->fetchAll(PDO::FETCH_OBJ);
-        $db = null;*/
-
         $rnempresa = new RNEmpresa();
         $empresa = new Empresa();
         $rnempresa = $rnempresa->pesquisar($empresa);
@@ -149,14 +141,6 @@ $app->post('/api/empresa/match', function(Request $request, Response $response){
 $app->get('/api/profissionais', function(Request $request, Response $response){
     
     try{
-        /*$sql = "SELECT * FROM profissional";
-
-        $db = db::getInstance();
-
-        $stmt = $db->query($sql);
-        $profissional = $stmt->fetchAll(PDO::FETCH_OBJ);
-        $db = null;*/
-
         $rnprofissional = new RNProfissional();
         $profissional = new Profissional();
         $rnprofissional = $rnprofissional->pesquisar($profissional);
@@ -214,7 +198,7 @@ $app->post('/api/profissional/salvar', function(Request $request, Response $resp
     }
 });
 
-$app->get('/api/profissional/{id}/notificacoes', function(Request $request, Response $response){
+$app->get('/api/profissional/notificacoes/{id}', function(Request $request, Response $response){
 
     try{
         $cd_profissional = $request->getAttribute('id');
