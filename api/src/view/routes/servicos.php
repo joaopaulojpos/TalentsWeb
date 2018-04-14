@@ -453,7 +453,7 @@ $app->get('/api/pergunta_perfil_comp', function(Request $request, Response $resp
     try{
         $perguntaperfilcomp = new perguntaperfilcomp();
         $rNPerguntaperfilcomp = new RNPerguntaperfilcomp();        
-        $rNPerguntaperfilcomp = $rNPerguntaperfilcomp->pesquisar($perguntaperfilcomp);
+        $rNPerguntaperfilcomp = $rNPerguntaperfilcomp->listarPerguntas();
         $response->write(json_encode($rNPerguntaperfilcomp));
         
     } catch(Exception $e){

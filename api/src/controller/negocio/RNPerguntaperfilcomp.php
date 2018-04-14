@@ -2,10 +2,10 @@
 
 class RNPerguntaperfilcomp{
 
-	public function pesquisar(Perguntaperfilcomp $cc){
+	public function listarPerguntas(){
 		try{
 			$daoPerguntaperfilcomp = new DaoPerguntaperfilcomp();
-			$result = $daoPerguntaperfilcomp->pesquisar($cc);
+			$result = $daoPerguntaperfilcomp->listarPerguntas();
 			
 			if (!empty($result)){
 				return array('sucess' => $result);

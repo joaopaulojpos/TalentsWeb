@@ -4,6 +4,8 @@ class perguntaperfilcomp implements JsonSerializable
 
     private $cd_pergunta;
     private $ds_pergunta;
+    private $alternativas;
+    private $resposta;
 
     function __construct(){}
 
@@ -20,6 +22,36 @@ class perguntaperfilcomp implements JsonSerializable
     function getDsPergunta(){
         return $this->ds_pergunta;
     }
+    /**
+     * @return mixed
+     */
+    public function getAlternativas()
+    {
+        return $this->alternativas;
+    }
+
+    /**
+     * @param $alternativas
+     */
+    public function setAlternativas($alternativas): void
+    {
+        $this->alternativas[] = $alternativas;
+    }
+    /**
+     * @return mixed
+     */
+    public function getResposta()
+    {
+        return $this->resposta;
+    }
+
+    /**
+     * @param mixed $resposta
+     */
+    public function setResposta($resposta): void
+    {
+        $this->resposta = $resposta;
+    }
 
 
     /**
@@ -34,7 +66,9 @@ class perguntaperfilcomp implements JsonSerializable
         return
             [
                 'cd_pergunta'=>$this->cd_pergunta,
-                'ds_pergunta'=>$this->ds_perguntas
+                'ds_pergunta'=>$this->ds_pergunta,
+                'alternativas'=>$this->alternativas,
+                'resposta'=>$this->resposta
             ];
     }
 }

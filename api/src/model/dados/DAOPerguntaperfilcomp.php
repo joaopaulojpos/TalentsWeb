@@ -8,37 +8,28 @@ class DaoPerguntaperfilcomp implements iDAOperguntaperfilcomp
 		
 	}
 
-	public function pesquisar(Perguntaperfilcomp $perguntaperfilcomp, $alt='false'){
+	public function listarPerguntas(){
 		try{
-			$comando = 'select * from pergunta_perfil_comp ';
-			$where = '';
-			$orderby = ' order by cd_pergunta_perfil_comp asc';
+			$comando = 'select cd_pergunta_perfil_comp,ds_pergunta from pergunta_perfil_comp';
 
-			if (!empty($perguntaperfilcomp->getCdPergunta())){
-				if (empty($where)){
-					$where = ' where cd_pergunta_perfil_comp = :cd_pergunta_perfil_comp';
-				}else{
-					$where = $where . ' and cd_pergunta_perfil_comp = :cd_pergunta_perfil_comp';
-				}
-			}
 
-			if (!empty($perguntaperfilcomp->getDsPergunta())){
-				if (empty($where)){
-					$where = ' where ds_pergunta like :descricao';
-				}else{
-					$where = $where . ' and ds_pergunta like :descricao';
-				}
-			}
+			$stmt = db::getInstance()->prepare($comando);
 
-			$stmt = db::getInstance()->prepare($comando . $where . $orderby);
-			if (!empty($perguntaperfilcomp->getCdPergunta()))
-				$stmt->bindValue(':cd_pergunta_perfil_comp', $perguntaperfilcomp->getCdPergunta());
-			if (!empty($perguntaperfilcomp->getDsPergunta()))
-				$stmt->bindValue(':descricao', '%'.$perguntaperfilcomp->getDsPergunta().'%');
-
+            $listaPerguntas = [];
 			$run = $stmt->execute();
+            $result =$stmt->fetchAll(PDO::FETCH_ASSOC);
 
-			return ($stmt->fetchAll(PDO::FETCH_ASSOC));
+            foreach ($result as $row){
+                $pergunta = new perguntaperfilcomp();
+                $pergunta->setCdPergunta($row['cd_pergunta_perfil_comp']);
+                $pergunta->setDsPergunta($row['ds_pergunta']);
+                foreach ($this->listarRespostas($pergunta->getCdPergunta()) as $alternativa) {
+                    $pergunta->setAlternativas($alternativa);
+                }
+                array_push($listaPerguntas,$pergunta);
+            }
+
+			return $listaPerguntas;
 
 		}catch(Exception $e){
 			throw new Exception($e->getMessage());
@@ -46,5 +37,32 @@ class DaoPerguntaperfilcomp implements iDAOperguntaperfilcomp
 			$stmt->closeCursor();
 		}
 	}
+
+    public function listarRespostas($cd_pergunta){
+	    try{
+	    $comando = 'select cd_alternativa_perfil_comp,nr_letra_ref,ds_resposta 
+                    from alternativa_perfil_comp 
+                    where cd_pergunta_perfil_comp = :cd_pergunta';
+	    $stmt = db::getInstance()->prepare($comando);
+	    $stmt->bindValue(':cd_pergunta', $cd_pergunta);
+
+        $run = $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $listaRespostas = [];
+        foreach ($result as $row){
+            $alternativa = new alternativaperfilcomp();
+            $alternativa->setCdAlternativaPerfilComp($row['cd_alternativa_perfil_comp']);
+            $alternativa->setNrLetraRef($row['nr_letra_ref']);
+            $alternativa->setDsResposta($row['ds_resposta']);
+            array_push($listaRespostas,$alternativa);
+        }
+        return $listaRespostas;
+
+        }catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
 }
 ?>

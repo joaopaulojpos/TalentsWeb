@@ -1,7 +1,8 @@
 <?php
 interface iDAOperguntaperfilcomp{
 
-    public function pesquisar(Perguntaperfilcomp $perguntaperfilcomp, $alt='false' );
+    public function listarPerguntas();
+    public function listarRespostas($cd_pergunta);
 }
 
  ?>
