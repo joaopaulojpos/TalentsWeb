@@ -88,6 +88,17 @@ class RNProfissional{
         }
         return array('sucess' => $result);
     }
+
+    public function getNotificacao($cd_profissional){
+        try{
+            $dao = new DaoProfissional();
+            $result = $dao->getNotificacoes($cd_profissional);
+            return array('sucess'=> $result);
+        }catch (Exception $e){
+            return array('erro' => $e->getMessage());
+        }
+
+    }
 }
 
 ?>

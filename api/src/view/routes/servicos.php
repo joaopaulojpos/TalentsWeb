@@ -214,6 +214,20 @@ $app->post('/api/profissional/salvar', function(Request $request, Response $resp
     }
 });
 
+$app->get('/api/profissional/{id}/notificacoes', function(Request $request, Response $response){
+
+    try{
+        $cd_profissional = $request->getAttribute('id');
+
+        $rnprofissional = new RNProfissional();
+        $rnprofissional = $rnprofissional->getNotificacao($cd_profissional);
+        $response->write(json_encode($rnprofissional));
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
 //----- Vaga
 
 /**
