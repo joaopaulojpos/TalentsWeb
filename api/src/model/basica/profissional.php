@@ -10,7 +10,7 @@ class Profissional implements JsonSerializable {
 	private $tp_conta;
 	private $tp_sexo;
 	private $ds_nome;
-	private $sn_like_empresa;
+	private $match_empresa;
 
 
 	function __construct(){
@@ -104,13 +104,13 @@ class Profissional implements JsonSerializable {
 	{
 		return $this->ds_email;
 	}
-	function setSnLikeEmpresa($sn_like_empresa)
+	function setMatchEmpresa($match_empresa)
 	{
-		$this->sn_like_empresa = trim($sn_like_empresa);
+		$this->match_empresa = trim($match_empresa);
 	}
-	function getSnLikeEmpresa()
+	function getMatchEmpresa()
 	{
-		return $this->sn_like_empresa;
+		return $this->match_empresa;
 	}
 
     /**
@@ -134,7 +134,7 @@ class Profissional implements JsonSerializable {
                 'nr_longitude'=>$this->nr_longitude,
                 'tp_conta'=>$this->tp_conta,
                 'tp_sexo'=>$this->tp_sexo,
-                'sn_like_empresa'=>$this->sn_like_empresa
+                'match_empresa'=>$this->match_empresa
             ];
     }
 }

@@ -86,12 +86,8 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 
                         $ds_formacao = "Análise e desenvolvimento de sistemas";
 
-                        $b_like = $value["sn_like_empresa"];
-                        if($b_like == 'F'){
-                            $b_envia_ajax = 0;
-                        }else{
-                            $b_envia_ajax = 1;
-                        }
+                        $b_like = $value["match_empresa"];
+                        $b_envia_ajax = $b_like;
         ?>
 
                         <div class="col s12 m5">
@@ -114,7 +110,7 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
                                 <div class="row">
                                     <div class="col m2">
                                     
-                                        <button class="btn-floating btn-large waves-effect waves-light red" <?php echo $b_like=='T'?'disabled':'';?> id="btnLike<?php echo $cd_profissional; ?>" type="submit" name="action" onclick="enviarLike(<?php echo $cd_vaga; ?>, <?php echo $cd_profissional; ?>, <?php echo $b_envia_ajax ?>)"><i class="material-icons right" id="iconeLike<?php echo $cd_profissional; ?>"><?php echo $b_like=='T'?'done':'favorite';?></i></button>
+                                        <button class="btn-floating btn-large waves-effect waves-light red" <?php echo $b_like== 1?'disabled':'';?> id="btnLike<?php echo $cd_profissional; ?>" type="submit" name="action" onclick="enviarLike(<?php echo $cd_vaga; ?>, <?php echo $cd_profissional; ?>, <?php echo $b_envia_ajax ?>)"><i class="material-icons right" id="iconeLike<?php echo $cd_profissional; ?>"><?php echo $b_like==1?'done':'favorite';?></i></button>
                             
                                         <br/><br/><br/>
                                         <h3 class="right-align teal-text">100%</h3>

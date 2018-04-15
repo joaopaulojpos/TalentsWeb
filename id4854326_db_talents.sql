@@ -117,6 +117,7 @@ CREATE TABLE vaga (
   cd_cargo Integer,
   cd_empresa Integer,
   ds_endereco varchar(200),
+  sn_ativo bit default 1,
   FOREIGN KEY(cd_cargo) REFERENCES cargo (cd_cargo),
   FOREIGN KEY(cd_empresa) REFERENCES empresa (cd_empresa)
 );
@@ -155,10 +156,9 @@ CREATE TABLE profissional_idioma (
 CREATE TABLE profissional_vaga (
   tp_acao Varchar(10),
   dt_inclusao timestamp DEFAULT current_timestamp(),
-  match_empresa bit,
+  match_empresa bit default 0,
   cd_profissional Integer,
   cd_vaga Integer,
-  sn_like_empresa varchar(1) DEFAULT 'F',
   FOREIGN KEY(cd_vaga) REFERENCES vaga (cd_vaga),
   FOREIGN KEY(cd_profissional) REFERENCES profissional (cd_profissional)
 );

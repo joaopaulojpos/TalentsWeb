@@ -129,7 +129,7 @@ class DaoProfissional implements iDAOProfissional
                            tp_sexo,
                            profissional.ds_nome,
                            profissional.nr_latitude,
-                           vp.sn_like_empresa
+                           vp.match_empresa
                       from profissional_vaga AS vp
                 inner join vaga ON vp.cd_vaga = vaga.cd_vaga
                 inner join profissional ON profissional.cd_profissional = vp.cd_profissional 
@@ -156,7 +156,7 @@ class DaoProfissional implements iDAOProfissional
                 $profissional->setTpsexo($row['tp_sexo']);
                 $profissional->setNrlatitude($row['nr_latitude']);
                 $profissional->setNrlogitude($row['nr_longitude']);
-                $profissional->setSnLikeEmpresa($row['sn_like_empresa']);
+                $profissional->setMatchEmpresa($row['match_empresa']);
                 $listaprofissional->append($profissional);
             }
             return $listaprofissional;
@@ -220,13 +220,13 @@ class DaoProfissional implements iDAOProfissional
     public function getNotificacoes($cd_profissional){
         try{
             $sql = 'select p.ds_nome,v.ds_titulo,e.ds_nome_fantasia 
-from profissional_vaga as pv
-  JOIN
-    profissional p on pv.cd_profissional = p.cd_profissional
-  JOIN
-    vaga v on pv.cd_vaga = v.cd_vaga
-  JOIN empresa e on v.cd_empresa = e.cd_empresa
-where p.cd_profissional = :cod_prof and match_empresa = 1;';
+                      from profissional_vaga as pv
+                      JOIN
+                        profissional p on pv.cd_profissional = p.cd_profissional
+                      JOIN
+                        vaga v on pv.cd_vaga = v.cd_vaga
+                      JOIN empresa e on v.cd_empresa = e.cd_empresa
+                    where p.cd_profissional = :cod_prof and match_empresa = 1;';
             $stmt = db::getInstance()->prepare($sql);
 
             if (!empty($cd_profissional))

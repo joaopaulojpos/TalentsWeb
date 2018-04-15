@@ -212,7 +212,7 @@ class DaoVaga implements iDAOVaga
 
     public function likeProfissionalVaga($cd_vaga,$cd_profissional){
         try{
-            $sql = "update profissional_vaga set sn_like_empresa = 'T' where cd_vaga = :cd_vaga and cd_profissional = :cd_profissional;";
+            $sql = "update profissional_vaga set match_empresa = 1 where cd_vaga = :cd_vaga and cd_profissional = :cd_profissional;";
 
             $stmt = db::getInstance()->prepare($sql);
             $run = $stmt->execute(array(
@@ -268,7 +268,7 @@ class DaoVaga implements iDAOVaga
             $sql = "select * from profissional_vaga
                     WHERE cd_vaga = :cd_vaga 
                       AND cd_profissional = :cd_profissional
-                      AND sn_like_empresa = 'T'";
+                      AND match_empresa = 1";
 
             $stmt = db::getInstance()->prepare($sql);
             $run = $stmt->execute(array(
