@@ -1,6 +1,38 @@
 <?php
 include "menu2.php";
 include "foooter.php";
+
+if (isset($_SESSION['empresa'])) 
+session_destroy();
+
+$cd_empresa              = '';
+$nr_cnpj                 = '';
+$ds_razao_social         = '';
+$ds_nome_fantasia        = '';
+$nr_porte                = '';
+$ds_area_atuacao         = '';
+$ds_responsavel_cadastro = '';
+$ds_telefone             = '';
+$ds_site                 = '';
+$ds_email                = '';
+$ds_senha                = '';
+
+if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
+  $empresa = $_SESSION['empresaLogada']; 
+
+  $cd_empresa = $empresa[0]['cd_empresa'];
+  $nr_cnpj = $empresa[0]['nr_cnpj'];
+  $ds_razao_social = $empresa[0]['ds_razao_social'];
+  $ds_nome_fantasia = $empresa[0]['ds_nome_fantasia'];
+  $nr_porte = $empresa[0]['nr_porte'];
+  $ds_area_atuacao = $empresa[0]['ds_area_atuacao'];
+  $ds_responsavel_cadastro = $empresa[0]['ds_nome_responsavel'];
+  $ds_telefone = $empresa[0]['ds_telefone'];
+  $ds_site = $empresa[0]['ds_site'];
+  $ds_email = $empresa[0]['ds_email'];
+  $ds_senha = $empresa[0]['ds_senha'];
+}
+
 ?>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&key=AIzaSyDVFKVgRK5cfSc-q-Mk_OacpyilcRANBrM"></script>
     <script type="text/javascript" src="js/mapa.js"></script>
