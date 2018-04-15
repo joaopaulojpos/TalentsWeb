@@ -226,7 +226,7 @@ from profissional_vaga as pv
   JOIN
     vaga v on pv.cd_vaga = v.cd_vaga
   JOIN empresa e on v.cd_empresa = e.cd_empresa
-where p.cd_profissional = 1 and match_empresa = 1;';
+where p.cd_profissional = :cod_prof and match_empresa = 1;';
             $stmt = db::getInstance()->prepare($sql);
 
             if (!empty($cd_profissional))

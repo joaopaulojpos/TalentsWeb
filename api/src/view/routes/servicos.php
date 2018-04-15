@@ -198,13 +198,11 @@ $app->post('/api/profissional/salvar', function(Request $request, Response $resp
     }
 });
 
-$app->get('/api/profissional/notificacoes/{id}', function(Request $request, Response $response){
+$app->get('/api/profissional/notificacoes', function(Request $request, Response $response){
 
     try{
-        $cd_profissional = $request->getAttribute('id');
-
         $rnprofissional = new RNProfissional();
-        $rnprofissional = $rnprofissional->getNotificacao($cd_profissional);
+        $rnprofissional = $rnprofissional->getNotificacao($request->getParam('cd_profissional'));
         $response->write(json_encode($rnprofissional));
 
     } catch(Exception $e){
