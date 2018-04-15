@@ -158,6 +158,7 @@ CREATE TABLE profissional_vaga (
   match_empresa bit,
   cd_profissional Integer,
   cd_vaga Integer,
+  sn_like_empresa varchar(1) DEFAULT 'F',
   FOREIGN KEY(cd_vaga) REFERENCES vaga (cd_vaga),
   FOREIGN KEY(cd_profissional) REFERENCES profissional (cd_profissional)
 );

@@ -1453,3 +1453,29 @@ Stack trace:
 #0 {main}
   thrown in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 100
 [13-Apr-2018 05:20:33 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 52
+[15-Apr-2018 00:36:59 Europe/Berlin] PHP Notice:  Undefined index: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 18
+[15-Apr-2018 00:36:59 Europe/Berlin] PHP Notice:  Undefined index: nr_longitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 19
+[15-Apr-2018 00:37:00 Europe/Berlin] PHP Notice:  Undefined index: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 18
+[15-Apr-2018 00:37:00 Europe/Berlin] PHP Notice:  Undefined index: nr_longitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 19
+[15-Apr-2018 00:37:01 Europe/Berlin] PHP Notice:  Undefined index: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 18
+[15-Apr-2018 00:37:01 Europe/Berlin] PHP Notice:  Undefined index: nr_longitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 19
+[15-Apr-2018 00:37:02 Europe/Berlin] PHP Notice:  Undefined index: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 18
+[15-Apr-2018 00:37:02 Europe/Berlin] PHP Notice:  Undefined index: nr_longitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 19
+[15-Apr-2018 00:37:03 Europe/Berlin] PHP Notice:  Undefined index: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 18
+[15-Apr-2018 00:37:03 Europe/Berlin] PHP Notice:  Undefined index: nr_longitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 19
+[15-Apr-2018 00:37:06 Europe/Berlin] PHP Notice:  Undefined index: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 18
+[15-Apr-2018 00:37:06 Europe/Berlin] PHP Notice:  Undefined index: nr_longitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 19
+[15-Apr-2018 00:37:06 Europe/Berlin] PHP Notice:  Undefined index: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 18
+[15-Apr-2018 00:37:06 Europe/Berlin] PHP Notice:  Undefined index: nr_longitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 19
+[15-Apr-2018 00:37:07 Europe/Berlin] PHP Notice:  Undefined index: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 18
+[15-Apr-2018 00:37:07 Europe/Berlin] PHP Notice:  Undefined index: nr_longitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 19
+[15-Apr-2018 00:37:07 Europe/Berlin] PHP Notice:  Undefined index: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 18
+[15-Apr-2018 00:37:07 Europe/Berlin] PHP Notice:  Undefined index: nr_longitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 19
+[15-Apr-2018 00:37:07 Europe/Berlin] PHP Notice:  Undefined index: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 18
+[15-Apr-2018 00:37:07 Europe/Berlin] PHP Notice:  Undefined index: nr_longitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 19
+[15-Apr-2018 00:37:08 Europe/Berlin] PHP Notice:  Undefined index: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 18
+[15-Apr-2018 00:37:08 Europe/Berlin] PHP Notice:  Undefined index: nr_longitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 19
+[15-Apr-2018 00:37:13 Europe/Berlin] PHP Notice:  Undefined index: nr_latitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 18
+[15-Apr-2018 00:37:13 Europe/Berlin] PHP Notice:  Undefined index: nr_longitude in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 19
+[15-Apr-2018 01:15:43 Europe/Berlin] PHP Notice:  Undefined index: sn_like_empresa in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 88
+[15-Apr-2018 01:15:43 Europe/Berlin] PHP Notice:  Undefined index: sn_like_empresa in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 88

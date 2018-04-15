@@ -371,6 +371,25 @@ $app->post('/api/vaga/curtirVaga', function(Request $request, Response $response
     }
 });
 
+/**
+ * Like profissional da vaga
+ */
+$app->post('/api/vaga/like/profissional', function(Request $request, Response $response){
+
+    try{
+        $cd_vaga = ($request->getParam('cd_vaga'));
+        $cd_profissional = ($request->getParam('cd_profissional'));
+    
+        $rnvaga = new RNVaga();
+        $result = $rnvaga->likeProfissionalVaga($cd_vaga,$cd_profissional);
+        $response->write(json_encode($result));
+
+    } catch(PDOException $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+
+});
+
 //------ cargo
 
 $app->get('/api/cargos', function(Request $request, Response $response){

@@ -45,5 +45,19 @@ class DAOVaga
     	
     	return $request->get("http://localhost/talentsweb/api/public/api/vaga/".$cd_vaga."/profissionais",array());
     }
+
+    public function likeProfissionalVaga($cd_vaga, $cd_profissional){
+    	try{
+    	$request = new RequestMethods();
+    	
+    	return $request->post("http://localhost/talentsweb/api/public/api/vaga/like/profissional",
+    		array(
+    		'cd_vaga' => $cd_vaga,
+    		'cd_profissional' => $cd_profissional));
+    	}catch(Exception $e){
+            return array('erro' => 'Erro publicação da vaga' );
+        }
+        
+    }
 }
 ?>

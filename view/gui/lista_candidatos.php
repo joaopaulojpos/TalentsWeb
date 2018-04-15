@@ -63,6 +63,7 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
     <div class="row">
 
         <?php 
+       
 
             foreach ($arrayprofissionais as $key => $value) {
                 if ($key == 'sucess'){
@@ -84,6 +85,13 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
                         $nr_longitude_profissional = $value["nr_longitude"];
 
                         $ds_formacao = "Análise e desenvolvimento de sistemas";
+
+                        $b_like = $value["sn_like_empresa"];
+                        if($b_like == 'F'){
+                            $b_envia_ajax = 0;
+                        }else{
+                            $b_envia_ajax = 1;
+                        }
         ?>
 
                         <div class="col s12 m5">
@@ -105,8 +113,9 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
                                 </div>
                                 <div class="row">
                                     <div class="col m2">
-                                    <button class="btn-floating btn-large waves-effect waves-light red" type="submit" name="action"><i class="material-icons right">favorite</i>
-                                    </button>
+                                    
+                                        <button class="btn-floating btn-large waves-effect waves-light red" <?php echo $b_like=='T'?'disabled':'';?> id="btnLike<?php echo $cd_profissional; ?>" type="submit" name="action" onclick="enviarLike(<?php echo $cd_vaga; ?>, <?php echo $cd_profissional; ?>, <?php echo $b_envia_ajax ?>)"><i class="material-icons right" id="iconeLike<?php echo $cd_profissional; ?>"><?php echo $b_like=='T'?'done':'favorite';?></i></button>
+                            
                                         <br/><br/><br/>
                                         <h3 class="right-align teal-text">100%</h3>
                                     </div>
@@ -122,9 +131,42 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
             }
   ?>
 
-
     </div>
-
-
-
 </section>
+
+<script type='text/javascript'>
+    function enviarLike(cd_vaga, cd_profissional, b_like) {
+
+        if (b_like == 1){
+            alert('Só é possível dar like no candidato 1 vez, esse já foi escolhido!');
+        }
+        
+        var nomeBotao = 'btnLike'+cd_profissional;
+        var nomeIcone = 'iconeLike'+cd_profissional;
+        $.ajax({      //Função AJAX
+        url:"valida_like_empresa.php",      //Arquivo php
+        type:"post",        //Método de envio
+        data: "cd_vaga="+cd_vaga+"&cd_profissional="+cd_profissional, //Dados
+            success: function (result){
+                if(result == 1){
+                    document.getElementById(nomeBotao).disabled = true; 
+                    document.getElementById(nomeIcone).innerHTML = "done";
+                }else{
+                    alert("Erro ao curtir candidato: " + result);
+                }
+            }
+        });
+    }
+    /*$(document).ready(function(){
+        $('#errMessage').hide();
+        $('#formulario_like').submit(function(){  //Ao submeter formulário
+
+            var cd_vaga=$('#cd_vaga').val();
+            var cd_profissional=$('#cd_profissional').val();
+
+            alert('cd_vaga:' + cd_vaga + ' - cd_profissional' + cd_profissional);
+            return false;
+        })
+    });*/
+
+</script>

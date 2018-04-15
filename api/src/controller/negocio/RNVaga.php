@@ -156,6 +156,50 @@ class RNVaga{
         }
     }
 
+    /**
+     * @param $cd_vaga
+     * @param $cd_profissional
+     * @return array
+     */
+    public function likeProfissionalVaga($cd_vaga,$cd_profissional){
+        try{
+            $daoprofissional = new DaoProfissional();
+            $daovaga = new DaoVaga();
+
+            //Verifica se o campo código do profissional está vazio
+            if (empty($cd_profissional)){
+                return array('erro' => 'Código do profissional inválido');
+            }
+
+            //Verifica se o campo código da vaga está vazio
+            if (empty($cd_vaga)){
+                return array('erro' => 'Código da vaga inválido');
+            }
+
+            //Verifica se o profissional existe
+            $prof = new Profissional();
+            $prof->setCdProfissional($cd_profissional);
+            $profissional = $daoprofissional->pesquisarById($prof);
+            if (empty($profissional)){
+                return array('erro' => "Profissional não existe");
+            }
+
+            //Verifica se a vaga já foi curtida pelo profissional
+            $result = $daovaga->isCurtidaByEmpresa($cd_vaga,$cd_profissional);
+            if (!empty($result)){
+                return array('erro'=> "O profissional já foi curtido");
+            }
+
+            $result = $daovaga->likeProfissionalVaga($cd_vaga,$cd_profissional);
+
+            return array('sucess' => 'Profissional curtido!');
+
+        }catch (Exception $e){
+            return array('erro' => $e->getTrace());
+        }
+    }
+ 
+
 	public function pesquisar($vaga){
 		try
         {

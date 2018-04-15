@@ -66,6 +66,11 @@
         return json_decode($daovaga->listarProfissionaisVaga($cd_vaga), true);
     }
 
+    public function likeProfissionalVaga($cd_vaga, $cd_profissional){
+        $daovaga = new DAOVaga();
+        return json_decode($daovaga->likeProfissionalVaga($cd_vaga, $cd_profissional), true);
+    }
+
     //Cargo
     public function cargoPesquisar(){
         $daocargo = new DAOCargo();

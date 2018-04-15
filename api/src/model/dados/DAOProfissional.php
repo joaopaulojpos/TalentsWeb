@@ -128,7 +128,8 @@ class DaoProfissional implements iDAOProfissional
                            tp_conta,
                            tp_sexo,
                            profissional.ds_nome,
-                           profissional.nr_latitude
+                           profissional.nr_latitude,
+                           vp.sn_like_empresa
                       from profissional_vaga AS vp
                 inner join vaga ON vp.cd_vaga = vaga.cd_vaga
                 inner join profissional ON profissional.cd_profissional = vp.cd_profissional 
@@ -155,6 +156,7 @@ class DaoProfissional implements iDAOProfissional
                 $profissional->setTpsexo($row['tp_sexo']);
                 $profissional->setNrlatitude($row['nr_latitude']);
                 $profissional->setNrlogitude($row['nr_longitude']);
+                $profissional->setSnLikeEmpresa($row['sn_like_empresa']);
                 $listaprofissional->append($profissional);
             }
             return $listaprofissional;
