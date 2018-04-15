@@ -54,25 +54,13 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
         </div>
     </div>
 
-<<<<<<< HEAD
     <div class="row">
         <div class="container">
             <div style="width: 95%; height: 300px" id="mapa"></div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="container">
-        
-=======
-        <div class="row">
-            <div class="container">
-                <div class="col s12 m8" id="mapa">
-                </div>
-            </div>
->>>>>>> 9105b85e81b570f75258fd7fbf95512107d49bc4
-        </div>
-    </div>
+ 
 </form>
 </section>
 
