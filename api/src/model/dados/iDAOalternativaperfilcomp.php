@@ -1,5 +1,5 @@
 <?php
-interface iDAOalternativaperfilcomp{
+interface iDAOAlternativaperfilcomp{
 
     public function pesquisar(alternativaperfilcomp $alternativaperfilcomp, $alt='false' );
 }

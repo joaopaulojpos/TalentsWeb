@@ -1,7 +1,7 @@
 <?php
-require_once ('IDAOVagaProfissional.php');
+require_once ('../src/model/dados/idaovagaprofissional.php');
 
-class DAOVagaProfissional implements IDAOVagaProfissional
+class DAOVagaProfissional implements iDAOVagaProfissional
 {
 
     /**

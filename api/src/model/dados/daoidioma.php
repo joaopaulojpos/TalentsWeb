@@ -2,7 +2,7 @@
 
 require_once('../src/model/dados/idaoidioma.php');
 
-class DaoIdioma implements iDaoIdioma
+class DaoIdioma implements iDAOIdioma
 {	
 	function __construct(){
 		

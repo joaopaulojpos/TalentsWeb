@@ -1,6 +1,6 @@
 <?php
 
-require_once('../src/model/dados/iDAOProfissionalresposta.php');
+require_once('../src/model/dados/idaoprofissionalresposta.php');
 
 class DAOProfissionalresposta implements iDAOProfissionalresposta
 {	

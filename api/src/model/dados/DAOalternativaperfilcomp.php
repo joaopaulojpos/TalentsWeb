@@ -1,8 +1,8 @@
 <?php
 
-require_once('../src/model/dados/iDAOalternativaperfilcomp.php');
+require_once('../src/model/dados/idaoalternativaperfilcomp.php');
 
-class Daoalternativaperfilcomp implements iDAOalternativaperfilcomp
+class Daoalternativaperfilcomp implements iDAOAlternativaperfilcomp
 {	
 	function __construct(){
 		

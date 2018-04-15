@@ -1,6 +1,6 @@
 <?php
 
-require_once('../src/model/dados/iDAOperguntaperfilcomp.php');
+require_once('../src/model/dados/idaoperguntaperfilcomp.php');
 
 class DaoPerguntaperfilcomp implements iDAOperguntaperfilcomp
 {	

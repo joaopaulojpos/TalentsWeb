@@ -22,16 +22,11 @@ require '../src/model/basica/perguntaperfilcomp.php';
 require '../src/model/basica/alternativaperfilcomp.php';
 require '../src/model/basica/profissionalrespota.php';
 
-
-
 require '../src/model/dados/daocompetenciatecnica.php';
 require '../src/model/dados/daocompetenciacomport.php';
-require '../src/model/dados/DaoPerguntaperfilcomp.php';
-require '../src/model/dados/Daoalternativaperfilcomp.php';
-require '../src/model/dados/DAOProfissionalresposta.php';
-
-
-
+require '../src/model/dados/daoperguntaperfilcomp.php';
+require '../src/model/dados/daoalternativaperfilcomp.php';
+require '../src/model/dados/daoprofissionalresposta.php';
 
 require '../src/model/dados/conversordeobjetos.php';
 
@@ -43,9 +38,9 @@ require '../src/controller/negocio/rncurso.php';
 require '../src/controller/negocio/rnidioma.php';
 require '../src/controller/negocio/rncompetenciatecnica.php';
 require '../src/controller/negocio/rncompetenciacomport.php';
-require '../src/controller/negocio/RNPerguntaperfilcomp.php';
-require '../src/controller/negocio/RNalternativaperfilcomp.php';
-require '../src/controller/negocio/RNprofissionalresposta.php';
+require '../src/controller/negocio/rnperguntaperfilcomp.php';
+require '../src/controller/negocio/rnalternativaperfilcomp.php';
+require '../src/controller/negocio/rnprofissionalresposta.php';
 
 
 

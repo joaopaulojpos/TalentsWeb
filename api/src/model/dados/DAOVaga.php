@@ -1,6 +1,6 @@
 <?php
 
-require_once('idaovaga.php');
+require_once('../src/model/dados/idaovaga.php');
 
 class DaoVaga implements iDAOVaga
 {
