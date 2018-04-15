@@ -47,18 +47,40 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                     <input id="txtEndereco" name="txtEndereco" type="text" class="validate" minlength="3" required>
                     <label for="titulo">Endereço da Vaga</label>
             </div>
+
             <div class="input-field col s12 m3">
                 <input class="btn waves-effect waves-light teal darken-1" type="button" name="btnEndereco" id="btnEndereco" value="Ver no Mapa">
             </div>
         </div>
+    </div>
 
-        <div class="row">
-            <div class="container">
-                <div class="col s12 m8">
-                    <div class="mapa" id="mapa"></div>
-                </div>
-            </div>
+    <div class="row">
+        <div class="container">
+            <div style="width: 95%; height: 300px" id="mapa"></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="container">
+        
         </div>
     </div>
 </form>
 </section>
+
+  <!--  Scripts-->
+  <script type='text/javascript'>
+      function enviardados(){
+      	$('#loader').show();
+      	$('#errMessage').hide();
+      	if(trim($('input[name="txtLatitude"]').val()) == '' || trim($('input[name="txtEndereco"]').val()) == ''){	
+    			$('#loader').hide();
+    			document.getElementById('errMessage').innerHTML = 'Endereço não localizado, por favor digite um endereço!';
+          $('#errMessage').show();   //Informa o erro*/  
+          $('input[name="txtEndereco"]').focus();  
+    		return false;
+    		}
+		    $('#loader').hide();
+		    return true;
+      }
+  </script>
