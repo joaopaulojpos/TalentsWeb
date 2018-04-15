@@ -117,7 +117,6 @@ CREATE TABLE vaga (
   cd_cargo Integer,
   cd_empresa Integer,
   ds_endereco varchar(200),
-  sn_ativo bit default 1,
   FOREIGN KEY(cd_cargo) REFERENCES cargo (cd_cargo),
   FOREIGN KEY(cd_empresa) REFERENCES empresa (cd_empresa)
 );
