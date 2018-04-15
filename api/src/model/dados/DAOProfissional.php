@@ -176,7 +176,7 @@ class DaoProfissional implements iDAOProfissional
      */
     public function listarVagaProfissional($cd_profissional, $alt='false'){
         try{
-            $comando = 'select v.cd_vaga,v.nr_qtd_vaga,v.ds_observacao,v.dt_validade,v.tp_contratacao,v.nr_longitude,v.nr_latitude,v.ds_beneficios,
+            $comando = "select v.cd_vaga,v.nr_qtd_vaga,v.ds_observacao,v.dt_validade,v.tp_contratacao,v.nr_longitude,v.nr_latitude,v.ds_beneficios,
                                v.ds_horario_expediente,v.dt_criacao,v.ds_titulo,v.vl_salario,v.tp_status,v.nr_experiencia,v.ds_endereco,
                                c.cd_cargo,c.ds_cargo,
                                e.cd_empresa,e.ds_razao_social,e.ds_nome_fantasia,e.nr_porte,e.ds_nome_responsavel,e.ds_area_atuacao,e.ds_site,e.ds_telefone,e.nr_cnpj,e.ds_email,e.ds_senha,
@@ -193,8 +193,9 @@ class DaoProfissional implements iDAOProfissional
                     inner join vaga_idioma AS vi ON vi.cd_vaga = v.cd_vaga
                     inner join idioma i ON vi.cd_idioma = i.cd_idioma
                          where v.cd_vaga not in (SELECT cd_vaga from profissional_vaga where cd_profissional = :cod_prof)
+                               and v.tp_status = 'A'
                       ORDER BY v.cd_vaga DESC
-                         LIMIT 1;';
+                         LIMIT 1;";
 
             //TODO JOIN vaga_curso AS vcurso ON vaga.cd_vaga = vcurso.cd_vaga , JOIN formacao AS f ON f.cd_formacao = vcurso.cd_formacao
 

@@ -129,9 +129,21 @@ class DaoEmpresa implements iDAOEmpresa
 
 	public function pesquisarVagas(Empresa $emp){
 		try{
-			$comando = 'select v.*, "" as ds_nome_fantasia, c.ds_cargo 
-						  from vaga v
-					inner join cargo c on c.cd_cargo = v.cd_cargo ';
+			$comando = 'select v.cd_vaga,v.nr_qtd_vaga,v.ds_observacao,v.dt_validade,v.tp_contratacao,v.nr_longitude,v.nr_latitude,v.ds_beneficios,
+                               v.ds_horario_expediente,v.dt_criacao,v.ds_titulo,v.vl_salario,v.tp_status,v.nr_experiencia,v.ds_endereco,
+                               c.cd_cargo,c.ds_cargo,
+                               ct.cd_competencia_tecnica,vct.nr_nivel,ct.ds_competencia_tecnica,
+                               cc.cd_competencia_comport,cc.ds_competencia_comport,
+                               vi.cd_idioma,i.ds_idioma,vi.nr_nivel,
+                               "" ds_nome_fantasia
+                          from vaga v
+                    inner join cargo c ON c.cd_cargo = v.cd_cargo
+                    left join vaga_competencia_tecnica vct ON vct.cd_vaga = v.cd_vaga
+                    left join competencia_tecnica ct ON ct.cd_competencia_tecnica = vct.cd_competencia_tecnica
+                    left join vaga_competencia_comport vcc ON vcc.cd_vaga = v.cd_vaga
+                    left join competencia_comport cc ON cc.cd_competencia_comport = vcc.cd_competencia_comport
+                    left join vaga_idioma AS vi ON vi.cd_vaga = v.cd_vaga
+                    left join idioma i ON vi.cd_idioma = i.cd_idioma ';
 			$where = '';
 			$orderBy = ' order by v.dt_criacao desc, v.ds_titulo asc ';
 
@@ -148,11 +160,11 @@ class DaoEmpresa implements iDAOEmpresa
 				$stmt->bindValue(':cd_empresa', $emp->getCdEmpresa());
 
 			$run = $stmt->execute();
-	        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-			$conversor = new conversorDeObjetos();
-
-			return $conversor->parseRowsToObjectVaga($result);
+            $conversor = new conversorDeObjetos();
+            $stmt->closeCursor();
+            return $conversor->parseRowsToObjectVaga($result); //$stmt->fetchAll(PDO::FETCH_ASSOC);
 		}catch(Exception $e){
 			throw new Exception($e->getMessage());
 		}finally{

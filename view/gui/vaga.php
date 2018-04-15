@@ -100,8 +100,10 @@
 
               if ($value["tp_status"] == 'A'){
                 $tp_status = 'Disponível';
+                $tp_envia_status_ajax = 0;
               }else{
                 $tp_status = 'Indisponível';
+                $tp_envia_status_ajax = 1;
               }
              
   ?>
@@ -129,7 +131,8 @@
                       <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="material-icons activator">+</i></i></a>
                       <div class="col-sx-12 col-md-20 col-lg-20 col-sm-offset-0">
                         <div id="doughnut-chart-wrapper" >
-                          <p><b>Status:</b><span class=<?php echo $tp_status=="Disponível"?"disponivel":"indisponivel";?>> <?php echo $tp_status; ?></span></p>
+                          <p><b>Status:</b><span class=<?php echo $tp_status=="Disponível"?"disponivel":"indisponivel";?>> <?php echo $tp_status; ?></span> 
+                          <button class = "btn waves-effect waves-light <?php echo $tp_status=="Disponível"?"red":"darken-2";?>" onclick="alterarStatusVaga(<?php echo $cd_vaga; ?>, <?php echo $tp_envia_status_ajax; ?>)" type = "submit"><?php echo $tp_status=="Disponível"?"Off":"On";?></button></p>
                           <p><b>Tipo de contratação:</b><span> <?php echo $tp_contratacao; ?></span></p>
                           <p><b>Salário:</b><span> <?php echo $vl_salario; ?></span></p>
                           <p><b>Jornada de trabalho:</b><span> <?php echo $ds_horario_expediente; ?></span></p>
@@ -259,3 +262,21 @@
 
   </body>
 </html>
+
+<script type='text/javascript'>
+    function alterarStatusVaga(cd_vaga, tp_envia_status_ajax) {
+      $.ajax({      //Função AJAX
+      url:"valida_alteracao_status_vaga.php",      //Arquivo php
+      type:"post",        //Método de envio
+      data: "cd_vaga="+cd_vaga+"&tp_envia_status_ajax="+tp_envia_status_ajax, //Dados
+          success: function (result){
+              if(result == 1){
+                  return true;
+              }else{
+                  alert("Erro ao inativar/ativar vaga: " + result);
+              }
+          }
+      });
+    }
+
+</script>
