@@ -11,14 +11,16 @@
                     </div>
                 </div>
 
-                <div class="col s12 m4 push-m2">
-                    <div class="card white">
-                        <div class="card-content white-text">
-                            <span class="card-title grey-text">Vagas Publicadas</span>
-                            <p><h4 class="center-align"><i class="medium material-icons grey-text">multiline_chart</i></h4></p>
-                            <p class="center-align grey-text">Aqui poderá consultar todas as vagas que foram publicadas por você.</p>
+            <div class="col s12 m4 push-m2">
+                    <a href="vaga2.php">
+                        <div class="card white">
+                            <div class="card-content white-text">
+                                <span class="card-title grey-text">Vagas Publicadas</span>
+                                <p><h4 class="center-align"><i class="medium material-icons grey-text">multiline_chart</i></h4></p>
+                                <p class="center-align grey-text">Aqui poderá consultar todas as vagas que foram publicadas por você.</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -38,7 +40,7 @@
                 <div class="col s12 m4 push-m2">
                     <div class="card white">
                         <div class="card-content white-text">
-                            <span class="card-title grey-text">Funcionalida Nova</span>
+                            <span class="card-title grey-text">Vagas em Aberto</span>
                             <p><h4 class="center-align"><i class="medium material-icons grey-text">https</i></h4></p>
                             <p class="center-align grey-text">Brevemente aqui será adicionado uma nova funcionalidade, é segredo tá.</p>
                         </div>
@@ -47,23 +49,3 @@
             </div>     
         </div>
     </section>
-
-
-
-
-    <!-- JQUERY do Materialize -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- JavaScript do Materialize -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <!-- Materialize Compentes -->
-    <script>
-        $(document).ready(function () {
-           $('select').material_select();
-        });
-
-        //Script do Menu
-        $(".button-collapse").sideNav();
-    </script>
-
-</body>
-</html>

@@ -72,13 +72,6 @@ ob_start();
     <!-- JavaScript do Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-    <!-- Materialize Compentes -->
-    <script>
-        $(document).ready(function () {
-           $('select').material_select();
-        });
-    </script>
-
     <!-- SCRIPT MANUAIS -->
     <script src="js/vaga.js"></script>
   <script type='text/javascript'>
@@ -95,7 +88,7 @@ ob_start();
           data: "username="+username+"&password="+password, //Dados
             success: function (result){     //Sucesso no AJAX
                         if(result==1){        
-                          location.href='vaga.php';  //Redireciona
+                          location.href='dashboard.php';  //Redireciona
                         }else{
                           document.getElementById('errMessage').innerHTML = result;
                           $('#loader').hide();
