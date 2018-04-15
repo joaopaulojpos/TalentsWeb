@@ -64,5 +64,29 @@ class DaoPerguntaperfilcomp implements iDAOperguntaperfilcomp
             $stmt->closeCursor();
         }
     }
+
+
+
+
+    public function cadastrarResposta($cd_pergunta_perfil_comp,$cd_profissional,$resposta){
+        try{
+            $sql = "insert into profissional_alternativa_perfil_comp (cd_alternativa_perfil_comp,cd_profissional,cd_pergunta_perfil_comp) 
+                             values (:cd_alternativa_perfil_comp,:cd_profissional,:cd_pergunta_perfil_comp)";
+
+            $stmt = db::getInstance()->prepare($sql);
+            $run = $stmt->execute(array(
+                ':cd_alternativa_perfil_comp' => $resposta,
+                ':cd_profissional' => $cd_profissional,
+                ':cd_pergunta_perfil_comp' => $cd_pergunta_perfil_comp
+            ));
+
+        }catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
+    
+
 }
 ?>

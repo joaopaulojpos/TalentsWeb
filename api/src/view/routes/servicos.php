@@ -494,4 +494,23 @@ $app->get('/api/alternativa_perfil_comp', function(Request $request, Response $r
     }
 });
 
+
+$app->post('/api/inserir_resposta', function(Request $request, Response $response){
+
+    try{
+        $Resposta = ($request->getParam('cd_alternativa_perfil_comp'));
+        $cd_profissional = ($request->getParam('cd_profissional'));
+        $CdPergunta = ($request->getParam('cd_pergunta_perfil_comp'));
+
+
+    
+        $rNPerguntaperfilcomp = new RNPerguntaperfilcomp();
+        $result = $rNPerguntaperfilcomp->cadastrarResposta($CdPergunta,$cd_profissional,$Resposta);
+        $response->write(json_encode($result));
+
+    } catch(PDOException $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
 ?>
