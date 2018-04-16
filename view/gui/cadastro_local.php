@@ -39,29 +39,55 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
 <section class="section">
     <form name="formulario" id="formulario" method="post" action="cadastro_vaga.php" onSubmit="return enviardados();">
-    <div class="row">
-        <div class="container center">
-            <h5>Localização da vaga</h5>
-            <div class="input-field col s12 m8">
-                    <i class="material-icons prefix">gps_fixed</i>
-                    <input id="txtEndereco" name="txtEndereco" type="text" class="validate" minlength="3" required>
-                    <label for="titulo">Endereço da Vaga</label>
-            </div>
+        <div class="row">
+            <div class="container center">
+                <h5>Localização da vaga</h5>
+                <div class="input-field col s12 m8">
+                        <i class="material-icons prefix">gps_fixed</i>
+                        <input id="txtEndereco" name="txtEndereco" type="text" class="validate" minlength="3" required>
+                        <label for="titulo">Endereço da Vaga</label>
+                </div>
 
-            <div class="input-field col s12 m3">
-                <input class="btn waves-effect waves-light teal darken-1" type="button" name="btnEndereco" id="btnEndereco" value="Ver no Mapa">
+                <div class="input-field col s12 m3">
+                    <input class="btn waves-effect waves-light teal darken-1" type="button" name="btnEndereco" id="btnEndereco" value="Ver no Mapa">
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="container">
-            <div style="width: 95%; height: 300px" id="mapa"></div>
+        <div class="row">
+            <div class="container">
+                <div style="width: 95%; height: 300px" id="mapa"></div>
+            </div>
         </div>
-    </div>
 
- 
-</form>
+        <div class="row">
+            <div class="container">
+                <div class="input-field col s12 m4">
+                    Lat: <input id="txtLatitude" name="txtLatitude" type="text">
+                </div>
+
+                <div class="input-field col s12 m4">
+                    Long: <input id="txtLongitude" name="txtLongitude" type="text">
+                </div>
+
+                <div class="input-field col s12 m4">
+                    <input class="btn waves-effect waves-light teal darken-1" type="button" name="btnEnviar" id="btnEnviar" value="Enviar">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container center">
+                <span class="errMessage" id="errMessage"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container center">
+                <div class="loader" id="loader"></div>
+            </div>
+        </div>
+    </form>
 </section>
 
   <!--  Scripts-->
