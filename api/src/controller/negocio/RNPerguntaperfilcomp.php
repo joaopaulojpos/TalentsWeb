@@ -41,6 +41,30 @@ class RNPerguntaperfilcomp{
 		}
 	}
 
+
+	public function CalculoPerfilComp($cd_profissional){	
+		try{
+			$daoPerguntaperfilcomp = new DaoPerguntaperfilcomp();
+			$perguntaperfilcomp = new perguntaperfilcomp();
+			$prof = new Profissional();
+
+            
+            $prof->setCdProfissional($cd_profissional);
+            
+			
+			$result = $daoPerguntaperfilcomp->CalculoPerfilComp($cd_profissional);
+
+			return array('sucess' => 'Cadastrado com sucesso!');
+
+		}catch (Exception $e){
+			return array('erro' => $e->getMessage());
+		}
+	}
+
+
+
+
+
 }
 
 ?>

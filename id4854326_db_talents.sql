@@ -59,7 +59,7 @@ CREATE TABLE profissional (
   b_foto varchar(100),
   nr_latitude Double,
   nr_longitude Double,
-  cd_resultado_comp Integer,
+  ds_resultado_comp varchar(20),
   dt_cadastro timestamp default current_timestamp()
 );
 
