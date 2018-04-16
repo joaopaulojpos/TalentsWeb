@@ -32,7 +32,7 @@
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">domain</i>
                         <input id="titulo" type="text" class="validate" minlength="3" required>
-                        <label for="titulo">Nome da Empresa</label>
+                        <label for="titulo">Título da vaga</label>
                     </div>
 
                     <div class="input-field col s12 m6">
@@ -103,7 +103,7 @@
 
             <div class="container">
                 <div class="row">
-                    <div class="input-field col s12 m12">
+                    <div class="input-field col s12 m8">
                         <select required>
                             <option value="" disabled selected>Escolha os cursos</option>
                             <option value="1">Option 1</option>
@@ -113,14 +113,38 @@
                         <label>Cursos Desejado Para Vaga</label>
                     </div>
 
+                    <div class="col s12 m4"> 
+                        <input type="BUTTON" class="btn waves-effect waves-light" id="adicionar_comport" name="adicionar_comport" value="Adicionar" onclick="adicionarComport()"/>        
+                    </div>
+
                     <div class="input-field col s12 m12">
                         <select required>
-                            <option value="" disabled selected>Habilidades</option>
+                            <option value="" disabled selected>Competência(s) Comportamentais</option>
                             <option value="1">Option 1</option>
                             <option value="2">Option 2</option>
                             <option value="3">Option 3</option>
                         </select>
-                        <label>Escolha as Habilidades</label>
+                        <label>Competência(s) Comportamentais</label>
+                    </div>
+                    
+                    <div class="input-field col s12 m8">
+                        <select required>
+                            <option value="" disabled selected>Competência(s) Técnica(s)</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <label>Competência(s) Técnica(s)</label>
+                    </div>
+
+                    <div class="input-field col s12 m4">
+                        <select required>
+                            <option value="" disabled selected>Nível</option>
+                            <option value="1">Básico</option>
+                            <option value="2">Médio</option>
+                            <option value="3">Avançado</option>
+                        </select>
+                        <label>Escolha o nível</label>
                     </div>
 
                     <div class="input-field col s12 m8">
