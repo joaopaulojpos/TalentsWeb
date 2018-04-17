@@ -211,8 +211,6 @@ CREATE TABLE vaga_competencia_tecnica (
   FOREIGN KEY(cd_competencia_tecnica) REFERENCES competencia_tecnica (cd_competencia_tecnica),
   FOREIGN KEY(cd_vaga) REFERENCES vaga (cd_vaga)
 );
-
-ALTER TABLE PROFISSIONAL ADD CONSTRAINT cd_resultado_comp FOREIGN KEY(cd_resultado_comp) REFERENCES resultado_perfil_comp (cd_resultado_comp);
 -- inserts
                                               
 INSERT INTO `cargo` (`cd_cargo`, `ds_cargo`) VALUES
