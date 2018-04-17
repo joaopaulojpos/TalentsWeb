@@ -20,7 +20,7 @@ error_reporting(E_ALL);
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard - Talents</title>
 </head>
-<body class="grey lighten-4">
+<body class="grey lighten-3">
     <header>
         <div class="navbar-fixed">
             <nav class="teal darken-1">
@@ -34,14 +34,15 @@ error_reporting(E_ALL);
                     <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Perfil"><a href="#"><i class="material-icons">person</i></a></li>
                     <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="login.php"><i class="material-icons">exit_to_app</i></a></li>
                   </ul>
-                  <ul class="side-nav" id="mobile-demo">
-                    <li><a href="#!">Sass</a></li>
-                    <li><a href="#!">Components</a></li>
-                    <li><a href="#!">Javascript</a></li>
-                    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Perfil"><a href="#"><i class="material-icons">person</i></a></li>
-                    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="#"><i class="material-icons">exit_to_app</i></a></li>
-                  </ul>
                 </div>
               </nav>
         </div>
+        <!-- Menu Mobile -->
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="#!">Sass</a></li>
+            <li><a href="#!">Components</a></li>
+            <li><a href="#!">Javascript</a></li>
+            <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Perfil"><a href="#"><i class="material-icons">person</i></a></li>
+            <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="#"><i class="material-icons">exit_to_app</i></a></li>
+        </ul>
     </header>
