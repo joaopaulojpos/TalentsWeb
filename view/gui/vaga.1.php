@@ -108,6 +108,12 @@ include "foooter.php";
               </p>
   
             </div>
+
+              <div class="card-action">
+                <a class="waves-effect waves-light btn red darken-4">Fechar Vaga</a>
+                <a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>&nr_latitude=<?php echo $nr_latitude; ?>&nr_longitude=<?php echo $nr_longitude; ?>" class="waves-effect waves-light btn teal darken-4">Ver Candidatos</a>
+              </div>
+
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Detalhes</span>
               </br>
@@ -115,6 +121,8 @@ include "foooter.php";
           </div>
         </div>
       </div>
+
+      <!--Code Old -->
               <div class="row">
                 <div class="col s12 m6">
                   <div class="card">
