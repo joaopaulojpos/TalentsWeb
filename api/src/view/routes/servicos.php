@@ -513,4 +513,22 @@ $app->post('/api/inserir_resposta', function(Request $request, Response $respons
     }
 });
 
+
+$app->post('/api/CalculoPerfilComp', function(Request $request, Response $response){
+
+    try{
+
+        $cd_profissional = ($request->getParam('cd_profissional'));
+
+
+    
+        $rNPerguntaperfilcomp = new RNPerguntaperfilcomp();
+        $result = $rNPerguntaperfilcomp->CalculoPerfilComp($cd_profissional);
+        $response->write(json_encode($result));
+
+    } catch(PDOException $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
 ?>

@@ -86,6 +86,55 @@ class DaoPerguntaperfilcomp implements iDAOperguntaperfilcomp
             $stmt->closeCursor();
         }
     }
+
+    public function CalculoPerfilComp($cd_profissional){
+
+        try{
+            $sql = "update profissional 
+                    set    ds_resultado_comp = (select result_comp 
+                            from  (select case 
+                                            when nr_letra_ref = 'i' then 
+                                            'criativo' 
+                                            when nr_letra_ref = 'c' then 
+                                            'trabalho em equipe' 
+                                            when nr_letra_ref = 'a' then 
+                                            'estrategista' 
+                                            else 'impulsivo,prático' 
+                                          end as result_comp 
+                                   from 
+              (select nr_letra_ref, 
+                      count(nr_letra_ref) letra_qtd 
+               from   (select pa.cd_alternativa_perfil_comp, 
+                              pa.cd_profissional, 
+                              pa.cd_pergunta_perfil_comp, 
+                              nr_letra_ref 
+                       from   profissional_alternativa_perfil_comp pa 
+                              inner join alternativa_perfil_comp alt 
+                                      on pa.cd_alternativa_perfil_comp = 
+                                         alt.cd_alternativa_perfil_comp
+                                         where pa.cd_profissional = :cd_profissional) a 
+               group  by nr_letra_ref 
+               order  by 2 desc 
+               limit  1) as c)d)
+               where cd_profissional = :cd_profissional";
+
+            $stmt = db::getInstance()->prepare($sql);
+            $run = $stmt->execute(array(
+
+                ':cd_profissional' => $cd_profissional
+               
+            ));
+
+        }catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+
+
+
+
+    }
     
 
 }
