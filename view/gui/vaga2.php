@@ -82,6 +82,25 @@ $arrayvagas = $fachada->vagasEmpresaPesquisar($empresa[0]['cd_empresa']);
              
 ?>
 
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="card">
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4"><?php echo $ds_titulo; ?><i class="material-icons right">more_vert</i></span>
+              <p><a href="#"><?php echo $ds_cargo; ?></a></p>
+              <p class="text-darken-4"><?php echo $dt_cricacao; ?></p>
+              </br>
+              <div class="divider"></div>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Card Title</span>
+              <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CODIGO DE BRUNO -->
               <div class="row">
                 <div class="col-xs-12 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
                   <div class="card">
