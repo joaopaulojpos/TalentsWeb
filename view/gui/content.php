@@ -2,13 +2,15 @@
         <div>
             <div class="row">
                 <div class="col s12 m4 push-m2">
-                    <div class="card white">
-                        <div class="card-content white-text">
-                            <span class="card-title grey-text">Publicar Vaga</span>
-                            <p><h4 class="center-align"><i class="medium material-icons grey-text">note_add</i></h4></p>
-                            <p class="center-align grey-text">Publique aqui a vaga desejada e obtenha os melhores profissionais possíveis.</p>
+                    <a href="cadastro_local.php">
+                        <div class="card white">
+                            <div class="card-content white-text">
+                                <span class="card-title grey-text">Publicar Vaga</span>
+                                <p><h4 class="center-align"><i class="medium material-icons grey-text">note_add</i></h4></p>
+                                <p class="center-align grey-text">Publique aqui a vaga desejada e obtenha os melhores profissionais possíveis.</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
             <div class="col s12 m4 push-m2">
