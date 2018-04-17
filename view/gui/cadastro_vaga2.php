@@ -191,7 +191,11 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                                 }
                             ?>
                         </select>
-                        <label>Competência(s) Comportamentais</label>
+                        <table class="table-comport" id="table-comport">
+                            <tbody id="itemlistComport">
+                            </tbody>
+                        </table>
+                        <!-- <label>Competência(s) Comportamentais</label> -->
                     </div>
                     
                     <div class="col s12 m2"> 
@@ -215,15 +219,21 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                                     }
                             ?>
                             </select>
-                        <label>Competência(s) Técnica(s)</label>
+                        <table class="table-tecnicas" id="table-tecnicas">  
+                            <tbody id="itemlistTecnica">
+                            </tbody>
+                        </table>    
+                        <!-- <label>Competência(s) Técnica(s)</label> -->
                     </div>
 
                     <div class="input-field col s12 m3">
                         <select name="nivel_tecnica" id="nivel_tecnica">
                             <option value="" disabled selected>Nível</option>
-                            <option value="1">Básico</option>
-                            <option value="2">Médio</option>
-                            <option value="3">Avançado</option>
+                            <option value="1">Nível 1</option>
+                            <option value="2">Nível 2</option>
+                            <option value="3">Nivel 3</option>
+                            <option value="4">Nivel 4</option>
+                            <option value="5">Nivel 5</option>
                         </select>
                         <label>Escolha o nível</label>
                     </div>
@@ -248,12 +258,16 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                                 }
                             ?>
                         </select>
-                        <label>Escolha os idiomas desejáveis</label>
+                        <table class="table-idiomas" id="table-idiomas">
+                            <tbody id="itemlistIdioma">
+                            </tbody>
+                        </table>
+                        <!-- <label>Escolha os idiomas desejáveis</label> -->
                     </div>
 
                     <div class="input-field col s12 m3">
                         <select name="nivel_idioma" id="nivel_idioma">
-                            <option value="" disabled selected>Senioridade</option>
+                            <option value="" disabled selected>Nível</option>
                             <option value="1">Básico</option>
                             <option value="2">Médio</option>
                             <option value="3">Avançado</option>
@@ -262,7 +276,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                     </div>
                     
                     <div class="col s12 m3"> 
-                        <input type="BUTTON" class="btn waves-effect waves-light" id="adicionar_idioma" name="adicionar_idioma" value="Adicionar" onclick=""/>        
+                        <input type="BUTTON" class="btn waves-effect waves-light" id="adicionar_idioma" name="adicionar_idioma" value="Adicionar" onclick="adicionarIdioma()"/>        
                     </div>
 
                 </div>
@@ -293,7 +307,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
 <script type='text/javascript'>
     $(document).ready(function(){
-    /*  $('#errMessage').hide();
+      $('#errMessage').hide();
       $('#formulario').submit(function(){  //Ao submeter formulário
 
         document.getElementById('buttonSubmit').disabled;
@@ -369,19 +383,20 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                     }
         })
         return false; //Evita que a página seja atualizada
-      })*/
+      })
     });
-/*
+
     //função que adiciona o idioma na tela
     function adicionarIdioma()
     {
-
+        alert('aa');
       //pega o valor dos componentes html que possuem esses id
       var codigo_idioma = $("#codigo_idioma").val();
       var descricao_idioma = $("#codigo_idioma option:selected").text();
       var nivel_idioma = $("#nivel_idioma").val();
       var descricao_nivel_idioma = $("#nivel_idioma option:selected").text();
       var items = "";
+
 
       if ((!codigo_idioma) || (!nivel_idioma))
       		return false;
@@ -403,7 +418,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
               return false;
           }
       }
-    }*/
+    }
 
     //função que adiciona o curso na tela
     function adicionarCurso()
@@ -436,7 +451,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
           }
       }
     }
-/*
+
     //função que adiciona o habilidade na tela
     function adicionarTecnica()
     {
@@ -514,7 +529,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
         });
         return cb;
     }
-*/
+
     //função para evitar de inserir 2 cursos iguais
     function checkListCurso(val){
         var cb = true;
@@ -528,7 +543,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
         });
         return cb;
     }
-/*
+
     //função para evitar de inserir 2 habilidades iguais
     function checkListTecnica(val){
         var cb = true;
@@ -562,12 +577,12 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
     $("#itemlistIdioma").on("click","#hapus",function(){
         $(this).parent().parent().remove();
     });
-*/
+
     //função de remover curso adicionado
     $("#itemlistCurso").on("click","#hapus",function(){
         $(this).parent().parent().remove();
     });
-/*
+
     //função de remover habilidade adicionado
     $("#itemlistTecnica").on("click","#hapus",function(){
         $(this).parent().parent().remove();
@@ -579,7 +594,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
     });
 
 
-*/
+
 
 
   </script>
