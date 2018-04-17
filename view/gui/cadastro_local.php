@@ -38,7 +38,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
     <script type="text/javascript" src="js/mapa.js"></script>
 
 <section class="section">
-    <form name="formulario" id="formulario" method="post" action="cadastro_vaga.php" onSubmit="return enviardados();">
+    <form name="formulario" id="formulario" method="post" action="cadastro_vaga2.php" onSubmit="return enviardados();">
         <div class="row">
             <div class="container center">
                 <h5>Localização da vaga</h5>
@@ -71,7 +71,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                 </div>
 
                 <div class="input-field col s12 m4">
-                    <input class="btn waves-effect waves-light teal darken-1" type="button" name="btnEnviar" id="btnEnviar" value="Enviar">
+                    <input class="btn waves-effect waves-light teal darken-1" type="submit" name="btnEnviar" id="btnEnviar" value="Enviar">
                 </div>
             </div>
         </div>
