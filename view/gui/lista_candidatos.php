@@ -63,7 +63,6 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
     <div class="row">
 
         <?php 
-       
 
             foreach ($arrayprofissionais as $key => $value) {
                 if ($key == 'sucess'){
@@ -88,6 +87,10 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
 
                         $b_like = $value["match_empresa"];
                         $b_envia_ajax = $b_like;
+
+                        $ds_resultado_comp = $value['ds_resultado_comp'];
+
+
         ?>
 
                         <div class="col s12 m5">
@@ -99,12 +102,11 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
                                 <div class="card-stacked">
                                     <div class="card-content">
                                     <h5><?php echo $ds_nome; ?></h5>
-                                    <h6><i class="material-icons">school</i> Formação Acadêmica</h6>
-                                    <h6><?php echo $ds_formacao ?></h6>
-                                    <h6><i class="material-icons">near_me</i> Distância da Vaga</h6>
-                                    <h6><?php echo number_format(distance($nr_latitude_vaga, $nr_longitude_vaga, $nr_latitude_profissional, $nr_longitude_profissional, "K"), 2, '.', '') . " km"; ?></h6>
-                                    <h6><i class="material-icons">star</i> Características do Perfil</h6>
-                                    <h6><?php echo $sexo; ?></h6>
+                                    <h6><i class="material-icons">school</i> <?php echo $ds_formacao ?></h6>
+                                    <h6><i class="material-icons">near_me</i> <?php echo number_format(distance($nr_latitude_vaga, $nr_longitude_vaga, $nr_latitude_profissional, $nr_longitude_profissional, "K"), 2, '.', '') . " km"; ?></h6>
+                                
+                                    <h6><i class="material-icons">star</i> <?php echo $ds_resultado_comp; ?></h6>
+                               
                                     </div>
                                 </div>
                                 <div class="row">

@@ -458,7 +458,7 @@
           data: "cd_empresa="+cd_empresa+"&titulo="+titulo+"&cargo="+cargo+"&observacao="+observacao+"&tipocontratacao="+tipocontratacao+"&salario="+salario+"&jornadatrabalho="+jornadatrabalho+"&experiencia="+experiencia+"&quantidadevagas="+quantidadevagas+"&beneficios="+beneficios+"&latitude="+latitude+"&longitude="+longitude+"&endereco="+endereco+"&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+"&tecnicaCodigo="+JSON.stringify(tecnicaCodigo)+"&tecnicaNivel="+JSON.stringify(tecnicaNivel)+"&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados*/
             success: function (result){     //Sucesso no AJAX
                         if (result == 1){
-                          location.href='vaga.php';
+                          location.href='vaga.1.php';
                         }else{
                           document.getElementById('errMessage').innerHTML = result;
                           $('#errMessage').show();   //Informa o erro*/                      

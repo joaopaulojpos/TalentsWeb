@@ -11,6 +11,7 @@ class Profissional implements JsonSerializable {
 	private $tp_sexo;
 	private $ds_nome;
 	private $match_empresa;
+	private $ds_resultado_comp;
 
 
 	function __construct(){
@@ -112,6 +113,14 @@ class Profissional implements JsonSerializable {
 	{
 		return $this->match_empresa;
 	}
+	function setDsResultadoComp($ds_resultado_comp)
+	{
+		$this->ds_resultado_comp = trim($ds_resultado_comp);
+	}
+	function getDsResultadoComp()
+	{
+		return $this->ds_resultado_comp;
+	}
 
     /**
      * Specify data which should be serialized to JSON
@@ -134,7 +143,8 @@ class Profissional implements JsonSerializable {
                 'nr_longitude'=>$this->nr_longitude,
                 'tp_conta'=>$this->tp_conta,
                 'tp_sexo'=>$this->tp_sexo,
-                'match_empresa'=>$this->match_empresa
+                'match_empresa'=>$this->match_empresa,
+                'ds_resultado_comp'=>$this->ds_resultado_comp
             ];
     }
 }

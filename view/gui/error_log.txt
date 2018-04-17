@@ -1842,3 +1842,6 @@ Stack trace:
 [15-Apr-2018 22:04:20 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 52
 [15-Apr-2018 22:04:33 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 52
 [15-Apr-2018 22:04:34 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.php on line 52
+[18-Apr-2018 00:37:15 Europe/Berlin] PHP Notice:  Undefined index: ds_resultado_comportamental in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 92
+[18-Apr-2018 00:37:15 Europe/Berlin] PHP Notice:  Undefined index: ds_resultado_comportamental in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 92
+[18-Apr-2018 00:40:20 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 68

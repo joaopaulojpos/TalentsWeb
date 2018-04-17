@@ -94,12 +94,12 @@ class DaoPerguntaperfilcomp implements iDAOperguntaperfilcomp
                     set    ds_resultado_comp = (select result_comp 
                             from  (select case 
                                             when nr_letra_ref = 'i' then 
-                                            'criativo' 
+                                            'Criativo' 
                                             when nr_letra_ref = 'c' then 
-                                            'trabalho em equipe' 
+                                            'Trabalho em equipe' 
                                             when nr_letra_ref = 'a' then 
-                                            'estrategista' 
-                                            else 'impulsivo,prático' 
+                                            'Estrategista' 
+                                            else 'Impulsivo,prático' 
                                           end as result_comp 
                                    from 
               (select nr_letra_ref, 
