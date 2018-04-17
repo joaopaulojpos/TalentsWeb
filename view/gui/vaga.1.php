@@ -20,12 +20,13 @@ include "foooter.php";
 
 ?>
 
-<body>
-  
+<section="section"> 
+  <div class="row">
   <div class="container">
     
-    <?php echo $empresa[0]['ds_razao_social'] ?>
+    <?//php echo $empresa[0]['ds_razao_social'] ?>
  
+  </div>
   </div>
 
   <?php foreach ($arrayvagas as $key => $value) {
@@ -110,59 +111,14 @@ include "foooter.php";
             </div>
 
               <div class="card-action">
-                <a class="waves-effect waves-light btn red darken-4">Fechar Vaga</a>
-                <a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>&nr_latitude=<?php echo $nr_latitude; ?>&nr_longitude=<?php echo $nr_longitude; ?>" class="waves-effect waves-light btn teal darken-4">Ver Candidatos</a>
+                    <a class="waves-effect waves-light btn red darken-4">Fechar Vaga</a>
+                    <a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>&nr_latitude=<?php echo $nr_latitude; ?>&nr_longitude=<?php echo $nr_longitude; ?>" class="waves-effect waves-light btn teal darken-4">Ver Candidatos</a>
               </div>
 
             <div class="card-reveal">
               <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Detalhes</span>
               </br>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!--Code Old -->
-              <div class="row">
-                <div class="col s12 m6">
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="move-up cyan darken-1">
-                        <div>
-                          <a class="chart-title white-text" href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>&nr_latitude=<?php echo $nr_latitude; ?>&nr_longitude=<?php echo $nr_longitude; ?>"><?php echo $ds_titulo; ?></a>
-                          <div class="chart-revenue cyan darken-2 white-text">
-                            <p class="chart-revenue-total"><?php echo $dt_cricacao; ?></p>
-                          </div>
-
-                        </div>
-                        <div class="trending-line-chart-wrapper">
-                          <p>
-                            <?php echo $ds_cargo; ?>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-content">
-                      <a class="btn-floating btn-move-up waves-effect waves-light darken-2 right"><i class="material-icons activator">+</i></i></a>
-                      <div class="col-sx-12 col-md-20 col-lg-20 col-sm-offset-0">
-                        <div id="doughnut-chart-wrapper" >
-                          <p><b>Status:</b><span class=<?php echo $tp_status=="Disponível"?"disponivel":"indisponivel";?>> <?php echo $tp_status; ?></span> 
-                          <button class = "btn waves-effect waves-light <?php echo $tp_status=="Disponível"?"red":"darken-2";?>" onclick="alterarStatusVaga(<?php echo $cd_vaga; ?>, <?php echo $tp_envia_status_ajax; ?>)" type = "submit"><?php echo $tp_status=="Disponível"?"Off":"On";?></button></p>
-                          <p><b>Tipo de contratação:</b><span> <?php echo $tp_contratacao; ?></span></p>
-                          <p><b>Salário:</b><span> <?php echo $vl_salario; ?></span></p>
-                          <p><b>Jornada de trabalho:</b><span> <?php echo $ds_horario_expediente; ?></span></p>
-                          <p><b>Experiência:</b><span> <?php echo $nr_experiencia; ?></span></p>
-                          <p><b>Quantidade de vagas:</b><span> <?php echo $nr_qtd_vaga; ?></span></p>
-                          <p><b>Benefícios:</b><span> <?php echo $ds_beneficios; ?></span></p>
-                          <p><b>Observação:</b><span> <?php echo $ds_observacao; ?></span></p>
-                          <p><b>Endereço:</b><span> <?php echo $ds_localizacao; ?></span></p>
-                        </div>
-                      </div>
-                    </div>
-
-                      <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">Requisitos <i class="material-icons right orange-text text-darken-2">Fechar</i></span>
-                        <table class="">
+              <table class="">
                           <thead>
                             <tr>
                               <th data-field="port">Curso</th>
@@ -251,18 +207,16 @@ include "foooter.php";
                               ?>
                             </tbody>
                           </table>
-                      </div>
-
-                  </div>
-                </div>
-              </div>
-
+            </div>
+          </div>
+        </div>
+      </div>
   <?php
           }
         }
       }
   ?>
-
+</section>
 <script type='text/javascript'>
     function alterarStatusVaga(cd_vaga, tp_envia_status_ajax) {
       $.ajax({      //Função AJAX
