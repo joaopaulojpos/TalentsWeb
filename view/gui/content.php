@@ -14,7 +14,7 @@
                 </div>
 
             <div class="col s12 m4 push-m2">
-                    <a href="vaga2.php">
+                    <a href="vaga.1.php">
                         <div class="card white">
                             <div class="card-content white-text">
                                 <span class="card-title grey-text">Vagas Publicadas</span>
