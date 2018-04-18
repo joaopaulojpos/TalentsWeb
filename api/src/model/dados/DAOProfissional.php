@@ -11,6 +11,7 @@ class DaoProfissional implements iDAOProfissional
 		try{
 			$comando = "insert into profissional (b_foto,ds_senha,dt_nascimento,ds_email,nr_latitude,nr_longitude,tp_conta,tp_sexo,ds_nome) 
 			            	 values (:b_foto,:ds_senha,:dt_nascimento,:ds_email,:nr_latitude,:nr_longitude,:tp_conta,:tp_sexo,:ds_nome)";
+			$db = db::getInstance();
 			$stmt = db::getInstance()->prepare($comando);
 			$run = $stmt->execute(array(
 	    			':b_foto' => $u->getBfoto(),
@@ -23,7 +24,9 @@ class DaoProfissional implements iDAOProfissional
 					':tp_sexo' => $u->getTpsexo(),
 					':ds_nome' => $u->getDsnome(),
 	 		));
+			$cd_profissional = $db->lastInsertId();
             $stmt->closeCursor();
+            return $cd_profissional;
 	 	}catch(Exception $e){
 			throw new Exception($e->getMessage());
 		}finally{
