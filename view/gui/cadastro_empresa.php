@@ -71,8 +71,8 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                 <div class="row">
                     <div class="input-field col s12 m10">
                         <i class="material-icons prefix">info</i>
-                        <input name="cnpj" id="cnpj" type="text" value="<?php echo $nr_cnpj ?>" title="Digite o CNPJ no formato nn.nnn.nnn/nnnn-nn" placeholder="00.000.000/0000-00">
-                        <label for="cnpj">CNPJ</label>
+                        <input name="cnpj" id="cnpj" type="text" required value="<?php echo $nr_cnpj ?>" title="Digite o CNPJ no formato nn.nnn.nnn/nnnn-nn" placeholder="00.000.000/0000-00">
+                        <label for="cnpj">CNPJ *</label>
                     </div>
 
                     <div class="input-field col s12 m2">
@@ -81,25 +81,25 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">business_center</i>
-                        <input name="razaosocial" id="razaosocial" type="text" value="<?php echo $ds_razao_social ?>">
-                        <label for="razaosocial">Razão Social</label>
+                        <input name="razaosocial" id="razaosocial" type="text" required value="<?php echo $ds_razao_social ?>">
+                        <label for="razaosocial">Razão Social *</label>
                     </div>
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">business_center</i>
-                        <input name="nomefantasia" id="nomefantasia" type="text" value="<?php echo $ds_nome_fantasia ?>">
-                        <label for="nomefantasia">Nome Fantasia</label>
+                        <input name="nomefantasia" id="nomefantasia" type="text" required value="<?php echo $ds_nome_fantasia ?>">
+                        <label for="nomefantasia">Nome Fantasia *</label>
                     </div>
 
                     <div class="input-field col s12 m6">
                         <i class="material-icons prefix">book</i>
-                        <input id="areaatuacao" name="areaatuacao" type="text" value="<?php echo $ds_area_atuacao ?>">
-                        <label for="areaatuacao">Área de atuação</label>
+                        <input id="areaatuacao" name="areaatuacao" type="text" required value="<?php echo $ds_area_atuacao ?>">
+                        <label for="areaatuacao">Área de atuação *</label>
                     </div>
 
                     <div class="input-field col s12 m6">
                         <select name="porte" id="porte">
-                            <option value="" disabled selected>Selecione o porte atual</option>
+                            <option value="" required disabled selected>Selecione o porte atual</option>
                             <option value="1" <?php echo $nr_porte=='1'?'selected':'';?>> 1 - 5 </option>
                             <option value="2" <?php echo $nr_porte=='2'?'selected':'';?>> 6 - 10 </option>
                             <option value="3" <?php echo $nr_porte=='3'?'selected':'';?>> 11 - 50 </option>
@@ -107,7 +107,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                             <option value="5" <?php echo $nr_porte=='5'?'selected':'';?>> 101 - 500 </option>
                             <option value="6" <?php echo $nr_porte=='6'?'selected':'';?>> 500 + </option>
                         </select>
-                        <label>Porte</label>
+                        <label>Porte *</label>
                     </div>
 
                     <div class="input-field col s12 m12">
@@ -118,14 +118,14 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">contacts</i>
-                        <input id="telefone" name="telefone" type="text" value="<?php echo $ds_telefone ?>" placeholder="99 999999999">
-                        <label for="telefone">Contato</label>
+                        <input id="telefone" name="telefone" type="text" required value="<?php echo $ds_telefone ?>" placeholder="99 999999999">
+                        <label for="telefone">Contato *</label>
                     </div>
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">email</i>
-                        <input id="email" name="email" type="text" value="<?php echo $ds_email ?>">
-                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required value="<?php echo $ds_email ?>">
+                        <label for="email">Email *</label>
                     </div>
 
                     <div class="input-field col s12 m12">
@@ -136,14 +136,14 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">https</i>
-                        <input id="senha" name="senha" type="password" value="<?php echo $ds_senha ?>">
-                        <label for="senha">Senha</label>
+                        <input id="senha" name="senha" type="password" required value="<?php echo $ds_senha ?>">
+                        <label for="senha">Senha *</label>
                     </div>
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">https</i>
-                        <input id="senhaconfirmacao" name="senhaconfirmacao" type="password" value="<?php echo $ds_senha ?>">
-                        <label for="senhaconfirmacao">Confirmar Senha</label>
+                        <input id="senhaconfirmacao" name="senhaconfirmacao" type="password" required value="<?php echo $ds_senha ?>">
+                        <label for="senhaconfirmacao">Confirmar Senha *</label>
                     </div>
 
                     <div class="input-field col s12 m12">
