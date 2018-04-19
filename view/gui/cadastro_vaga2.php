@@ -9,7 +9,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
   }
 
   if(empty($_POST['txtLatitude']) && empty($_POST['txtLongitude'])){
-    header("Location: cadastro_vaga_localizacao.php"); 
+    header("Location: cadastro_local.php"); 
     exit; //Redireciona o visitante para login
   }
 
@@ -163,17 +163,25 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
                             ?>
                         </select>
-                        <table class="table-cursos" id="table-cursos">
-                            <tbody id="itemlistCurso">
-                            </tbody>
-                        </table>
-                       <!-- <label>Cursos Desejado Para Vaga</label> -->
+                       <label>Cursos Desejado Para Vaga</label>
                     </div>
 
                     <div class="col s12 m2"> 
-                        <input type="BUTTON" class="btn waves-effect waves-light" id="adicionar_curso" name="adicionar_curso" value="Adicionar" onclick="adicionarCurso()"/>        
+                        <button type="button" class="btn waves-effect waves-light" id="adicionar_curso" name="adicionar_curso">Adicionar</button>        
                     </div>
+                </div>
+            </div>
 
+            <div class="container">
+                <div class="row">
+                    <table class="striped" id="table-cursos">
+                        <tbody id="itemlistCurso"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
                     <div class="input-field col s12 m9">
                         <select name="codigo_comport" id="codigo_comport">
                             <option value="" disabled selected>Competência(s) Comportamentais</option>
@@ -191,16 +199,25 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                                 }
                             ?>
                         </select>
-                        <table class="table-comport" id="table-comport">
-                            <tbody id="itemlistComport">
-                            </tbody>
-                        </table>
-                        <!-- <label>Competência(s) Comportamentais</label> -->
+                        <label>Competência(s) Comportamentais</label>
                     </div>
                     
                     <div class="col s12 m2"> 
-                        <input type="BUTTON" class="btn waves-effect waves-light" id="adicionar_comport" name="adicionar_comport" value="Adicionar" onclick="adicionarComport()"/>        
+                        <button type="button" class="btn waves-effect waves-light" id="adicionar_comport" name="adicionar_comport">Adicionar</button>        
                     </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <table class="striped" id="table-comport">
+                        <tbody id="itemlistComport"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
                     
                     <div class="input-field col s12 m6">
                         <select name="codigo_tecnica" id="codigo_tecnica">
@@ -219,11 +236,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                                     }
                             ?>
                             </select>
-                        <table class="table-tecnicas" id="table-tecnicas">  
-                            <tbody id="itemlistTecnica">
-                            </tbody>
-                        </table>    
-                        <!-- <label>Competência(s) Técnica(s)</label> -->
+                        <label>Competência(s) Técnica(s)</label>
                     </div>
 
                     <div class="input-field col s12 m3">
@@ -239,9 +252,22 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                     </div>
 
                     <div class="col s12 m3"> 
-                        <input type="BUTTON" class="btn waves-effect waves-light" id="adicionar_tecnica" name="adicionar_tecnica" value="Adicionar" onclick="adicionarTecnica()"/>        
+                        <button type="button" class="btn waves-effect waves-light" id="adicionar_tecnica" name="adicionar_tecnica">Adicionar</button>        
                     </div>
 
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <table class="striped" id="table-tecnicas">
+                        <tbody id="itemlistTecnica"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
                     <div class="input-field col s12 m6">
                         <select name="codigo_idioma" id="codigo_idioma">
                             <option value="" disabled selected>Idiomas</option>
@@ -258,11 +284,8 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                                 }
                             ?>
                         </select>
-                        <table class="table-idiomas" id="table-idiomas">
-                            <tbody id="itemlistIdioma">
-                            </tbody>
-                        </table>
-                        <!-- <label>Escolha os idiomas desejáveis</label> -->
+
+                        <label>Escolha os idiomas desejáveis</label>
                     </div>
 
                     <div class="input-field col s12 m3">
@@ -275,27 +298,34 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                         <label>Escolha o nível</label>
                     </div>
                     
-                    <div class="col s12 m3"> 
-                        <input type="BUTTON" class="btn waves-effect waves-light" id="adicionar_idioma" name="adicionar_idioma" value="Adicionar" onclick="adicionarIdioma()"/>        
+                    <div class="col s12 m3">
+                        <button type="button" class="btn waves-effect waves-light" id="adicionar_idioma" name="adicionar_idioma">Adicionar</button>        
                     </div>
-
+                </div>
+            </div>  
+             
+            <div class="container">
+                <div class="row">
+                    <table class="striped" id="table-idiomas">
+                        <tbody id="itemlistIdioma"></tbody>
+                    </table>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="container center">
-                    <span class="errMessage" id="errMessage"></span>
+            <div class="container">
+                <div class="row">
+                    <span class="errMessage" id="errMessage">teste</span>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="container center">
+            <div class="container">
+                <div class="row">
                     <div class="loader" id="loader"></div>
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col s4 m4 offset-s2 offset-m2">
+            <div class="container">
+                <div class="row">
                     <button class="btn waves-effect waves-light" type="submit" name="buttonSubmit" id="buttonSubmit">Criar
                         <i class="material-icons right">send</i>
                     </button>         
@@ -306,7 +336,138 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 </section>
 
 <script type='text/javascript'>
+
+    (function() {
+        document.getElementById("adicionar_curso").onclick = function() { 
+            //pega o valor dos componentes html que possuem esses id
+            var codigo_curso = $("#codigo_curso").val();
+            var descricao_curso = $("#codigo_curso option:selected").text();
+            var items = "";
+
+            if (!codigo_curso)
+                return false;
+
+            //esse codigo html vai ser inserido para o usuário ver na tela (esse itemcurso vai ser a lista utilizado para pegar os item depois)
+            items += "<tr>";
+            items += "<td class='col s9 m9'><input type='hidden' name='itemcurso[codigo]' value='"+ codigo_curso +"'>"+descricao_curso+"</td>";
+            items += "<td class='col s3 m3'><a href='javascript:void(0);' id='hapus'>Remove</a></td>";
+            items += "</tr>";
+
+            if ($("#itemlistCurso tr").length == 0)
+            {          
+                $("#itemlistCurso").append(items);
+            }else{
+                var callback = checkListCurso(codigo_curso);
+                if(callback === true){
+                    $("#itemlistCurso").append(items);
+                    return false;
+                }
+            } 
+        };
+    })();
+
+    (function() {
+        document.getElementById("adicionar_comport").onclick = function() { 
+            //pega o valor dos componentes html que possuem esses id
+            var codigo_comport = $("#codigo_comport").val();
+            var descricao_comport = $("#codigo_comport option:selected").text();
+            var items = "";
+
+            if (!codigo_comport)
+                return false;
+
+            //esse codigo html vai ser inserido para o usuário ver na tela (esse itemhabilidade vai ser a lista utilizado para pegar os item depois)
+            //()
+            items += "<tr>";
+            items += "<td class='col s9 m9'><input type='hidden' name='itemcomport[codigo]' value='"+ codigo_comport +"'>"+descricao_comport+"</td>";
+            items += "<td class='col s3 m3'><a href='javascript:void(0);' id='hapus'>Remove</a></td>";
+            items += "</tr>";
+
+            if ($("#itemlistComport tr").length == 0)
+            {
+                $("#itemlistComport").append(items);
+            }else{
+            var callback = checkListComport(codigo_comport);
+                if(callback === true){
+                    $("#itemlistComport").append(items);
+                    return false;
+                }
+            }
+        };
+    })();
+
+    (function() {
+        document.getElementById("adicionar_tecnica").onclick = function() { 
+            //pega o valor dos componentes html que possuem esses id
+            var codigo_tecnica = $("#codigo_tecnica").val();
+            var descricao_tecnica = $("#codigo_tecnica option:selected").text();
+            var nivel_tecnica = $("#nivel_tecnica").val();
+            var descricao_nivel_tecnica = $("#nivel_tecnica option:selected").text();
+            var items = "";
+
+            if ((!codigo_tecnica) || (!nivel_tecnica))
+                return false;
+
+            //esse codigo html vai ser inserido para o usuário ver na tela (esse itemhabilidade vai ser a lista utilizado para pegar os item depois)
+            //()
+            items += "<tr>";
+            items += "<td class='col s6 m6'><input type='hidden' name='itemtecnica[codigo]' value='"+ codigo_tecnica +"'>"+descricao_tecnica+"</td>";
+            items += "<td class='col s3 m3'><input type='hidden' class='span2' name='itemtecnica[nivel]' value='"+ nivel_tecnica +"'>"+ descricao_nivel_tecnica +"</td>";
+            items += "<td class='col s3 m3'><a href='javascript:void(0);' id='hapus'>Remove</a></td>";
+            items += "</tr>";
+
+            if ($("#itemlistTecnica tr").length == 0)
+            {
+                $("#itemlistTecnica").append(items);
+            }else{
+                var callback = checkListTecnica(codigo_tecnica);
+                if(callback === true){
+                    $("#itemlistTecnica").append(items);
+                    return false;
+                }
+            }
+        };
+    })();
+
+    (function() {
+        document.getElementById("adicionar_idioma").onclick = function() { 
+            //pega o valor dos componentes html que possuem esses id
+            var codigo_idioma = $("#codigo_idioma").val();
+            var descricao_idioma = $("#codigo_idioma option:selected").text();
+            var nivel_idioma = $("#nivel_idioma").val();
+            var descricao_nivel_idioma = $("#nivel_idioma option:selected").text();
+            var items = "";
+
+
+            if ((!codigo_idioma) || (!nivel_idioma))
+                return false;
+
+            //esse codigo html vai ser inserido para o usuário ver na tela (esse itemidioma vai ser a lista utilizado para pegar os item depois)
+            items += "<tr>";
+            items += "<td class='col s6 m6'><input type='hidden' name='itemidioma[codigo]' value='"+ codigo_idioma +"'>"+descricao_idioma+"</td>";
+            items += "<td class='col s3 m3'><input type='hidden'  name='itemidioma[nivel]' value='"+ nivel_idioma +"'>"+ descricao_nivel_idioma +"</td>";
+            items += "<td class='col s3 m3'><a href='javascript:void(0);'  id='hapus'>Remove</a></td>";
+            items += "</tr>";
+
+            if ($("#itemlistIdioma tr").length == 0)
+            {
+                $("#itemlistIdioma").append(items);
+            }else{
+                var callback = checkListIdioma(codigo_idioma);
+                if(callback === true){
+                    $("#itemlistIdioma").append(items);
+                    return false;
+                }
+            }
+        };
+    })();
+
     $(document).ready(function(){
+
+      /*$('#adicionar_curso').onclick = function() {
+        
+      }*/
+
       $('#errMessage').hide();
       $('#formulario').submit(function(){  //Ao submeter formulário
 
@@ -375,7 +536,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                 "&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados
             success: function (result){     //Sucesso no AJAX
                         if (result == 1){
-                          location.href='vaga.php';
+                          location.href='dashboard.php';
                         }else{
                           document.getElementById('errMessage').innerHTML = result;
                           $('#errMessage').show();   //Informa o erro                      
@@ -385,136 +546,6 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
         return false; //Evita que a página seja atualizada
       })
     });
-
-    //função que adiciona o idioma na tela
-    function adicionarIdioma()
-    {
-        alert('aa');
-      //pega o valor dos componentes html que possuem esses id
-      var codigo_idioma = $("#codigo_idioma").val();
-      var descricao_idioma = $("#codigo_idioma option:selected").text();
-      var nivel_idioma = $("#nivel_idioma").val();
-      var descricao_nivel_idioma = $("#nivel_idioma option:selected").text();
-      var items = "";
-
-
-      if ((!codigo_idioma) || (!nivel_idioma))
-      		return false;
-
-      //esse codigo html vai ser inserido para o usuário ver na tela (esse itemidioma vai ser a lista utilizado para pegar os item depois)
-      items += "<tr>";
-      items += "<td><input type='hidden' name='itemidioma[codigo]' value='"+ codigo_idioma +"'>"+descricao_idioma+"</td>";
-      items += "<td><input type='hidden' class='span2' name='itemidioma[nivel]' value='"+ nivel_idioma +"'>"+ descricao_nivel_idioma +"</td>";
-      items += "<td><a href='javascript:void(0);' id='hapus'>Remove</a></td>";
-      items += "</tr>";
-
-      if ($("#itemlistIdioma tr").length == 0)
-      {
-          $("#itemlistIdioma").append(items);
-      }else{
-          var callback = checkListIdioma(codigo_idioma);
-          if(callback === true){
-              $("#itemlistIdioma").append(items);
-              return false;
-          }
-      }
-    }
-
-    //função que adiciona o curso na tela
-    function adicionarCurso()
-    {
-        
-      //pega o valor dos componentes html que possuem esses id
-      var codigo_curso = $("#codigo_curso").val();
-      var descricao_curso = $("#codigo_curso option:selected").text();
-      var items = "";
-
-      if (!codigo_curso)
-      		return false;
-
-      //esse codigo html vai ser inserido para o usuário ver na tela (esse itemcurso vai ser a lista utilizado para pegar os item depois)
-      items += "<tr>";
-      items += "<td><input type='hidden' name='itemcurso[codigo]' value='"+ codigo_curso +"'>"+descricao_curso+"</td>";
-      items += "<td><a href='javascript:void(0);' id='hapus'>Remove</a></td>";
-      items += "</tr>";
-
-        alert($("#itemlistCurso tr").length);
-      if ($("#itemlistCurso tr").length == 0)
-      {
-          
-          $("#itemlistCurso").append(items);
-      }else{
-          var callback = checkListCurso(codigo_curso);
-          if(callback === true){
-              $("#itemlistCurso").append(items);
-              return false;
-          }
-      }
-    }
-
-    //função que adiciona o habilidade na tela
-    function adicionarTecnica()
-    {
-      //pega o valor dos componentes html que possuem esses id
-      var codigo_tecnica = $("#codigo_tecnica").val();
-      var descricao_tecnica = $("#codigo_tecnica option:selected").text();
-      var nivel_tecnica = $("#nivel_tecnica").val();
-      var descricao_nivel_tecnica = $("#nivel_tecnica option:selected").text();
-      var items = "";
-
-      if ((!codigo_tecnica) || (!nivel_tecnica))
-          return false;
-
-      //esse codigo html vai ser inserido para o usuário ver na tela (esse itemhabilidade vai ser a lista utilizado para pegar os item depois)
-      //()
-      items += "<tr>";
-      items += "<td><input type='hidden' name='itemtecnica[codigo]' value='"+ codigo_tecnica +"'>"+descricao_tecnica+"</td>";
-      items += "<td><input type='hidden' class='span2' name='itemtecnica[nivel]' value='"+ nivel_tecnica +"'>"+ descricao_nivel_tecnica +"</td>";
-      items += "<td><a href='javascript:void(0);' id='hapus'>Remove</a></td>";
-      items += "</tr>";
-
-      if ($("#itemlistTecnica tr").length == 0)
-      {
-          $("#itemlistTecnica").append(items);
-      }else{
-          var callback = checkListTecnica(codigo_tecnica);
-          if(callback === true){
-              $("#itemlistTecnica").append(items);
-              return false;
-          }
-      }
-    }
-
-    //função que adiciona o habilidade na tela
-    function adicionarComport()
-    {
-      //pega o valor dos componentes html que possuem esses id
-      var codigo_comport = $("#codigo_comport").val();
-      var descricao_comport = $("#codigo_comport option:selected").text();
-      var items = "";
-
-      if (!codigo_comport)
-          return false;
-
-      //esse codigo html vai ser inserido para o usuário ver na tela (esse itemhabilidade vai ser a lista utilizado para pegar os item depois)
-      //()
-      items += "<tr>";
-      items += "<td><input type='hidden' name='itemcomport[codigo]' value='"+ codigo_comport +"'>"+descricao_comport+"</td>";
-      items += "<td><a href='javascript:void(0);' id='hapus'>Remove</a></td>";
-      items += "</tr>";
-
-      if ($("#itemlistComport tr").length == 0)
-      {
-          $("#itemlistComport").append(items);
-      }else{
-          var callback = checkListComport(codigo_comport);
-          if(callback === true){
-              $("#itemlistComport").append(items);
-              return false;
-          }
-      }
-    }
-
 
     //função para evitar de inserir 2 idiomas iguais
     function checkListIdioma(val){
@@ -592,9 +623,5 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
     $("#itemlistComport").on("click","#hapus",function(){
         $(this).parent().parent().remove();
     });
-
-
-
-
 
   </script>

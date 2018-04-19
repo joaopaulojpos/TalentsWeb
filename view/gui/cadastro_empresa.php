@@ -124,7 +124,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">email</i>
-                        <input id="email" name="email" type="email" required value="<?php echo $ds_email ?>">
+                        <input type="email" required class="input-text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" value="<?php echo $ds_email ?>" />
                         <label for="email">Email *</label>
                     </div>
 
@@ -221,7 +221,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
           data: "cd_empresa="+codigo_empresa+"&cnpj="+cnpj+"&razaosocial="+razao_social+"&nomefantasia="+nome_fantasia+"&porte="+porte+"&areaatuacao="+area_atuacao+"&responsavel="+responsavel+"&telefone="+telefone+"&site="+site+"&email="+email+"&senha="+senha, //Dados
             success: function (result){     //Sucesso no AJAX
                         if(result==1){            
-                          location.href='vaga.php';  //Redireciona
+                          location.href='dashboard.php';  //Redireciona
                         }else{
                           document.getElementById('errMessage').innerHTML = result;
                           $('#loader').hide();
