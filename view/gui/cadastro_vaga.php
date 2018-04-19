@@ -7,7 +7,7 @@
   }
 
   if(empty($_POST['txtLatitude']) && empty($_POST['txtLongitude'])){
-    header("Location: cadastro_vaga_localizacao.php"); 
+    header("Location: cadastro_local.php"); 
     exit; //Redireciona o visitante para login
   }
 
