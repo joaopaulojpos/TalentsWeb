@@ -25,7 +25,7 @@ error_reporting(E_ALL);
         <div class="navbar-fixed">
             <nav class="teal darken-1">
                 <div class="nav-wrapper">
-                  <a href="#!" class="brand-logo">&nbsp; Talents</a>
+                  <a href="#!" class="brand-logo logo">&nbsp; <span class="logo2">T</span><span class="logo3">alents</span></a>
                   <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                   <ul class="right hide-on-med-and-down">
                     <li><a href="dashboard.php">Home</a></li>
@@ -38,7 +38,7 @@ error_reporting(E_ALL);
         <!-- Menu Mobile -->
         <ul class="side-nav" id="mobile-demo">
             <li><a href="dashboard.php">Home</a></li>
-            <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Perfil"><a href="#"><i class="material-icons">person</i></a></li>
-            <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="#"><i class="material-icons">exit_to_app</i></a></li>
+            <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Perfil"><a href="cadastro_empresa.php"><i class="material-icons">person</i></a></li>
+            <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="login.php"><i class="material-icons">exit_to_app</i></a></li>
         </ul>
     </header>

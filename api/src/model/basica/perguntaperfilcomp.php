@@ -33,7 +33,7 @@ class perguntaperfilcomp implements JsonSerializable
     /**
      * @param $alternativas
      */
-    public function setAlternativas($alternativas): void
+    public function setAlternativas($alternativas)
     {
         $this->alternativas[] = $alternativas;
     }
@@ -48,7 +48,7 @@ class perguntaperfilcomp implements JsonSerializable
     /**
      * @param mixed $resposta
      */
-    public function setResposta($resposta): void
+    public function setResposta($resposta)
     {
         $this->resposta = $resposta;
     }

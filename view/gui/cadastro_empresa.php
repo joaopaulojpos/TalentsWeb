@@ -57,12 +57,25 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
     <div class="container">
         <div class="row center">
-            <h5>
-                <b>Cadastre sua empresa</b>
-            </h5>
-            <br/> Se você chegou até aqui, é porque gostou da proposta da plataforma
-            <br/> Então está esperando o que ? Preencha o formulário abaixo e seja feliz
-            <br/> Venha fazer parte dessa revolução no mundo do recrutamento.
+            <?php                     
+              if ($cd_empresa == ''){
+            ?>
+              <h5>
+                  <b>Cadastre sua empresa</b>
+              </h5>
+              <br/> Se você chegou até aqui, é porque gostou da proposta da plataforma
+              <br/> Então está esperando o que ? Preencha o formulário abaixo e seja feliz
+              <br/> Venha fazer parte dessa revolução no mundo do recrutamento.
+              <?php
+              }else{
+            ?>
+              <h5>
+                <b>Alterar dados cadastrais empresa</b>
+              </h5>
+              <br/>
+            <?php
+              }
+            ?>
         </div>
 
         <form name="formulario" id="formulario">
@@ -130,7 +143,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
                     <div class="input-field col s12 m12">
                         <i class="material-icons prefix">language</i>
-                        <input id="site" name="site" value="<?php echo $ds_site ?>">
+                        <input id="site" name="site" type="text" value="<?php echo $ds_site ?>">
                         <label for="site">Site</label>
                     </div>
 

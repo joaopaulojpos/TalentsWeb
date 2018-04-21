@@ -20,7 +20,7 @@ class alternativaperfilcomp implements JsonSerializable
     /**
      * @param mixed $cd_alternativa_perfil_comp
      */
-    public function setCdAlternativaPerfilComp($cd_alternativa_perfil_comp): void
+    public function setCdAlternativaPerfilComp($cd_alternativa_perfil_comp)
     {
         $this->cd_alternativa_perfil_comp = $cd_alternativa_perfil_comp;
     }
@@ -36,7 +36,7 @@ class alternativaperfilcomp implements JsonSerializable
     /**
      * @param mixed $ds_resposta
      */
-    public function setDsResposta($ds_resposta): void
+    public function setDsResposta($ds_resposta)
     {
         $this->ds_resposta = $ds_resposta;
     }
@@ -52,7 +52,7 @@ class alternativaperfilcomp implements JsonSerializable
     /**
      * @param mixed $nr_letra_ref
      */
-    public function setNrLetraRef($nr_letra_ref): void
+    public function setNrLetraRef($nr_letra_ref)
     {
         $this->nr_letra_ref = $nr_letra_ref;
     }

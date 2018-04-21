@@ -9,7 +9,7 @@ error_reporting(E_ALL);
 
 <nav class="menu" role="navigation">
   <div class="nav-wrapper container">
-    <a id="logo-container" href="#"><span class="logo-text">T</span>alents</a>
+    <a class="logo" id="logo-container" href="#"><span class="logo2">T</span>alents</a>
     <?php if (!isset($_SESSION['empresaLogada'])) { ?>
       <ul class="right">
         <li><a href="login.php">Entrar</a></li>
