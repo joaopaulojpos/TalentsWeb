@@ -8,7 +8,7 @@ class DAOVaga
 		try{
 			$request = new RequestMethods();
 
-	        return $request->post('http://localhost/talentsweb/api/public/api/vaga/publicar',
+	        return $request->post($request::$url.'/vaga/publicar',
 				array( 
 				'nr_qtd_vaga' => $vaga->getNrQtdVaga(),
 				'ds_observacao' => $vaga->getDsObservacao(),
@@ -37,20 +37,20 @@ class DAOVaga
 	public function pesquisar(){
         $request = new RequestMethods();
 
-        return $request->get("http://localhost/talentsweb/api/public/api/vagas",array());
+        return $request->get($request::$url.'/vagas',array());
     }
 
     public function listarProfissionaisVaga($cd_vaga){
     	$request = new RequestMethods();
     	
-    	return $request->get("http://localhost/talentsweb/api/public/api/vaga/".$cd_vaga."/profissionais",array());
+    	return $request->get($request::$url.'/vaga/'.$cd_vaga.'/profissionais',array());
     }
 
     public function likeProfissionalVaga($cd_vaga, $cd_profissional){
     	try{
     	$request = new RequestMethods();
     	
-    	return $request->post("http://localhost/talentsweb/api/public/api/vaga/like/profissional",
+    	return $request->post($request::$url.'/vaga/like/profissional',
     		array(
     		'cd_vaga' => $cd_vaga,
     		'cd_profissional' => $cd_profissional));

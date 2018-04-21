@@ -21,6 +21,8 @@ include "foooter.php";
 ?>
 
 <section="section"> 
+
+
   <div class="row">
   <div class="container">
     
@@ -28,6 +30,8 @@ include "foooter.php";
  
   </div>
   </div>
+
+  <div class="row">
 
   <?php foreach ($arrayvagas as $key => $value) {
           if ($key == 'sucess'){
@@ -87,137 +91,151 @@ include "foooter.php";
               }
              
   ?>
-      <div class="row">
-        <div class="col s12 m6">
-          <div class="card">
-            <div class="card-content">
-              <span class="card-title activator grey-text text-darken-4"><a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>&nr_latitude=<?php echo $nr_latitude; ?>&nr_longitude=<?php echo $nr_longitude; ?>"><?php echo $ds_titulo; ?></a><i class="material-icons right">more_vert</i></span>
-              <p><a href="#"><?php echo $ds_cargo; ?></a></p>
-              <p class="text-darken-4"><?php echo $dt_cricacao; ?></p>
-              </br>
-              <div class="divider"></div>
-              </br>
-              <p><b>Status:</b><span class=<?php echo $tp_status=="Disponível"?"disponivel":"indisponivel";?>> <?php echo $tp_status; ?></span></p>
-                          <p><b>Tipo de contratação:</b><span> <?php echo $tp_contratacao; ?></span></p>
-                          <p><b>Salário:</b><span> <?php echo $vl_salario; ?></span></p>
-                          <p><b>Jornada de trabalho:</b><span> <?php echo $ds_horario_expediente; ?></span></p>
-                          <p><b>Experiência:</b><span> <?php echo $nr_experiencia; ?></span></p>
-                          <p><b>Quantidade de vagas:</b><span> <?php echo $nr_qtd_vaga; ?></span></p>
-                          <p><b>Benefícios:</b><span> <?php echo $ds_beneficios; ?></span></p>
-                          <p><b>Observação:</b><span> <?php echo $ds_observacao; ?></span></p>
-                          <p><b>Endereço:</b><span> <?php echo $ds_localizacao; ?></span></p>
-              </p>
-  
-            </div>
 
-              <div class="card-action">
-                    <a class="waves-effect waves-light btn red darken-4">Fechar Vaga</a>
-                    <a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>&nr_latitude=<?php echo $nr_latitude; ?>&nr_longitude=<?php echo $nr_longitude; ?>" class="waves-effect waves-light btn teal darken-4">Ver Candidatos</a>
-              </div>
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4"><a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>&nr_latitude=<?php echo $nr_latitude; ?>&nr_longitude=<?php echo $nr_longitude; ?>"><?php echo $ds_titulo; ?></a><i class="material-icons right">more_vert</i></span>
+          <p><a href="#"><?php echo $ds_cargo; ?></a></p>
+          <p class="text-darken-4"><?php echo $dt_cricacao; ?></p>
+          </br>
+          <div class="divider"></div>
+          </br>
+          <p><b>Status:</b><span class=<?php echo $tp_status=="Disponível"?"disponivel":"indisponivel";?>> <?php echo $tp_status; ?></span></p>
+                      <p><b>Tipo de contratação:</b><span> <?php echo $tp_contratacao; ?></span></p>
+                      <p><b>Salário:</b><span> <?php echo $vl_salario; ?></span></p>
+                      <p><b>Jornada de trabalho:</b><span> <?php echo $ds_horario_expediente; ?></span></p>
+                      <p><b>Experiência:</b><span> <?php echo $nr_experiencia; ?></span></p>
+                      <p><b>Quantidade de vagas:</b><span> <?php echo $nr_qtd_vaga; ?></span></p>
+                      <p><b>Benefícios:</b><span> <?php echo $ds_beneficios; ?></span></p>
+                      <p><b>Observação:</b><span> <?php echo $ds_observacao; ?></span></p>
+                      <p><b>Endereço:</b><span> <?php echo $ds_localizacao; ?></span></p>
+          </p>
 
-            <div class="card-reveal">
-              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Detalhes</span>
-              </br>
-              <table class="">
-                          <thead>
-                            <tr>
-                              <th data-field="port">Curso</th>
-                              <th data-field="protocol">Formação</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <?php if ($value["cursos"]){ 
-                                    foreach ($value["cursos"] as $key => $cursos) {    
-                            ?>
-                              <tr>
-                                <td class='primeiro'> <?php echo $cursos['ds_curso']; ?></td>
-                                <td class='segundo'> <?php echo $cursos['ds_formacao']; ?></td>
-                              </tr>
-                            <?php 
-                                    }
-                                  } 
+        </div>
 
-                            ?> 
-                          </tbody>
-                        </table>
-
-                        <table class="">
-                          <thead>
-                            <tr>
-                              <th data-field="port">Competência Técnica</th>
-                              <th data-field="protocol">Nível</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <?php if ($value["competencias_tecnicas"]){ 
-                                    foreach ($value["competencias_tecnicas"] as $key => $comp_tec) {    
-                            ?>
-                              <tr>
-                                <td class='primeiro'> <?php echo $comp_tec['ds_competencia_tecnica']; ?></td>
-                                <td class='segundo'> <?php echo $comp_tec['nr_nivel']; ?></td>
-                              </tr>
-                            <?php 
-                                    }
-                                  } 
-
-                            ?>
-                          </tbody>
-                        </table>
-
-                        <table class="">
-                            <thead>
-                              <tr>
-                                <th data-field="port">Competência Comportamental</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <?php if ($value["competencias_comp"]){ 
-                                      foreach ($value["competencias_comp"] as $key => $comp_comport) {    
-                              ?>
-                                <tr>
-                                  <td> <?php echo $comp_comport['ds_competencia_comport']; ?></td>
-                                </tr>
-                              <?php 
-                                      }
-                                    } 
-
-                              ?>
-                            </tbody>
-                          </table>
-
-                        <table class="">
-                            <thead>
-                              <tr>
-                                <th data-field="port">Idioma</th>
-                                <th data-field="protocol">Nível</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <?php if ($value["idiomas"]){ 
-                                      foreach ($value["idiomas"] as $key => $comp_tec) {    
-                              ?>
-                                <tr>
-                                  <td class='primeiro'> <?php echo $comp_tec['ds_idioma']; ?></td>
-                                  <td class='segundo'> <?php echo $comp_tec['nr_nivel']; ?></td>
-                                </tr>
-                              <?php 
-                                      }
-                                    } 
-
-                              ?>
-                            </tbody>
-                          </table>
-            </div>
+          <div class="card-action">
+                <a class="waves-effect waves-light btn red darken-4">Fechar Vaga</a>
+                <a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>&nr_latitude=<?php echo $nr_latitude; ?>&nr_longitude=<?php echo $nr_longitude; ?>" class="waves-effect waves-light btn teal darken-4">Ver Candidatos</a>
           </div>
+
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Detalhes</span>
+          </br>
+          <table class="">
+                      <thead>
+                        <tr>
+                          <th data-field="port">Curso</th>
+                          <th data-field="protocol">Formação</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php if ($value["cursos"]){ 
+                                foreach ($value["cursos"] as $key => $cursos) {    
+                        ?>
+                          <tr>
+                            <td class='primeiro'> <?php echo $cursos['ds_curso']; ?></td>
+                            <td class='segundo'> <?php echo $cursos['ds_formacao']; ?></td>
+                          </tr>
+                        <?php 
+                                }
+                              } 
+
+                        ?> 
+                      </tbody>
+                    </table>
+
+                    <table class="">
+                      <thead>
+                        <tr>
+                          <th data-field="port">Competência Técnica</th>
+                          <th data-field="protocol">Nível</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <?php if ($value["competencias_tecnicas"]){ 
+                                foreach ($value["competencias_tecnicas"] as $key => $comp_tec) {    
+                        ?>
+                          <tr>
+                            <td class='primeiro'> <?php echo $comp_tec['ds_competencia_tecnica']; ?></td>
+                            <td class='segundo'> <?php echo $comp_tec['nr_nivel']; ?></td>
+                          </tr>
+                        <?php 
+                                }
+                              } 
+
+                        ?>
+                      </tbody>
+                    </table>
+
+                    <table class="">
+                        <thead>
+                          <tr>
+                            <th data-field="port">Competência Comportamental</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <?php if ($value["competencias_comp"]){ 
+                                  foreach ($value["competencias_comp"] as $key => $comp_comport) {    
+                          ?>
+                            <tr>
+                              <td> <?php echo $comp_comport['ds_competencia_comport']; ?></td>
+                            </tr>
+                          <?php 
+                                  }
+                                } 
+
+                          ?>
+                        </tbody>
+                      </table>
+
+                    <table class="">
+                        <thead>
+                          <tr>
+                            <th data-field="port">Idioma</th>
+                            <th data-field="protocol">Nível</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <?php if ($value["idiomas"]){ 
+                                  foreach ($value["idiomas"] as $key => $comp_tec) {    
+                          ?>
+                            <tr>
+                              <td class='primeiro'> <?php echo $comp_tec['ds_idioma']; ?></td>
+                              <td class='segundo'> <?php echo $comp_tec['nr_nivel']; ?></td>
+                            </tr>
+                          <?php 
+                                  }
+                                } 
+
+                          ?>
+                        </tbody>
+                      </table>
         </div>
       </div>
+    </div>
+    <div class="load" id="load">
+      <hr/><hr/><hr/><hr/>
+    </div>
+      
   <?php
           }
         }
       }
   ?>
+  </div>
 </section>
 <script type='text/javascript'>
+    $(document).ready(function(){
+
+        //Esconde preloader
+        $(window).load(function(){
+            $('#load').fadeOut(1500);//1500 é a duração do efeito (1.5 seg)
+        });
+
+    });
+
+
     function alterarStatusVaga(cd_vaga, tp_envia_status_ajax) {
       $.ajax({      //Função AJAX
       url:"valida_alteracao_status_vaga.php",      //Arquivo php

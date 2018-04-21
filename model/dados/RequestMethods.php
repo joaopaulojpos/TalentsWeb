@@ -9,6 +9,9 @@
 class RequestMethods
 {
 
+     public static $url = "http://talents.heliohost.org/api/public/api";
+     //http://localhost/talentsweb/api/public/api
+
     /**
      * @param $url
      * @param $params

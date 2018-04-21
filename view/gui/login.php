@@ -54,7 +54,7 @@ ob_start();
 
             <div class="row">
               <div class="input-field col s12">
-                <button class="btn waves-effect waves-light col s12 teal darken-1" type="submit" name="buttonSubmit">LOGIN</button>
+                <button class="btn waves-effect waves-light col s12 teal darken-1" type="submit" id="buttonSubmit" name="buttonSubmit">LOGIN</button>
               </div>
             </div>
 
@@ -65,6 +65,10 @@ ob_start();
               <div class="input-field col s6 m6 l6">
                 <p class="right-align"><a href="#">Esqueceu sua senha ?</a></p>
               </div>          
+            </div>
+
+            <div class="load" id="load">
+              <hr/><hr/><hr/><hr/>
             </div>
 
           </form>
@@ -78,13 +82,14 @@ ob_start();
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
     <!-- SCRIPT MANUAIS -->
-    <script src="js/vaga.js"></script>
+
   <script type='text/javascript'>
     $(document).ready(function(){
       $('#errMessage').hide(); //Esconde o elemento com id errolog
-      $('#loader').hide();
+      $('#load').hide();
       $('#formulario').submit(function(){  //Ao submeter formulário
-      	$('#loader').show();
+      	$('#load').show();
+        document.getElementById("buttonSubmit").disabled = true;
         var username=$('#username').val();  //Pega valor do campo login
         var password=$('#password').val();  //Pega valor do campo senha
         $.ajax({      //Função AJAX
@@ -96,8 +101,9 @@ ob_start();
                           location.href='dashboard.php';  //Redireciona
                         }else{
                           document.getElementById('errMessage').innerHTML = result;
-                          $('#loader').hide();
+                          $('#load').hide();
                           $('#errMessage').show();   //Informa o erro
+                          document.getElementById("buttonSubmit").disabled = false;
                         }
                     }
         })

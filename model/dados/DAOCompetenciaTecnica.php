@@ -6,7 +6,7 @@ class DAOCompetenciaTecnica
 
 	public function pesquisar(CompetenciaTecnica $ct){
 		$request = new RequestMethods();
-		return $request->get('http://localhost/talentsweb/api/public/api/competencias_tecnicas');
+		return $request->get($request::$url.'/competencias_tecnicas');
 	}
 }
 ?>
