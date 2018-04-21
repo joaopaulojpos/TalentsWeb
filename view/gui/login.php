@@ -93,7 +93,7 @@ ob_start();
         var username=$('#username').val();  //Pega valor do campo login
         var password=$('#password').val();  //Pega valor do campo senha
         $.ajax({      //Função AJAX
-          url:"valida_login.php",      //Arquivo php
+          url:"../validacoes/valida_login.php",      //Arquivo php
           type:"post",        //Método de envio
           data: "username="+username+"&password="+password, //Dados
             success: function (result){     //Sucesso no AJAX
@@ -105,7 +105,13 @@ ob_start();
                           $('#errMessage').show();   //Informa o erro
                           document.getElementById("buttonSubmit").disabled = false;
                         }
-                    }
+            },
+            error: function (result){
+                document.getElementById('errMessage').innerHTML = 'Erro ao efetuar login, por favor, entre em contato com nosso suporte!';
+                $('#load').hide();
+                $('#errMessage').show();   //Informa o erro
+                document.getElementById("buttonSubmit").disabled = false;
+            }
         })
         return false; //Evita que a página seja atualizada
       })

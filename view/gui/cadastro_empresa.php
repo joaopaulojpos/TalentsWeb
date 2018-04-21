@@ -180,8 +180,8 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
     </div>
 
 
-        <!-- JavaScript do Materialize -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!-- JavaScript do Materialize -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
     <!-- Materialize Compentes -->
   <script type='text/javascript'>
@@ -229,7 +229,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
         }
 
         $.ajax({      //Função AJAX
-          url:"valida_cadastro.php",      //Arquivo php
+          url:"../validacoes/valida_cadastro.php",      //Arquivo php
           type:"post",        //Método de envio
           data: "cd_empresa="+codigo_empresa+"&cnpj="+cnpj+"&razaosocial="+razao_social+"&nomefantasia="+nome_fantasia+"&porte="+porte+"&areaatuacao="+area_atuacao+"&responsavel="+responsavel+"&telefone="+telefone+"&site="+site+"&email="+email+"&senha="+senha, //Dados
             success: function (result){     //Sucesso no AJAX
@@ -250,7 +250,7 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
       document.getElementById('loader').style.display = 'block';
       var teste = document.getElementById('cnpj').value.replace(/[^\d]+/g,'');
       $.ajax({      //Função AJAX
-        url:"carrega_dados_cadastro_empresa.php",      //Arquivo php
+        url:"../carregamentos/carrega_dados_cadastro_empresa.php",      //Arquivo php
         type:"post",        //Método de envio
         data: "cnpj="+teste, //Dados
           success: function (result){     //Sucesso no AJAX

@@ -6,7 +6,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
     exit; //Redireciona o visitante para login
   }
 
-include "menu2.php";
+include "menu.php";
 include "content.php";
 include "foooter.php";
 ?>

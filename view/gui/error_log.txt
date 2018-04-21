@@ -1846,3 +1846,8 @@ Stack trace:
 [18-Apr-2018 00:37:15 Europe/Berlin] PHP Notice:  Undefined index: ds_resultado_comportamental in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 92
 [18-Apr-2018 00:40:20 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 68
 [21-Apr-2018 06:08:14 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\cadastro_vaga2.php on line 70
+[21-Apr-2018 06:36:31 Europe/Berlin] PHP Warning:  include(foooter.php): failed to open stream: No such file or directory in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.1.php on line 3
+[21-Apr-2018 06:36:31 Europe/Berlin] PHP Warning:  include(): Failed opening 'foooter.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TalentsWeb\view\gui\vaga.1.php on line 3
+[21-Apr-2018 06:48:44 Europe/Berlin] PHP Warning:  require_once(../../../model/basica/empresa.php): failed to open stream: No such file or directory in C:\xampp\htdocs\TalentsWeb\controller\fachada.php on line 2
+[21-Apr-2018 06:48:44 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '../../../model/basica/empresa.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TalentsWeb\controller\fachada.php on line 2
+[21-Apr-2018 06:59:47 Europe/Berlin] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\TalentsWeb\model\dados\RequestMethods.php on line 27

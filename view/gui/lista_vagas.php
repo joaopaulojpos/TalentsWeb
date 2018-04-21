@@ -1,5 +1,5 @@
 <?php
-include "menu2.php";
+include "menu.php";
 include "foooter.php";
 
   if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
@@ -238,7 +238,7 @@ include "foooter.php";
 
     function alterarStatusVaga(cd_vaga, tp_envia_status_ajax) {
       $.ajax({      //Função AJAX
-      url:"valida_alteracao_status_vaga.php",      //Arquivo php
+      url:"../validacoes/valida_alteracao_status_vaga.php",      //Arquivo php
       type:"post",        //Método de envio
       data: "cd_vaga="+cd_vaga+"&tp_envia_status_ajax="+tp_envia_status_ajax, //Dados
           success: function (result){

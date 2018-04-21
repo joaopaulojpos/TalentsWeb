@@ -7,26 +7,38 @@ error_reporting(E_ALL);
 
 ?>
 
-<nav class="menu" role="navigation">
-  <div class="nav-wrapper container">
-    <a class="logo" id="logo-container" href="#"><span class="logo2">T</span>alents</a>
-    <?php if (!isset($_SESSION['empresaLogada'])) { ?>
-      <ul class="right">
-        <li><a href="login.php">Entrar</a></li>
-      </ul>
-      <ul class="right">
-        <li><a href="cadastro.php">Cadastrar</a></li>
-      </ul>
-    <?php }else { ?>
-      <ul class="right">
-        <li><a href="login.php">Sair</a></li>
-      </ul>
-      <ul class="right">
-        <li><a href="cadastro.php">Perfil</a></li>
-      </ul>
-      <ul class="right">
-        <li><a href="cadastro_vaga.php">Cadastrar Vaga</a></li>
-      </ul>
-    <?php } ?>
-  </div>
-</nav>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard - Talents</title>
+</head>
+<body class="grey lighten-3">
+    <header>
+        <div class="navbar-fixed">
+            <nav class="teal darken-1">
+                <div class="nav-wrapper">
+                  <a href="#!" class="brand-logo logo">&nbsp; <span class="logo2">T</span><span class="logo3">alents</span></a>
+                  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                  <ul class="right hide-on-med-and-down">
+                    <li><a href="dashboard.php">Home</a></li>
+                    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Perfil"><a href="cadastro_empresa.php"><i class="material-icons">person</i></a></li>
+                    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="login.php"><i class="material-icons">exit_to_app</i></a></li>
+                  </ul>
+                </div>
+              </nav>
+        </div>
+        <!-- Menu Mobile -->
+        <ul class="side-nav" id="mobile-demo">
+            <li><a href="dashboard.php">Home</a></li>
+            <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Perfil"><a href="cadastro_empresa.php"><i class="material-icons">person</i></a></li>
+            <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="login.php"><i class="material-icons">exit_to_app</i></a></li>
+        </ul>
+    </header>

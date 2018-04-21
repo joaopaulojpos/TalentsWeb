@@ -1,5 +1,5 @@
 <?php
-include "menu2.php";
+include "menu.php";
 include "foooter.php";
 
 
@@ -142,7 +142,7 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
         var nomeBotao = 'btnLike'+cd_profissional;
         var nomeIcone = 'iconeLike'+cd_profissional;
         $.ajax({      //Função AJAX
-        url:"valida_like_empresa.php",      //Arquivo php
+        url:"../validacoes/valida_like_empresa.php",      //Arquivo php
         type:"post",        //Método de envio
         data: "cd_vaga="+cd_vaga+"&cd_profissional="+cd_profissional, //Dados
             success: function (result){

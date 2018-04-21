@@ -31,7 +31,7 @@ function initialize() {
 $(document).ready(function () {
 
 	try{
-		$('#loader').show();
+		$('#load').show();
 
 		initialize();
 		
@@ -61,7 +61,7 @@ $(document).ready(function () {
 
 	    }else{
 	    	//alert("O seu navegador não suporta Geolocalização.");
-	    	$('#loader').hide();
+	    	$('#load').hide();
 	    }
 
 	    function showPosition(position){
@@ -73,7 +73,7 @@ $(document).ready(function () {
 	       	$('#txtLongitude').val(lng);
 
 	       	$.ajax({      //Função AJAX
-	        url:"carrega_endereco_latitude_longitude.php",      //Arquivo php
+	        url:"../carregamentos/carrega_endereco_latitude_longitude.php",      //Arquivo php
 	        type:"GET",        //Método de envio
 	        data: "latitude="+lat+"&longitude="+lng, //Dados
 	          success: function (result){     //Sucesso no AJAX
@@ -86,7 +86,7 @@ $(document).ready(function () {
 			map.setCenter(location);
 			map.setZoom(16);
 
-			$('#loader').hide();
+			$('#load').hide();
 		}
 
 		$("#btnEndereco").click(function() {
@@ -146,6 +146,6 @@ $(document).ready(function () {
 	}catch(err) {
     	//
 	}finally{
-		$('#loader').hide();
+		$('#load').hide();
 	}
 });

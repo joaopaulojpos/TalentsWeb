@@ -2,7 +2,7 @@
         <div>
             <div class="row">
                 <div class="col s12 m4 push-m2">
-                    <a href="cadastro_local.php">
+                    <a href="cadastro_local_vaga.php">
                         <div class="card white">
                             <div class="card-content white-text">
                                 <span class="card-title grey-text">Publicar Vaga</span>
@@ -14,7 +14,7 @@
                 </div>
 
             <div class="col s12 m4 push-m2">
-                    <a href="vaga.1.php">
+                    <a href="lista_vagas.php">
                         <div class="card white">
                             <div class="card-content white-text">
                                 <span class="card-title grey-text">Vagas Publicadas</span>
