@@ -110,6 +110,28 @@ class RNProfissional{
             return array('erro'=> $e->getMessage());
         }
     }
+
+    public function inserirCursoProfissional($cd_profissional,$cd_curso,$nr_nivel)
+    {
+        try{
+            $dao = new DaoProfissional();
+            $result = $dao->inserirCursoProfissional($cd_profissional,$cd_curso,$nr_nivel);
+            return array('sucess');
+        }catch (Exception $e){
+            return array('erro'=> $e->getMessage());
+        }
+    }
+
+    public function inserirCompetenciaTecnicaProfissional($cd_profissional,$cd_competencia_tecnica,$nr_nivel)
+    {
+        try{
+            $dao = new DaoProfissional();
+            $result = $dao->inserirCompetenciaTecnicaProfissional($cd_profissional,$cd_competencia_tecnica,$nr_nivel);
+            return array('sucess');
+        }catch (Exception $e){
+            return array('erro'=> $e->getMessage());
+        }
+    }
 }
 
 ?>
