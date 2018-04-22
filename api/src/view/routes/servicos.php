@@ -175,8 +175,8 @@ $app->post('/api/profissional/salvar', function(Request $request, Response $resp
         $nr_longitude = $request->getParam('nr_longitude');
         $tp_conta = $request->getParam('tp_conta');
         $tp_sexo = $request->getParam('tp_sexo');
-        $ds_nome = $request->getParam('ds_nome');   
-    
+        $ds_nome = $request->getParam('ds_nome');
+
         $profissional = new Profissional();
 
         $profissional->setBfoto($b_foto);
@@ -185,13 +185,13 @@ $app->post('/api/profissional/salvar', function(Request $request, Response $resp
         $profissional->setDsEmail($ds_email);
         $profissional->setNrlatitude($nr_latitude);
         $profissional->setNrlogitude($nr_longitude);
-        $profissional->setTpconta($tp_conta);   
+        $profissional->setTpconta($tp_conta);
         $profissional->setTpsexo($tp_sexo);
         $profissional->setDsnome($ds_nome);
 
-        $rnprofissional = new RNProfissional(); 
+        $rnprofissional = new RNProfissional();
         $rnprofissional = $rnprofissional->cadastrar($profissional);
-        $response->write(json_encode($rnprofissional)); 
+        $response->write(json_encode($rnprofissional));
 
     } catch(Exception $e){
         $response->write(json_encode(array('erro' => $e->getMessage())));
@@ -203,6 +203,22 @@ $app->get('/api/profissional/notificacoes', function(Request $request, Response 
     try{
         $rnprofissional = new RNProfissional();
         $rnprofissional = $rnprofissional->getNotificacao($request->getParam('cd_profissional'));
+        $response->write(json_encode($rnprofissional));
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
+$app->post('/api/profissional/idioma', function(Request $request, Response $response){
+
+    try{
+        $cd_profissional = $request->getParam('cd_profissional');
+        $cd_idioma = $request->getParam('cd_idioma');
+        $nr_nivel = $request->getParam('nr_nivel');
+
+        $rnprofissional = new RNProfissional();
+        $rnprofissional = $rnprofissional->inserirIdiomaProfissional($cd_profissional,$cd_idioma,$nr_nivel);
         $response->write(json_encode($rnprofissional));
 
     } catch(Exception $e){
