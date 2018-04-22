@@ -226,6 +226,43 @@ $app->post('/api/profissional/idioma', function(Request $request, Response $resp
     }
 });
 
+$app->post('/api/profissional/curso', function(Request $request, Response $response){
+
+    try{
+        $cd_profissional = $request->getParam('cd_profissional');
+        $cd_curso = $request->getParam('cd_curso');
+        $ds_instituicao = $request->getParam('ds_instituicao');
+        $dt_fim = $request->getParam('dt_fim');
+        $dt_inicio = $request->getParam('dt_inicio');
+        $tp_certificado_validado = $request->getParam('tp_certificado_validado');
+        $nr_cerificado = $request->getParam('nr_cerificado');
+        $nr_periodo = $request->getParam('nr_periodo');
+
+        $rnprofissional = new RNProfissional();
+        $rnprofissional = $rnprofissional->inserirCursoProfissional($cd_profissional, $cd_curso, $ds_instituicao, $dt_fim, $dt_inicio, $nr_cerificado, $tp_certificado_validado, $nr_periodo);
+        $response->write(json_encode($rnprofissional));
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
+$app->post('/api/profissional/competencia_tecnica', function(Request $request, Response $response){
+
+    try{
+        $cd_profissional = $request->getParam('cd_profissional');
+        $cd_competencia_tecnica = $request->getParam('cd_competencia_tecnica');
+        $nr_nivel = $request->getParam('nr_nivel');
+
+        $rnprofissional = new RNProfissional();
+        $rnprofissional = $rnprofissional->inserirCompetenciaTecnicaProfissional($cd_profissional,$cd_competencia_tecnica,$nr_nivel);
+        $response->write(json_encode($rnprofissional));
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
 //----- Vaga
 
 /**
