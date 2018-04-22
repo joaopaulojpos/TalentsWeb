@@ -249,5 +249,25 @@ class DaoProfissional implements iDAOProfissional
         }
     }
 
+    public function inserirIdiomaProfissional($cd_profissional,$cd_idioma,$nr_nivel)
+    {
+        try{
+            $sql = "insert into profissional_idioma (cd_profissional,cd_idioma,nr_nivel) 
+                         values (:cd_profissional,:cd_idioma,:nr_nivel);";
+
+            $stmt = db::getInstance()->prepare($sql);
+            $run = $stmt->execute(array(
+                ':cd_profissional' => $cd_profissional,
+                ':cd_idioma' => $cd_idioma,
+                ':nr_nivel' => $nr_nivel
+            ));
+
+        }catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
+
 }
 ?>
