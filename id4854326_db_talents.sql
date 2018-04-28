@@ -138,7 +138,7 @@ CREATE TABLE profissional_curso (
   dt_fim Date,
   dt_inicio Date,
   tp_certificado_validado varchar(1),
-  nr_cerificado Integer,
+  nr_certificado Integer,
   nr_periodo Integer,
   FOREIGN KEY(cd_curso) REFERENCES curso (cd_curso),
   FOREIGN KEY(cd_profissional) REFERENCES profissional (cd_profissional)
