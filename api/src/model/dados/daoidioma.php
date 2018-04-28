@@ -110,5 +110,32 @@ class DaoIdioma implements iDAOIdioma
         $stmt->closeCursor();
       }
     }
+
+    public function idiomaProfissional($cd_profissional,$idiomas)
+    {
+        foreach ($idiomas as $idioma){
+            $this->inserirIdiomaProfissional($cd_profissional,$idioma['cd_idioma'],$idioma['nr_nivel']);
+        }
+    }
+
+    private function inserirIdiomaProfissional($cd_profissional,$cd_idioma,$nr_nivel)
+    {
+        try{
+            $sql = "insert into profissional_idioma (cd_profissional,cd_idioma,nr_nivel) 
+                         values (:cd_profissional,:cd_idioma,:nr_nivel);";
+
+            $stmt = db::getInstance()->prepare($sql);
+            $run = $stmt->execute(array(
+                ':cd_profissional' => $cd_profissional,
+                ':cd_idioma' => $cd_idioma,
+                ':nr_nivel' => $nr_nivel
+            ));
+
+        }catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
 }
 ?>

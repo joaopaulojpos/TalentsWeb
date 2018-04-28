@@ -100,17 +100,6 @@ class RNProfissional{
 
     }
 
-    public function inserirIdiomaProfissional($cd_profissional,$cd_idioma,$nr_nivel)
-    {
-        try{
-            $dao = new DaoProfissional();
-            $result = $dao->inserirIdiomaProfissional($cd_profissional,$cd_idioma,$nr_nivel);
-            return array('sucess');
-        }catch (Exception $e){
-            return array('erro'=> $e->getMessage());
-        }
-    }
-
     public function inserirCursoProfissional($cd_profissional,$cd_curso,$nr_nivel)
     {
         try{

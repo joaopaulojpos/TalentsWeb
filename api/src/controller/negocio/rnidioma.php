@@ -18,6 +18,17 @@ class RNIdioma{
 			return array('erro' => $e->getMessage());
 		}
 	}
+
+    public function inserirIdiomaProfissional($cd_profissional,$idiomas)
+    {
+        try{
+            $dao = new DaoIdioma();
+            $result = $dao->idiomaProfissional($cd_profissional,$idiomas);
+            return array('sucess');
+        }catch (Exception $e){
+            return array('erro'=> $e->getMessage());
+        }
+    }
 }
 
 ?>
