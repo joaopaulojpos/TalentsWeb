@@ -251,12 +251,11 @@ $app->post('/api/profissional/competencia_tecnica', function(Request $request, R
 
     try{
         $cd_profissional = $request->getParam('cd_profissional');
-        $cd_competencia_tecnica = $request->getParam('cd_competencia_tecnica');
-        $nr_nivel = $request->getParam('nr_nivel');
+        $competencias = $request->getParam('competencias');
 
-        $rnprofissional = new RNProfissional();
-        $rnprofissional = $rnprofissional->inserirCompetenciaTecnicaProfissional($cd_profissional,$cd_competencia_tecnica,$nr_nivel);
-        $response->write(json_encode($rnprofissional));
+        $rncompetenciatecnica = new RNCompetenciaTecnica();
+        $rncompetenciatecnica = $rncompetenciatecnica->inserirCompetenciaTecnicaProfissional($cd_profissional,$competencias);
+        $response->write(json_encode($rncompetenciatecnica));
 
     } catch(Exception $e){
         $response->write(json_encode(array('erro' => $e->getMessage())));

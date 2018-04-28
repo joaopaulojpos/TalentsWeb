@@ -111,5 +111,32 @@ class DAOCompetenciaTecnica implements iDAOCompetenciaTecnica
         $stmt->closeCursor();
       }
     }
+
+    public function inserirCompetenciaTecnicaProfissional($cd_profissional,$competencias){
+
+        foreach ($competencias as $competencia){
+            $this->competenciaTecnicaProfissional($cd_profissional,$competencia['cd_competencia_tecnica'],$competencia['nr_nivel']);
+        }
+    }
+
+    private function competenciaTecnicaProfissional($cd_profissional,$cd_competencia_tecnica,$nr_nivel)
+    {
+        try{
+            $sql = "insert into profissional_competencia_tecnica (cd_profissional,cd_competencia_tecnica,nr_nivel) 
+                         values (:cd_profissional,:cd_competencia_tecnica,:nr_nivel);";
+
+            $stmt = db::getInstance()->prepare($sql);
+            $run = $stmt->execute(array(
+                ':cd_profissional' => $cd_profissional,
+                ':cd_competencia_tecnica' => $cd_competencia_tecnica,
+                ':nr_nivel' => $nr_nivel
+            ));
+
+        }catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
 }
 ?>

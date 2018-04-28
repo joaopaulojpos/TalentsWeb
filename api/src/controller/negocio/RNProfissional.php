@@ -122,16 +122,6 @@ class RNProfissional{
         }
     }
 
-    public function inserirCompetenciaTecnicaProfissional($cd_profissional,$cd_competencia_tecnica,$nr_nivel)
-    {
-        try{
-            $dao = new DaoProfissional();
-            $result = $dao->inserirCompetenciaTecnicaProfissional($cd_profissional,$cd_competencia_tecnica,$nr_nivel);
-            return array('sucess');
-        }catch (Exception $e){
-            return array('erro'=> $e->getMessage());
-        }
-    }
 }
 
 ?>

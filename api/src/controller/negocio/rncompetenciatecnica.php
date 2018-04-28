@@ -16,6 +16,17 @@ class RNCompetenciaTecnica{
 			return array('erro' => $e->getMessage());
 		}
 	}
+
+    public function inserirCompetenciaTecnicaProfissional($cd_profissional,$competencias)
+    {
+        try{
+            $dao = new DAOCompetenciaTecnica();
+            $result = $dao->inserirCompetenciaTecnicaProfissional($cd_profissional,$competencias);
+            return array('sucess');
+        }catch (Exception $e){
+            return array('erro'=> $e->getMessage());
+        }
+    }
 }
 
 ?>
