@@ -760,3 +760,6 @@ insert into alternativa_perfil_comp(cd_pergunta_perfil_comp,ds_resposta,nr_letra
 (25,'É preferível olhar, antes de pular','O'),
 (25,'Duas cabeças pensam melhor que do que uma','C'),
 (25,'Se você não tem condições de competir, não compita','A');
+
+-- Adicionando campo nr_nivel da competencia
+alter table profissional_competencia_tecnica add column nr_nivel Integer;
