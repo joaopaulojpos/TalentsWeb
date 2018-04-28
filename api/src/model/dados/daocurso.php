@@ -105,5 +105,53 @@ class DaoCurso implements iDAOCurso
         $stmt->closeCursor();
       }
     }
+
+    public function cursoProfissional($cd_profissional,$cursos)
+    {
+        foreach ($cursos as $curso){
+            $this->inserirCursoProfissional($cd_profissional, $curso['cd_curso'], $curso['ds_instituicao'], $curso['dt_fim'], $curso['dt_inicio'], $curso['nr_certificado'], $curso['tp_certificado_validado'], $curso['nr_periodo']);
+        }
+    }
+
+    private function inserirCursoProfissional($cd_profissional, $cd_curso, $ds_instituicao, $dt_fim, $dt_inicio, $nr_certificado, $tp_certificado_validado, $nr_periodo)
+    {
+        try{
+            $sql = "INSERT INTO profissional_curso
+                    (cd_curso,
+                    cd_profissional,
+                    ds_instituicao,
+                    dt_fim,
+                    dt_inicio,
+                    tp_certificado_validado,
+                    nr_cerificado,
+                    nr_periodo)
+                    VALUES
+                    (:cd_curso,
+                    :cd_profissional,
+                    :ds_instituicao,
+                    :dt_fim,
+                    :dt_inicio,
+                    :tp_certificado_validado,
+                    :nr_cerificado,
+                    :nr_periodo);";
+
+            $stmt = db::getInstance()->prepare($sql);
+            $run = $stmt->execute(array(
+                ':cd_profissional' => $cd_profissional,
+                ':cd_curso' => $cd_curso,
+                ':ds_instituicao' => $ds_instituicao,
+                ':dt_fim' => $dt_fim,
+                ':dt_inicio' => $dt_inicio,
+                ':nr_cerificado' => $nr_certificado,
+                ':tp_certificado_validado' => $tp_certificado_validado,
+                ':nr_periodo' => $nr_periodo
+            ));
+
+        }catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
 }
 ?>

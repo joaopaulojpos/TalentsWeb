@@ -249,46 +249,7 @@ class DaoProfissional implements iDAOProfissional
         }
     }
 
-    public function inserirCursoProfissional($cd_profissional, $cd_curso, $ds_instituicao, $dt_fim, $dt_inicio, $nr_cerificado, $tp_certificado_validado, $nr_periodo)
-    {
-        try{
-            $sql = "INSERT INTO profissional_curso
-                    (cd_curso,
-                    cd_profissional,
-                    ds_instituicao,
-                    dt_fim,
-                    dt_inicio,
-                    tp_certificado_validado,
-                    nr_cerificado,
-                    nr_periodo)
-                    VALUES
-                    (:cd_curso,
-                    :cd_profissional,
-                    :ds_instituicao,
-                    :dt_fim,
-                    :dt_inicio,
-                    :tp_certificado_validado,
-                    :nr_cerificado,
-                    :nr_periodo);";
 
-            $stmt = db::getInstance()->prepare($sql);
-            $run = $stmt->execute(array(
-                ':cd_profissional' => $cd_profissional,
-                ':cd_curso' => $cd_curso,
-                ':ds_instituicao' => $ds_instituicao,
-                ':dt_fim' => $dt_fim,
-                ':dt_inicio' => $dt_inicio,
-                ':nr_cerificado' => $nr_cerificado,
-                ':tp_certificado_validado' => $tp_certificado_validado,
-                ':nr_periodo' => $nr_periodo
-            ));
-
-        }catch(Exception $e){
-            throw new Exception($e->getMessage());
-        }finally{
-            $stmt->closeCursor();
-        }
-    }
 
 }
 ?>

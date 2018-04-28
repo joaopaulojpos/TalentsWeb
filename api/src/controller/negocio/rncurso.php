@@ -6,7 +6,7 @@ class RNCurso{
 
 	public function pesquisar($curso){
 		try{
-			$daocurso = new DAOCurso();
+			$daocurso = new daocurso();
 			$result = $daocurso->pesquisar($curso);
 			
 			if (!empty($result)){
@@ -18,6 +18,18 @@ class RNCurso{
 			return array('erro' => $e->getMessage());
 		}
 	}
+
+
+    public function inserirCursoProfissional($cd_profissional,$cursos)
+    {
+        try{
+            $dao = new daocurso();
+            $result = $dao->cursoProfissional($cd_profissional,$cursos);
+            return array('sucess');
+        }catch (Exception $e){
+            return array('erro'=> $e->getMessage());
+        }
+    }
 }
 
 ?>

@@ -229,17 +229,11 @@ $app->post('/api/profissional/curso', function(Request $request, Response $respo
 
     try{
         $cd_profissional = $request->getParam('cd_profissional');
-        $cd_curso = $request->getParam('cd_curso');
-        $ds_instituicao = $request->getParam('ds_instituicao');
-        $dt_fim = $request->getParam('dt_fim');
-        $dt_inicio = $request->getParam('dt_inicio');
-        $tp_certificado_validado = $request->getParam('tp_certificado_validado');
-        $nr_cerificado = $request->getParam('nr_cerificado');
-        $nr_periodo = $request->getParam('nr_periodo');
+        $cursos = $request->getParam('cursos');
 
-        $rnprofissional = new RNProfissional();
-        $rnprofissional = $rnprofissional->inserirCursoProfissional($cd_profissional, $cd_curso, $ds_instituicao, $dt_fim, $dt_inicio, $nr_cerificado, $tp_certificado_validado, $nr_periodo);
-        $response->write(json_encode($rnprofissional));
+        $rncurso = new RNCurso();
+        $rncurso = $rncurso->inserirCursoProfissional($cd_profissional, $cursos);
+        $response->write(json_encode($rncurso));
 
     } catch(Exception $e){
         $response->write(json_encode(array('erro' => $e->getMessage())));
