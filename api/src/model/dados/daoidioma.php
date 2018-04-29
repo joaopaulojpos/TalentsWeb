@@ -72,6 +72,45 @@ class DaoIdioma implements iDAOIdioma
     }
 
     /**
+     * @param $cd_profissional
+     * @return ArrayObject
+     */
+    public function listarIdiomaProfissional($cd_profissional)
+    {
+      try{
+        $sql = 'select pi.cd_idioma, i.ds_idioma, pi.nr_nivel
+                  from profissional_idioma pi
+             left join idioma i on i.cd_idioma = pi.cd_idioma
+                  where pi.cd_profissional = :cd_profissional';
+
+        $stmt = db::getInstance()->prepare($sql);
+
+        if (!empty($cd_profissional))
+            $stmt->bindValue(':cd_profissional', $cd_profissional);
+
+        $run = $stmt->execute();
+
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $listaIdioma = new ArrayObject();
+
+        foreach ($result as $row){
+            $idioma = new idioma();
+            $idioma->setNrNivel($row['nr_nivel']);
+            $idioma->setCdIdioma($row['cd_idioma']);
+            $idioma->setDsIdioma($row['ds_idioma']);
+            $listaIdioma->append($idioma);
+        }
+
+        return $listaIdioma;
+        
+      }catch(Exception $e){
+        throw new Exception($e->getMessage());
+      }finally{
+        $stmt->closeCursor();
+      }
+    }
+
+    /**
      * @param $cod_vaga
      * @return ArrayObject
      */

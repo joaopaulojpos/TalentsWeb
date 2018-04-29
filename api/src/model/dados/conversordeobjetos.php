@@ -84,6 +84,52 @@ class conversorDeObjetos{
         return $listavagas;
     }
 
+    public function parseRowsToObjectProfissional($result){
+        $cd_profissional = 0;
+        $listaProfissionais = [];
+        $daocurso = new DAOCurso();
+        $daocompetenciatecnica = new DAOCompetenciaTecnica();
+        $daoidioma = new DAOIdioma();
+        foreach ($result as $row) {
+            //Verifica o código da vaga, para não inserir duplicado
+            if ($cd_profissional <> $row['cd_profissional']) {
+
+                $profissional = new profissional();
+                $profissional->setBfoto($row['b_foto']);
+                $profissional->setCdprofissional($row['cd_profissional']);
+                $profissional->setDsEmail($row['ds_email']);
+                $profissional->setDsnome($row['ds_nome']);
+                $profissional->setTpconta($row['tp_conta']);
+                $profissional->setTpsexo($row['tp_sexo']);
+                $profissional->setNrlatitude($row['nr_latitude']);
+                $profissional->setNrlogitude($row['nr_longitude']);
+                $profissional->setMatchEmpresa($row['match_empresa']);
+                $profissional->setDsResultadoComp($row['ds_resultado_comp']);
+                
+                //Cursos
+                foreach ($daocurso->listarCursoProfissional($profissional->getCdprofissional()) as $c) {
+                    $profissional->setCursos($c);
+                }
+
+                //Competência Técnica
+                foreach ($daocompetenciatecnica->listarCompetenciasComportProfissional($profissional->getCdprofissional()) as $ct) {
+                    $profissional->setCompetenciasTecnicas($ct);
+                }
+
+                //Idiomas
+                foreach ($daoidioma->listarIdiomaProfissional($profissional->getCdprofissional()) as $i) {
+                    $profissional->setIdiomas($i);
+                }
+
+                array_push($listaProfissionais, $profissional);
+
+                $cd_profissional=$row['cd_profissional']; 
+            }
+        }
+        //Retorna a lista de profissionais
+        return $listaProfissionais;
+    }
+
     public function listarVagasParaCandidato($result){
         $cd_vaga = 0;
         $listavagas = [];

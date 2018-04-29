@@ -99,20 +99,20 @@ class DaoProfissional implements iDAOProfissional
 
     public function pesquisarById(Profissional $u, $alt='false'){
     	try{
-	        $comando = 'select * from profissional WHERE cd_profissional = :cd_profissional';
+        $comando = 'select * from profissional WHERE cd_profissional = :cd_profissional';
 
-	        $stmt = db::getInstance()->prepare($comando);
+        $stmt = db::getInstance()->prepare($comando);
 
-	        $run = $stmt->execute(array(':cd_profissional' => $u->getCdProfissional()));
-	        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $run = $stmt->execute(array(':cd_profissional' => $u->getCdProfissional()));
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-	        return $result;
+        return $result;
 	        
-        }catch(Exception $e){
-			throw new Exception($e->getMessage());
-		}finally{
-			$stmt->closeCursor();
-		}
+      }catch(Exception $e){
+  			throw new Exception($e->getMessage());
+  		}finally{
+  			$stmt->closeCursor();
+  		}
     }
 
     /**
@@ -148,23 +148,9 @@ class DaoProfissional implements iDAOProfissional
 
             $run = $stmt->execute();
 
-            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            $listaprofissional = new ArrayObject();
-            foreach ($result as $row){
-                $profissional = new profissional();
-                $profissional->setBfoto($row['b_foto']);
-                $profissional->setCdprofissional($row['cd_profissional']);
-                $profissional->setDsEmail($row['ds_email']);
-                $profissional->setDsnome($row['ds_nome']);
-                $profissional->setTpconta($row['tp_conta']);
-                $profissional->setTpsexo($row['tp_sexo']);
-                $profissional->setNrlatitude($row['nr_latitude']);
-                $profissional->setNrlogitude($row['nr_longitude']);
-                $profissional->setMatchEmpresa($row['match_empresa']);
-                $profissional->setDsResultadoComp($row['ds_resultado_comp']);
-                $listaprofissional->append($profissional);
-            }
-            return $listaprofissional;
+            $conversor = new conversorDeObjetos();
+
+            return $conversor->parseRowsToObjectProfissional($stmt->fetchAll(PDO::FETCH_ASSOC));
 
         }catch(Exception $e){
             throw new Exception($e->getMessage());

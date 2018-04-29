@@ -1851,3 +1851,10 @@ Stack trace:
 [21-Apr-2018 06:48:44 Europe/Berlin] PHP Warning:  require_once(../../../model/basica/empresa.php): failed to open stream: No such file or directory in C:\xampp\htdocs\TalentsWeb\controller\fachada.php on line 2
 [21-Apr-2018 06:48:44 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required '../../../model/basica/empresa.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TalentsWeb\controller\fachada.php on line 2
 [21-Apr-2018 06:59:47 Europe/Berlin] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in C:\xampp\htdocs\TalentsWeb\model\dados\RequestMethods.php on line 27
+[29-Apr-2018 20:55:49 Europe/Berlin] PHP Notice:  unserialize(): Error at offset 14 of 18 bytes in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 20
+[29-Apr-2018 20:56:25 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 119
+[29-Apr-2018 20:59:02 Europe/Berlin] PHP Warning:  urldecode() expects parameter 1 to be string, array given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 20
+[29-Apr-2018 21:19:42 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 69
+[29-Apr-2018 21:21:37 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 69
+[29-Apr-2018 21:23:47 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 69
+[29-Apr-2018 21:30:34 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 69

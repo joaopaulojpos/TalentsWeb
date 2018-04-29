@@ -13,6 +13,15 @@ class Profissional implements JsonSerializable {
 	private $match_empresa;
 	private $ds_resultado_comp;
 
+	//array de cursos
+    private $cursos;
+
+    //array de competencias
+    private $competenciastecnicas;
+
+    //array de idiomas
+    private $idiomas;
+
 
 	function __construct(){
 		
@@ -121,6 +130,30 @@ class Profissional implements JsonSerializable {
 	{
 		return $this->ds_resultado_comp;
 	}
+	function setCursos(Curso $curso)
+    {
+        $this->cursos[] = $curso;
+    }
+    function getCursos()
+    {
+        return $this->cursos;
+    }
+    function setCompetenciasTecnicas(CompetenciaTecnica $ct)
+    {
+        $this->competenciastecnicas[] = $ct;
+    }
+    function getCompetenciasTecnicas()
+    {
+        return $this->competenciastecnicas;
+    }
+    function setIdiomas(idioma $idioma)
+    {
+        $this->idiomas[] = $idioma;
+    }
+    function getIdiomas()
+    {
+        return $this->idiomas;
+    }
 
     /**
      * Specify data which should be serialized to JSON
@@ -144,7 +177,10 @@ class Profissional implements JsonSerializable {
                 'tp_conta'=>$this->tp_conta,
                 'tp_sexo'=>$this->tp_sexo,
                 'match_empresa'=>$this->match_empresa,
-                'ds_resultado_comp'=>$this->ds_resultado_comp
+                'ds_resultado_comp'=>$this->ds_resultado_comp,
+                'cursos'=>$this->cursos,
+                'competencias_tecnicas'=>$this->competenciastecnicas,
+                'idiomas'=>$this->idiomas
             ];
     }
 }

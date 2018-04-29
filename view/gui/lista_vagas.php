@@ -116,7 +116,7 @@ include "foooter.php";
 
           <div class="card-action">
                 <a class="waves-effect waves-light btn red darken-4">Fechar Vaga</a>
-                <a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>&nr_latitude=<?php echo $nr_latitude; ?>&nr_longitude=<?php echo $nr_longitude; ?>" class="waves-effect waves-light btn teal darken-4">Ver Candidatos</a>
+                <a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>&nr_latitude=<?php echo $nr_latitude; ?>&nr_longitude=<?php echo $nr_longitude; ?>&cursos=<?php echo urlencode(serialize($value["cursos"])); ?>" class="waves-effect waves-light btn teal darken-4">Ver Candidatos</a>
           </div>
 
         <div class="card-reveal">

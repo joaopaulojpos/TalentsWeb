@@ -48,6 +48,43 @@ class DaoCurso implements iDAOCurso
 	}
 
     /**
+     * @param $cd_profissional
+     * @return ArrayObject
+     */
+    public function listarCursoProfissional($cd_profissional)
+    {
+      try{
+        $sql = 'select pc.cd_curso, c.ds_curso
+                  from profissional_curso pc
+             left join curso c on c.cd_curso = pc.cd_curso
+                  where pc.cd_profissional = :cd_profissional';
+
+        $stmt = db::getInstance()->prepare($sql);
+
+        if (!empty($cd_profissional))
+            $stmt->bindValue(':cd_profissional', $cd_profissional);
+
+        $run = $stmt->execute();
+
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $listaCurso = new ArrayObject();
+
+        foreach ($result as $row){
+            $curso = new curso();
+            $curso->setCdCurso($row['cd_curso']);
+            $curso->setDsCurso($row['ds_curso']);
+            $listaCurso->append($curso);
+        }
+        return $listaCurso;
+
+      }catch(Exception $e){
+        throw new Exception($e->getMessage());
+      }finally{
+        $stmt->closeCursor();
+      }
+    }
+
+    /**
      * @param $cod_vaga
      * @return ArrayObject
      */

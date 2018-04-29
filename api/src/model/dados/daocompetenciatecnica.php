@@ -51,6 +51,45 @@ class DAOCompetenciaTecnica implements iDAOCompetenciaTecnica
 	}
 
     /**
+     * @param $cd_profissional
+     * @return ArrayObject
+     */
+    public function listarCompetenciasComportProfissional($cd_profissional)
+    {
+      try{
+        $sql = 'select pct.cd_competencia_tecnica, ct.ds_competencia_tecnica, pct.nr_nivel
+                  from profissional_competencia_tecnica pct
+             left join competencia_tecnica ct on ct.cd_competencia_tecnica = pct.cd_competencia_tecnica
+                  where pct.cd_profissional = :cd_profissional';
+
+        $stmt = db::getInstance()->prepare($sql);
+
+        if (!empty($cd_profissional))
+            $stmt->bindValue(':cd_profissional', $cd_profissional);
+
+        $run = $stmt->execute();
+
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $listaCt = new ArrayObject();
+
+        foreach ($result as $row){
+            $ct = new CompetenciaTecnica();
+            $ct->setNrNivel($row['nr_nivel']);
+            $ct->setCdCompetenciaTecnica($row['cd_competencia_tecnica']);
+            $ct->setDsCompetenciaTecnica($row['ds_competencia_tecnica']);
+            $listaCt->append($ct);
+        }
+
+        return $listaCt;
+        
+      }catch(Exception $e){
+        throw new Exception($e->getMessage());
+      }finally{
+        $stmt->closeCursor();
+      }
+    }
+
+    /**
      * @param $cod_vaga
      * @return ArrayObject
      */

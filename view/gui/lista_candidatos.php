@@ -17,6 +17,8 @@ exit; //Redireciona o visitante para login
 $cd_vaga = $_GET['cd_vaga']; 
 $nr_latitude_vaga = $_GET['nr_latitude'];
 $nr_longitude_vaga = $_GET['nr_longitude'];
+$cursos = unserialize(urldecode($_GET['cursos']));
+
 
 require_once('../../controller/fachada.php');
 
@@ -69,6 +71,9 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
                     $arrayprofissionais2 = $value;
                     foreach ($arrayprofissionais2 as $key => $value) { 
 
+                        var_dump($arrayprofissionais2);
+                        die;
+
                         $cd_profissional = $value['cd_profissional'];
                         $ds_nome = $value['ds_nome'];
                         $ds_email = $value['ds_email'];
@@ -89,6 +94,8 @@ function distance($lat1, $lon1, $lat2, $lon2, $unit) {
                         $b_envia_ajax = $b_like;
 
                         $ds_resultado_comp = $value['ds_resultado_comp'];
+
+
 
 
         ?>
