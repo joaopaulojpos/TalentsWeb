@@ -23,7 +23,7 @@ error_reporting(E_ALL);
 <body class="grey lighten-3">
     <header>
         <div class="navbar-fixed">
-            <nav class="teal darken-1">
+            <nav class="menu">
                 <div class="nav-wrapper">
                   <a href="#!" class="brand-logo logo">&nbsp; <span class="logo2">T</span><span class="logo3">alents</span></a>
                   <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>

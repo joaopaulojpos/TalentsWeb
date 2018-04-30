@@ -40,6 +40,12 @@ class DAOVaga
         return $request->get($request::$url.'/vagas',array());
     }
 
+    public function pesquisarVaga($cd_vaga){
+        $request = new RequestMethods();
+
+        return $request->get($request::$url.'/vaga/'.$cd_vaga,array());
+    }
+
     public function listarProfissionaisVaga($cd_vaga){
     	$request = new RequestMethods();
     	

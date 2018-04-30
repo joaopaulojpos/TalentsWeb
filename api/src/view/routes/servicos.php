@@ -273,6 +273,26 @@ $app->get('/api/vagas', function(Request $request, Response $response){
     }
 });
 
+/**
+* Visualiza vaga
+*/
+$app->get('/api/vaga/{id}', function(Request $request, Response $response){
+    
+    try{
+        $id = $request->getAttribute('id');
+        $vaga = new Vaga();
+        $vaga->setCdVaga($id);
+        $empresa = new Empresa();
+        $vaga->setEmpresa($empresa);
+        $rnvaga = new RNVaga();        
+        $rnvaga = $rnvaga->pesquisar($vaga);
+        $response->write(json_encode($rnvaga));
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
 $app->get('/api/profissional/vagas', function(Request $request, Response $response){
     
     try{

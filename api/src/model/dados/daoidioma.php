@@ -81,7 +81,8 @@ class DaoIdioma implements iDAOIdioma
         $sql = 'select pi.cd_idioma, i.ds_idioma, pi.nr_nivel
                   from profissional_idioma pi
              left join idioma i on i.cd_idioma = pi.cd_idioma
-                  where pi.cd_profissional = :cd_profissional';
+                 where pi.cd_profissional = :cd_profissional
+              order by i.ds_idioma asc '; 
 
         $stmt = db::getInstance()->prepare($sql);
 

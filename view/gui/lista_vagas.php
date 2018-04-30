@@ -95,7 +95,7 @@ include "foooter.php";
     <div class="col s12 m6">
       <div class="card">
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4"><a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>&nr_latitude=<?php echo $nr_latitude; ?>&nr_longitude=<?php echo $nr_longitude; ?>"><?php echo $ds_titulo; ?></a><i class="material-icons right">more_vert</i></span>
+          <span class="card-title activator grey-text text-darken-4"><a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>?>"><?php echo $ds_titulo; ?></a><i class="material-icons right">more_vert</i></span>
           <p><a href="#"><?php echo $ds_cargo; ?></a></p>
           <p class="text-darken-4"><?php echo $dt_cricacao; ?></p>
           </br>
@@ -116,7 +116,7 @@ include "foooter.php";
 
           <div class="card-action">
                 <a class="waves-effect waves-light btn red darken-4">Fechar Vaga</a>
-                <a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>&nr_latitude=<?php echo $nr_latitude; ?>&nr_longitude=<?php echo $nr_longitude; ?>&cursos=<?php echo urlencode(serialize($value["cursos"])); ?>" class="waves-effect waves-light btn teal darken-4">Ver Candidatos</a>
+                <a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>" class="waves-effect waves-light btn teal darken-4">Ver Candidatos</a>
           </div>
 
         <div class="card-reveal">

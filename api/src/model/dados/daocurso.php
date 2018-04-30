@@ -57,7 +57,8 @@ class DaoCurso implements iDAOCurso
         $sql = 'select pc.cd_curso, c.ds_curso
                   from profissional_curso pc
              left join curso c on c.cd_curso = pc.cd_curso
-                  where pc.cd_profissional = :cd_profissional';
+                 where pc.cd_profissional = :cd_profissional
+              order by c.ds_curso asc ';
 
         $stmt = db::getInstance()->prepare($sql);
 

@@ -60,7 +60,8 @@ class DAOCompetenciaTecnica implements iDAOCompetenciaTecnica
         $sql = 'select pct.cd_competencia_tecnica, ct.ds_competencia_tecnica, pct.nr_nivel
                   from profissional_competencia_tecnica pct
              left join competencia_tecnica ct on ct.cd_competencia_tecnica = pct.cd_competencia_tecnica
-                  where pct.cd_profissional = :cd_profissional';
+                 where pct.cd_profissional = :cd_profissional
+              order by ct.ds_competencia_tecnica ';
 
         $stmt = db::getInstance()->prepare($sql);
 
