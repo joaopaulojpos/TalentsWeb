@@ -120,70 +120,95 @@ usort($arrayListaDeProfissionais, 'cmp');
 
 <section class="section">
     <div class="row">
-
-        <?php 
-            foreach ($arrayListaDeProfissionais as $key => $value) {
-
-                $cd_profissional = $value['cd_profissional'];
-                $ds_nome = $value['ds_nome'];
-                $ds_email = $value['ds_email'];
-                $b_foto = "https://i.pinimg.com/originals/d2/9e/ba/d29ebab9f2f5663d9993cfe72b6ebba8.jpg";
-                if ($value["tp_sexo"] == 'M'){
-                    $sexo = "Masculino";
-                }else if ($value["tp_sexo"] == 'F'){
-                    $sexo = "Feminino";
-                }else{
-                    $sexo = "Indefinido";
-                }
-                $nr_latitude_profissional = $value["nr_latitude"];
-                $nr_longitude_profissional = $value["nr_longitude"];
-
-                $ds_formacao = "Análise e desenvolvimento de sistemas";
-
-                $b_like = $value["match_empresa"];
-                $b_envia_ajax = $b_like;
-
-                $ds_resultado_comp = $value['ds_resultado_comp'];
-
-                $porcentagem = number_format($value['porcentagem'], 2, ',', ' ');
-
-
-?>
-
-                <div class="col s12 m5">
-                    <div class="card horizontal">
-                        <div class="card-image">
-                            <img src="<?php echo $b_foto; ?>" align="left" width="150" height="150">
-                        </div>
-
-                        <div class="card-stacked">
-                            <div class="card-content">
-                            <h5><?php echo $ds_nome; ?></h5>
-                           
-                            
-                            <h6><i class="material-icons">near_me</i> <?php echo number_format(distance($nr_latitude_vaga, $nr_longitude_vaga, $nr_latitude_profissional, $nr_longitude_profissional, "K"), 2, '.', '') . " km"; ?></h6>
-                        
-                            <h6><i class="material-icons">star</i> <?php echo $ds_resultado_comp; ?></h6>
-                       
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col m2">
-                            
-                                <button class="btn-floating btn-large waves-effect waves-light red" <?php echo $b_like== 1?'disabled':'';?> id="btnLike<?php echo $cd_profissional; ?>" type="submit" name="action" onclick="enviarLike(<?php echo $cd_vaga; ?>, <?php echo $cd_profissional; ?>, <?php echo $b_envia_ajax ?>)"><i class="material-icons right" id="iconeLike<?php echo $cd_profissional; ?>"><?php echo $b_like==1?'done':'favorite';?></i></button>
+        <table>
+            <tbody>
+                <tr>
                     
-                                <br/><br/><br/>
-                                <h3 class="right-align teal-text"><?php echo $porcentagem; ?>%</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>  
 
-  <?php
+                    <?php 
+                        foreach ($arrayListaDeProfissionais as $key => $value) {
 
-            }
-  ?>
+                            $cd_profissional = $value['cd_profissional'];
+                            $ds_nome = $value['ds_nome'];
+                            $ds_email = $value['ds_email'];
+                            $b_foto = "https://i.pinimg.com/originals/d2/9e/ba/d29ebab9f2f5663d9993cfe72b6ebba8.jpg";
+                            if ($value["tp_sexo"] == 'M'){
+                                $sexo = "Masculino";
+                            }else if ($value["tp_sexo"] == 'F'){
+                                $sexo = "Feminino";
+                            }else{
+                                $sexo = "Indefinido";
+                            }
+                            $nr_latitude_profissional = $value["nr_latitude"];
+                            $nr_longitude_profissional = $value["nr_longitude"];
 
+                            $ds_formacao = "Análise e desenvolvimento de sistemas";
+
+                            $b_like = $value["match_empresa"];
+                            $b_envia_ajax = $b_like;
+
+                            $ds_resultado_comp = $value['ds_resultado_comp'];
+
+                            $porcentagem = number_format($value['porcentagem'], 2, ',', ' ');
+
+
+                    ?>
+                        <td class="col s12 m5">
+                            <div >
+                                <div class="card horizontal">
+                                    <div class="card-image">
+                                        <img src="<?php echo $b_foto; ?>" align="left" width="150" height="150">
+                                    </div>
+
+                                    <div class="card-stacked">
+                                        <div class="card-content">
+                                        <h5><?php echo $ds_nome; ?></h5>
+                                        <?php 
+
+                                            if ($value["cursos"]){
+                                                $i = 0;
+                                                $qtdCursosValidos = 0;
+                                                foreach ($value["cursos"] as $key => $cursos) {   
+                                                    if (in_array_field($cursos['cd_curso'], 'cd_curso', $cursos_vaga)){
+                                                        $qtdCursosValidos = $qtdCursosValidos + 1;
+                                                    }
+                                                    
+                                        ?>          
+                                                    <h6><?php echo $i==0?'<i class="material-icons">school</i> ':'';?><?php echo $cursos['ds_curso']; ?></h6>
+                                        <?php 
+                                                    $i = $i + 1;
+                                                }
+                                            } 
+
+                                        ?> 
+                                        
+                                        <h6><i class="material-icons">near_me</i> <?php echo number_format(distance($nr_latitude_vaga, $nr_longitude_vaga, $nr_latitude_profissional, $nr_longitude_profissional, "K"), 2, '.', '') . " km"; ?></h6>
+                                    
+                                        <h6><i class="material-icons">star</i> <?php echo $ds_resultado_comp; ?></h6>
+                                   
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col m2">
+                                        
+                                            <button class="btn-floating btn-large waves-effect waves-light red" <?php echo $b_like== 1?'disabled':'';?> id="btnLike<?php echo $cd_profissional; ?>" type="submit" name="action" onclick="enviarLike(<?php echo $cd_vaga; ?>, <?php echo $cd_profissional; ?>, <?php echo $b_envia_ajax ?>)"><i class="material-icons right" id="iconeLike<?php echo $cd_profissional; ?>"><?php echo $b_like==1?'done':'favorite';?></i></button>
+                                
+                                            <br/><br/><br/>
+                                            <h3 class="right-align teal-text"><?php echo $porcentagem; ?>%</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </td>
+
+                    <?php
+
+                        }
+                    ?>
+                    <td>
+                </tr>
+            </tbody> 
+        </table>
     </div>
 </section>
 
