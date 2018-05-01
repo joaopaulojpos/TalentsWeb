@@ -46,5 +46,46 @@ class DaoCargo implements iDAOCargo
 			$stmt->closeCursor();
 		}
 	}
+
+	/**
+     * @param $cd_profissional
+     * @return ArrayObject
+     */
+    public function listarCargoProfissional($cd_profissional)
+    {
+      try{
+        $sql = 'select pc.cd_cargo, c.ds_cargo, pc.ds_empresa, pc.dt_inicio, pc.dt_fim
+                  from profissional_cargo pc
+             left join cargo c on c.cd_cargo = pc.cd_cargo
+                 where pc.cd_profissional = :cd_profissional
+              order by c.ds_cargo asc ';
+
+        $stmt = db::getInstance()->prepare($sql);
+
+        if (!empty($cd_profissional))
+            $stmt->bindValue(':cd_profissional', $cd_profissional);
+
+        $run = $stmt->execute();
+
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $listaCargo = new ArrayObject();
+
+        foreach ($result as $row){
+            $cargo = new Cargo();
+            $cargo->setCdCargo($row['cd_cargo']);
+            $cargo->setDsCargo($row['ds_cargo']);
+            $cargo->setDsEmpresa($row['ds_empresa']);
+            $cargo->setDtInicio($row['dt_inicio']);
+            $cargo->setDtFim($row['dt_fim']);
+            $listaCargo->append($cargo);
+        }
+        return $listaCargo;
+
+      }catch(Exception $e){
+        throw new Exception($e->getMessage());
+      }finally{
+        $stmt->closeCursor();
+      }
+    }
 }
 ?>

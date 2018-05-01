@@ -2298,3 +2298,74 @@ Stack trace:
 [30-Apr-2018 04:40:01 Europe/Berlin] PHP Notice:  Undefined index: match_empresa in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 144
 [30-Apr-2018 04:40:01 Europe/Berlin] PHP Notice:  Undefined index: ds_resultado_comp in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 147
 [30-Apr-2018 04:40:01 Europe/Berlin] PHP Notice:  Undefined index: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 165
+[01-May-2018 23:19:56 Europe/Berlin] PHP Notice:  Undefined variable: ds_titulo in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 126
+[01-May-2018 23:20:14 Europe/Berlin] PHP Notice:  Undefined variable: ds_titulo in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 126
+[01-May-2018 23:20:40 Europe/Berlin] PHP Notice:  Undefined variable: ds_titulo in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 126
+[01-May-2018 23:21:29 Europe/Berlin] PHP Notice:  Undefined variable: ds_titulo in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 127
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: ds_instituicao in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 299
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: dt_inicio in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 300
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: dt_fim in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: nr_periodo in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 302
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: ds_instituicao in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 299
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: dt_inicio in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 300
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: dt_fim in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: nr_periodo in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 302
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: ds_instituicao in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 299
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: dt_inicio in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 300
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: dt_fim in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: nr_periodo in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 302
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: ds_instituicao in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 299
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: dt_inicio in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 300
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: dt_fim in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:40:10 Europe/Berlin] PHP Notice:  Undefined index: nr_periodo in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 302
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 300
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 300
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 300
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 300
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, string given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 300
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 300
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 300
+[01-May-2018 23:54:34 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:56:12 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:56:12 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:56:12 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:56:12 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:56:12 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:56:12 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[01-May-2018 23:56:12 Europe/Berlin] PHP Warning:  date_format() expects parameter 1 to be DateTimeInterface, null given in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 301
+[02-May-2018 00:02:14 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 338
+[02-May-2018 00:03:43 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 319
+[02-May-2018 00:03:43 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 319
+[02-May-2018 00:03:43 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 351
+[02-May-2018 00:04:35 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 319
+[02-May-2018 00:04:35 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 319
+[02-May-2018 00:04:35 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 351
+[02-May-2018 00:05:02 Europe/Berlin] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 319
+[02-May-2018 00:05:02 Europe/Berlin] PHP Warning:  sizeof(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 319
+[02-May-2018 00:05:02 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 351
+[02-May-2018 00:05:48 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 319
+[02-May-2018 00:05:48 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 319
+[02-May-2018 00:05:48 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 351
+[02-May-2018 00:07:52 Europe/Berlin] PHP Notice:  Undefined variable: qtdIdiomas in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 356
+[02-May-2018 00:07:52 Europe/Berlin] PHP Notice:  Undefined variable: qtdIdiomas in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 356
+[02-May-2018 00:08:53 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 181
+[02-May-2018 00:08:53 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 181
+[02-May-2018 00:08:53 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 182
+[02-May-2018 00:12:11 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 182
+[02-May-2018 00:12:11 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 182
+[02-May-2018 00:12:11 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 186
+[02-May-2018 00:13:26 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 186
+[02-May-2018 00:14:35 Europe/Berlin] PHP Notice:  Undefined index: ds_competencia_tecnic in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 352
+[02-May-2018 00:14:35 Europe/Berlin] PHP Notice:  Undefined index: ds_competencia_tecnic in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 352
+[02-May-2018 00:40:58 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 26
+[02-May-2018 00:40:58 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 84
+[02-May-2018 00:40:58 Europe/Berlin] PHP Notice:  Undefined variable: ds_titulo_vaga in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 128
+[02-May-2018 00:41:06 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 26
+[02-May-2018 00:41:06 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 84
+[02-May-2018 00:41:06 Europe/Berlin] PHP Notice:  Undefined variable: ds_titulo_vaga in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 128

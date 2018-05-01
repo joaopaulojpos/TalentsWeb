@@ -6,6 +6,9 @@ class curso implements JsonSerializable
     private $ds_curso;
     private $ds_instituicao;
     private $formacao;
+    private $dt_inicio;
+    private $dt_fim;
+    private $nr_periodo;
 
     function __construct(){}
 
@@ -37,6 +40,27 @@ class curso implements JsonSerializable
         return $this->formacao;
     }
 
+    function setDtInicio($dt_inicio){
+        $this->dt_inicio = $dt_inicio;
+    }
+    function getDtInicio(){
+        return $this->dt_inicio;
+    }
+
+    function setDtFim($dt_fim){
+        $this->dt_fim = $dt_fim;
+    }
+    function getDtFim(){
+        return $this->dt_fim;
+    }
+
+    function setNrPeriodo($nr_periodo){
+        $this->nr_periodo = $nr_periodo;
+    }
+    function getNrPeriodo(){
+        return $this->nr_periodo;
+    }
+
     /**
      * Specify data which should be serialized to JSON
      * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
@@ -50,7 +74,11 @@ class curso implements JsonSerializable
             [
                 'cd_curso'=>$this->cd_curso,
                 'ds_curso'=>$this->ds_curso,
-                'ds_formacao'=>$this->formacao
+                'ds_formacao'=>$this->formacao,
+                'ds_instituicao'=>$this->ds_instituicao,
+                'dt_inicio'=>$this->dt_inicio,
+                'dt_fim'=>$this->dt_fim,
+                'nr_periodo'=>$this->nr_periodo
             ];
     }
 }

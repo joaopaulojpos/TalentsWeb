@@ -13,6 +13,9 @@ class Profissional implements JsonSerializable {
 	private $match_empresa;
 	private $ds_resultado_comp;
 
+	//array de cargos
+	private $cargos;
+
 	//array de cursos
     private $cursos;
 
@@ -130,6 +133,14 @@ class Profissional implements JsonSerializable {
 	{
 		return $this->ds_resultado_comp;
 	}
+	function setCargos(cargo $cargo)
+    {
+        $this->cargos[] = $cargo;
+    }
+    function getCargos()
+    {
+        return $this->cargos;
+    }
 	function setCursos(Curso $curso)
     {
         $this->cursos[] = $curso;
@@ -179,6 +190,7 @@ class Profissional implements JsonSerializable {
                 'tp_sexo'=>$this->tp_sexo,
                 'match_empresa'=>$this->match_empresa,
                 'ds_resultado_comp'=>$this->ds_resultado_comp,
+                'cargos'=>$this->cargos,
                 'cursos'=>$this->cursos,
                 'competencias_tecnicas'=>$this->competenciastecnicas,
                 'idiomas'=>$this->idiomas

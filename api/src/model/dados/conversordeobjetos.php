@@ -87,6 +87,7 @@ class conversorDeObjetos{
     public function parseRowsToObjectProfissional($result){
         $cd_profissional = 0;
         $listaProfissionais = [];
+        $daocargo = new DAOCargo();
         $daocurso = new DAOCurso();
         $daocompetenciatecnica = new DAOCompetenciaTecnica();
         $daoidioma = new DAOIdioma();
@@ -106,6 +107,11 @@ class conversorDeObjetos{
                 $profissional->setMatchEmpresa($row['match_empresa']);
                 $profissional->setDsResultadoComp($row['ds_resultado_comp']);
                 
+                //Cargos
+                foreach ($daocargo->listarCargoProfissional($profissional->getCdprofissional()) as $c) {
+                    $profissional->setCargos($c);
+                }
+
                 //Cursos
                 foreach ($daocurso->listarCursoProfissional($profissional->getCdprofissional()) as $c) {
                     $profissional->setCursos($c);
