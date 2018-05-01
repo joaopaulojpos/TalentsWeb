@@ -19,15 +19,8 @@ back{
     background-image: linear-gradient(to top, #F2F8EF 0%, #fff 1%, #F2F8EF 31%, #F2F8EF 75%, #F2F8EF 100%);
 }
 
-.card{
-  height: 300px;
-}
-
-@media (max-width: 1400px) 
-{
-  .card{
-    height: 400px;
-  }
+.collapsible-body{
+  border-bottom: black 0px;
 }
 
 .fundo-login{

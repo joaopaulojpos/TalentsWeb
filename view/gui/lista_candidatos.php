@@ -125,10 +125,10 @@ usort($arrayPromissores, 'cmp');
 
 <section class="section">
     <div class="row">
-        <ul class="collapsible" data-collapsible = "accordion">
+        <ul class="collapsible z-depth-0" data-collapsible = "accordion">
             <li>
-                <div class="collapsible-header active"><i class="material-icons">assignment_turned_in</i>Aptos</div>
-                <div class="collapsible-body">
+                <div class="collapsible-header active teal darken-1 white-text"><i class="material-icons">assignment_turned_in</i>Aptos</div>
+                <div class="collapsible-body z-depth-0">
                     <table>
                         <tbody>
                             <tr>
@@ -163,8 +163,11 @@ usort($arrayPromissores, 'cmp');
 
                                 ?>
                                     <td class="col s12 m5">
-                                        <div >
+                                        <div>
                                             <div class="card horizontal">
+
+
+
                                                 <div class="card-image">
                                                     <img src="<?php echo $b_foto; ?>" align="left" width="150" height="150">
                                                 </div>
@@ -197,13 +200,163 @@ usort($arrayPromissores, 'cmp');
                                                
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col m2">
+                                                <div class="card-stacked">
+                                                    <div class="card-content col s12 m9 offset-s6">
+
+
                                                     
-                                                        <button class="btn-floating btn-large waves-effect waves-light red" <?php echo $b_like== 1?'disabled':'';?> id="btnLike<?php echo $cd_profissional; ?>" type="submit" name="action" onclick="enviarLike(<?php echo $cd_vaga; ?>, <?php echo $cd_profissional; ?>, <?php echo $b_envia_ajax ?>)"><i class="material-icons right" id="iconeLike<?php echo $cd_profissional; ?>"><?php echo $b_like==1?'done':'favorite';?></i></button>
-                                            
-                                                        <br/><br/><br/>
-                                                        <h3 class="right-align teal-text"><?php echo $porcentagem; ?>%</h3>
+                                                        <button class="btn-floating btn-large waves-effect waves-light red" <?php echo $b_like== 1?'disabled':'';?> id="btnLike<?php echo $cd_profissional; ?>" type="submit" title="Curtir" name="action" onclick="enviarLike(<?php echo $cd_vaga; ?>, <?php echo $cd_profissional; ?>, <?php echo $b_envia_ajax ?>)"><i class="material-icons right" id="iconeLike<?php echo $cd_profissional; ?>"><?php echo $b_like==1?'done':'favorite';?></i></button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                        <a class="btn-floating btn-large waves-effect waves-light red btn modal-trigger" href="#modal<?php echo $cd_profissional?>" title="Visualizar Perfil"><i class="material-icons right">account_circle</i></a>
+
+                                                        <!-- Perfil do profissional (modal) -->
+                                                        <div id="modal<?php echo $cd_profissional?>" class="modal modal-fixed-footer">
+                                                            <div class="modal-content">
+                                                                <div class="row">
+                                                                     <div class="card-panel teal lighten-1 white-text text center"><h5>Perfil do(a) <?php echo $ds_nome ?></h5></div>
+                                                                    <ul class="collapsible">
+                                                                        <li>
+                                                                            <div class="collapsible-header"><i class="material-icons">business_center</i>Experiência(s) Profissional(is)</div>
+                                                                            <div class="collapsible-body">
+                                                                                <table>
+                                                                                    <thead>
+                                                                                      <tr>
+                                                                                          <th>Empresa</th>
+                                                                                          <th>Data Início</th>
+                                                                                          <th>Data Fim</th>
+                                                                                      </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                      <tr>
+                                                                                        <td>ANS</td>
+                                                                                        <td>01/01/2016</td>
+                                                                                        <td>-</td>
+                                                                                      </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+
+                                                                    <ul class="collapsible">
+                                                                        <li>
+                                                                            <div class="collapsible-header"><i class="material-icons">school</i>Educação</div>
+                                                                            <div class="collapsible-body">
+                                                                                <table>
+                                                                                    <thead>
+                                                                                      <tr>
+                                                                                          <th>Curso</th>
+                                                                                          <th>Instituição</th>
+                                                                                          <th>Data Início</th>
+                                                                                          <th>Data Fim</th>
+                                                                                          <th>Período</th>
+                                                                                      </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                      <tr>
+                                                                                        <td>ADS</td>
+                                                                                        <td>Unibratec</td>
+                                                                                        <td>01/01/2016</td>
+                                                                                        <td>-</td>
+                                                                                        <td>6 Período</td>
+                                                                                      </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+
+                                                                    <ul class="collapsible">
+                                                                        <li>
+                                                                            <div class="collapsible-header"><i class="material-icons">poll</i>Competência(s) Técnica(s)</div>
+                                                                            <div class="collapsible-body">
+                                                                                <table>
+                                                                                    <thead>
+                                                                                      <tr>
+                                                                                          <th>Competência</th>
+                                                                                          <th>Nível</th>
+                                                                                      </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                      <tr>
+                                                                                        <td>Java</td>
+                                                                                        <td>5</td>
+                                                                                      </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+
+                                                                    <ul class="collapsible">
+                                                                        <li>
+                                                                            <div class="collapsible-header"><i class="material-icons">public</i>Idioma(s)</div>
+                                                                            <div class="collapsible-body">
+                                                                                <table>
+                                                                                    <thead>
+                                                                                      <tr>
+                                                                                          <th>Idioma</th>
+                                                                                          <th>Nível</th>
+                                                                                      </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                      <tr>
+                                                                                        <td>Português</td>
+                                                                                        <td>Avançado</td>
+                                                                                      </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+
+                                                                    
+                                                                    
+
+                                                                </div>         
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
+                                                            </div>
+                                                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                        
+                                                        <h3 class="teal-text" title="Porcentagem de adequação a vaga"><?php echo $porcentagem; ?>%</h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -224,10 +377,10 @@ usort($arrayPromissores, 'cmp');
 
 
 
-        <ul class="collapsible" data-collapsible = "accordion">
+        <ul class="collapsible z-depth-0" data-collapsible = "accordion">
             <li>
-                <div class="collapsible-header active"><i class="material-icons">assignment_late</i>Promissores</div>
-                <div class="collapsible-body">
+                <div class="collapsible-header active blue-grey darken-2 white-text"><i class="material-icons">assignment_late</i>Promissores</div>
+                <div class="collapsible-body z-depth-0">
                     <table>
                         <tbody>
                             <tr>
@@ -296,13 +449,28 @@ usort($arrayPromissores, 'cmp');
                                                
                                                     </div>
                                                 </div>
-                                                <div class="row">
-                                                    <div class="col m2">
+                                                <div class="card-stacked">
+                                                    <div class="card-content col s12 m9 offset-s6">
+
+
                                                     
                                                         <button class="btn-floating btn-large waves-effect waves-light red" <?php echo $b_like== 1?'disabled':'';?> id="btnLike<?php echo $cd_profissional; ?>" type="submit" name="action" onclick="enviarLike(<?php echo $cd_vaga; ?>, <?php echo $cd_profissional; ?>, <?php echo $b_envia_ajax ?>)"><i class="material-icons right" id="iconeLike<?php echo $cd_profissional; ?>"><?php echo $b_like==1?'done':'favorite';?></i></button>
-                                            
-                                                        <br/><br/><br/>
-                                                        <h3 class="right-align teal-text"><?php echo $porcentagem; ?>%</h3>
+
+
+                                                        <a class="btn-floating btn-large waves-effect waves-light red btn modal-trigger" href="#modal<?php echo $cd_profissional?>" title="Visualizar Perfil"><i class="material-icons right">account_circle</i></a>
+
+                                                        <!-- Perfil do profissional (modal) -->
+                                                        <div id="modal<?php echo $cd_profissional?>" class="modal">
+                                                          <div class="modal-content">
+                                                            <h4><?php echo $ds_nome?></h4>
+                                                            <p>A bunch of text</p>
+                                                          </div>
+                                                          <div class="modal-footer">
+                                                            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                                                          </div>
+                                                        </div>
+                                                        
+                                                        <h3 class="teal-text"><?php echo $porcentagem; ?>%</h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -324,6 +492,7 @@ usort($arrayPromissores, 'cmp');
 </section>
 
 <script type='text/javascript'>
+
     function enviarLike(cd_vaga, cd_profissional, b_like) {
 
         if (b_like == 1){
@@ -346,6 +515,11 @@ usort($arrayPromissores, 'cmp');
             }
         });
     }
+    $(document).ready(function() {
+
+         // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+        $('.modal').modal();
+    });
     /*$(document).ready(function(){
         $('#errMessage').hide();
         $('#formulario_like').submit(function(){  //Ao submeter formulário
