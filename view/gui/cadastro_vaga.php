@@ -139,7 +139,6 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                         <textarea name="observacao" id="observacao" class="materialize-textarea" minlength="10" required></textarea>
                         <label for="observacao">Descrição das atividades</label>
                     </div>
-
                 </div>
             </div>
 
@@ -325,10 +324,12 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
             </div>
 
             <div class="container">
-                <div class="row">
-                    <button class="btn waves-effect waves-light" type="submit" name="buttonSubmit" id="buttonSubmit">Criar
+                <div class="row">     
+                    <button class="btn waves-effect waves-light" type="submit" name="buttonSubmit" id="buttonSubmit">Salvar
                         <i class="material-icons right">send</i>
                     </button>         
+                    &nbsp; &nbsp;<input name="publicar" id="publicar" type="checkbox" class="validate" checked>
+                    <label for="publicar">Publicar?</label>
                 </div>
             </div>
         </form>
@@ -524,6 +525,14 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
         var longitude=$('#longitude').val();
         var endereco=$('#endereco').val();
 
+        var publicar = 'A';
+
+        if ($('#publicar').is(':checked')){
+            //
+        }else{
+            publicar = 'P';
+        }
+
         $.ajax({      //Função AJAX
           url:"../validacoes/valida_vaga.php",      //Arquivo php
           type:"post",        //Método de envio
@@ -533,7 +542,8 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                 "&latitude="+latitude+"&longitude="+longitude+"&endereco="+endereco+
                 "&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+
                 "&tecnicaCodigo="+JSON.stringify(tecnicaCodigo)+"&tecnicaNivel="+JSON.stringify(tecnicaNivel)+
-                "&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo), //Dados
+                "&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo)+
+                "&tpStatus="+publicar, //Dados
             success: function (result){     //Sucesso no AJAX
                         if (result == 1){
                           location.href='dashboard.php';

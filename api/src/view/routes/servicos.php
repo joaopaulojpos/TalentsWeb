@@ -276,7 +276,7 @@ $app->get('/api/vagas', function(Request $request, Response $response){
 /**
 * Visualiza vaga
 */
-$app->get('/api/vaga/{id}', function(Request $request, Response $response){
+$app->get('/api/vaga/buscar/{id}', function(Request $request, Response $response){
     
     try{
         $id = $request->getAttribute('id');
@@ -323,7 +323,7 @@ $app->get('/api/vaga/{id}/profissionais', function(Request $request, Response $r
 /**
  * Cadastro da vaga
  */
-$app->post('/api/vaga/publicar', function(Request $request, Response $response){
+$app->post('/api/vaga/salvar', function(Request $request, Response $response){
 
     try{
         $vaga = new Vaga();
@@ -347,6 +347,8 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
     	$vaga->setCargo($cargo);
     	$empresa->setCdEmpresa($request->getParam('cd_empresa'));
     	$vaga->setEmpresa($empresa);
+
+        $vaga->setTpStatus($request->getParam('tp_status'));
 
         //Pegando a lista de idiomas no JSON e colocando na lista de idiomas na vaga
         $idiomas = json_decode($request->getParam('idiomas'), true);
@@ -408,10 +410,27 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
             }
         }
         $rnvaga = new RNVaga();  
-        $response->write(json_encode($rnvaga->publicar($vaga)));
+        $response->write(json_encode($rnvaga->salvar($vaga)));
          
     } catch(PDOException $e){
         $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
+/**
+ * Publicar Vaga
+ */
+$app->post('/api/vaga/publicar', function(Request $request, Response $response){
+
+    try{
+        $cd_vaga = $request->getParam('cd_vaga');
+    
+        $rnvaga = new RNVaga();
+        $result = $rnvaga->publicar($cd_vaga);
+        $response->write(json_encode($result));
+
+    } catch(PDOException $e){
+        $response->write(json_encode(array('error' => $e->getMessage())));
     }
 });
 

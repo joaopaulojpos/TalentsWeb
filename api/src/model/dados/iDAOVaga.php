@@ -2,7 +2,9 @@
 interface iDAOVaga{
 
     //Função cadastrar vaga
-    public function publicar(Vaga $vaga);
+    public function salvar(Vaga $vaga);
+
+    public function publicar($cd_vaga);
 
     public function pesquisar(Vaga $vagas, $alt='false' );
 

@@ -10,7 +10,7 @@ class DaoVaga implements iDAOVaga
      * @param vaga $vaga
      * @return string
      */
-    public function publicar(vaga $vaga){
+    public function salvar(vaga $vaga){
         try{
             //Comando para inserir a vaga na base de dados
             $sql = "insert into vaga (nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_experiencia,nr_longitude,nr_latitude,ds_beneficios,ds_horario_expediente,
@@ -35,7 +35,7 @@ class DaoVaga implements iDAOVaga
                     ':ds_endereco' => $vaga->getDsEndereco(),
                     ':cd_cargo' => $vaga->getCargo()->getCdCargo(),
                     ':cd_empresa' => $vaga->getEmpresa()->getCdEmpresa(),
-                    ':tp_status' => 'A'
+                    ':tp_status' => $vaga->getTpStatus()
 
                 ));
                 //Guardando o id da última insersão para utiliza-lo
@@ -69,6 +69,25 @@ class DaoVaga implements iDAOVaga
         }finally{
             $stmt->closeCursor();
         }
+    }
+
+    public function publicar($cd_vaga){
+        try{
+
+            $comando = "update vaga set tp_status = 'A' where cd_vaga = :cd_vaga";
+
+            $stmt = db::getInstance()->prepare($comando);
+
+            $stmt->bindValue(':cd_vaga', $cd_vaga);
+
+            $run = $stmt->execute();
+
+        }catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+
     }
 
     public function duplicidade(Vaga $vaga){

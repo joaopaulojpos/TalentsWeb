@@ -82,12 +82,12 @@ include "foooter.php";
                 $nr_experiencia = 'Acima de 5 anos';
               }
 
-              if ($value["tp_status"] == 'A'){
+              if ($value["tp_status"] == 'P'){
+                $tp_status = 'Aguardando Publicação';
+                $tp_envia_status_ajax = 1;
+              }else{
                 $tp_status = 'Disponível';
                 $tp_envia_status_ajax = 0;
-              }else{
-                $tp_status = 'Indisponível';
-                $tp_envia_status_ajax = 1;
               }
              
   ?>
@@ -101,7 +101,7 @@ include "foooter.php";
           </br>
           <div class="divider"></div>
           </br>
-          <p><b>Status:</b><span class=<?php echo $tp_status=="Disponível"?"disponivel":"indisponivel";?>> <?php echo $tp_status; ?></span></p>
+          <p><b>Status:</b><span class=<?php echo $tp_status=="Disponível"?"teal-text":"orange-text";?>> <?php echo $tp_status; ?></span></p>
                       <p><b>Tipo de contratação:</b><span> <?php echo $tp_contratacao; ?></span></p>
                       <p><b>Salário:</b><span> <?php echo $vl_salario; ?></span></p>
                       <p><b>Jornada de trabalho:</b><span> <?php echo $ds_horario_expediente; ?></span></p>
@@ -115,7 +115,7 @@ include "foooter.php";
         </div>
 
           <div class="card-action">
-                <a class="waves-effect waves-light btn red darken-4">Fechar Vaga</a>
+                <button class="waves-effect waves-light btn orange darken-1" onclick="alterarStatusVaga(<?php echo $cd_vaga; ?>)" <?php echo $tp_status=="Disponível"?"disabled":""?>><?php echo $tp_status=="Disponível"?"Publicado":"Publicar"?></button>
                 <a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>" class="waves-effect waves-light btn teal darken-4">Ver Candidatos</a>
           </div>
 
@@ -236,19 +236,20 @@ include "foooter.php";
     });
 
 
-    function alterarStatusVaga(cd_vaga, tp_envia_status_ajax) {
+    function alterarStatusVaga(cd_vaga) {
       $.ajax({      //Função AJAX
       url:"../validacoes/valida_alteracao_status_vaga.php",      //Arquivo php
       type:"post",        //Método de envio
-      data: "cd_vaga="+cd_vaga+"&tp_envia_status_ajax="+tp_envia_status_ajax, //Dados
+      data: "cd_vaga="+cd_vaga, //Dados
           success: function (result){
               if(result == 1){
-                  return true;
+                location.href='lista_vagas.php'; 
               }else{
-                  alert("Erro ao inativar/ativar vaga: " + result);
+                alert("Erro ao publicar vaga: " + result);
               }
           }
       });
+      return false;
     }
 
 </script>

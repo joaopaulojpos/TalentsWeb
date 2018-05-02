@@ -31,6 +31,7 @@ try{
 	$tecnicaNivel = json_decode(stripslashes($_POST['tecnicaNivel']));
 	$comportCodigo = json_decode(stripslashes($_POST['comportCodigo']));
 	$cursoCodigo = json_decode(stripslashes($_POST['cursoCodigo']));
+	$tp_status = $_POST['tpStatus'];
 
 	//Inicializando os objetos
 	$vaga = new Vaga();
@@ -52,6 +53,7 @@ try{
 	$vaga->setNrLatitude($latitude);
 	$vaga->setNrLongitude($longitude);
 	$vaga->setDsEndereco($endereco);
+	$vaga->setTpStatus($tp_status);
 
 	//prenchendo os campos do objeto cargo 
 	$cargo->setCdCargo($cd_cargo);
@@ -96,7 +98,7 @@ try{
 	$vaga->setCargo($cargo);
 	$vaga->setEmpresa($empresa);
 
-	$array = $fachada->publicarVaga($vaga);
+	$array = $fachada->salvarVaga($vaga);
 
 	if ($array == null){
 		echo 1;

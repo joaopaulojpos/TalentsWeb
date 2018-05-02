@@ -47,14 +47,23 @@
     }
 
     //Vaga
-    public function publicarVaga($vaga){
+    public function publicarVaga($cd_vaga){
         try{
             $daovaga = new DAOVaga();
-            return json_decode($daovaga->publicar($vaga), true);
+            return json_decode($daovaga->publicar($cd_vaga), true);
         }catch(Exception $e){
-            return array('erro' => 'Erro publicação' );
+            return array('erro' => 'Erro ao publicar vaga!' );
         }
-    }   
+    }  
+
+    public function salvarVaga($vaga){
+        try{
+            $daovaga = new DAOVaga();
+            return json_decode($daovaga->salvar($vaga), true);
+        }catch(Exception $e){
+            return array('erro' => 'Erro ao salvar vaga!' );
+        }
+    } 
 
     public function vagasEmpresaPesquisar($cd_empresa){
         $daoempresa = new DaoEmpresa();

@@ -7,7 +7,7 @@ require_once('../src/model/dados/daovaga.php');
  */
 class RNVaga{
 
-	public function publicar(Vaga $vaga){
+	public function salvar(Vaga $vaga){
 		try {
 
             $daovaga = new DAOVaga();
@@ -96,7 +96,7 @@ class RNVaga{
             
             //------------------------------------------------------------------------------------------------------------\
 
-            $daovaga->publicar($vaga);
+            $daovaga->salvar($vaga);
 
             return array('sucess' => 'Cadastrado com sucesso!');
 
@@ -104,6 +104,18 @@ class RNVaga{
             return array('erro' => $e->getMessage());
         }
 	}
+
+    public function publicar($cd_vaga){
+        try{
+            $daovaga = new DAOVaga();
+            $daovaga->publicar($cd_vaga);
+
+            return array('sucess' => 'Publicado com sucesso!');   
+                     
+        }catch (Exception $e){
+            return array('erro' => $e->getMessage());
+        }
+    } 
 
     /**
      * @param $tp_acao
