@@ -486,7 +486,17 @@ $app->get('/api/cargos', function(Request $request, Response $response){
         $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
+$app->get('/api/profissional/cargos', function(Request $request, Response $response){
+    
+    try{
+        $rnprofissional = new RNProfissional();
+        $rnprofissional = $rnprofissional->listarCargosCandidatos($request->getParam('cd_profissional'));
+        $response->write(json_encode($rnprofissional));
 
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
 //------ curso
 
 $app->get('/api/cursos', function(Request $request, Response $response){
@@ -496,6 +506,18 @@ $app->get('/api/cursos', function(Request $request, Response $response){
         $rncurso = new RNCurso();        
         $rncurso = $rncurso->pesquisar($curso);
         $response->write(json_encode($rncurso));
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
+$app->get('/api/profissional/cursos', function(Request $request, Response $response){
+    
+    try{
+        $rnprofissional = new RNProfissional();
+        $rnprofissional = $rnprofissional->listarCursosCandidatos($request->getParam('cd_profissional'));
+        $response->write(json_encode($rnprofissional));
 
     } catch(Exception $e){
         $response->write(json_encode(array('erro' => $e->getMessage())));
@@ -517,6 +539,18 @@ $app->get('/api/idiomas', function(Request $request, Response $response){
     }
 });
 
+$app->get('/api/profissional/idiomas', function(Request $request, Response $response){
+    
+    try{
+        $rnprofissional = new RNProfissional();
+        $rnprofissional = $rnprofissional->listarIdiomasCandidatos($request->getParam('cd_profissional'));
+        $response->write(json_encode($rnprofissional));
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
 //------ competencias
 
 $app->get('/api/competencias_tecnicas', function(Request $request, Response $response){
@@ -526,6 +560,17 @@ $app->get('/api/competencias_tecnicas', function(Request $request, Response $res
         $rncompetenciatecnica = new RNCompetenciaTecnica();        
         $rncompetenciatecnica = $rncompetenciatecnica->pesquisar($competenciatecnica);
         $response->write(json_encode($rncompetenciatecnica));
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+$app->get('/api/profissional/competencias_tecnicas', function(Request $request, Response $response){
+    
+    try{
+        $rnprofissional = new RNProfissional();
+        $rnprofissional = $rnprofissional->listarCompetenciasCandidatos($request->getParam('cd_profissional'));
+        $response->write(json_encode($rnprofissional));
 
     } catch(Exception $e){
         $response->write(json_encode(array('erro' => $e->getMessage())));

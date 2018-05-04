@@ -234,8 +234,93 @@ class DaoProfissional implements iDAOProfissional
             $stmt->closeCursor();
         }
     }
+    public function listarCursosProfissional($cd_profissional){
+        try{
+            $sql = 'select pc.cd_profissional,pc.cd_curso,c.ds_curso,pc.ds_instituicao,pc.dt_fim,pc.dt_inicio,pc.tp_certificado_validado,pc.nr_certificado,pc.nr_periodo
+                      from profissional_curso as pc
+                      JOIN
+                        curso c on pc.cd_curso = c.cd_curso
+                    where pc.cd_profissional = :cod_prof;';
+            $stmt = db::getInstance()->prepare($sql);
 
+            if (!empty($cd_profissional))
+                $stmt->bindValue(':cod_prof', $cd_profissional);
 
+            $run = $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+            return $result;
+        }catch (PDOException $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
+    public function listarIdiomasProfissional($cd_profissional){
+        try{
+            $sql = 'select pi.cd_profissional,pi.cd_idioma,i.ds_idioma,pi.nr_nivel
+                      from profissional_idioma as pi
+                      JOIN
+                        idioma i on pi.cd_idioma = i.cd_idioma
+                    where pi.cd_profissional = :cod_prof;';
+            $stmt = db::getInstance()->prepare($sql);
+
+            if (!empty($cd_profissional))
+                $stmt->bindValue(':cod_prof', $cd_profissional);
+
+            $run = $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $result;
+        }catch (PDOException $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
+    public function listarCompetenciasProfissional($cd_profissional){
+        try{
+            $sql = 'select pct.cd_profissional ,pct.cd_competencia_tecnica,ct.ds_competencia_tecnica,pct.nr_nivel
+                      from profissional_competencia_tecnica as pct
+                      JOIN
+                      competencia_tecnica ct on pct.cd_competencia_tecnica = ct.cd_competencia_tecnica
+                    where pct.cd_profissional = :cod_prof;';
+            $stmt = db::getInstance()->prepare($sql);
+
+            if (!empty($cd_profissional))
+                $stmt->bindValue(':cod_prof', $cd_profissional);
+
+            $run = $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $result;
+        }catch (PDOException $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
+    public function listarCargosProfissional($cd_profissional){
+        try{
+            $sql = 'select pc.cd_profissional,pc.cd_cargo,c.ds_cargo,pc.ds_empresa,pc.dt_fim,pc.dt_inicio
+                      from profissional_cargo as pc
+                      JOIN
+                      cargo c on pc.cd_cargo = c.cd_cargo
+                      where pc.cd_profissional = :cod_prof;';
+            $stmt = db::getInstance()->prepare($sql);
+
+            if (!empty($cd_profissional))
+                $stmt->bindValue(':cod_prof', $cd_profissional);
+
+            $run = $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $result;
+        }catch (PDOException $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
 }
 ?>

@@ -99,7 +99,86 @@ class RNProfissional{
         }
 
     }
+    public function listarCursosCandidatos($cd_profissional)
+    {
+        try{
+            $daoprofissional = new DaoProfissional();
 
+            //Verifica se o profissional existe
+            $prof = new Profissional();
+            $prof->setCdProfissional($cd_profissional);
+            $profissional = $daoprofissional->pesquisarById($prof);
+            if (empty($profissional)){
+                return array('erro' => "Profissional não existe");
+            }
+
+            $result = $daoprofissional->listarCursosProfissional($cd_profissional,false);
+            return array('sucess'=> $result);
+
+        }catch (Exception $e){
+            return array('erro' => $e->getMessage());
+        }
+    }
+    public function listarIdiomasCandidatos($cd_profissional)
+    {
+        try{
+            $daoprofissional = new DaoProfissional();
+
+            //Verifica se o profissional existe
+            $prof = new Profissional();
+            $prof->setCdProfissional($cd_profissional);
+            $profissional = $daoprofissional->pesquisarById($prof);
+            if (empty($profissional)){
+                return array('erro' => "Profissional não existe");
+            }
+
+            $result = $daoprofissional->listarIdiomasProfissional($cd_profissional,false);
+            return array('sucess'=> $result);
+
+        }catch (Exception $e){
+            return array('erro' => $e->getMessage());
+        }
+    }
+    public function listarCompetenciasCandidatos($cd_profissional)
+    {
+        try{
+            $daoprofissional = new DaoProfissional();
+
+            //Verifica se o profissional existe
+            $prof = new Profissional();
+            $prof->setCdProfissional($cd_profissional);
+            $profissional = $daoprofissional->pesquisarById($prof);
+            if (empty($profissional)){
+                return array('erro' => "Profissional não existe");
+            }
+
+            $result = $daoprofissional->listarCompetenciasProfissional($cd_profissional,false);
+            return array('sucess'=> $result);
+
+        }catch (Exception $e){
+            return array('erro' => $e->getMessage());
+        }
+    }
+    public function listarCargosCandidatos($cd_profissional)
+    {
+        try{
+            $daoprofissional = new DaoProfissional();
+
+            //Verifica se o profissional existe
+            $prof = new Profissional();
+            $prof->setCdProfissional($cd_profissional);
+            $profissional = $daoprofissional->pesquisarById($prof);
+            if (empty($profissional)){
+                return array('erro' => "Profissional não existe");
+            }
+
+            $result = $daoprofissional->listarCargosProfissional($cd_profissional,false);
+            return array('sucess'=> $result);
+
+        }catch (Exception $e){
+            return array('erro' => $e->getMessage());
+        }
+    }
 
 }
 
