@@ -152,14 +152,7 @@ class DAOCompetenciaTecnica implements iDAOCompetenciaTecnica
       }
     }
 
-    public function inserirCompetenciaTecnicaProfissional($cd_profissional,$competencias){
-
-        foreach ($competencias as $competencia){
-            $this->competenciaTecnicaProfissional($cd_profissional,$competencia['cd_competencia_tecnica'],$competencia['nr_nivel']);
-        }
-    }
-
-    private function competenciaTecnicaProfissional($cd_profissional,$cd_competencia_tecnica,$nr_nivel)
+    public function inserirCompetenciaTecnicaProfissional($cd_profissional,$cd_competencia_tecnica,$nr_nivel)
     {
         try{
             $sql = "insert into profissional_competencia_tecnica (cd_profissional,cd_competencia_tecnica,nr_nivel) 
