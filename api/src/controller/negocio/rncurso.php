@@ -20,11 +20,11 @@ class RNCurso{
 	}
 
 
-    public function inserirCursoProfissional($cd_profissional,$cursos)
+    public function inserirCursoProfissional($cd_profissional, $cd_curso, $ds_instituicao, $dt_fim, $dt_inicio, $nr_certificado, $tp_certificado_validado, $nr_periodo)
     {
         try{
             $dao = new daocurso();
-            $result = $dao->cursoProfissional($cd_profissional,$cursos);
+            $result = $dao->inserirCursoProfissional($cd_profissional, $cd_curso, $ds_instituicao, $dt_fim, $dt_inicio, $nr_certificado, $tp_certificado_validado, $nr_periodo);
             return array('sucess');
         }catch (Exception $e){
             return array('erro'=> $e->getMessage());

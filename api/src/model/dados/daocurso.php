@@ -155,7 +155,7 @@ class DaoCurso implements iDAOCurso
         }
     }
 
-    private function inserirCursoProfissional($cd_profissional, $cd_curso, $ds_instituicao, $dt_fim, $dt_inicio, $nr_certificado, $tp_certificado_validado, $nr_periodo)
+    public function inserirCursoProfissional($cd_profissional, $cd_curso, $ds_instituicao, $dt_fim, $dt_inicio, $nr_certificado, $tp_certificado_validado, $nr_periodo)
     {
         try{
             $sql = "INSERT INTO profissional_curso
