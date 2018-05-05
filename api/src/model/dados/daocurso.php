@@ -165,7 +165,7 @@ class DaoCurso implements iDAOCurso
                     dt_fim,
                     dt_inicio,
                     tp_certificado_validado,
-                    nr_cerificado,
+                    nr_certificado,
                     nr_periodo)
                     VALUES
                     (:cd_curso,
@@ -174,7 +174,7 @@ class DaoCurso implements iDAOCurso
                     :dt_fim,
                     :dt_inicio,
                     :tp_certificado_validado,
-                    :nr_cerificado,
+                    :nr_certificado,
                     :nr_periodo);";
 
             $stmt = db::getInstance()->prepare($sql);
@@ -184,7 +184,7 @@ class DaoCurso implements iDAOCurso
                 ':ds_instituicao' => $ds_instituicao,
                 ':dt_fim' => $dt_fim,
                 ':dt_inicio' => $dt_inicio,
-                ':nr_cerificado' => $nr_certificado,
+                ':nr_certificado' => $nr_certificado,
                 ':tp_certificado_validado' => $tp_certificado_validado,
                 ':nr_periodo' => $nr_periodo
             ));
