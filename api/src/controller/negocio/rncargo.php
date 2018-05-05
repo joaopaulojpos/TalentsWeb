@@ -18,6 +18,17 @@ class RNCargo{
 			return array('erro' => $e->getMessage());
 		}
 	}
+
+    public function inserirCargoProfissional($cd_profissional,$cd_cargo,$ds_empresa,$dt_inicio,$dt_fim)
+    {
+        try{
+            $dao = new DaoCargo();
+            $result = $dao->inserirCargoProfissional($cd_profissional,$cd_cargo,$ds_empresa,$dt_inicio,$dt_fim);
+            return array('sucess');
+        }catch (Exception $e){
+            return array('erro'=> $e->getMessage());
+        }
+    }
 }
 
 ?>

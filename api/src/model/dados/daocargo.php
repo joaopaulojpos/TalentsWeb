@@ -87,5 +87,27 @@ class DaoCargo implements iDAOCargo
         $stmt->closeCursor();
       }
     }
+
+    public function inserirCargoProfissional($cd_profissional,$cd_cargo,$ds_empresa,$dt_inicio,$dt_fim)
+    {
+        try{
+            $sql = "insert into profissional_cargo (cd_profissional,cd_cargo,ds_empresa,dt_inicio,dt_fim) 
+                         values (:cd_profissional,:cd_cargo,:ds_empresa,:dt_inicio,:dt_fim);";
+
+            $stmt = db::getInstance()->prepare($sql);
+            $run = $stmt->execute(array(
+                ':cd_profissional' => $cd_profissional,
+                ':cd_cargo' => $cd_cargo,
+                ':ds_empresa' => $ds_empresa,
+                ':dt_inicio' => $dt_inicio,
+                ':dt_fim' => $dt_fim
+            ));
+
+        }catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
 }
 ?>

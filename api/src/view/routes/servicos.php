@@ -263,6 +263,24 @@ $app->post('/api/profissional/competencia_tecnica', function(Request $request, R
     }
 });
 
+$app->post('/api/profissional/cargo', function(Request $request, Response $response){
+
+    try{
+        $cd_profissional = $request->getParam('cd_profissional');
+        $cd_cargo = $request->getParam('cd_cargo');
+        $ds_empresa = $request->getParam('ds_empresa');
+        $dt_inicio = $request->getParam('dt_inicio');
+        $dt_fim = $request->getParam('dt_fim');
+
+        $rncargo = new RNCargo();
+        $rncargo = $rncargo->inserirCargoProfissional($cd_profissional,$cd_cargo,$ds_empresa,$dt_inicio,$dt_fim);
+        $response->write(json_encode($rncargo));
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
 //----- Vaga
 
 /**
