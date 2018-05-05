@@ -214,10 +214,11 @@ $app->post('/api/profissional/idioma', function(Request $request, Response $resp
 
     try{
         $cd_profissional = $request->getParam('cd_profissional');
-        $idiomas = $request->getParam('idiomas');
+        $cd_idioma = $request->getParam('cd_idioma');
+        $nr_nivel = $request->getParam('nr_nivel');
 
         $rnidioma = new RNIdioma();
-        $rnidioma= $rnidioma->inserirIdiomaProfissional($cd_profissional,$idiomas);
+        $rnidioma= $rnidioma->inserirIdiomaProfissional($cd_profissional,$cd_idioma,$nr_nivel);
         $response->write(json_encode($rnidioma));
 
     } catch(Exception $e){

@@ -151,14 +151,7 @@ class DaoIdioma implements iDAOIdioma
       }
     }
 
-    public function idiomaProfissional($cd_profissional,$idiomas)
-    {
-        foreach ($idiomas as $idioma){
-            $this->inserirIdiomaProfissional($cd_profissional,$idioma['cd_idioma'],$idioma['nr_nivel']);
-        }
-    }
-
-    private function inserirIdiomaProfissional($cd_profissional,$cd_idioma,$nr_nivel)
+    public function inserirIdiomaProfissional($cd_profissional,$cd_idioma,$nr_nivel)
     {
         try{
             $sql = "insert into profissional_idioma (cd_profissional,cd_idioma,nr_nivel) 
