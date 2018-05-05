@@ -763,3 +763,6 @@ insert into alternativa_perfil_comp(cd_pergunta_perfil_comp,ds_resposta,nr_letra
 
 -- Adicionando campo nr_nivel da competencia
 alter table profissional_competencia_tecnica add column nr_nivel Integer;
+
+-- Adicionando campo token do profissional
+alter table profissional add column token varchar(100);
