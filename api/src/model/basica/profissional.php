@@ -12,6 +12,7 @@ class Profissional implements JsonSerializable {
 	private $ds_nome;
 	private $match_empresa;
 	private $ds_resultado_comp;
+	private $token;
 
 	//array de cargos
 	private $cargos;
@@ -165,6 +166,39 @@ class Profissional implements JsonSerializable {
     {
         return $this->idiomas;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getNrLongitude()
+    {
+        return $this->nr_longitude;
+    }
+
+    /**
+     * @param mixed $nr_longitude
+     */
+    public function setNrLongitude($nr_longitude)
+    {
+        $this->nr_longitude = $nr_longitude;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * @param mixed $token
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
+    }
+
 
     /**
      * Specify data which should be serialized to JSON

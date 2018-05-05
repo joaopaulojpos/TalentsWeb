@@ -180,6 +180,20 @@ class RNProfissional{
         }
     }
 
+    public function updateToken($cd_profissional,$token)
+    {
+        try{
+            $daoprofissional = new DaoProfissional();
+
+            //Verifica se o profissional existe
+            $daoprofissional->updateToken($cd_profissional,$token);
+
+            return array('sucess');
+        }catch (Exception $e){
+            return array('erro' => $e->getMessage());
+        }
+    }
+
 }
 
 ?>

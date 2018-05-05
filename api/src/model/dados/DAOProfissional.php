@@ -322,5 +322,23 @@ class DaoProfissional implements iDAOProfissional
             $stmt->closeCursor();
         }
     }
+    public function updateToken($cd_profissional,$token){
+        try{
+            $sql = 'update profissional set token = :token where cd_profissional = :cd_profissional;';
+            $stmt = db::getInstance()->prepare($sql);
+
+            if (!empty($cd_profissional))
+                $stmt->bindValue(':cd_profissional', $cd_profissional);
+                $stmt->bindValue(':token', $token);
+
+            $run = $stmt->execute();
+
+        }catch (PDOException $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
+
 }
 ?>

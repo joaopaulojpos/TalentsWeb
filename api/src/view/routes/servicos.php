@@ -281,6 +281,21 @@ $app->post('/api/profissional/cargo', function(Request $request, Response $respo
     }
 });
 
+$app->post('/api/profissional/updateToken', function(Request $request, Response $response){
+
+    try{
+        $cd_profissional = $request->getParam('cd_profissional');
+        $token = $request->getParam('token');
+
+        $rncargo = new RNProfissional();
+        $rncargo = $rncargo->updateToken($cd_profissional,$token);
+        $response->write(json_encode($rncargo));
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
 //----- Vaga
 
 /**
