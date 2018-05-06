@@ -229,6 +229,27 @@ class RNVaga{
 		}
 	
 	}
+
+
+        public function fecharVaga($cd_vaga){
+        try{
+            
+            $daovaga = new DaoVaga();
+
+
+            //Verifica se o campo código da vaga está vazio
+            if (empty($cd_vaga)){
+                return array('erro' => 'Código da vaga inválido');
+            }
+
+            $result = $daovaga->fecharVaga($cd_vaga);
+
+            return array('sucess' => 'Vaga Finalizada com Sucesso!');
+
+        }catch (Exception $e){
+            return array('erro' => $e->getTrace());
+        }
+    }
 }
 
 ?>

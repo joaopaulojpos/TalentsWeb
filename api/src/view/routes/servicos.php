@@ -701,4 +701,19 @@ $app->post('/api/CalculoPerfilComp', function(Request $request, Response $respon
     }
 });
 
+
+$app->post('/api/vaga/fecharVaga', function(Request $request, Response $response){
+
+    try{
+        $cd_vaga = ($request->getParam('cd_vaga'));
+    
+        $rnvaga = new RNVaga();
+        $result = $rnvaga->fecharVaga($cd_vaga);
+        $response->write(json_encode($result));
+
+    } catch(PDOException $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
 ?>

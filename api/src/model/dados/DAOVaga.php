@@ -299,5 +299,25 @@ class DaoVaga implements iDAOVaga
             $stmt->closeCursor();
         }
     }
+
+
+    public function fecharVaga($cd_vaga){
+        try{
+            $sql = "update vaga set    tp_status = 'F' 
+                     where  cd_vaga = :cd_vaga";
+
+            $stmt = db::getInstance()->prepare($sql);
+            $run = $stmt->execute(array(
+                ':cd_vaga' => $cd_vaga
+            ));
+
+        }catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
+
+
 }
 ?>

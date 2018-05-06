@@ -11,6 +11,8 @@ interface iDAOVaga{
     public function curtirVaga($tp_acao,$cd_vaga,$cd_profissional);
 
     public function isCurtidaByProfissional($cd_vaga,$cd_profissional);
+
+    public function fecharVaga($cd_vaga);
 }
 
 ?>
