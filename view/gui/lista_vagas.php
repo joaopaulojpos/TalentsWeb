@@ -84,10 +84,22 @@ include "foooter.php";
 
               if ($value["tp_status"] == 'P'){
                 $tp_status = 'Aguardando Publicação';
-                $tp_envia_status_ajax = 1;
+                $cor_status = 'orange';
+                $metodo_status = 'publicarVaga('.$cd_vaga.')';
+                $cor_botao_status = 'orange';
+                $texto_botao_status = "Publicar";
+              }else if ($value["tp_status"] == 'F'){
+                $tp_status = 'Finalizado';
+                $cor_status = 'red';
+                $metodo_status = '';
+                $cor_botao_status = 'grey';
+                $texto_botao_status = "Finalizado";
               }else{
                 $tp_status = 'Disponível';
-                $tp_envia_status_ajax = 0;
+                $cor_status = 'teal';
+                $metodo_status = 'fecharVaga('.$cd_vaga.')';
+                $cor_botao_status = 'red';
+                $texto_botao_status = "Finalizar";
               }
              
   ?>
@@ -101,7 +113,7 @@ include "foooter.php";
           </br>
           <div class="divider"></div>
           </br>
-          <p><b>Status:</b><span class=<?php echo $tp_status=="Disponível"?"teal-text":"orange-text";?>> <?php echo $tp_status; ?></span></p>
+          <p><b>Status:</b><span class=<?php echo $cor_status.'-text';?>> <?php echo $tp_status; ?></span></p>
                       <p><b>Tipo de contratação:</b><span> <?php echo $tp_contratacao; ?></span></p>
                       <p><b>Salário:</b><span> <?php echo $vl_salario; ?></span></p>
                       <p><b>Jornada de trabalho:</b><span> <?php echo $ds_horario_expediente; ?></span></p>
@@ -115,7 +127,7 @@ include "foooter.php";
         </div>
 
           <div class="card-action">
-                <button class="waves-effect waves-light btn orange darken-1" onclick="alterarStatusVaga(<?php echo $cd_vaga; ?>)" <?php echo $tp_status=="Disponível"?"disabled":""?>><?php echo $tp_status=="Disponível"?"Publicado":"Publicar"?></button>
+                <button class="waves-effect waves-light btn <?php echo $cor_botao_status; ?> darken-1" onclick=<?php echo $metodo_status; ?>> <?php echo $texto_botao_status; ?> </button>
                 <a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>" class="waves-effect waves-light btn teal darken-4">Ver Candidatos</a>
           </div>
 
@@ -236,16 +248,34 @@ include "foooter.php";
     });
 
 
-    function alterarStatusVaga(cd_vaga) {
+    function publicarVaga(cd_vaga) {
+      var tp_status='A';
       $.ajax({      //Função AJAX
       url:"../validacoes/valida_alteracao_status_vaga.php",      //Arquivo php
       type:"post",        //Método de envio
-      data: "cd_vaga="+cd_vaga, //Dados
+      data: "cd_vaga="+cd_vaga+"&tp_status="+tp_status, //Dados
           success: function (result){
               if(result == 1){
                 location.href='lista_vagas.php'; 
               }else{
-                alert("Erro ao publicar vaga: " + result);
+                alert("Erro ao alterar status da vaga: " + result);
+              }
+          }
+      });
+      return false;
+    }
+
+    function fecharVaga(cd_vaga) {
+      var tp_status='F';
+      $.ajax({      //Função AJAX
+      url:"../validacoes/valida_alteracao_status_vaga.php",      //Arquivo php
+      type:"post",        //Método de envio
+      data: "cd_vaga="+cd_vaga+"&tp_status="+tp_status, //Dados
+          success: function (result){
+              if(result == 1){
+                location.href='lista_vagas.php'; 
+              }else{
+                alert("Erro ao alterar status da vaga: " + result);
               }
           }
       });

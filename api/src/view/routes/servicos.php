@@ -475,6 +475,21 @@ $app->post('/api/vaga/publicar', function(Request $request, Response $response){
     }
 });
 
+$app->post('/api/vaga/fechar', function(Request $request, Response $response){
+
+    try{
+        $cd_vaga = ($request->getParam('cd_vaga'));
+    
+        $rnvaga = new RNVaga();
+        $result = $rnvaga->fecharVaga($cd_vaga);
+        $response->write(json_encode($result));
+
+    } catch(PDOException $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
+
 /**
  * Curtir Vaga
  */
@@ -694,21 +709,6 @@ $app->post('/api/CalculoPerfilComp', function(Request $request, Response $respon
     
         $rNPerguntaperfilcomp = new RNPerguntaperfilcomp();
         $result = $rNPerguntaperfilcomp->CalculoPerfilComp($cd_profissional);
-        $response->write(json_encode($result));
-
-    } catch(PDOException $e){
-        $response->write(json_encode(array('erro' => $e->getMessage())));
-    }
-});
-
-
-$app->post('/api/vaga/fecharVaga', function(Request $request, Response $response){
-
-    try{
-        $cd_vaga = ($request->getParam('cd_vaga'));
-    
-        $rnvaga = new RNVaga();
-        $result = $rnvaga->fecharVaga($cd_vaga);
         $response->write(json_encode($result));
 
     } catch(PDOException $e){

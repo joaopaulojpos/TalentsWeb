@@ -47,6 +47,17 @@ class DAOVaga
         }
     }
 
+    public function fechar($cd_vaga){
+        try{
+            $request = new RequestMethods();
+
+            return $request->post($request::$url.'/vaga/fechar',
+                array( 
+                'cd_vaga' => $cd_vaga));
+        }catch(Exception $e){
+            return array('erro' => 'Erro ao fechar vaga!' );
+        }
+    }
 
 	public function pesquisar(){
         $request = new RequestMethods();

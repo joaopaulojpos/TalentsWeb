@@ -65,6 +65,15 @@
         }
     } 
 
+    public function fecharVaga($cd_vaga){
+        try{
+            $daovaga = new DAOVaga();
+            return json_decode($daovaga->fechar($cd_vaga), true);
+        }catch(Exception $e){
+            return array('erro' => 'Erro ao fechar vaga!' );
+        }
+    }
+
     public function vagasEmpresaPesquisar($cd_empresa){
         $daoempresa = new DaoEmpresa();
         return json_decode($daoempresa->vagasEmpresaPesquisar($cd_empresa), true);

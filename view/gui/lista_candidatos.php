@@ -481,6 +481,7 @@ usort($arrayPromissores, 'cmp');
                                                 $cd_profissional = $value['cd_profissional'];
                                                 $ds_nome = $value['ds_nome'];
                                                 $ds_email = $value['ds_email'];
+                                                $dt_nascimento = $value['dt_nascimento'];
                                                 $b_foto = "https://i.pinimg.com/originals/d2/9e/ba/d29ebab9f2f5663d9993cfe72b6ebba8.jpg";
                                                 if ($value["tp_sexo"] == 'M'){
                                                     $sexo = "Masculino";
@@ -492,14 +493,10 @@ usort($arrayPromissores, 'cmp');
                                                 $nr_latitude_profissional = $value["nr_latitude"];
                                                 $nr_longitude_profissional = $value["nr_longitude"];
 
-                                                $ds_formacao = "Análise e desenvolvimento de sistemas";
-
                                                 $b_like = $value["match_empresa"];
                                                 $b_envia_ajax = $b_like;
 
                                                 $ds_resultado_comp = $value['ds_resultado_comp'];
-
-                                                $porcentagem = number_format($value['porcentagem'], 2, ',', ' ');
 
                                                 $porcentagem = number_format($value['porcentagem'], 2, ',', ' ');
 
