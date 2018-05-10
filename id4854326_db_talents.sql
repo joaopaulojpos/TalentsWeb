@@ -620,7 +620,9 @@ VALUES
   (5,2,1),
   (11,2,1),
   (1,2,1),
-  (12,1,1);
+  (12,1,1),
+  (1,3,1),
+  (12,3,1);
 
 
 INSERT INTO `vaga_idioma`
@@ -631,6 +633,12 @@ VALUES
   (1,3,1),
   (1,5,2),
   (1,2,3);
+
+  INSERT INTO `vaga_curso`
+  (`cd_formacao`, `cd_curso`, `cd_vaga`)
+  VALUES (1,1,1),
+          (1,2,2),
+          (1,3,3);
   
  INSERT INTO `pergunta_perfil_comp` (`cd_pergunta_perfil_comp`, `ds_pergunta`) VALUES
 (1, '1. Eu sou...'),
