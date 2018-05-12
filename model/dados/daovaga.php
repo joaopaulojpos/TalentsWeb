@@ -1,5 +1,5 @@
 <?php
-require_once('RequestMethods.php');
+require_once('requestmethods.php');
 
 class DAOVaga
 {
