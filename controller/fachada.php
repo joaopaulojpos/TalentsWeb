@@ -1,14 +1,14 @@
 <?php
     require_once('../../model/basica/empresa.php');
-    require_once('../../model/dados/DAOEmpresa.php');
+    require_once('../../model/dados/daoempresa.php');
     require_once('../../model/basica/vaga.php');
-    require_once('../../model/dados/DAOVaga.php');
+    require_once('../../model/dados/daovaga.php');
     require_once('../../model/basica/cargo.php');
-    require_once('../../model/dados/DAOCargo.php');
+    require_once('../../model/dados/daocargo.php');
     require_once('../../model/basica/idioma.php');
-    require_once('../../model/dados/DAOIdioma.php');
+    require_once('../../model/dados/daoidioma.php');
     require_once('../../model/basica/curso.php');
-    require_once('../../model/dados/DAOCurso.php');
+    require_once('../../model/dados/daocurso.php');
     require_once('../../model/basica/competenciatecnica.php');
     require_once('../../model/dados/daocompetenciatecnica.php');
     require_once('../../model/basica/competenciacomport.php');
