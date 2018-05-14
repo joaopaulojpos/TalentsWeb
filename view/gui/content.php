@@ -3,7 +3,7 @@
             <div class="row">
                 <div class="col s12 m4 push-m2">
                     <a href="cadastro_local_vaga.php">
-                        <div class="card white">
+                        <div class="card white altcard">
                             <div class="card-content white-text">
                                 <span class="card-title grey-text">Publicar Vaga</span>
                                 <p><h4 class="center-align"><i class="medium material-icons grey-text">note_add</i></h4></p>
@@ -15,7 +15,7 @@
 
             <div class="col s12 m4 push-m2">
                     <a href="lista_vagas.php">
-                        <div class="card white">
+                        <div class="card white altcard">
                             <div class="card-content white-text">
                                 <span class="card-title grey-text">Vagas Publicadas</span>
                                 <p><h4 class="center-align"><i class="medium material-icons grey-text">multiline_chart</i></h4></p>
@@ -30,7 +30,7 @@
         <div>
             <div class="row">
                 <div class="col s12 m4 push-m2">
-                    <div class="card white">
+                    <div class="card white altcard">
                         <div class="card-content white-text">
                             <span class="card-title grey-text">Cash</span>
                             <p><h4 class="center-align"><i class="medium material-icons grey-text">monetization_on</i></h4></p>
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="col s12 m4 push-m2">
-                    <div class="card white">
+                    <div class="card white altcard">
                         <div class="card-content white-text">
                             <span class="card-title grey-text">Vagas em Aberto</span>
                             <p><h4 class="center-align"><i class="medium material-icons grey-text">https</i></h4></p>
