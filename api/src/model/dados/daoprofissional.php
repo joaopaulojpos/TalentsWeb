@@ -258,11 +258,19 @@ class DaoProfissional implements iDAOProfissional
     }
     public function listarIdiomasProfissional($cd_profissional){
         try{
-            $sql = 'select pi.cd_profissional,pi.cd_idioma,i.ds_idioma,pi.nr_nivel
-                      from profissional_idioma as pi
-                      JOIN
-                        idioma i on pi.cd_idioma = i.cd_idioma
-                    where pi.cd_profissional = :cod_prof;';
+             $sql = 'SELECT
+                   pi.cd_profissional,
+                   pi.cd_idioma,
+                   i.ds_idioma,
+                  (CASE
+                   WHEN pi.nr_nivel = 1 THEN "Básico"
+                   WHEN pi.nr_nivel = 2 THEN "Médio"
+                   ELSE "Avançado"
+                   END) AS "nr_nivel"
+                   FROM profissional_idioma AS pi
+                   JOIN idioma i
+                  ON pi.cd_idioma = i.cd_idioma
+                  WHERE pi.cd_profissional = :cod_prof;';
             $stmt = db::getInstance()->prepare($sql);
 
             if (!empty($cd_profissional))
