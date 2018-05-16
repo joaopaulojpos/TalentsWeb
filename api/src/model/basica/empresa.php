@@ -12,6 +12,7 @@ class Empresa implements JsonSerializable {
 	private $ds_telefone;
 	private $ds_email;
 	private $ds_senha;
+	private $vl_saldo;
 
 	function __construct(){
 		
@@ -115,6 +116,15 @@ class Empresa implements JsonSerializable {
 	{
 		return $this->ds_senha;
 	}
+	
+	function setVlSaldo($vl_saldo)
+	{
+		$this->vl_saldo = trim($vl_saldo);
+	}
+	function getVlSaldo()
+	{
+		return $this->vl_saldo;
+	}
 
     /**
      * Specify data which should be serialized to JSON
@@ -137,7 +147,8 @@ class Empresa implements JsonSerializable {
                 'ds_site'=>$this->ds_site,
                 'ds_telefone'=>$this->ds_telefone,
                 'ds_email'=>$this->ds_email,
-                'ds_senha'=>$this->ds_senha
+                'ds_senha'=>$this->ds_senha,
+				'vl_saldo'=>$this->vl_saldo
             ];
     }
 }

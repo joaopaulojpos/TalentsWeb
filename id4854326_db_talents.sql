@@ -775,10 +775,6 @@ alter table profissional_competencia_tecnica add column nr_nivel Integer;
 -- Adicionando campo token do profissional
 alter table profissional add column token varchar(100);
 
-
-
-
-
 CREATE event evt_status ON schedule every 1 day starts NOW() do 
 UPDATE vaga 
 SET    tp_status = 'F' 
@@ -792,3 +788,6 @@ WHERE  cd_vaga IN
 			  
 			  
 SET GLOBAL event_scheduler = ON;
+
+-- Adicionando campo saldo do profissional
+alter table empresa add column vl_saldo double;

@@ -30,13 +30,15 @@
         <div>
             <div class="row">
                 <div class="col s12 m4 push-m2">
-                    <div class="card white altcard">
-                        <div class="card-content white-text">
-                            <span class="card-title grey-text">Cash</span>
-                            <p><h4 class="center-align"><i class="medium material-icons grey-text">monetization_on</i></h4></p>
-                            <p class="center-align grey-text">Aqui você poderá consultar saldo, fazer recarga de cash e etc.</p>
-                        </div>
-                    </div>
+					<a href="recarga_saldo.php">
+						<div class="card white altcard">
+							<div class="card-content white-text">
+								<span class="card-title grey-text">Cash</span>
+								<p><h4 class="center-align"><i class="medium material-icons grey-text">monetization_on</i></h4></p>
+								<p class="center-align grey-text">Aqui você poderá consultar saldo, fazer recarga de cash e etc.</p>
+							</div>
+						</div>
+					</a>
                 </div>
 
                 <div class="col s12 m4 push-m2">
