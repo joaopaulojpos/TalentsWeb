@@ -223,6 +223,7 @@ class DaoProfissional implements iDAOProfissional
           FROM profissional_vaga
           WHERE cd_profissional = :cod_prof)
        AND v.tp_status = 'A'
+	 HAVING distancia_km <= 60
      ORDER BY v.cd_vaga DESC
      LIMIT 1;";
 

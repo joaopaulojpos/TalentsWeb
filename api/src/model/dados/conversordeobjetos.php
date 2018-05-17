@@ -167,6 +167,7 @@ class conversorDeObjetos{
                 $vaga->setNrExperiencia($row['nr_experiencia']);
                 $vaga->setTpStatus($row['tp_status']);
                 $vaga->setDsEndereco($row['ds_endereco']);
+				$vaga->setDistanciaKm($row['distancia_km']);
 
                 //Cargo
                 $cargo->setCdCargo($row['cd_cargo']);

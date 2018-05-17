@@ -15,6 +15,7 @@ class Vaga implements JsonSerializable {
     private $vl_salario;
     private $nr_experiencia;
     private $ds_endereco;
+	private $distancia_km;
 
     private $tp_status;
 
@@ -222,6 +223,15 @@ class Vaga implements JsonSerializable {
     {
         return $this->idiomas;
     }
+	
+	function setDistanciaKm($distancia_km)
+    {
+        $this->distancia_km = $distancia_km;
+    }
+    function getDistanciaKm()
+    {
+        return $this->distancia_km;
+    }
 
     /**
      * @return mixed
@@ -272,7 +282,8 @@ class Vaga implements JsonSerializable {
                 'competencias_tecnicas'=>$this->competenciastecnicas,
                 'competencias_comp'=>$this->competenciascomport,
                 'idiomas'=>$this->idiomas,
-                'profissionais'=>$this->profissionais
+                'profissionais'=>$this->profissionais,
+				'distancia_km'=>$this->distancia_km
             ];
     }
 }
