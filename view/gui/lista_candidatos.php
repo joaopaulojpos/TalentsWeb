@@ -122,7 +122,15 @@ usort($arrayPromissores, 'cmp');
 //var_dump($arrayvagas);
 //var_dump($empresa[0]['cd_empresa']);
 ?>
-    
+      <div class="row">
+    <div class="col s12 m12">    
+      <?//php echo $empresa[0]['ds_razao_social'] ?>
+      <div class="section right-align">
+        <a href="lista_vagas.php" class="waves-effect waves-light btn"><i class="material-icons left">chevron_left</i>Voltar</a>
+      </div>
+    </div>
+  </div>
+
     <div class="container">
         <div class="card-panel teal darken-1">
             <h5><span><a class="white-text" href="lista_vagas.php"><?php echo $cd_vaga; ?> - <?php echo $ds_titulo_vaga; ?></a></span></h5>

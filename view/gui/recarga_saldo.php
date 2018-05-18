@@ -1,8 +1,8 @@
 <?php
 include "menu.php";
 
-  if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
-    session_destroy();            //Destroi a seção por segurança
+  if (!isset($_SESSION['empresaLogada'])) {   //Verifica se hï¿½ seï¿½ï¿½es
+    session_destroy();            //Destroi a seï¿½ï¿½o por seguranï¿½a
     header("Location: login.php"); 
     exit; //Redireciona o visitante para login
   }
@@ -10,6 +10,15 @@ include "menu.php";
   $empresa = $_SESSION['empresaLogada']; 
 
 ?>
+  <div class="row">
+    <div class="col s12 m12">    
+      <?//php echo $empresa[0]['ds_razao_social'] ?>
+      <div class="section right-align">
+        <a href="dashboard.php" class="waves-effect waves-light btn"><i class="material-icons left">chevron_left</i>Voltar</a>
+      </div>
+    </div>
+  </div>
+	
 	<div class='container gray darken-2'>
 		<div class="row">
 			<h2>Pagamento</h2>
