@@ -22,13 +22,13 @@ include "foooter.php";
 
 <section="section"> 
 
-
   <div class="row">
-  <div class="container">
-    
-    <?//php echo $empresa[0]['ds_razao_social'] ?>
- 
-  </div>
+    <div class="col s12 m12">    
+      <?//php echo $empresa[0]['ds_razao_social'] ?>
+      <div class="section right-align">
+        <a href="dashboard.php" class="waves-effect waves-light btn"><i class="material-icons left">chevron_left</i>Voltar</a>
+      </div>
+    </div>
   </div>
 
   <div class="row">
