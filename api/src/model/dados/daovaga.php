@@ -233,6 +233,7 @@ class DaoVaga implements iDAOVaga
                 ':cd_vaga' => $cd_vaga,
                 ':cd_profissional' => $cd_profissional
             ));
+            return 'match' . $cd_vaga . $cd_profissional;
 
         }catch(Exception $e){
             throw new Exception($e->getMessage());

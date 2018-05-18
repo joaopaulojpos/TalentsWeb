@@ -119,6 +119,7 @@ $app->get('/api/empresa/{id}/vagas', function(Request $request, Response $respon
     }
 });
 
+
 $app->post('/api/empresa/match', function(Request $request, Response $response){
 
     try{
@@ -129,6 +130,22 @@ $app->post('/api/empresa/match', function(Request $request, Response $response){
         $rnempresa = new RNEmpresa();
         $rnempresa = $rnempresa->match($cd_vaga,$cd_profissional);
         $response->write(json_encode($rnempresa));
+
+
+		//$req->get("https://fcm.googleapis.com/fcm/send");
+		/*
+
+Content-Type:application/json
+Authorization:key=AIzaSyZ-1u...0GBYzPu7Udno5aA
+{
+  "to" : "/topics/foo-bar",
+  "priority" : "high",
+  "notification" : {
+    "body" : "This is a Firebase Cloud Messaging Topic Message!",
+    "title" : "FCM Message",
+  }
+}
+		*/
 
     } catch(Exception $e){
         $response->write(json_encode(array('erro' => $e->getMessage())));
@@ -508,23 +525,28 @@ $app->post('/api/vaga/curtirVaga', function(Request $request, Response $response
         $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
+$app->get('/api/teste', function(Request $request, Response $response){
 
+    $response->write('Testando post para notifications');
+});
 /**
  * Like profissional da vaga
  */
 $app->post('/api/vaga/like/profissional', function(Request $request, Response $response){
 
-    try{
+    try {
         $cd_vaga = ($request->getParam('cd_vaga'));
         $cd_profissional = ($request->getParam('cd_profissional'));
-    
-        $rnvaga = new RNVaga();
-        $result = $rnvaga->likeProfissionalVaga($cd_vaga,$cd_profissional);
-        $response->write(json_encode($result));
 
-    } catch(PDOException $e){
-        $response->write(json_encode(array('erro' => $e->getMessage())));
+        $rnvaga = new RNVaga();
+        $result = $rnvaga->likeProfissionalVaga($cd_vaga, $cd_profissional);
+        $sendnotification = new sendnotificationtofcm();
+        $sendnotification->sendtotopic($result);
     }
+    catch
+        (PDOException $e){
+            $response->write(json_encode(array('erro' => $e->getMessage())));
+        }
 
 });
 

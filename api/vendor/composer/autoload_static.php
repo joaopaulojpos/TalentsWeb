@@ -4,13 +4,20 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit441cd6dd7376ad88b1e1c9edfd5db498
+class ComposerStaticInit66362684b8fd84e94c26bae267b07911
 {
     public static $files = array (
+        'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'p' => 
+        array (
+            'paragraph1\\phpFCM\\' => 18,
+        ),
         'S' => 
         array (
             'Slim\\' => 5,
@@ -23,6 +30,12 @@ class ComposerStaticInit441cd6dd7376ad88b1e1c9edfd5db498
         array (
             'Interop\\Container\\' => 18,
         ),
+        'G' => 
+        array (
+            'GuzzleHttp\\Psr7\\' => 16,
+            'GuzzleHttp\\Promise\\' => 19,
+            'GuzzleHttp\\' => 11,
+        ),
         'F' => 
         array (
             'FastRoute\\' => 10,
@@ -30,6 +43,10 @@ class ComposerStaticInit441cd6dd7376ad88b1e1c9edfd5db498
     );
 
     public static $prefixDirsPsr4 = array (
+        'paragraph1\\phpFCM\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/paragraph1/php-fcm/src',
+        ),
         'Slim\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
@@ -41,6 +58,18 @@ class ComposerStaticInit441cd6dd7376ad88b1e1c9edfd5db498
         'Interop\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
+        ),
+        'GuzzleHttp\\Psr7\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'GuzzleHttp\\Promise\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/promises/src',
+        ),
+        'GuzzleHttp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/guzzle/src',
         ),
         'FastRoute\\' => 
         array (
@@ -61,9 +90,9 @@ class ComposerStaticInit441cd6dd7376ad88b1e1c9edfd5db498
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit441cd6dd7376ad88b1e1c9edfd5db498::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit441cd6dd7376ad88b1e1c9edfd5db498::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit441cd6dd7376ad88b1e1c9edfd5db498::$prefixesPsr0;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit66362684b8fd84e94c26bae267b07911::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit66362684b8fd84e94c26bae267b07911::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit66362684b8fd84e94c26bae267b07911::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

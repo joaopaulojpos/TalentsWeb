@@ -204,7 +204,7 @@ class RNVaga{
 
             $result = $daovaga->likeProfissionalVaga($cd_vaga,$cd_profissional);
 
-            return array('sucess' => 'Profissional curtido!');
+            return $result;
 
         }catch (Exception $e){
             return array('erro' => $e->getTrace());

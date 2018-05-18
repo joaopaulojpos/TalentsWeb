@@ -174,8 +174,8 @@ class RNEmpresa{
 	    try{
 	        $dao = new DaoEmpresa();
 
-	        $dao->match($cd_vaga,$cd_profissional);
-	        return array('sucess' => 'Match!');
+	        $result = $dao->match($cd_vaga,$cd_profissional);
+	        return $result;
         }catch (Exception $e){
             return array('erro' => $e->getMessage());
         }

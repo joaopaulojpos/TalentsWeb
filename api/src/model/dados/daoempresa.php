@@ -187,7 +187,8 @@ class DaoEmpresa implements iDAOEmpresa
             $stmt->bindValue(':cd_profissional', $cd_profissional);
             $stmt->bindValue(':cd_vaga', $cd_vaga);
             $run = $stmt->execute();
-            $this->notificarCandidato($cd_profissional);
+
+            return 'match' . $cd_vaga . $cd_profissional;
         }catch (PDOException $e){
             throw new Exception($e->getMessage());
         }finally{

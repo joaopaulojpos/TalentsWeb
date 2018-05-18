@@ -41,6 +41,7 @@ require '../src/controller/negocio/rncompetenciacomport.php';
 require '../src/controller/negocio/rnperguntaperfilcomp.php';
 require '../src/controller/negocio/rnalternativaperfilcomp.php';
 require '../src/controller/negocio/rnprofissionalresposta.php';
+require '../src/view/sendnotificationtofcm.php';
 
 
 
