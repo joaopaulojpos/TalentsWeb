@@ -13,7 +13,7 @@ CREATE TABLE cargo (
 
 CREATE TABLE formacao (
   cd_formacao INTEGER PRIMARY KEY AUTO_INCREMENT,
-  ds_formacao Varchar(100) not null
+  ds_formacao Varchar(100) not null  
 );
 
 CREATE TABLE curso (
@@ -791,3 +791,14 @@ SET GLOBAL event_scheduler = ON;
 
 -- Adicionando campo saldo do profissional
 alter table empresa add column vl_saldo double;
+
+CREATE TABLE pagamento (
+  cd_pagamento Integer PRIMARY KEY AUTO_INCREMENT,
+  cd_empresa Integer,       
+  vl_recarga Double,
+  dt_recarga timestamp default current_timestamp(),
+  token varchar(30),
+  payerid varchar(30),
+  tp_status varchar(1),
+  FOREIGN KEY(cd_empresa) REFERENCES empresa (cd_empresa)
+);
