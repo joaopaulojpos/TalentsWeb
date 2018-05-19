@@ -26,7 +26,7 @@ include "menu.php";
             <div class="col s12 m4 push-m2">
                     <div class="card white altcard">
                         <div class="card-content white-text">
-                        	<form name="formulario" id="formulario" method="post" action="../validacoes/valida_recarga.php">
+                        	<form name="formulario" id="formulario">
 	                            <span class="card-title grey-text">Recarregar saldo</span>
 	                           	<p>                          	
 	                            	<div class="row grey-text">
@@ -76,7 +76,7 @@ include "menu.php";
 			$('#formulario').submit(function(){
 				$('#load').show();
 				document.getElementById("buttonSubmit").disabled = true;
-				/*var valor=$('#valor').val();
+				var valor=$('#valor').val();
 				$.ajax({      //Função AJAX
 		          url:"../validacoes/valida_recarga.php",      //Arquivo php
 		          type:"post",        //Método de envio
@@ -93,7 +93,7 @@ include "menu.php";
 		                document.getElementById("buttonSubmit").disabled = false;
 		            }
 		        })
-		        return false; //Evita que a página seja atualizada*/
+		        return false; //Evita que a página seja atualizada
 			})
 
 		})
