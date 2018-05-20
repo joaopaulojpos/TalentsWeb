@@ -94,7 +94,7 @@ CREATE TABLE profissional_alternativa_perfil_comp (
   cd_alternativa_perfil_comp Integer,
   cd_profissional Integer,
   cd_pergunta_perfil_comp INTEGER,
-  FOREIGN KEY(cd_alternativa_perfil_comp) REFERENCES alternativa_perfil_comp                                                                                   (cd_alternativa_perfil_comp),
+  FOREIGN KEY(cd_alternativa_perfil_comp) REFERENCES alternativa_perfil_comp (cd_alternativa_perfil_comp),
   FOREIGN KEY(cd_profissional) REFERENCES profissional (cd_profissional),
   FOREIGN KEY (cd_pergunta_perfil_comp) REFERENCES pergunta_perfil_comp(cd_pergunta_perfil_comp)
 );

@@ -21,12 +21,14 @@ require '../src/model/basica/competenciacomport.php';
 require '../src/model/basica/perguntaperfilcomp.php';
 require '../src/model/basica/alternativaperfilcomp.php';
 require '../src/model/basica/profissionalrespota.php';
+require '../src/model/basica/pagamento.php';
 
 require '../src/model/dados/daocompetenciatecnica.php';
 require '../src/model/dados/daocompetenciacomport.php';
 require '../src/model/dados/daoperguntaperfilcomp.php';
 require '../src/model/dados/daoalternativaperfilcomp.php';
 require '../src/model/dados/daoprofissionalresposta.php';
+require '../src/model/dados/daopagamento.php';
 
 require '../src/model/dados/conversordeobjetos.php';
 
@@ -41,6 +43,8 @@ require '../src/controller/negocio/rncompetenciacomport.php';
 require '../src/controller/negocio/rnperguntaperfilcomp.php';
 require '../src/controller/negocio/rnalternativaperfilcomp.php';
 require '../src/controller/negocio/rnprofissionalresposta.php';
+require '../src/controller/negocio/rnpagamento.php';
+
 require '../src/view/sendnotificationtofcm.php';
 
 

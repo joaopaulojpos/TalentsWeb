@@ -13,6 +13,8 @@
     require_once('../../model/dados/daocompetenciatecnica.php');
     require_once('../../model/basica/competenciacomport.php');
     require_once('../../model/dados/daocompetenciacomport.php');
+    require_once('../../model/basica/pagamento.php');
+    require_once('../../model/dados/daopagamento.php');
 
 
     class Fachada {
@@ -139,5 +141,16 @@
         $result = json_decode($daocompetenciacomport->pesquisar($competenciacomport));
 
         return json_decode(json_encode($result, true));
+    }
+
+    //Pagamento
+
+    public function pagamentoCadastrar($pagamento){
+        try{
+            $daopagamento = new DAOPagamento();
+            return json_decode($daopagamento->cadastrar($pagamento), true);
+        }catch(Exception $e){
+            return array('erro' => 'Erro ao publicar vaga!' );
+        }
     }
 }

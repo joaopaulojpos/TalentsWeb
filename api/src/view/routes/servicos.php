@@ -745,4 +745,55 @@ $app->post('/api/CalculoPerfilComp', function(Request $request, Response $respon
     }
 });
 
+//pagamentos
+
+$app->post('/api/pagamento', function(Request $request, Response $response){
+
+    try{
+
+        $cd_empresa = ($request->getParam('cd_empresa'));
+        $token = ($request->getParam('token'));
+        $vl_recarga = ($request->getParam('vl_recarga'));
+        $tp_status = 'F';
+
+        $pagamento = new Pagamento();
+        $pagamento->setCdEmpresa($cd_empresa);
+        $pagamento->setToken($token);
+        $pagamento->setVlRecarga($vl_recarga);
+        $pagamento->setTpStatus($tp_status);
+
+        $rnpagamento = new RNPagamento();
+        $result = $rnpagamento->cadastrar($rnpagamento);
+        $response->write(json_encode($result));
+
+    } catch(PDOException $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
+$app->post('/api/pagamento/finalizar', function(Request $request, Response $response){
+
+    try{
+
+        $cd_empresa = ($request->getParam('cd_empresa'));
+        $token = ($request->getParam('token'));
+        $tp_status = ($request->getParam('tp_status'));
+
+        $pagamento = new Pagamento();
+        $pagamento->setCdEmpresa($cd_empresa);
+        $pagamento->setToken($token);
+        $pagamento->setVlRecarga($vl_recarga);
+        $pagamento->setTpStatus($tp_status);
+
+        $rnpagamento = new RNPagamento();
+        $result = $rnpagamento->cadastrar($rnpagamento);
+        $response->write(json_encode($result));
+
+    } catch(PDOException $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
+
+
 ?>

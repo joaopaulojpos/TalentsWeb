@@ -38,7 +38,7 @@ $requestNvp = array(
     'PAYMENTREQUEST_0_AMT' => '11.00',
     'PAYMENTREQUEST_0_CURRENCYCODE' => 'BRL',
     'PAYMENTREQUEST_0_ITEMAMT' => '11.00',
-    'PAYMENTREQUEST_0_INVNUM' => '8888888',
+    'PAYMENTREQUEST_0_INVNUM' => '777777',
     'L_PAYMENTTYPE0' => 'Any',
     'SOLUTIONTYPE' => 'Sole',
     'LANDINGPAGE' => 'Billing',
@@ -79,4 +79,6 @@ if (isset($responseNvp['ACK']) && $responseNvp['ACK'] == 'Success') {
 } else {
     //Opz, alguma coisa deu errada.
     //Verifique os logs de erro para depuração.
+    echo var_dump($responseNvp);
+    die;
 }
