@@ -7,22 +7,22 @@ class DaoProfissional implements iDAOProfissional
 	function __construct(){
 		
 	}
-	public function cadastrar(Profissional $u){
+	public function cadastrar(Profissional $profissional){
 		try{
 			$comando = "insert into profissional (b_foto,ds_senha,dt_nascimento,ds_email,nr_latitude,nr_longitude,tp_conta,tp_sexo,ds_nome) 
 			            	 values (:b_foto,:ds_senha,:dt_nascimento,:ds_email,:nr_latitude,:nr_longitude,:tp_conta,:tp_sexo,:ds_nome)";
 			$db = db::getInstance();
 			$stmt = db::getInstance()->prepare($comando);
 			$run = $stmt->execute(array(
-	    			':b_foto' => $u->getBfoto(),
-	    			':ds_senha' => $u->getDsSenha(),
-	    			':dt_nascimento' => $u->getDtNascimento(),
-					':ds_email' => $u->getDsEmail(),
-					':nr_latitude' => $u->getNrlatitude(),
-					':nr_longitude' => $u->getNrlogitude(),
-					':tp_conta' => $u->getTpconta(),
-					':tp_sexo' => $u->getTpsexo(),
-					':ds_nome' => $u->getDsnome(),
+	    			':b_foto' => $profissional->getBfoto(),
+	    			':ds_senha' => $profissional->getDsSenha(),
+	    			':dt_nascimento' => $profissional->getDtNascimento(),
+					':ds_email' => $profissional->getDsEmail(),
+					':nr_latitude' => $profissional->getNrlatitude(),
+					':nr_longitude' => $profissional->getNrlogitude(),
+					':tp_conta' => $profissional->getTpconta(),
+					':tp_sexo' => $profissional->getTpsexo(),
+					':ds_nome' => $profissional->getDsnome(),
 	 		));
 			$cd_profissional = $db->lastInsertId();
             $stmt->closeCursor();
@@ -33,21 +33,21 @@ class DaoProfissional implements iDAOProfissional
 			$stmt->closeCursor();
 		}
 	}
-	public function alterar(Profissional $u){
+	public function alterar(Profissional $profissional){
 		try{
-			$comando = "update profissional set b_foto = :b_foto, ds_senha = :ds_senha, dt_nascimento = :dt_nascimento, ds_email = :ds_email,nr_latitude= :nr_latitude,nr_longitude = :nr_latitude,tp_conta= :tp_conta,tp_sexo = :tp_sexo,ds_nome = :ds_nome where cd_profissional = :cd_profissional";
+			$comando = "update profissional set b_foto = :b_foto, ds_senha = :ds_senha, dt_nascimento = :dt_nascimento, ds_email = :ds_email,nr_latitude= :nr_latitude,nr_longitude = :nr_longitude,tp_conta= :tp_conta,tp_sexo = :tp_sexo,ds_nome = :ds_nome where cd_profissional = :cd_profissional";
 			$stmt = db::getInstance()->prepare($comando);
 			$run = $stmt->execute(array(
-					':b_foto' => $u->getBfoto(),
-	    			':ds_senha' => $u->getDsSenha(),
-	    			':dt_nascimento' => $u->getDtNascimento(),
-					':ds_email' => $u->getDsEmail(),
-					':nr_latitude' => $u->getNrlatitude(),
-					':nr_longitude' => $u->getNrlogitude(),
-					':tp_conta' => $u->getTpconta(),
-					':tp_sexo' => $u->getTpsexo(),
-					':ds_nome' => $u->getDsnome(),
-					':cd_profissional' => $u->getCdProfissional()
+					':b_foto' => $profissional->getBfoto(),
+	    			':ds_senha' => $profissional->getDsSenha(),
+	    			':dt_nascimento' => $profissional->getDtNascimento(),
+					':ds_email' => $profissional->getDsEmail(),
+					':nr_latitude' => $profissional->getNrlatitude(),
+					':nr_longitude' => $profissional->getNrlogitude(),
+					':tp_conta' => $profissional->getTpconta(),
+					':tp_sexo' => $profissional->getTpsexo(),
+					':ds_nome' => $profissional->getDsnome(),
+					':cd_profissional' => $profissional->getCdProfissional()
 	 		));
 
  		}catch(Exception $e){
