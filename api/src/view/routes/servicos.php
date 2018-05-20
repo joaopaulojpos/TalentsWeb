@@ -193,8 +193,12 @@ $app->post('/api/profissional/salvar', function(Request $request, Response $resp
         $tp_conta = $request->getParam('tp_conta');
         $tp_sexo = $request->getParam('tp_sexo');
         $ds_nome = $request->getParam('ds_nome');
+        $codigo = $request->getParam('cd_profissional');
 
         $profissional = new Profissional();
+        if ($codigo != null){
+            $profissional->setCdProfissional($codigo);
+        }
 
         $profissional->setBfoto($b_foto);
         $profissional->setDsSenha($ds_senha);
@@ -207,7 +211,7 @@ $app->post('/api/profissional/salvar', function(Request $request, Response $resp
         $profissional->setDsnome($ds_nome);
 
         $rnprofissional = new RNProfissional();
-        $rnprofissional = $rnprofissional->cadastrar($profissional);
+        $rnprofissional = $rnprofissional->salvar($profissional);
         $response->write(json_encode($rnprofissional));
 
     } catch(Exception $e){

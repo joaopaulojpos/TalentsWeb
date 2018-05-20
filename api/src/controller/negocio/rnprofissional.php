@@ -4,19 +4,93 @@ require_once('../src/model/dados/daoprofissional.php');
 
 class RNProfissional{
 
-	public function cadastrar($u){
+	public function cadastrar($profissional){
 		try{
-			$daoprofissional = new daoprofissional();
-			$result = $daoprofissional->cadastrar($u);
+			$daoprofissional = new DaoProfissional();
+			$result = $daoprofissional->cadastrar($profissional);
 
-			return array('sucess' => $result);
+			return array('sucess' => 'Cadastrado com sucesso!');
 
 		}catch (Exception $e){
 			return array('erro' => $e->getMessage());
 		}
 	}
 
+	public function alterar($profissional){
+		try{
+			$daoprofissional = new DaoProfissional();
+			$result = $daoprofissional->alterar($profissional);
 
+			return array('sucess' => 'Alterado com sucesso!');
+
+		}catch (Exception $e){
+			return array('erro' => $e->getMessage());
+		}
+
+    }
+    
+    public function salvar(Profissional $profissional){
+		try{
+			$validacoes = array();
+			$alterar = ($profissional->getCdProfissional() != null) && ($profissional->getCdProfissional() > 0);
+
+			if($profissional == null)
+				array_push($validacoes, 'Todos os campos precisam ser preenchido!');
+			if (empty($profissional->getBfoto()))
+				array_push($validacoes, 'A Foto precisa ser preenchido!');
+			if (empty($profissional->getDsSenha()))
+				array_push($validacoes, 'A Senha precisa ser preenchido!');
+			if (empty($profissional->getDtNascimento()))
+				array_push($validacoes, 'Data de Nascimento precisa ser preenchido!');
+			if (empty($profissional->getNrlatitude()))
+				array_push($validacoes, 'A Latitude precisa ser preenchido!');
+			if (empty($profissional->getNrlogitude()))
+				array_push($validacoes,  'A Logintude precisa ser preenchido!');
+			if (empty($profissional->getTpconta()))
+				array_push($validacoes, 'Tipo Conta precisa ser preenchido!');
+			if (empty($profissional->getTpsexo()))
+				array_push($validacoes, 'O Sexo precisa ser preenchido!');
+			if (empty($profissional->getDsnome()))
+				array_push($validacoes, 'O Nome precisa ser preenchido!');
+			if (empty($profissional->getDsEmail()))
+				array_push($validacoes, 'O Email precisa ser preenchido!');
+
+			if ($validacoes != null){
+				return array('erro' => $validacoes);
+				exit;
+			}
+
+			if ($alterar){
+				$profissionalvalidar = new Profissional();
+				$profissionalvalidar->setCdProfissional($profissional->getCdProfissional());
+				$profissionalvalidar->setDsEmail($profissional->getDsEmail());
+				$daoprofissional = new DaoProfissional();
+				$result = $daoprofissional->pesquisar($profissionalvalidar, true);
+			}else{
+				$profissionalvalidar = new Profissional();
+				$profissionalvalidar->setDsEmail($profissional->getDsEmail());
+				$daoprofissional = new DaoProfissional();
+				$result = $daoprofissional->pesquisar($profissionalvalidar);
+				if (!empty($result))
+					array_push($validacoes, 'Já existe uma Profissional cadastrada com esses dados !');
+			}
+
+			if ($validacoes != null){
+				return array('erro' => $validacoes);
+				exit;
+			}
+
+			if ($alterar){
+				return $this->alterar($profissional);
+			}else{
+				return $this->cadastrar($profissional);
+			}
+			
+		}catch (Exception $e){
+            return array('erro' => $e->getMessage());
+        }
+    }
+    
 	public function logar($login, $senha){
 		try{
 			if (empty($login) || empty($senha)){
