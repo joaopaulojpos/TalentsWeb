@@ -4,6 +4,7 @@ class CompetenciaTecnica implements JsonSerializable {
     private $cd_competencia_tecnica;
     private $nr_nivel;
     private $ds_competencia_tecnica;
+    private $pontosranking;
 
     function __construct(){}
 
@@ -36,6 +37,23 @@ class CompetenciaTecnica implements JsonSerializable {
     function getDsCompetenciaTecnica(){
         return $this->ds_competencia_tecnica;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getPontosranking()
+    {
+        return $this->pontosranking;
+    }
+
+    /**
+     * @param mixed $pontosranking
+     */
+    public function setPontosranking($pontosranking)
+    {
+        $this->pontosranking = $pontosranking;
+    }
+
 
     /**
      * Specify data which should be serialized to JSON

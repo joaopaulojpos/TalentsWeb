@@ -541,7 +541,10 @@ $app->post('/api/vaga/like/profissional', function(Request $request, Response $r
         $rnvaga = new RNVaga();
         $result = $rnvaga->likeProfissionalVaga($cd_vaga, $cd_profissional);
         $sendnotification = new sendnotificationtofcm();
-        $sendnotification->sendtotopic($result);
+        $resultnotification = $sendnotification->sendtotopic($result['topic'],'');
+
+
+        $response->write(json_encode($resultnotification));
     }
     catch
         (PDOException $e){
