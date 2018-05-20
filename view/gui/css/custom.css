@@ -68,6 +68,13 @@ back{
 }
 
 .altcard{
-  height: 7cm;
+  height: 6cm;
 }
 
+.altcardvagas{
+  height: 13cm;
+}
+
+.cardcontent{
+  height: 11cm;
+}
