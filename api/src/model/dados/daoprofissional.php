@@ -35,7 +35,7 @@ class DaoProfissional implements iDAOProfissional
 	}
 	public function alterar(Profissional $profissional){
 		try{
-			$comando = "update profissional set b_foto = :b_foto, ds_senha = :ds_senha, dt_nascimento = :dt_nascimento, ds_email = :ds_email,nr_latitude= :nr_latitude,nr_longitude = :nr_latitude,tp_conta= :tp_conta,tp_sexo = :tp_sexo,ds_nome = :ds_nome where cd_profissional = :cd_profissional";
+			$comando = "update profissional set b_foto = :b_foto, ds_senha = :ds_senha, dt_nascimento = :dt_nascimento, ds_email = :ds_email,nr_latitude= :nr_latitude,nr_longitude = :nr_longitude,tp_conta= :tp_conta,tp_sexo = :tp_sexo,ds_nome = :ds_nome where cd_profissional = :cd_profissional";
 			$stmt = db::getInstance()->prepare($comando);
 			$run = $stmt->execute(array(
 					':b_foto' => $profissional->getBfoto(),
