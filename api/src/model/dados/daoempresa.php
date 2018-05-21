@@ -196,6 +196,22 @@ class DaoEmpresa implements iDAOEmpresa
         }
     }
 
+    public function recarregarSaldo(Empresa $u, $vl_recarga){
+    	try{
+			$comando = "update empresa set vl_saldo = :vl_saldo where cd_empresa = :cd_empresa";
+			$stmt = db::getInstance()->prepare($comando);
+
+			$stmt->bindValue(':vl_saldo', $vl_recarga);
+			$stmt->bindValue(':cd_empresa', $emp->getCdEmpresa());
+			$run = $stmt->execute();
+			
+		}catch(Exception $e){
+			throw new Exception($e->getMessage());
+		}finally{
+			$stmt->closeCursor();
+		}
+    }
+
     private function notificarCandidato($cd_profissional){
 	    //TODO implementar código de notificação
     }

@@ -43,6 +43,7 @@ include "menu.php";
 								</p>
 	                            <p>
 	                            	<div class="input-field col s12">
+	                            		<input type="hidden" class="grey-text" name="cd_empresa" id="cd_empresa" value="<?php echo $empresa[0]['cd_empresa']; ?>">
 							        	<input name="valor" id="valor" type="number" class="validate grey-text" required>
                         			  	<label for="valor">Valor</label>
 							        </div>

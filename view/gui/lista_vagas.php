@@ -105,8 +105,8 @@ include "foooter.php";
   ?>
 
     <div class="col s12 m6">
-      <div class="card">
-        <div class="card-content">
+      <div class="card altcardvagas">
+        <div class="card-content cardcontent">
           <span class="card-title activator grey-text text-darken-4"><a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>"><?php echo $ds_titulo; ?></a><i class="material-icons right">more_vert</i></span>
           <p><a href="#"><?php echo $ds_cargo; ?></a></p>
           <p class="text-darken-4"><?php echo $dt_cricacao; ?></p>

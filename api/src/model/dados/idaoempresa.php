@@ -8,6 +8,7 @@ interface iDAOEmpresa
 	public function pesquisar(Empresa $u, $alt='false' );
     public function pesquisarVagas(Empresa $emp);
 	public function match($cd_vaga,$cd_profissional);
+	public function recarregarSaldo(Empresa $u, $vl_recarga);
 }
 
 ?>
