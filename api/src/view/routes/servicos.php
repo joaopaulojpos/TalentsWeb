@@ -548,7 +548,7 @@ $app->post('/api/vaga/like/profissional', function(Request $request, Response $r
         $resultnotification = $sendnotification->sendtotopic($result['topic'],'');
 
 
-        $response->write(json_encode($resultnotification));
+        $response->write(json_encode($result));
     }
     catch
         (PDOException $e){
