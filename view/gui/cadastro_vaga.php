@@ -311,9 +311,16 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                 </div>
             </div>
 
+
             <div class="container">
                 <div class="row">
-                    <span class="errMessage" id="errMessage">teste</span>
+                    <p>Custo da vaga: R$200.00</p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <span class="errMessage" id="errMessage"></span>
                 </div>
             </div>
 
