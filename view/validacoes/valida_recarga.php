@@ -1,6 +1,8 @@
 <?php
 //Incluindo o arquivo que contém a função sendNvpRequest
 require 'sendNvpRequest.php';
+require_once('../../model/basica/pagamento.php');
+require_once('../../controller/fachada.php');
  
 //Vai usar o Sandbox, ou produção?
 $sandbox = true;
@@ -35,30 +37,29 @@ $requestNvp = array(
     'METHOD'=> 'SetExpressCheckout',
 
     'PAYMENTREQUEST_0_PAYMENTACTION' => 'Sale',
-    'PAYMENTREQUEST_0_AMT' => '11.00',
+    'PAYMENTREQUEST_0_AMT' => $_POST['valor'],
     'PAYMENTREQUEST_0_CURRENCYCODE' => 'BRL',
-    'PAYMENTREQUEST_0_ITEMAMT' => '11.00',
-    'PAYMENTREQUEST_0_INVNUM' => '777777',
+    'PAYMENTREQUEST_0_ITEMAMT' => $_POST['valor'],
     'L_PAYMENTTYPE0' => 'Any',
     'SOLUTIONTYPE' => 'Sole',
     'LANDINGPAGE' => 'Billing',
     'NOSHIPPING' => '1',
-    'LOGOIMG' => 'https://www.iotalents.com/v2/images/logo.png',
+    'LOGOIMG' => 'http://plataformatalent.tmp.k8.com.br/view/gui/images/logo.png',
     'TOTALTYPE' => 'Total',
     'BRANDNAME' => 'Talents',
   
-    'L_PAYMENTREQUEST_0_NAME0' => 'Item A',
-    'L_PAYMENTREQUEST_0_DESC0' => 'Produto A – 110V',
-    'L_PAYMENTREQUEST_0_AMT0' => '11.00',
+    'L_PAYMENTREQUEST_0_NAME0' => 'Recarga Talents',
+    'L_PAYMENTREQUEST_0_DESC0' => 'Recarga de saldo',
+    'L_PAYMENTREQUEST_0_AMT0' => $_POST['valor'],
     'L_PAYMENTREQUEST_0_QTY0' => '1',
-    'L_PAYMENTREQUEST_0_ITEMAMT' => '11.00',
+    'L_PAYMENTREQUEST_0_ITEMAMT' => $_POST['valor'],
     'L_PAYMENTREQUEST_0_ITEMCATEGORY0' => 'Digital',
 
     'HDRIMG' => 'https://www.paypal-brasil.com.br/desenvolvedores/wp-content/uploads/2014/04/hdr.png',
     'LOCALECODE' => 'pt_BR',
  
     'RETURNURL' => 'http://plataformatalent.tmp.k8.com.br/view/gui/recarga_saldo_sucesso.php',
-    'CANCELURL' => 'http://plataformatalent.tmp.k8.com.br/view/gui/recarga_saldo_cancelado.php',
+    'CANCELURL' => 'http://plataformatalent.tmp.k8.com.br/view/gui/dashboard.php',
     'BUTTONSOURCE' => 'BR_EC_EMPRESA'
 );
  
@@ -72,7 +73,35 @@ if (isset($responseNvp['ACK']) && $responseNvp['ACK'] == 'Success') {
         'cmd'    => '_express-checkout',
         'token'  => $responseNvp['TOKEN']
     );
- 
+
+    $valor = $_POST['valor'];
+    $cd_empresa = $_POST['cd_empresa'];
+    $token = $responseNvp['TOKEN'];
+
+    $fachada = Fachada::getInstance();
+    $pagamento = new Pagamento();
+    $pagamento->setCdEmpresa($cd_empresa);
+    $pagamento->setVlRecarga($valor);
+    $pagamento->setToken($token);
+    $array = $fachada->pagamentoCadastrar($pagamento);
+
+    $texto = '';
+
+    foreach ($array as $key => $value) {
+        if ($key == 'sucess'){
+            echo 1;
+        }else{
+            if (is_array($value)){  
+                foreach ($value as $key => $value2) {
+                    $texto = $texto.'<br>*'.$value2;
+                }
+            }else{
+                $texto = $value;
+            }
+            echo $texto; 
+        }
+    }
+
     $redirectURL = sprintf('%s?%s', $paypalURL, http_build_query($query));
  
     header("Location: " . $redirectURL);

@@ -50,6 +50,14 @@ class pagamento implements JsonSerializable
         return $this->tp_status;
     }
 
+    function setDtRecarga($dt_recarga){
+        $this->dt_recarga = trim($dt_recarga);
+    }
+    function getDtRecarga(){
+        return $this->dt_recarga;
+    }
+
+
     function setCdEmpresa($cd_empresa){
         $this->cd_empresa = trim($cd_empresa);
     }

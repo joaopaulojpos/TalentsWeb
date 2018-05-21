@@ -31,15 +31,23 @@ class DaoPagamento implements iDAOPagamento
 
 	public function finalizar(Pagamento $p){
 		try{
-			$comando = "update pagamento set tp_status = :tp_status, payerid = :payerid, where token = :token";
+			$comando = "update empresa set vl_saldo = vl_saldo + (select distinct vl_recarga from pagamento where token = :token and tp_status = 'F') where cd_empresa = (select distinct cd_empresa from pagamento where token = :token and tp_status = 'F') ";
 			$stmt = db::getInstance()->prepare($comando);
 
-			$stmt->bindValue(':tp_status', 'A');
+			$stmt->bindValue(':token', $p->getToken());
+			$run = $stmt->execute();
+
+			$stmt->closeCursor();
+
+			$comando = "update pagamento set tp_status = :tp_status, payerid = :payerid where token = :token";
+			$stmt = db::getInstance()->prepare($comando);
+
+			$stmt->bindValue(':tp_status', $p->getTpStatus());
 			$stmt->bindValue(':payerid', $p->getPayerId());
 
 			$stmt->bindValue(':token', $p->getToken());
 			$run = $stmt->execute();
-			
+		
 		}catch(Exception $e){
 			throw new Exception($e->getMessage());
 		}finally{

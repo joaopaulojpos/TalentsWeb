@@ -9,17 +9,18 @@ class DaoPagamento
 
 		return $request->post($request::$url.'/pagamento', 
 			array( 'cd_empresa' => $p->getCdEmpresa(),
-				   'token' => $emp->getToken(), 
-				   'vl_recarga' => $emp->getVlRecarga());
+				   'token' => $p->getToken(), 
+				   'vl_recarga' => $p->getVlRecarga()));
 	}
 
 	public function finalizar(Pagamento $p){
 		$request = new RequestMethods();
 
-		return $request->post($request::$url.'/pagamento', 
+		return $request->post($request::$url.'/pagamento/finalizar', 
 			array( 'cd_empresa' => $p->getCdEmpresa(),
-				   'token' => $emp->getToken(), 
-				   'tp_status' => $emp->getTpStatus());
+				   'token' => $p->getToken(), 
+				   'tp_status' => $p->getTpStatus(),
+				   'payerid' => $p->getPayerId()));
 	}
 
 }

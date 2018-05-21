@@ -1,5 +1,7 @@
 <?php
 include "menu.php";
+require_once('../../model/basica/pagamento.php');
+require_once('../../controller/fachada.php');
 
   if (!isset($_SESSION['empresaLogada'])) {   //Verifica se h� se��es
     session_destroy();            //Destroi a se��o por seguran�a
@@ -12,8 +14,9 @@ include "menu.php";
 
   if ( isset( $_GET[ 'token' ] ) ) {
     $token = $_GET[ 'token' ];
+    $payerid = $_GET['PayerID'];
 
-   /* $nvp = array(
+    $nvp = array(
         'TOKEN'     => $token,
         'METHOD'    => 'GetExpressCheckoutDetails',
         'VERSION'   => '124.0', 
@@ -41,6 +44,10 @@ include "menu.php";
         }
     }
 
+    $pagamento = new Pagamento();
+    $pagamento->setPayerId($payerid);
+    $pagamento->setToken($token);
+
     if ( isset( $responseNvp[ 'TOKEN' ] ) && isset( $responseNvp[ 'ACK' ] ) ) {
         if ( $responseNvp[ 'TOKEN' ] == $token && $responseNvp[ 'ACK' ] == 'Success' ) {
             $nvp[ 'PAYERID' ]           = $responseNvp[ 'PAYERID' ];
@@ -60,21 +67,45 @@ include "menu.php";
                 }
             }
             if ( $responseNvp[ 'PAYMENTINFO_0_PAYMENTSTATUS' ] == 'Completed' ) {
-              
-                echo 'Parabéns, sua compra foi concluída com sucesso';
+                $pagamento->setTpStatus('A');
+                $_SESSION['empresaLogada'][0]['vl_saldo'] = $_SESSION['empresaLogada'][0]['vl_saldo'] + $responseNvp[ 'PAYMENTINFO_0_AMT' ];
+                /*echo 'Parabéns, sua compra foi concluída com sucesso';
                                 echo '<br />';
-                                echo '<br />';
+                                echo '<br />';*/
             } else {
-                echo 'Não foi possível concluir a transação';
+                $pagamento->setTpStatus('E');
+                //echo 'Não foi possível concluir a transação'; 
             }
         } else {
-            echo 'Não foi possível concluir a transação';
+            $pagamento->setTpStatus('E');
+            //echo 'Não foi possível concluir a transação';
         }
     } else {
-        echo 'Não foi possível concluir a transação';
+        $pagamento->setTpStatus('E');
+        //echo 'Não foi possível concluir a transação';
     }
-   echo $response;
-   curl_close( $curl );*/
+   //echo $response;
+   curl_close( $curl );
+
+   $fachada = Fachada::getInstance(); 
+   $array = $fachada->pagamentoFinalizar($pagamento);
+
+   $texto = '';
+
+    foreach ($array as $key => $value) {
+        if ($key == 'sucess'){
+            echo 1;
+        }else{
+            if (is_array($value)){  
+                foreach ($value as $key => $value2) {
+                    $texto = $texto.'<br>*'.$value2;
+                }
+            }else{
+                $texto = $value;
+            }
+            echo $texto; 
+        }
+    }
 }
 
 ?>
@@ -83,13 +114,13 @@ include "menu.php";
         <div>
             <div class="row">
                 <div class="col s12 m4 push-m4">
-                    <div class="card white altcard">
+                    <div class="card white altcard" style="height: 9cm;">
                         <div class="card-content white-text">
                             <span class="card-title grey-text">Recarga efetuada com sucesso!</span>
-                            <p><h2 class="center-align grey-text">Confirmado!</h2></p>
-                            <p class="center-align grey-text">Seu saldo atual é: <?php echo 'R$ ' . number_format($empresa[0]['vl_saldo'], 2, '.', ''); ?> e já pode ser utilizado!</p>
+                            <p><h2 class="center-align grey-text"><img style="width: 160px;" src="http://plataformatalent.tmp.k8.com.br/view/gui/images/pagamento_aprovado.png" /></h2></p>
+                            <p class="center-align grey-text">Seu novo saldo é: <?php echo 'R$ ' . number_format($_SESSION['empresaLogada'][0]['vl_saldo'], 2, '.', ''); ?> e já pode ser utilizado!</p>
                             <p class="center-align grey-text" style="margin-top: 15px;">
-	                            <form method="get" action="dashboard.php">
+	                            <form method="get" action="http://plataformatalent.tmp.k8.com.br/view/gui/dashboard.php">
 	                            	<button class="btn waves-effect waves-light col s12 m12 teal darken-1" type="submit" id="buttonSubmit" name="buttonSubmit">Continuar</button>
 	                        	</form>
 	                        </p>

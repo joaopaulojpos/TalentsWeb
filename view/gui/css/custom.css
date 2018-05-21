@@ -1,10 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
-@import url('https://fonts.googleapis.com/css?family=Norican');
-@import url('https://fonts.googleapis.com/css?family=Leckerli+One');
-@import url('https://fonts.googleapis.com/css?family=Yesteryear');
-@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
-@import url('https://fonts.googleapis.com/css?family=Courgette');
 @import url('https://fonts.googleapis.com/css?family=Playball');
 
 .menu{
@@ -68,7 +61,7 @@ back{
 }
 
 .altcard{
-  height: 6cm;
+  height: 7cm;
 }
 
 .altcardvagas{

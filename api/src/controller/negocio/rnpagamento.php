@@ -4,7 +4,7 @@ require_once('../src/model/dados/daopagamento.php');
 
 class RNPagamento{
 
-	public function cadastrar($pagamento){	
+	public function cadastrar(Pagamento $pagamento){	
 		try{
 			$daopagamento = new DaoPagamento();
 			$result = $daopagamento->cadastrar($pagamento);
@@ -16,10 +16,10 @@ class RNPagamento{
 		}
 	}
 
-	public function finalizar($pagamento){	
+	public function finalizar(Pagamento $pagamento){	
 		try{
 			$daopagamento = new DaoPagamento();
-			$result = $daopagamento->cadastrar($pagamento);
+			$result = $daopagamento->finalizar($pagamento);
 
 			return array('sucess' => 'Finalizado com sucesso!');
 

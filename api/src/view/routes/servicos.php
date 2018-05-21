@@ -763,7 +763,7 @@ $app->post('/api/pagamento', function(Request $request, Response $response){
         $pagamento->setTpStatus($tp_status);
 
         $rnpagamento = new RNPagamento();
-        $result = $rnpagamento->cadastrar($rnpagamento);
+        $result = $rnpagamento->cadastrar($pagamento);
         $response->write(json_encode($result));
 
     } catch(PDOException $e){
@@ -774,19 +774,17 @@ $app->post('/api/pagamento', function(Request $request, Response $response){
 $app->post('/api/pagamento/finalizar', function(Request $request, Response $response){
 
     try{
-
-        $cd_empresa = ($request->getParam('cd_empresa'));
         $token = ($request->getParam('token'));
+        $payerid = ($request->getParam('payerid'));
         $tp_status = ($request->getParam('tp_status'));
 
         $pagamento = new Pagamento();
-        $pagamento->setCdEmpresa($cd_empresa);
         $pagamento->setToken($token);
-        $pagamento->setVlRecarga($vl_recarga);
         $pagamento->setTpStatus($tp_status);
+        $pagamento->setPayerId($payerid);
 
         $rnpagamento = new RNPagamento();
-        $result = $rnpagamento->cadastrar($rnpagamento);
+        $result = $rnpagamento->finalizar($pagamento);
         $response->write(json_encode($result));
 
     } catch(PDOException $e){

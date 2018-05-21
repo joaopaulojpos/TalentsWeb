@@ -150,7 +150,16 @@
             $daopagamento = new DAOPagamento();
             return json_decode($daopagamento->cadastrar($pagamento), true);
         }catch(Exception $e){
-            return array('erro' => 'Erro ao publicar vaga!' );
+            return array('erro' => 'Erro ao criar pagamento!' );
+        }
+    }
+
+    public function pagamentoFinalizar($pagamento){
+        try{
+            $daopagamento = new DAOPagamento();
+            return json_decode($daopagamento->finalizar($pagamento), true);
+        }catch(Exception $e){
+            return array('erro' => 'Erro ao finalizar pagamento!' );
         }
     }
 }
