@@ -230,6 +230,18 @@ $app->get('/api/profissional/notificacoes', function(Request $request, Response 
         $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
+ 
+$app->get('/api/profissional/profissional', function(Request $request, Response $response){
+
+    try{
+        $rnprofissional = new RNProfissional();
+        $rnprofissional = $rnprofissional->getProfissional($request->getParam('ds_email'));
+        $response->write(json_encode($rnprofissional));
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
 
 $app->post('/api/profissional/idioma', function(Request $request, Response $response){
 

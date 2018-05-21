@@ -273,6 +273,35 @@ class DaoProfissional implements iDAOProfissional
             $stmt->closeCursor();
         }
     }
+    public function getProfissional(Profissional $u, $alt='false'){
+        try{
+			$comando = 'select * from profissional ';
+			$where = '';
+			
+			if (!empty($u->getDsEmail())){
+				if (empty($where)){
+					$where = ' where ds_email = :email';
+				}else{
+					$where = $where . ' and ds_email = :email';
+				}
+			}
+
+			$stmt = db::getInstance()->prepare($comando . $where);
+        
+            if (!empty($u->getDsEmail()))
+				$stmt->bindValue(':email', $u->getDsEmail());
+
+			$run = $stmt->execute();
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$stmt->closeCursor();
+	        return $result;
+
+        }catch(Exception $e){
+			throw new Exception($e->getMessage());
+		}finally{
+			$stmt->closeCursor();
+		}
+    }
     public function listarCursosProfissional($cd_profissional){
         try{
             $sql = 'select pc.cd_profissional,pc.cd_curso,c.ds_curso,pc.ds_instituicao,pc.dt_fim,pc.dt_inicio,pc.tp_certificado_validado,pc.nr_certificado,pc.nr_periodo

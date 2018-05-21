@@ -173,6 +173,27 @@ class RNProfissional{
         }
 
     }
+    public function getProfissional($ds_email){
+        try{
+        	if (empty($ds_email)){
+				return json_encode(array('erro' => 'Todos os campos precisam ser preenchidos!'));
+				exit;
+			}
+
+			$profissional = new Profissional();
+
+			$profissional->setDsEmail($ds_email);
+
+			$daoprofissional = new DaoProfissional();
+
+			$result = $daoprofissional->getProfissional($profissional);
+    
+            return array('sucess'=> $result);
+        }catch (Exception $e){
+            return array('erro' => $e->getMessage());
+        }
+
+    }
     public function listarCursosCandidatos($cd_profissional)
     {
         try{
