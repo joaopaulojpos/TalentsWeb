@@ -802,3 +802,72 @@ CREATE TABLE pagamento (
   tp_status varchar(1),
   FOREIGN KEY(cd_empresa) REFERENCES empresa (cd_empresa)
 );
+
+
+CREATE function fnc_calcula_curso(cdvaga         INT, 
+                            cdprofissional INT) 
+returns DECIMAL(10,1) 
+  RETURN (SELECT CASE WHEN qtd_em_comun = qtd_total_vaga THEN 100 WHEN 
+         qtd_em_comun < 
+                               qtd_total_vaga THEN ((qtd_em_comun/qtd_total_vaga 
+         ) 
+                               * 100) ELSE 0 end AS resultado FROM 
+
+( SELECT Count(*) AS qtd_em_comun, 
+/*Verifica a quantidade total de cursos cadastrados para determinada vaga */ 
+(SELECT Count(*) FROM vaga_curso WHERE cd_vaga = cdvaga) qtd_total_vaga 
+/* Verifica a quantidade de cursos em comum com determinada vaga */ 
+FROM ( SELECT vc.cd_curso c1, pc.cd_curso c2 
+         FROM vaga_curso vc 
+              INNER JOIN profissional_curso pc ON vc.cd_curso = pc.cd_curso 
+        WHERE pc.cd_profissional = cdprofissional ) AS qtde_cursos_em_comum ) AS table_result); 
+		
+		
+
+
+
+
+
+		CREATE function fnc_calcula_idioma(cdvaga         INT, 
+                            cdprofissional INT) 
+returns DECIMAL(10,1) 
+  RETURN (SELECT CASE WHEN qtd_em_comun = qtd_total_vaga THEN 100 WHEN 
+         qtd_em_comun < 
+                               qtd_total_vaga THEN ((qtd_em_comun/qtd_total_vaga 
+         ) 
+                               * 100) ELSE 0 end AS resultado FROM 
+
+( SELECT Count(*) AS qtd_em_comun, 
+/*Verifica a quantidade total de idiomas cadastrados para determinada vaga */ 
+(SELECT Count(*) FROM vaga_idioma WHERE cd_vaga = cdvaga) qtd_total_vaga 
+/* Verifica a quantidade de idiomas em comum com determinada vaga */ 
+FROM (  SELECT vi.cd_idioma i1, pi.cd_idioma i2 
+         FROM vaga_idioma vi
+              INNER JOIN profissional_idioma pi ON vi.cd_idioma = pi.cd_idioma 
+        WHERE pi.cd_profissional = cdprofissional) AS qtde_cursos_em_comum ) AS table_result) ;
+
+
+
+
+
+
+
+
+
+		CREATE function fnc_calcula_competencia(cdvaga         INT, 
+                            cdprofissional INT) 
+returns DECIMAL(10,1) 
+  RETURN (SELECT CASE WHEN qtd_em_comun = qtd_total_vaga THEN 100 WHEN 
+         qtd_em_comun < 
+                               qtd_total_vaga THEN ((qtd_em_comun/qtd_total_vaga 
+         ) 
+                               * 100) ELSE 0 end AS resultado FROM 
+
+( SELECT Count(*) AS qtd_em_comun, 
+/*Verifica a quantidade total de competencias cadastrados para determinada vaga */ 
+(SELECT Count(*) FROM vaga_competencia_tecnica WHERE cd_vaga = cdvaga) qtd_total_vaga 
+/* Verifica a quantidade de competencias em comum com determinada vaga */ 
+FROM (  SELECT vct.cd_competencia_tecnica ct1, pct.cd_competencia_tecnica pct1 
+         FROM vaga_competencia_tecnica vct
+              INNER JOIN profissional_competencia_tecnica pct ON vct.cd_competencia_tecnica = pct.cd_competencia_tecnica 
+        WHERE pct.cd_profissional = cdprofissional) AS qtde_competencias_em_comum ) AS table_result);		
