@@ -54,7 +54,8 @@ class RNVaga{
             if (empty($daocargo->pesquisar($vaga->getCargo())))
                 array_push($validacoes, 'Cargo inválido!');
             $daoempresa = new DaoEmpresa();
-            $empresa = $daoempresa->pesquisar($vaga->getEmpresa());
+            $empresa = $daoempresa->pesquisar($vaga->getEmpresa(), false);
+
             if (empty($empresa)){
                  array_push($validacoes, 'Empresa não existe');
             }else{
@@ -62,8 +63,7 @@ class RNVaga{
                     array_push($validacoes, 'Saldo insuficiente para realizar esta operação! recarregue clicando <a target="_blank" href="http://plataformatalent.tmp.k8.com.br/view/gui/recarga_saldo.php">aqui</a>');
                 }
             }
-
-
+			
             //Verifica se tem algum elemento dentro do array de validações
             if ($validacoes != null){
                 return array('erro' => $validacoes);

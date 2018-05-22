@@ -107,6 +107,7 @@ try{
 
 	foreach ($array as $key => $value) {
 	    if ($key == 'sucess'){
+			$_SESSION['empresaLogada'][0]['vl_saldo'] = $_SESSION['empresaLogada'][0]['vl_saldo'] - 200;
 	        echo 1;
 	    }else{
 	    	$texto = 'Verifique as mensagens abaixo para prosseguir com o cadastro da vaga: <br>';
