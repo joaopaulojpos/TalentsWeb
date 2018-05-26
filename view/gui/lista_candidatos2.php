@@ -150,205 +150,106 @@ usort($arrayPromissores, 'cmp');
         <ul class="collapsible z-depth-0" data-collapsible = "accordion">
             <li>
                <div class="collapsible-header active teal darken-1 white-text"><i class="material-icons">assignment_turned_in</i>Aptos</div>
-                <div class="collapsible-body z-depth-0">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <?php 
-                                    foreach ($arrayAptos as $key => $value) {
+                    <div class="collapsible-body z-depth-0">
+                        <table>
+                                    <?php 
+                                        foreach ($arrayAptos as $key => $value) {
+                                                /*var_dump($arrayAptos);
+                                                die;*/
 
-                                            /*var_dump($arrayAptos);
-                                            die;*/
+                                                $cd_profissional = $value['cd_profissional'];
+                                                $ds_nome = $value['ds_nome'];
+                                                $ds_email = $value['ds_email'];
+                                                $dt_nascimento = $value['dt_nascimento'];
+                                                $b_foto = "https://i.pinimg.com/originals/d2/9e/ba/d29ebab9f2f5663d9993cfe72b6ebba8.jpg";
+                                                if ($value["tp_sexo"] == 'M'){
+                                                    $sexo = "Masculino";
+                                                }else if ($value["tp_sexo"] == 'F'){
+                                                    $sexo = "Feminino";
+                                                }else{
+                                                    $sexo = "Indefinido";
+                                                }
+                                                $nr_latitude_profissional = $value["nr_latitude"];
+                                                $nr_longitude_profissional = $value["nr_longitude"];
 
-                                            $cd_profissional = $value['cd_profissional'];
-                                            $ds_nome = $value['ds_nome'];
-                                            $ds_email = $value['ds_email'];
-                                            $dt_nascimento = $value['dt_nascimento'];
-                                            $b_foto = "https://i.pinimg.com/originals/d2/9e/ba/d29ebab9f2f5663d9993cfe72b6ebba8.jpg";
-                                            if ($value["tp_sexo"] == 'M'){
-                                                $sexo = "Masculino";
-                                            }else if ($value["tp_sexo"] == 'F'){
-                                                $sexo = "Feminino";
-                                            }else{
-                                                $sexo = "Indefinido";
-                                            }
-                                            $nr_latitude_profissional = $value["nr_latitude"];
-                                            $nr_longitude_profissional = $value["nr_longitude"];
+                                                $b_like = $value["match_empresa"];
+                                                $b_envia_ajax = $b_like;
 
-                                            $b_like = $value["match_empresa"];
-                                            $b_envia_ajax = $b_like;
+                                                $ds_resultado_comp = $value['ds_resultado_comp'];
 
-                                            $ds_resultado_comp = $value['ds_resultado_comp'];
+                                                $porcentagem = number_format($value['porcentagem'], 2, ',', ' ');
 
-                                            $porcentagem = number_format($value['porcentagem'], 2, ',', ' ');
+                                                if (is_array($value["cargos"])){
+                                                    $qtdExp = count($value["cargos"]);
+                                                }else{
+                                                    $qtdExp = 0;
+                                                }
+                                                if (is_array($value["cursos"])){
+                                                    $qtdCursos = count($value["cursos"]);
+                                                }else{
+                                                    $qtdCursos = 0;
+                                                }
+                                                if (is_array($value["competencias_tecnicas"])){
+                                                    $qtdCompTec = count($value["competencias_tecnicas"]);
+                                                }else{
+                                                    $qtdCompTec = 0;
+                                                }
+                                                if (is_array($value["idiomas"])){
+                                                    $qtdIdiomas = count($value["idiomas"]);
+                                                }else{
+                                                    $qtdIdiomas = 0;
+                                                }
 
-                                            if (is_array($value["cargos"])){
-                                                $qtdExp = count($value["cargos"]);
-                                            }else{
-                                                $qtdExp = 0;
-                                            }
-                                            if (is_array($value["cursos"])){
-                                                $qtdCursos = count($value["cursos"]);
-                                            }else{
-                                                $qtdCursos = 0;
-                                            }
-                                            if (is_array($value["competencias_tecnicas"])){
-                                                $qtdCompTec = count($value["competencias_tecnicas"]);
-                                            }else{
-                                                $qtdCompTec = 0;
-                                            }
-                                            if (is_array($value["idiomas"])){
-                                                $qtdIdiomas = count($value["idiomas"]);
-                                            }else{
-                                                $qtdIdiomas = 0;
-                                            }
+                                                $distancia = number_format(distance($nr_latitude_vaga, $nr_longitude_vaga, $nr_latitude_profissional, $nr_longitude_profissional, "K"), 2, '.', '');
+                                        ?>
+                                            
+                                                <div class="col s12 m12">
+                                                    <div class="card horizontal">
+                                                        <div class="card-image">
+                                                            <img src="<?php echo $b_foto; ?>" align="left" width="150" height="150">
+                                                        </div>
 
-                                            $distancia = number_format(distance($nr_latitude_vaga, $nr_longitude_vaga, $nr_latitude_profissional, $nr_longitude_profissional, "K"), 2, '.', '');
-
-
-                                    ?>
-                                        <td class="col s12 m12">
-                                            <div>
-                                                <div class="card horizontal">
-                                                    <div class="card-image">
-                                                        <img src="<?php echo $b_foto; ?>" align="left" width="150" height="150">
-                                                    </div>
-
-                                                <div class="card-stacked">
-                                                    <div class="card-content">
-                                                        <h5><?php echo $ds_nome; ?></h5>
-                                                        <?php 
-                                                            if ($value["cursos"]){
-                                                                $i = 0;
-                                                                $qtdCursosValidos = 0;
-                                                                foreach ($value["cursos"] as $key => $cursos) {   
-                                                                    if (in_array_field($cursos['cd_curso'], 'cd_curso', $cursos_vaga)){
-                                                                        $qtdCursosValidos = $qtdCursosValidos + 1;
-                                                                    }            
-                                                            ?>          
-                                                            <h6><?php echo $i==0?'<i class="material-icons">school</i> ':'';?><?php echo $cursos['ds_curso']; ?></h6>
-                                                            <?php 
-                                                                $i = $i + 1;
-                                                                }
-                                                            } 
-                                                            ?> 
-                                                            <h6><i class="material-icons">near_me</i> <?php echo $distancia . " km"; ?></h6>
-                                                            <h6><i class="material-icons">star</i> <?php echo $ds_resultado_comp; ?></h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-<div class="card-action">
-    <a class="btn-large waves-effect waves-light teal darken-4 btn modal-trigger" href="#modal<?php echo $cd_profissional?>" title="Visualizar Perfil"><i class="material-icons right">account_circle</i>Ver Perfil</a>
-    <button class="btn-floating btn-large waves-effect waves-light red" <?php echo $b_like== 1?'disabled':'';?> id="btnLike<?php echo $cd_profissional; ?>" type="submit" title="Curtir" name="action" onclick="enviarLike(<?php echo $cd_vaga; ?>, <?php echo $cd_profissional; ?>, <?php echo $b_envia_ajax ?>)"><i class="material-icons right" id="iconeLike<?php echo $cd_profissional; ?>"><?php echo $b_like==1?'done':'favorite';?></i></button>
-        <!-- Perfil do profissional (modal) -->
-    <div id="modal<?php echo $cd_profissional?>" class="modal modal-fixed-footer teal darken-2">
-        <div class="modal-content">
-            <div class="row">
-                <div class="card horizontal">
-                    <div class="card-image">
-                        <img src="<?php echo $b_foto; ?>" align="left" width="150" height="150">
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content">
-                            <h6><b>Nome: </b> <?php echo $ds_nome; ?></h6>
-                            <h6><b>Email: </b> <?php echo $ds_email; ?></h6>
-                            <h6><b>Data de Nascimento: </b> <?php echo $dt_nascimento; ?></h6>
-                            <h6><b>Sexo: </b> <?php echo $sexo; ?></h6>
-                            <h6><b>Distância da Vaga: </b> <?php echo $distancia . " km"; ?></h6>
-                            <h6><b>Perfil Comportamental: </b> <?php echo $ds_resultado_comp; ?></h6>
-                        </div>
-                    </div>
-                </div>
-
-            <?php include "content_modal.php"; ?>
-
-                                                                            <ul class="collapsible">
-                                                                                <li>
-                                                                                    <div class="collapsible-header"><i class="material-icons">poll</i>Competência(s) Técnica(s) - <?php echo $qtdCompTec; ?></div>
-                                                                                    <div class="collapsible-body white darken-2">
-                                                                                        <table>
-                                                                                            <thead>
-                                                                                              <tr>
-                                                                                                  <th>Competência</th>
-                                                                                                  <th>Nível</th>
-                                                                                              </tr>
-                                                                                            </thead>
-                                                                                            <tbody>
-                                                                                              <?php 
-                                                                                                    if ($value["competencias_tecnicas"]){
-                                                                                                        foreach ($value["competencias_tecnicas"] as $key => $idiomas) {              
-                                                                                                ?>   
-                                                                                                            <tr>
-
-                                                                                                                <td><?php echo $idiomas['ds_competencia_tecnica']; ?></td>
-                                                                                                                <td><?php echo $idiomas['nr_nivel']; ?></td>
-
-                                                                                                            </tr>
-                                                                                                <?php 
-                                                                                                        }
-                                                                                                    } 
-                                                                                                ?> 
-                                                                                            </tbody>
-                                                                                        </table>
-                                                                                    </div>
-                                                                                </li>
-                                                                            </ul>
-
-                                                                            <ul class="collapsible">
-                                                                                <li>
-                                                                                    <div class="collapsible-header"><i class="material-icons">public</i>Idioma(s) - <?php echo $qtdIdiomas; ?></div>
-                                                                                    <div class="collapsible-body white darken-2">
-                                                                                        <table>
-                                                                                            <thead>
-                                                                                              <tr>
-                                                                                                  <th>Idioma</th>
-                                                                                                  <th>Nível</th>
-                                                                                              </tr>
-                                                                                            </thead>
-                                                                                            <tbody>
-                                                                                              <?php 
-                                                                                                    if ($value["idiomas"]){
-                                                                                                        foreach ($value["idiomas"] as $key => $idiomas) {              
-                                                                                                ?>   
-                                                                                                            <tr>
-
-                                                                                                                <td><?php echo $idiomas['ds_idioma']; ?></td>
-                                                                                                                <td><?php echo $idiomas['nr_nivel']; ?></td>
-
-                                                                                                            </tr>
-                                                                                                <?php 
-                                                                                                        }
-                                                                                                    } 
-                                                                                                ?> 
-                                                                                            </tbody>
-                                                                                        </table>
-                                                                                    </div>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>         
-                                                                    </div>
-                                                                    <div class="modal-footer">
-                                                                        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
-                                                                    </div>
-                                                                </div>  
+                                                        <div class="card-stacked">
+                                                            <div class="card-content">
+                                                                <h5><?php echo $ds_nome; ?></h5>
+                                                                <?php 
+                                                                    if ($value["cursos"]){
+                                                                        $i = 0;
+                                                                        $qtdCursosValidos = 0;
+                                                                        foreach ($value["cursos"] as $key => $cursos) {   
+                                                                            if (in_array_field($cursos['cd_curso'], 'cd_curso', $cursos_vaga)){
+                                                                                $qtdCursosValidos = $qtdCursosValidos + 1;
+                                                                            }            
+                                                                    ?>          
+                                                                    <h6><?php echo $i==0?'<i class="material-icons">school</i> ':'';?><?php echo $cursos['ds_curso']; ?></h6>
+                                                                    <?php 
+                                                                        $i = $i + 1;
+                                                                        }
+                                                                    } 
+                                                                    ?> 
+                                                                    <h6><i class="material-icons">near_me</i> <?php echo $distancia . " km"; ?></h6>
+                                                                    <h6><i class="material-icons">star</i> <?php echo $ds_resultado_comp; ?></h6>
+                                                            </div>
+                                                            <div class="card-action">
+                                                                <a class="btn-large waves-effect waves-light teal darken-4 btn modal-trigger" href="#modal<?php echo $cd_profissional?>" title="Visualizar Perfil"><i class="material-icons right">account_circle</i>Ver Perfil</a>
+                                                                <button class="btn-floating btn-large waves-effect waves-light red" <?php echo $b_like== 1?'disabled':'';?> id="btnLike<?php echo $cd_profissional; ?>" type="submit" title="Curtir" name="action" onclick="enviarLike(<?php echo $cd_vaga; ?>, <?php echo $cd_profissional; ?>, <?php echo $b_envia_ajax ?>)"><i class="material-icons right" id="iconeLike<?php echo $cd_profissional; ?>"><?php echo $b_like==1?'done':'favorite';?></i></button>
                                                                 <a class="waves-effect waves-light btn btn-large transparent z-depth-0 right"><h4 class="green-text"><?php echo $porcentagem; ?>%</h4></a>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>  
-                                            </td>
+                                                </div>
+                                                <!-- INCLUSÃO DO CONTEUDO DO MODAL -->
+                                                <?php include "content_modal.php"; ?>    
+                    </div>
+                </div>     
 
-                                        <?php
+                <?php
 
-                                            }
-                                        ?>
-                                        <td>
-                                    </tr>
-                                </tbody> 
-                            </table>
-                        </div>
-                    </li>
-                 </ul>
+                    }
+                ?>
+                </table>            
+            </li>
+        </ul>
 
                 <ul class="collapsible z-depth-0" data-collapsible = "accordion">
                     <li>
