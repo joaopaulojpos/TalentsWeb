@@ -3,7 +3,7 @@
     <!-- LAYOUT DOS CANDIDATOS APTOS -->
 
 <td>
-    <div id="modal<?php echo $cd_profissional?>" class="modal modal-fixed-footer teal darken-2">
+    <div id="modal<?php echo $cd_profissional?>" class="modal modal-fixed-footer <?php echo $cor_fundo; ?> darken-2">
         <div class="modal-content">
             <div class="row">
                 <div class="card horizontal">
@@ -69,6 +69,7 @@
                                                 <th>Data Início</th>
                                                 <th>Data Fim</th>
                                                 <th>Período</th>
+                                                <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -82,6 +83,7 @@
                                                 <td><?php echo $cursos['dt_inicio']!=''? date('d/m/Y', strtotime($cursos['dt_inicio'])) : '-' ?></td>
                                                 <td><?php echo $cursos['dt_fim']!=''? date('d/m/Y', strtotime($cursos['dt_fim'])) : '-' ?></td>
                                                 <td><?php echo $cursos['nr_periodo']; ?></td>
+                                                <td style="float:right;"><img src="http://plataformatalent.tmp.k8.com.br/view/gui/images/estrela_small_5.png"/></td>
                                             </tr>
                                             <?php 
                                                 }
@@ -102,6 +104,7 @@
                                         <tr>
                                             <th>Competência</th>
                                             <th>Nível</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -112,6 +115,7 @@
                                         <tr>
                                             <td><?php echo $idiomas['ds_competencia_tecnica']; ?></td>
                                             <td><?php echo $idiomas['nr_nivel']; ?></td>
+                                            <td style="float:right;"><img src="http://plataformatalent.tmp.k8.com.br/view/gui/images/estrela_small_5.png"/></td>
                                         </tr>
                                         <?php 
                                                 }
@@ -132,6 +136,7 @@
                                         <tr>
                                             <th>Idioma</th>
                                             <th>Nível</th>
+                                            <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -142,6 +147,7 @@
                                         <tr>
                                             <td><?php echo $idiomas['ds_idioma']; ?></td>
                                             <td><?php echo $idiomas['nr_nivel']; ?></td>
+                                            <td style="float:right;"><img src="http://plataformatalent.tmp.k8.com.br/view/gui/images/estrela_small_5.png"/></td>
                                         </tr>
                                         <?php 
                                                 }
@@ -156,7 +162,8 @@
         </div>
 
         <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
+            <button onclick="imprimir(<?php echo $cd_profissional?>)" class="modal-action modal-close waves-effect waves-green btn-flat black-text"> <i class="large material-icons">print</i></button>
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat black-text">Fechar</a>
         </div>
     </div>  
 </td>
