@@ -213,6 +213,9 @@ class Profissional implements JsonSerializable {
             [
                 'cd_profissional'=>$this->cd_profissional,
                 'porcentagem'=>99.99,
+                'porcentagem_cursos'=>99.99,
+                'porcentagem_comp_tecnicas'=>99.99,
+                'porcentagem_idiomas'=>99.99,
                 'ds_nome'=>$this->ds_nome,
                 'ds_email'=>$this->ds_email,
                 'ds_senha'=>$this->ds_senha,
