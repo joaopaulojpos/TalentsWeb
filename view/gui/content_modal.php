@@ -83,7 +83,19 @@
                                                 <td><?php echo $cursos['dt_inicio']!=''? date('d/m/Y', strtotime($cursos['dt_inicio'])) : '-' ?></td>
                                                 <td><?php echo $cursos['dt_fim']!=''? date('d/m/Y', strtotime($cursos['dt_fim'])) : '-' ?></td>
                                                 <td><?php echo $cursos['nr_periodo']; ?></td>
-                                                <td style="float:right;"><img src="http://plataformatalent.tmp.k8.com.br/view/gui/images/estrela_small_5.png"/></td>
+                                                <td style="float:right;">
+                                                    <?php
+                                                        $percent_curso = (double) number_format(((in_array_field($cursos['cd_curso'], 'cd_curso', $cursos_vaga)) * 100), 2, ',', ' ');
+                                                        if ($percent_curso <= 10){
+                                                            $estrela_curso = 0;
+                                                        }else {
+                                                            $estrela_curso = 5;
+                                                        }
+
+                                                        echo '<img src="http://plataformatalent.tmp.k8.com.br/view/gui/images/estrela_small_'.$estrela_curso.'.png" />'
+
+                                                    ?>
+                                                </td>
                                             </tr>
                                             <?php 
                                                 }
@@ -110,12 +122,32 @@
                                     <tbody>
                                         <?php 
                                             if ($value["competencias_tecnicas"]){
-                                                foreach ($value["competencias_tecnicas"] as $key => $idiomas) {              
+                                                foreach ($value["competencias_tecnicas"] as $key => $comp_tec) {              
                                             ?>   
                                         <tr>
-                                            <td><?php echo $idiomas['ds_competencia_tecnica']; ?></td>
-                                            <td><?php echo $idiomas['nr_nivel']; ?></td>
-                                            <td style="float:right;"><img src="http://plataformatalent.tmp.k8.com.br/view/gui/images/estrela_small_5.png"/></td>
+                                            <td><?php echo $comp_tec['ds_competencia_tecnica']; ?></td>
+                                            <td><?php echo $comp_tec['nr_nivel']; ?></td>
+                                            <td style="float:right;">
+                                                <?php
+                                                    $percent_comp_tec = (double) number_format(((in_percent($comp_tec['cd_competencia_tecnica'], $comp_tec['nr_nivel'], 'cd_competencia_tecnica', $competencias_tecnicas_vaga)) * 100), 2, ',', ' ');
+                                                    if ($percent_comp_tec < 20){
+                                                        $estrela_comp_tec = 0;
+                                                    }else if ($percent_comp_tec == 20){
+                                                        $estrela_comp_tec = 1;
+                                                    }else if ($percent_comp_tec > 20 && $percent_comp_tec <= 40){
+                                                        $estrela_comp_tec = 2;
+                                                    }else if ($percent_comp_tec > 40 && $percent_comp_tec <= 60){
+                                                        $estrela_comp_tec = 3;
+                                                    }else if ($percent_comp_tec > 60 && $percent_comp_tec <= 80){
+                                                        $estrela_comp_tec = 4;
+                                                    }else {
+                                                        $estrela_comp_tec = 5;
+                                                    }
+
+                                                    echo '<img src="http://plataformatalent.tmp.k8.com.br/view/gui/images/estrela_small_'.$estrela_comp_tec.'.png" />'
+
+                                                ?>
+                                            </td>
                                         </tr>
                                         <?php 
                                                 }
@@ -147,7 +179,24 @@
                                         <tr>
                                             <td><?php echo $idiomas['ds_idioma']; ?></td>
                                             <td><?php echo $idiomas['nr_nivel']; ?></td>
-                                            <td style="float:right;"><img src="http://plataformatalent.tmp.k8.com.br/view/gui/images/estrela_small_5.png"/></td>
+                                            <td style="float:right;">
+                                                <?php
+                                                    $percent_idioma = (double) number_format(((in_percent($idiomas['cd_idioma'], $idiomas['nr_nivel'], 'cd_idioma', $idiomas_vaga)) * 100), 2, ',', ' ');
+
+                                                    if ($percent_idioma < 33){
+                                                        $estrela_idioma = 0;
+                                                    }else if ($percent_idioma == 33){
+                                                        $estrela_idioma = 1;
+                                                    }else if ($percent_idioma > 33 && $percent_idioma <= 66){
+                                                        $estrela_idioma = 3;
+                                                    }else {
+                                                        $estrela_idioma = 5;
+                                                    }
+
+                                                    echo '<img src="http://plataformatalent.tmp.k8.com.br/view/gui/images/estrela_small_'.$estrela_idioma.'.png" />'
+
+                                                ?>
+                                            </td>
                                         </tr>
                                         <?php 
                                                 }

@@ -81,12 +81,96 @@ $arrayPromissores = [];
 /*::    Função para verificar se o valor existe dentro de um array, passando em qual campo do array você quer utilizar                         :*/
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
 function in_array_field($needle, $needle_field, $haystack) { 
-    foreach ($haystack as $item){ 
-        if (isset($item[$needle_field]) && $item[$needle_field] == $needle) 
-            return true;
+    if (is_array($haystack)){
+        $achou_algum = false;
+        foreach ($haystack as $item){ 
+            if (isset($item[$needle_field]) && $item[$needle_field] == $needle) 
+                return 1;
+        }
+        if ($achou_algum == false){
+            return 0.10;
+        }
+    }else{
+        return 0.10; 
     }
-    return false; 
+    return 0;
+}
+
+function in_array_percent($needle, $needle_field, $haystack) { 
+    
+    if (is_array($haystack)){
+        $achou_algum = false;
+        foreach ($haystack as $item){ 
+            if (isset($item[$needle_field]) && $item[$needle_field] == $needle[$needle_field]) {
+                $retorno = ($needle["nr_nivel"] / $item["nr_nivel"]);
+                $achou_algum = true;
+                if ($retorno > 1){
+                    return 1;
+                }else{
+                    return $retorno;
+                }
+            }
+        }
+        if ($achou_algum == false){
+            return retorna_nivel($needle["nr_nivel"], $needle_field);
+        }
+    }else {
+        return retorna_nivel($needle["nr_nivel"], $needle_field);
+    }
 } 
+
+function in_percent($codigo, $nr_nivel, $needle_field, $haystack) { 
+    if (is_array($haystack)){
+        $achou_algum = false;
+        foreach ($haystack as $item){ 
+            if (isset($item[$needle_field]) && $item[$needle_field] == $codigo) {
+                $retorno = ($nr_nivel / $item["nr_nivel"]);
+                $achou_algum = true;
+                if ($retorno > 1){
+                    return 1;
+                }else{
+                    return $retorno;
+                }
+            }
+        }
+        if ($achou_algum == false){
+            return retorna_nivel($nr_nivel, $needle_field);
+        }        
+    }else {
+        return retorna_nivel($nr_nivel, $needle_field);
+    }
+}
+
+function retorna_nivel($nr_nivel, $needle_field){
+    if ($needle_field == 'cd_idioma'){
+        if ($nr_nivel == 1){
+            return 0.03;
+        }else if ($nr_nivel == 2){
+            return 0.08;
+        }else if ($nr_nivel == 3){
+            return 0.12;
+        }else{
+            return 0;
+        }
+    }else if ($needle_field == 'cd_competencia_tecnica'){
+        if ($nr_nivel == 1){
+            return 0.02;
+        }else if ($nr_nivel == 2){
+            return 0.04;
+        }else if ($nr_nivel == 3){
+            return 0.06;
+        }else if ($nr_nivel == 4){
+            return 0.08;
+        }else if ($nr_nivel == 5){
+            return 0.10;
+        }else{
+            return 0;
+        }
+    }else{
+        return 0;
+    }
+}
+
 
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
@@ -104,42 +188,47 @@ foreach ($arrayprofissionais as $key => $value) {
             $value["porcentagem_comp_tecnicas"] = $porcentagem;
             $value["porcentagem_idiomas"] = $porcentagem;
 
-
-
             //parte dos cursos
+            if (!is_array($cursos_vaga) || count($cursos_vaga) == 0){
+               $value["porcentagem_cursos"] = 100; 
+            }
+
             if ($value["cursos"]){
                 $qtdCursosValidos = 0;
                 foreach ($value["cursos"] as $key => $cursos) {   
-                    if (in_array_field($cursos['cd_curso'], 'cd_curso', $cursos_vaga)){
-                        $qtdCursosValidos = $qtdCursosValidos + 1;
-                    }
-                } 
-                $value["porcentagem_cursos"] =  (($qtdCursosValidos*100) / count($cursos_vaga));
+                    $qtdCursosValidos = $qtdCursosValidos + (in_array_field($cursos['cd_curso'], 'cd_curso', $cursos_vaga));
+                }
+                $value["porcentagem_cursos"] = $value["porcentagem_cursos"] + (($qtdCursosValidos*100) / (is_array($cursos_vaga) ? count($cursos_vaga) : 1) );
             }
 
             //parte das competências técnicas
+            if (!is_array($competencias_tecnicas_vaga) || count($competencias_tecnicas_vaga) == 0){
+               $value["porcentagem_comp_tecnicas"] = 100; 
+            }
+
             if ($value["competencias_tecnicas"]){
                 $qtdCompetenciasTecnicasValidos = 0;
-
                 foreach ($value["competencias_tecnicas"] as $key => $competencias_tecnicas) {   
-                    if (in_array_field($competencias_tecnicas['cd_competencia_tecnica'], 'cd_competencia_tecnica', $competencias_tecnicas_vaga)){
-                        $qtdCompetenciasTecnicasValidos = $qtdCompetenciasTecnicasValidos + 1;
-                    }
+                    $qtdCompetenciasTecnicasValidos = $qtdCompetenciasTecnicasValidos + (in_array_percent($competencias_tecnicas, 'cd_competencia_tecnica', $competencias_tecnicas_vaga));
                 }
-                $value["porcentagem_comp_tecnicas"] =  (($qtdCompetenciasTecnicasValidos*100) / count($competencias_tecnicas_vaga));
+
+
+
+
+                $value["porcentagem_comp_tecnicas"] = $value["porcentagem_comp_tecnicas"] + (($qtdCompetenciasTecnicasValidos*100) / (is_array($competencias_tecnicas_vaga) ? count($competencias_tecnicas_vaga) : 1) );
             }
 
             //parte dos idiomas
-            if ($value["idiomas"]){
-                $i = 0;
-                $qtdIdiomasValidos = 0;
+            if (!is_array($idiomas_vaga) || count($idiomas_vaga) == 0){
+               $value["porcentagem_idiomas"] = 100; 
+            }
 
+            if ($value["idiomas"]){
+                $qtdIdiomasValidos = 0;
                 foreach ($value["idiomas"] as $key => $idiomas) {
-                    if (in_array_field($idiomas['cd_idioma'], 'cd_idioma', $idiomas_vaga)){
-                        $qtdIdiomasValidos = $qtdIdiomasValidos + 1;
-                    }
+                    $qtdIdiomasValidos = $qtdIdiomasValidos + (in_array_percent($idiomas, 'cd_idioma', $idiomas_vaga));
                 }
-                $value["porcentagem_idiomas"] =  (($qtdIdiomasValidos*100) / count($idiomas_vaga));  
+                $value["porcentagem_idiomas"] = $value["porcentagem_idiomas"] + (($qtdIdiomasValidos*100) / (is_array($idiomas_vaga) ? count($idiomas_vaga) : 1) );  
             }
 
             $value["porcentagem"] = ($value["porcentagem_cursos"] + $value["porcentagem_comp_tecnicas"] + $value["porcentagem_idiomas"]) / 3;
@@ -261,9 +350,9 @@ usort($arrayPromissores, 'cmp');
                                                             $i = 0;
                                                             $qtdCursosValidos = 0;
                                                             foreach ($value["cursos"] as $key => $cursos) {   
-                                                                if (in_array_field($cursos['cd_curso'], 'cd_curso', $cursos_vaga)){
+                                                                /*if (in_array_field($cursos['cd_curso'], 'cd_curso', $cursos_vaga)){
                                                                     $qtdCursosValidos = $qtdCursosValidos + 1;
-                                                                }            
+                                                                }*/           
                                                     ?>          
                                                                 <h6><?php echo $i==0?'<i class="material-icons">school</i> ':'';?><?php echo $cursos['ds_curso']; ?></h6>
                                                     <?php 
@@ -277,7 +366,14 @@ usort($arrayPromissores, 'cmp');
                                                 <div class="card-action">
                                                     <a class="btn-large waves-effect waves-light teal darken-4 btn modal-trigger" href="#modal<?php echo $cd_profissional?>" title="Visualizar Perfil"><i class="material-icons right">account_circle</i>Ver Perfil</a>
                                                     <button class="btn-floating btn-large waves-effect waves-light red" <?php echo $b_like== 1?'disabled':'';?> id="btnLike<?php echo $cd_profissional; ?>" type="submit" title="Curtir" name="action" onclick="enviarLike(<?php echo $cd_vaga; ?>, <?php echo $cd_profissional; ?>, <?php echo $b_envia_ajax ?>)"><i class="material-icons right" id="iconeLike<?php echo $cd_profissional; ?>"><?php echo $b_like==1?'done':'favorite';?></i></button>
-                                                    <a class="waves-effect waves-light btn btn-large transparent z-depth-0 right"><h4 class="green-text"><?php echo $porcentagem; ?>%</h4></a>
+                                                    <a class="waves-effect waves-light btn btn-large transparent z-depth-0 right">
+                                                        <h4 class="green-text">
+                                                            T:<?php echo $porcentagem; ?>%
+                                                            C:<?php echo $porcentagem_cursos; ?>%
+                                                            Ct:<?php echo $porcentagem_comp_tecnicas; ?>%
+                                                            I:<?php echo $porcentagem_idiomas; ?>%
+                                                        </h4>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -368,9 +464,9 @@ usort($arrayPromissores, 'cmp');
                                                             $i = 0;
                                                             $qtdCursosValidos = 0;
                                                             foreach ($value["cursos"] as $key => $cursos) {   
-                                                                if (in_array_field($cursos['cd_curso'], 'cd_curso', $cursos_vaga)){
+                                                                /*if (in_array_field($cursos['cd_curso'], 'cd_curso', $cursos_vaga)){
                                                                     $qtdCursosValidos = $qtdCursosValidos + 1;
-                                                                }            
+                                                                }*/            
                                                     ?>          
                                                                 <h6><?php echo $i==0?'<i class="material-icons">school</i> ':'';?><?php echo $cursos['ds_curso']; ?></h6>
                                                     <?php 

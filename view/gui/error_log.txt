@@ -2372,3 +2372,120 @@ Stack trace:
 [02-May-2018 01:20:00 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 36
 [02-May-2018 01:21:08 Europe/Berlin] PHP Parse error:  syntax error, unexpected 'd' (T_STRING), expecting ';' in C:\xampp\htdocs\TalentsWeb\model\dados\DAOVaga.php on line 13
 [30-May-2018 09:23:58 Europe/Berlin] PHP Notice:  Undefined index: competencia_tecnica in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 31
+[02-Jun-2018 19:36:47 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 141
+[02-Jun-2018 19:36:47 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 141
+[02-Jun-2018 19:37:57 Europe/Berlin] PHP Notice:  Undefined variable: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 118
+[02-Jun-2018 19:37:57 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 118
+[02-Jun-2018 19:37:57 Europe/Berlin] PHP Notice:  Undefined variable: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 131
+[02-Jun-2018 19:37:57 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 131
+[02-Jun-2018 19:37:57 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 145
+[02-Jun-2018 19:37:57 Europe/Berlin] PHP Notice:  Undefined variable: cursos in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 118
+[02-Jun-2018 19:37:57 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 118
+[02-Jun-2018 19:37:57 Europe/Berlin] PHP Notice:  Undefined variable: competencias_tecnicas in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 131
+[02-Jun-2018 19:37:57 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 131
+[02-Jun-2018 19:37:57 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 145
+[02-Jun-2018 19:38:14 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 145
+[02-Jun-2018 19:38:14 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 145
+[02-Jun-2018 19:38:42 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 145
+[02-Jun-2018 19:38:42 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 145
+[02-Jun-2018 19:39:44 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 145
+[02-Jun-2018 19:39:44 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 145
+[02-Jun-2018 19:41:00 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 84
+[02-Jun-2018 19:41:00 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 84
+[02-Jun-2018 19:41:18 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 84
+[02-Jun-2018 19:41:18 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 84
+[02-Jun-2018 19:42:07 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 84
+[02-Jun-2018 19:42:07 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 84
+[02-Jun-2018 19:42:49 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 84
+[02-Jun-2018 19:42:49 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 84
+[02-Jun-2018 19:43:38 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 84
+[02-Jun-2018 19:43:38 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 84
+[02-Jun-2018 19:44:03 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function in_array_field() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php:281
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 281
+[02-Jun-2018 19:45:09 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 92
+[02-Jun-2018 19:45:09 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 161
+[02-Jun-2018 19:45:09 Europe/Berlin] PHP Warning:  Division by zero in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 161
+[02-Jun-2018 19:46:35 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 94
+[02-Jun-2018 19:46:35 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 166
+[02-Jun-2018 19:46:35 Europe/Berlin] PHP Warning:  Division by zero in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 166
+[02-Jun-2018 19:46:50 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 93
+[02-Jun-2018 19:46:50 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 166
+[02-Jun-2018 19:46:50 Europe/Berlin] PHP Warning:  Division by zero in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 166
+[02-Jun-2018 19:47:15 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 166
+[02-Jun-2018 19:47:15 Europe/Berlin] PHP Warning:  Division by zero in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 166
+[02-Jun-2018 19:48:24 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 166
+[02-Jun-2018 19:48:54 Europe/Berlin] PHP Warning:  Division by zero in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 166
+[02-Jun-2018 19:48:54 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 166
+[02-Jun-2018 19:52:01 Europe/Berlin] PHP Notice:  Undefined index: nl_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 102
+[02-Jun-2018 19:52:01 Europe/Berlin] PHP Notice:  Undefined index: nl_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 104
+[02-Jun-2018 19:52:01 Europe/Berlin] PHP Notice:  Undefined index: nl_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 106
+[02-Jun-2018 19:56:45 Europe/Berlin] PHP Notice:  Undefined variable: qtdCompetenciasTecnicasValidos in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 162
+[02-Jun-2018 20:14:03 Europe/Berlin] PHP Notice:  Undefined variable: needle in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 118
+[02-Jun-2018 20:14:03 Europe/Berlin] PHP Notice:  Undefined variable: needle in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 120
+[02-Jun-2018 20:14:03 Europe/Berlin] PHP Notice:  Undefined variable: needle in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 122
+[02-Jun-2018 20:14:03 Europe/Berlin] PHP Notice:  Undefined variable: needle in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 124
+[02-Jun-2018 20:14:03 Europe/Berlin] PHP Notice:  Undefined variable: needle in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 126
+[02-Jun-2018 20:14:03 Europe/Berlin] PHP Notice:  Undefined variable: needle in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 118
+[02-Jun-2018 20:14:03 Europe/Berlin] PHP Notice:  Undefined variable: needle in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 120
+[02-Jun-2018 20:14:03 Europe/Berlin] PHP Notice:  Undefined variable: needle in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 122
+[02-Jun-2018 20:14:03 Europe/Berlin] PHP Notice:  Undefined variable: needle in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 124
+[02-Jun-2018 20:14:03 Europe/Berlin] PHP Notice:  Undefined variable: needle in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 126
+[02-Jun-2018 20:14:03 Europe/Berlin] PHP Notice:  Undefined variable: needle in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 108
+[02-Jun-2018 20:14:03 Europe/Berlin] PHP Notice:  Undefined variable: needle in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 110
+[02-Jun-2018 20:14:03 Europe/Berlin] PHP Notice:  Undefined variable: needle in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 112
+[02-Jun-2018 20:25:04 Europe/Berlin] PHP Parse error:  syntax error, unexpected '/' in C:\xampp\htdocs\TalentsWeb\view\gui\content_modal.php on line 166
+[02-Jun-2018 20:26:49 Europe/Berlin] PHP Parse error:  syntax error, unexpected ',' in C:\xampp\htdocs\TalentsWeb\view\gui\content_modal.php on line 157
+[02-Jun-2018 20:44:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function in_array_field() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php:177
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 177
+[02-Jun-2018 20:44:59 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 84
+[02-Jun-2018 20:44:59 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 84
+[02-Jun-2018 21:07:42 Europe/Berlin] PHP Notice:  Undefined index: cd_idioma in C:\xampp\htdocs\TalentsWeb\view\gui\content_modal.php on line 132
+[02-Jun-2018 21:07:42 Europe/Berlin] PHP Notice:  Undefined index: cd_idioma in C:\xampp\htdocs\TalentsWeb\view\gui\content_modal.php on line 132
+[02-Jun-2018 21:17:28 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function alert() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php:117
+Stack trace:
+#0 C:\xampp\htdocs\TalentsWeb\view\gui\content_modal.php(132): in_percent('1', '5', 'cd_competencia_...', Array)
+#1 C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php(486): include('C:\\xampp\\htdocs...')
+#2 {main}
+  thrown in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 117
+[02-Jun-2018 21:21:23 Europe/Berlin] PHP Notice:  Undefined index: cd_competencia_tecnica in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 207
+[02-Jun-2018 21:21:23 Europe/Berlin] PHP Notice:  Undefined index: cd_competencia_tecnica in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 207
+[02-Jun-2018 21:21:56 Europe/Berlin] PHP Notice:  Undefined index: cd_competencia_tecnica in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 208
+[02-Jun-2018 21:21:56 Europe/Berlin] PHP Notice:  Undefined index: cd_competencia_tecnica in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 208
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 99
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 109
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: nr_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 110
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 99
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 102
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 99
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 109
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: nr_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 110
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 99
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 102
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 99
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 109
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: nr_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 110
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 99
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 109
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: nr_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 110
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 121
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 124
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 121
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 121
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 124
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 121
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 132
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 121
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 121
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 132
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 121
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 124
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 121
+[02-Jun-2018 21:29:45 Europe/Berlin] PHP Notice:  Undefined variable: achou_algum in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 132
+[02-Jun-2018 21:30:22 Europe/Berlin] PHP Notice:  Undefined variable: nr_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 110
+[02-Jun-2018 21:30:22 Europe/Berlin] PHP Notice:  Undefined variable: nr_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 110
+[02-Jun-2018 21:30:22 Europe/Berlin] PHP Notice:  Undefined variable: nr_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 110
+[02-Jun-2018 21:30:22 Europe/Berlin] PHP Notice:  Undefined variable: nr_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 110
