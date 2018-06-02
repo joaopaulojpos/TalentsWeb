@@ -17,19 +17,22 @@ class sendnotificationtofcm
 
     public function sendtotopic($topic,$notification)
     {
-        $apiKey = 'AAAAOF3Q56o:APA91bG_xHb9D7xhSpkHy--ntyz96pNJfp-FtNQ1OPi1YAO4PX1FCe6gTcD2eblZfd0iBwKHxEqrBGZCDd-9mbueP5mm2LKwLvT04XaLtpZUO7zRSb_C3RJUfd45_HT2Fn6pB9L8zwvE';
-        $client = new Client();
-        $client->setApiKey($apiKey);
-        $client->injectHttpClient(new \GuzzleHttp\Client());
+        try {
+            $apiKey = 'AAAAOF3Q56o:APA91bG_xHb9D7xhSpkHy--ntyz96pNJfp-FtNQ1OPi1YAO4PX1FCe6gTcD2eblZfd0iBwKHxEqrBGZCDd-9mbueP5mm2LKwLvT04XaLtpZUO7zRSb_C3RJUfd45_HT2Fn6pB9L8zwvE';
+            $client = new Client();
+            $client->setApiKey($apiKey);
+            $client->injectHttpClient(new \GuzzleHttp\Client());
 
-        $message = new Message();
-        $message->addRecipient(new Topic($topic));
-        $message->setNotification(new Notification('Fim das tretas', '7 dias sem incidentes'));
-        //$message->setNotification(new Notification($notification['title'], $notification['body']));
+            $message = new Message();
+            $message->addRecipient(new Topic($topic));
+            $message->setNotification(new Notification('Via API', 'Aqui ta normal'));
+            //$message->setNotification(new Notification($notification['title'], $notification['body']));
 
-        $response = $client->send($message);
-        return($response->getStatusCode());
-
+            $response = $client->send($message);
+            return ($response->getStatusCode());
+        }catch (\GuzzleHttp\Exception\ConnectException $e){
+            return $response->getStatusCode();
+        }
     }
 
     public function sendtouser($token)

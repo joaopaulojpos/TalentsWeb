@@ -335,7 +335,7 @@ class DaoVaga implements iDAOVaga
             $run = $stmt->execute(array(
                 ':cd_vaga' => $cd_vaga
             ));
-
+            
         }catch(Exception $e){
             throw new Exception($e->getMessage());
         }finally{
