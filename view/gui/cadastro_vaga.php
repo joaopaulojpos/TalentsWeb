@@ -165,7 +165,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                        <label>Cursos Desejado Para Vaga</label>
                     </div>
 
-                    <div class="col s12 m2"> 
+                    <div class="col s12 m3 right-align"> 
                         <button type="button" class="btn waves-effect waves-light" id="adicionar_curso" name="adicionar_curso">Adicionar</button>        
                     </div>
                 </div>
@@ -201,7 +201,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                         <label>Competência(s) Comportamentais</label>
                     </div>
                     
-                    <div class="col s12 m2"> 
+                    <div class="col s12 m3 right-align"> 
                         <button type="button" class="btn waves-effect waves-light" id="adicionar_comport" name="adicionar_comport">Adicionar</button>        
                     </div>
                 </div>
@@ -250,7 +250,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                         <label>Escolha o nível</label>
                     </div>
 
-                    <div class="col s12 m3"> 
+                    <div class="col s12 m3 right-align"> 
                         <button type="button" class="btn waves-effect waves-light" id="adicionar_tecnica" name="adicionar_tecnica">Adicionar</button>        
                     </div>
 
@@ -297,7 +297,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                         <label>Escolha o nível</label>
                     </div>
                     
-                    <div class="col s12 m3">
+                    <div class="col s12 m3 right-align">
                         <button type="button" class="btn waves-effect waves-light" id="adicionar_idioma" name="adicionar_idioma">Adicionar</button>        
                     </div>
                 </div>
@@ -331,12 +331,14 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
             </div>
 
             <div class="container">
-                <div class="row">     
+                <div class="row right-align">  
+                    <input name="publicar" id="publicar" type="checkbox" class="validate" checked>
+                    <label for="publicar">Publicar?</label>   
+                    &nbsp; &nbsp;
                     <button class="btn waves-effect waves-light" type="submit" name="buttonSubmit" id="buttonSubmit">Salvar
                         <i class="material-icons right">send</i>
                     </button>         
-                    &nbsp; &nbsp;<input name="publicar" id="publicar" type="checkbox" class="validate" checked>
-                    <label for="publicar">Publicar?</label>
+                    
                 </div>
             </div>
         </form>

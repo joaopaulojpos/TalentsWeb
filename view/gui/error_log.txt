@@ -2489,3 +2489,6 @@ Stack trace:
 [02-Jun-2018 21:30:22 Europe/Berlin] PHP Notice:  Undefined variable: nr_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 110
 [02-Jun-2018 21:30:22 Europe/Berlin] PHP Notice:  Undefined variable: nr_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 110
 [02-Jun-2018 21:30:22 Europe/Berlin] PHP Notice:  Undefined variable: nr_nivel in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos2.php on line 110
+[02-Jun-2018 22:26:45 Europe/Berlin] PHP Warning:  Use of undefined constant none - assumed 'none' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 280
+[02-Jun-2018 22:34:44 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 261
+[02-Jun-2018 22:36:47 Europe/Berlin] PHP Warning:  Use of undefined constant active - assumed 'active' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 406
