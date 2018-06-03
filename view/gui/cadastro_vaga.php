@@ -241,11 +241,9 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                     <div class="input-field col s12 m3">
                         <select name="nivel_tecnica" id="nivel_tecnica">
                             <option value="" disabled selected>Nível</option>
-                            <option value="1">Nível 1</option>
-                            <option value="2">Nível 2</option>
-                            <option value="3">Nivel 3</option>
-                            <option value="4">Nivel 4</option>
-                            <option value="5">Nivel 5</option>
+                            <option value="1">Básico</option>
+                            <option value="2">Intermediário</option>
+                            <option value="3">Avançado</option>
                         </select>
                         <label>Escolha o nível</label>
                     </div>
