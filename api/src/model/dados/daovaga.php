@@ -257,7 +257,6 @@ class DaoVaga implements iDAOVaga
                 ':cd_vaga' => $cd_vaga,
                 ':cd_profissional' => $cd_profissional
             ));
-            return 'match' . $cd_vaga . $cd_profissional;
 
         }catch(Exception $e){
             throw new Exception($e->getMessage());
@@ -341,6 +340,33 @@ class DaoVaga implements iDAOVaga
         }finally{
             $stmt->closeCursor();
         }
+    }
+
+    public function getByIdToNotification($cd_vaga){
+         try{
+             $sql = 'select vaga.ds_titulo,empresa.ds_nome_fantasia from vaga 
+                    join empresa on empresa.cd_empresa = vaga.cd_empresa
+                    where vaga.cd_vaga = :cd_vaga;';
+             $db = db::getInstance();
+
+             $stmt = $db->prepare($sql);
+             $stmt->bindValue(':cd_vaga',$cd_vaga);
+             $stmt->execute();
+             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+             $vaga = new vaga();
+             $empresa = new empresa();
+             //$empresa->setDsNomeFantasia($result['ds_nome_fantasia']);
+             //$vaga->setDsTitulo($result['ds_titulo']);
+             //$vaga->setEmpresa($empresa);
+
+             return $result;
+
+         }catch (PDOException $e){
+            throw new Exception($e->getMessage());
+         }finally{
+            $stmt->closeCursor();
+         }
     }
 
 

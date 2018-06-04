@@ -210,7 +210,7 @@ class RNVaga{
 
             $result = $daovaga->likeProfissionalVaga($cd_vaga,$cd_profissional);
 
-            return array('sucess' => 'Profissional curtido!','topic' => $result);
+            return array('sucess' => 'Profissional curtido!');
 
         }catch (Exception $e){
             return array('erro' => $e->getTrace());
@@ -254,6 +254,17 @@ class RNVaga{
 
         }catch (Exception $e){
             return array('erro' => $e->getTrace());
+        }
+    }
+
+    public function getByIdToNotification($cd_vaga)
+    {
+        try{
+            $dao = new daovaga();
+            $result = $dao->getByIdToNotification($cd_vaga);
+            return array('sucess' => $result);
+        }catch (Exception $e){
+            return array('erro' => $e->getMessage());
         }
     }
 }

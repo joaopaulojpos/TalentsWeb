@@ -25,13 +25,21 @@ class sendnotificationtofcm
 
             $message = new Message();
             $message->addRecipient(new Topic($topic));
-            $message->setNotification(new Notification('Via API', 'Aqui ta normal'));
+            $message->setNotification(new Notification('Vagas Talents', 'Parabéns, você foi selecionado pela empresa '
+                . $notification['ds_nome_fantasia']
+                . ' para a vaga de ' . $notification['ds_titulo']));
             //$message->setNotification(new Notification($notification['title'], $notification['body']));
 
             $response = $client->send($message);
-            return ($response->getStatusCode());
+            if($response->getStatusCode() == 200){
+                return $response->getStatusCode();
+            }
+            else{
+                return 0;
+            }
+
         }catch (\GuzzleHttp\Exception\ConnectException $e){
-            return $response->getStatusCode();
+            return array('erro' => $e->getMessage());
         }
     }
 

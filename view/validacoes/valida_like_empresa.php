@@ -14,9 +14,7 @@ try{
 	foreach ($array as $key => $value) {
 	    if ($key == 'sucess'){
 	        echo 1;
-	    }elseif($key == 'topic'){
-
-        }else{
+	    }else{
 	    	echo $value;
 	    }
 	}

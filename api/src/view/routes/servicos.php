@@ -555,10 +555,14 @@ $app->post('/api/vaga/like/profissional', function(Request $request, Response $r
         $cd_profissional = ($request->getParam('cd_profissional'));
 
         $rnvaga = new RNVaga();
-        //$result = $rnvaga->likeProfissionalVaga($cd_vaga, $cd_profissional);
+        $vaga = new vaga();
+        $vaga->setCdVaga($cd_vaga);
+        $notification = $rnvaga->getByIdToNotification($cd_vaga);
+
         $sendnotification = new sendnotificationtofcm();
-        $resultnotification = $sendnotification->sendtotopic('match'. $cd_vaga . $cd_profissional, '' );
-        var_dump($resultnotification);
+        $resultnotification = $sendnotification->sendtotopic('match'. $cd_vaga . $cd_profissional, $notification['sucess'][0]);
+
+
         if ($resultnotification == 200){
             $result = $rnvaga->likeProfissionalVaga($cd_vaga, $cd_profissional);
             $response->write(json_encode($result));
@@ -566,7 +570,6 @@ $app->post('/api/vaga/like/profissional', function(Request $request, Response $r
             $response->write(json_encode(array('erro' => 'Candidato não foi notificado, tente de novo')));
         }
 
- //       $response->write(json_encode($result));
     }
     catch
         (PDOException $e){
