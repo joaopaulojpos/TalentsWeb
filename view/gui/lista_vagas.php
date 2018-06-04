@@ -25,8 +25,8 @@ include "foooter.php";
   <div class="row">
     <div class="col s12 m12">    
       <?//php echo $empresa[0]['ds_razao_social'] ?>
-      <div class="section right-align">
-        <a href="dashboard.php" class="waves-effect waves-light btn"><i class="material-icons left">chevron_left</i>Voltar</a>
+      <div class="section left-align">
+        <a href="dashboard.php" class="waves-effect waves-light btn teal darken-1"><i class="material-icons left">chevron_left</i>Voltar</a>
       </div>
     </div>
   </div>
@@ -107,7 +107,7 @@ include "foooter.php";
     <div class="col s12 m6">
       <div class="card altcardvagas">
         <div class="card-content cardcontent">
-          <span class="card-title activator grey-text text-darken-4"><a href="lista_candidatos2.php?cd_vaga=<?php echo $cd_vaga; ?>"><?php echo $ds_titulo; ?></a><i class="material-icons right">more_vert</i></span>
+          <span class="card-title activator grey-text text-darken-4"><a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>"><?php echo $ds_titulo; ?></a><i class="material-icons right">more_vert</i></span>
           <p><a href="#"><?php echo $ds_cargo; ?></a></p>
           <p class="text-darken-4"><?php echo $dt_cricacao; ?></p>
           </br>
@@ -127,8 +127,8 @@ include "foooter.php";
         </div>
 
           <div class="card-action">
-                <button class="waves-effect waves-light btn <?php echo $cor_botao_status; ?> darken-1" onclick=<?php echo $metodo_status; ?>> <?php echo $texto_botao_status; ?> </button>
-                <a href="lista_candidatos2.php?cd_vaga=<?php echo $cd_vaga; ?>" class="waves-effect waves-light btn teal darken-4">Ver Candidatos</a>
+                <button class="waves-effect waves-light btn <?php echo $cor_botao_status; ?> darken-2" onclick=<?php echo $metodo_status; ?>> <?php echo $texto_botao_status; ?> </button>
+                <a href="lista_candidatos.php?cd_vaga=<?php echo $cd_vaga; ?>" class="waves-effect waves-light btn teal darken-4">Ver Candidatos</a>
           </div>
 
         <div class="card-reveal">

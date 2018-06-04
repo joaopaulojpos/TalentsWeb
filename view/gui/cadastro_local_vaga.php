@@ -40,15 +40,17 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 <section class="section">
     <form name="formulario" id="formulario" method="post" action="cadastro_vaga.php" onSubmit="return enviardados();">
         <div class="row">
-            <div class="container center">
+            <div class="container">
                 <h5>Localização da vaga</h5>
-                <div class="input-field col s12 m8">
+            </div>
+            <div class="container">
+                <div class="input-field col s12 m12">
                         <i class="material-icons prefix">gps_fixed</i>
                         <input id="txtEndereco" name="txtEndereco" type="text" class="validate" minlength="3" required>
                         <label for="titulo">Endereço da Vaga</label>
                 </div>
 
-                <div class="input-field col s12 m3">
+                <div class="right-align">
                     <input class="btn waves-effect waves-light teal darken-1" type="button" name="btnEndereco" id="btnEndereco" value="Ver no Mapa">
                 </div>
             </div>
@@ -56,21 +58,21 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
         <div class="row">
             <div class="container">
-                <div style="width: 95%; height: 300px" id="mapa"></div>
+                <div style="width: 100%; height: 300px" id="mapa"></div>
             </div>
         </div>
 
         <div class="row">
             <div class="container">
-                <div class="input-field col s12 m4">
-                    Lat: <input id="txtLatitude" name="txtLatitude" type="text">
-                </div>
+              
+                    <input id="txtLatitude" name="txtLatitude" type="hidden">
+                
 
-                <div class="input-field col s12 m4">
-                    Long: <input id="txtLongitude" name="txtLongitude" type="text">
-                </div>
+                
+                    <input id="txtLongitude" name="txtLongitude" type="hidden">
+                
 
-                <div class="input-field col s12 m4">
+                <div class="right-align">
                     <input class="btn waves-effect waves-light teal darken-1" type="submit" name="btnEnviar" id="btnEnviar" value="Enviar">
                 </div>
             </div>
@@ -92,17 +94,33 @@ if (isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
 
   <!--  Scripts-->
   <script type='text/javascript'>
-      function enviardados(){
-      	$('#loader').show();
-      	$('#errMessage').hide();
-      	if(trim($('input[name="txtLatitude"]').val()) == '' || trim($('input[name="txtEndereco"]').val()) == ''){	
-    			$('#loader').hide();
-    			document.getElementById('errMessage').innerHTML = 'Endereço não localizado, por favor digite um endereço!';
-          $('#errMessage').show();   //Informa o erro*/  
-          $('input[name="txtEndereco"]').focus();  
-    		return false;
-    		}
-		    $('#loader').hide();
-		    return true;
+    /* $(document).keypress(function(e) {
+      if(e.which == 13)
+        alert("teste");
+        return false;
+    });*/
+
+    $(document).ready(function () {
+       $('input[name="txtEndereco"]').keypress(function (e) {
+            if(e.which == 13){
+              $('#btnEndereco').click();
+              return false;
+            }
+       });
+    });
+
+    function enviardados(){
+    	$('#loader').show();
+    	$('#errMessage').hide();
+    	if(trim($('input[name="txtLatitude"]').val()) == '' || trim($('input[name="txtEndereco"]').val()) == ''){	
+  			$('#loader').hide();
+  			document.getElementById('errMessage').innerHTML = 'Endereço não localizado, por favor digite um endereço!';
+        $('#errMessage').show();   //Informa o erro*/  
+        $('input[name="txtEndereco"]').focus();  
+  		  return false;
+  		}else {
+	     $('#loader').hide();
+	     return true;
       }
+    }
   </script>
