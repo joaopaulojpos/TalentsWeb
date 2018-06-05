@@ -9,7 +9,7 @@ class RNProfissional{
 			$daoprofissional = new DaoProfissional();
 			$result = $daoprofissional->cadastrar($profissional);
 
-			return array('sucess' => 'Cadastrado com sucesso!');
+			return array('sucess' => $result);
 
 		}catch (Exception $e){
 			return array('erro' => $e->getMessage());
