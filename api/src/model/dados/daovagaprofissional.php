@@ -158,8 +158,8 @@ select v.cd_vaga,v.nr_qtd_vaga,v.ds_observacao,v.dt_validade,v.tp_contratacao,v.
                     inner join idioma i ON vi.cd_idioma = i.cd_idioma
                          where v.cd_vaga not in (SELECT cd_vaga from profissional_vaga where cd_profissional = :cod_prof)
                       ORDER BY v.cd_vaga DESC
-                         LIMIT 1) as Gambi
-                         where percentual_comp <> 0  or percentual_curso <> 0 or percentual_idioma <> 0 ;'          
+                         LIMIT 1) as result_0001
+                         where percentual_comp <> 0  and percentual_curso <> 0 and percentual_idioma <> 0 ;'          
 
             //TODO JOIN vaga_curso AS vcurso ON vaga.cd_vaga = vcurso.cd_vaga , JOIN formacao AS f ON f.cd_formacao = vcurso.cd_formacao
 
