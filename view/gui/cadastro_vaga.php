@@ -139,6 +139,11 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                         <textarea name="observacao" id="observacao" class="materialize-textarea" minlength="10" required></textarea>
                         <label for="observacao">Descrição das atividades</label>
                     </div>
+
+                    <div class="input-field col s12 m12">
+                        <textarea name="segunda_etapa" id="segunda_etapa" class="materialize-textarea" minlength="10" required></textarea>
+                        <label for="segunda_etapa">Instruções segunda etapa *¹</label>
+                    </div>
                 </div>
             </div>
 
@@ -241,11 +246,13 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                     <div class="input-field col s12 m3">
                         <select name="nivel_tecnica" id="nivel_tecnica">
                             <option value="" disabled selected>Nível</option>
-                            <option value="1">Básico</option>
-                            <option value="2">Intermediário</option>
-                            <option value="3">Avançado</option>
+                            <option value="1">Nível 1</option>
+                            <option value="2">Nível 2</option>
+                            <option value="3">Nivel 3</option>
+                            <option value="4">Nivel 4</option>
+                            <option value="5">Nivel 5</option>
                         </select>
-                        <label>Escolha o nível</label>
+                        <label>Escolha o nível *²</label>
                     </div>
 
                     <div class="col s12 m3 right-align"> 
@@ -340,6 +347,13 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                 </div>
             </div>
         </form>
+
+        <div class="container">
+            <div class="row">
+                <span class="grey-text">*¹ Essa será a mensagem que irá ser exibida ao(s) candidato(s) forem escolhidos para essa vaga!</span><br>
+                <span class="grey-text">*² Quanto mais próximo do número <b>UM</b>, <b>menor</b> o grau de conhecimento. Quanto mais próximo do número <b>SEIS</b>, <b>maior</b> o grau de conhecimento.</span>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -522,6 +536,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
         var titulo=$('#titulo').val();
         var cargo=$('#cargo').val();
         var observacao=$('#observacao').val();
+        var segunda_etapa=$('#segunda_etapa').val();
         var tipocontratacao=$('#tipocontratacao').val();
         var salario=$('#salario').val();
         var jornadatrabalho=$('#jornadatrabalho').val();
@@ -550,7 +565,7 @@ if (!isset($_SESSION['empresaLogada'])) {   //Verifica se há seções
                 "&idiomaCodigo="+JSON.stringify(idiomaCodigo)+"&idiomaNivel="+JSON.stringify(idiomaNivel)+
                 "&tecnicaCodigo="+JSON.stringify(tecnicaCodigo)+"&tecnicaNivel="+JSON.stringify(tecnicaNivel)+
                 "&comportCodigo="+JSON.stringify(comportCodigo)+"&cursoCodigo="+JSON.stringify(cursoCodigo)+
-                "&tpStatus="+publicar, //Dados
+                "&tpStatus="+publicar+"&segundaEtapa="+segunda_etapa, //Dados
             success: function (result){     //Sucesso no AJAX
                         if (result == 1){
                           location.href='dashboard.php';

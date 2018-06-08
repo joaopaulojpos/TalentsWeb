@@ -16,6 +16,7 @@ try{
 	$titulo = $_POST['titulo'];
 	$cd_cargo = $_POST['cargo'];
 	$observacao = $_POST['observacao'];
+	$segunda_etapa = $_POST["segundaEtapa"];
 	$tipo_contratacao = $_POST['tipocontratacao'];
 	$salario = $_POST['salario'];
 	$jornada_trabalho = $_POST['jornadatrabalho'];
@@ -54,6 +55,7 @@ try{
 	$vaga->setNrLongitude($longitude);
 	$vaga->setDsEndereco($endereco);
 	$vaga->setTpStatus($tp_status);
+	$vaga->setDsSegundaEtapa($segunda_etapa);
 
 	//prenchendo os campos do objeto cargo 
 	$cargo->setCdCargo($cd_cargo);

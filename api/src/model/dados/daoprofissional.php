@@ -250,7 +250,7 @@ class DaoProfissional implements iDAOProfissional
 
     public function getNotificacoes($cd_profissional){
         try{
-            $sql = 'select p.ds_nome,v.ds_titulo,e.ds_nome_fantasia 
+            $sql = 'select p.ds_nome,v.ds_titulo,e.ds_nome_fantasia, e.ds_segunda_etapa
                       from profissional_vaga as pv
                       JOIN
                         profissional p on pv.cd_profissional = p.cd_profissional

@@ -417,6 +417,7 @@ $app->post('/api/vaga/salvar', function(Request $request, Response $response){
         $vaga->setDsTitulo($request->getParam('ds_titulo'));
         $vaga->setVlSalario($request->getParam('vl_salario'));
         $vaga->setDsEndereco($request->getParam('ds_endereco'));
+        $vaga->setDsSegundaEtapa($request->getParam('ds_segunda_etapa'));
     	$cargo->setCdCargo($request->getParam('cd_cargo'));
     	$vaga->setCargo($cargo);
     	$empresa->setCdEmpresa($request->getParam('cd_empresa'));

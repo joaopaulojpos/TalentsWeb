@@ -16,6 +16,7 @@ class Vaga implements JsonSerializable {
     private $nr_experiencia;
     private $ds_endereco;
 	private $distancia_km;
+    private $ds_segunda_etapa;
 
     private $tp_status;
 
@@ -170,6 +171,15 @@ class Vaga implements JsonSerializable {
         return $this->tp_status;
     }
 
+    function setDsSegundaEtapa($ds_segunda_etapa)
+    {
+        $this->ds_segunda_etapa = trim($ds_segunda_etapa);
+    }
+    function getDsSegundaEtapa()
+    {
+        return $this->ds_segunda_etapa;
+    }
+
     function setCargo($cargo)
     {
         $this->cargo = $cargo;
@@ -283,7 +293,8 @@ class Vaga implements JsonSerializable {
                 'competencias_comp'=>$this->competenciascomport,
                 'idiomas'=>$this->idiomas,
                 'profissionais'=>$this->profissionais,
-				'distancia_km'=>$this->distancia_km
+				'distancia_km'=>$this->distancia_km,
+                'ds_segunda_etapa'=>$this->ds_segunda_etapa
             ];
     }
 }

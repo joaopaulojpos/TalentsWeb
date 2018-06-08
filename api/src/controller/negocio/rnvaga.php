@@ -41,6 +41,8 @@ class RNVaga{
                 array_push($validacoes, 'Não é possível inserir um texto de beneficíos tão grande, permitido no máximo 1000 caracteres!');
             if (strlen($vaga->getDsObservacao()) > 1000)
                 array_push($validacoes, 'Não é possível inserir um texto de observação tão grande, permitido no máximo 1000 caracteres!');
+            if (strlen($vaga->getDsSegundaEtapa()) > 2000)
+                array_push($validacoes, 'Não é possível inserir um texto de segunda etapa tão grande, permitido no máximo 2000 caracteres!');
 
             $vagavalidar = new Vaga();
             $vagavalidar->setDsTitulo($vaga->getDsTitulo());

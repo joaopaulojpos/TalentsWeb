@@ -871,3 +871,8 @@ FROM (  SELECT vct.cd_competencia_tecnica ct1, pct.cd_competencia_tecnica pct1
          FROM vaga_competencia_tecnica vct
               INNER JOIN profissional_competencia_tecnica pct ON vct.cd_competencia_tecnica = pct.cd_competencia_tecnica 
         WHERE pct.cd_profissional = cdprofissional) AS qtde_competencias_em_comum ) AS table_result);		
+
+
+
+-- Adicionando campo segunda_etapa do profissional
+alter table vaga add column ds_segunda_etapa varchar(2000);

@@ -14,9 +14,9 @@ class DaoVaga implements iDAOVaga
         try{
             //Comando para inserir a vaga na base de dados
             $sql = "insert into vaga (nr_qtd_vaga,ds_observacao,dt_validade,tp_contratacao,nr_experiencia,nr_longitude,nr_latitude,ds_beneficios,ds_horario_expediente,
-                                      dt_criacao,ds_titulo,vl_salario,ds_endereco,cd_cargo,cd_empresa,tp_status)
+                                      dt_criacao,ds_titulo,vl_salario,ds_endereco,cd_cargo,cd_empresa,tp_status,ds_segunda_etapa)
                          values (:nr_qtd_vaga,:ds_observacao,:dt_validade,:tp_contratacao,:nr_experiencia,:nr_longitude,:nr_latitude,:ds_beneficios,:ds_horario_expediente,
-                                 :dt_criacao,:ds_titulo,:vl_salario,:ds_endereco,:cd_cargo,:cd_empresa,:tp_status)";
+                                 :dt_criacao,:ds_titulo,:vl_salario,:ds_endereco,:cd_cargo,:cd_empresa,:tp_status,:ds_segunda_etapa)";
             $db = db::getInstance();
             $stmt = $db->prepare($sql);
             $run = $stmt->execute(array(
@@ -35,7 +35,8 @@ class DaoVaga implements iDAOVaga
                 ':ds_endereco' => $vaga->getDsEndereco(),
                 ':cd_cargo' => $vaga->getCargo()->getCdCargo(),
                 ':cd_empresa' => $vaga->getEmpresa()->getCdEmpresa(),
-                ':tp_status' => $vaga->getTpStatus()
+                ':tp_status' => $vaga->getTpStatus(),
+                ':ds_segunda_etapa' => $vaga->getDsSegundaEtapa()
 
             ));
             //Guardando o id da última insersão para utiliza-lo
