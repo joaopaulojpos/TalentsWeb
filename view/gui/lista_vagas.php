@@ -13,7 +13,15 @@ include "foooter.php";
   require_once('../../controller/fachada.php');
 
   $fachada = Fachada::getInstance();
-  $arrayvagas = $fachada->vagasEmpresaPesquisar($empresa[0]['cd_empresa']);
+  $filtro = "T";
+
+  if (isset($_GET['filtro'])){
+    if ($_GET['filtro'] == "A"){
+      $filtro = "A";
+    }
+  }
+
+  $arrayvagas = $fachada->vagasEmpresaPesquisar($empresa[0]['cd_empresa'], $filtro);
 
   //var_dump($arrayvagas);
   //var_dump($empresa[0]['cd_empresa']);
@@ -256,7 +264,8 @@ include "foooter.php";
       data: "cd_vaga="+cd_vaga+"&tp_status="+tp_status, //Dados
           success: function (result){
               if(result == 1){
-                location.href='lista_vagas.php'; 
+                //location.href='lista_vagas.php'; 
+                location.reload(true);
               }else{
                 alert("Erro ao alterar status da vaga: " + result);
               }
@@ -273,7 +282,8 @@ include "foooter.php";
       data: "cd_vaga="+cd_vaga+"&tp_status="+tp_status, //Dados
           success: function (result){
               if(result == 1){
-                location.href='lista_vagas.php'; 
+                //location.href='lista_vagas.php'; 
+                location.reload(true);
               }else{
                 alert("Erro ao alterar status da vaga: " + result);
               }

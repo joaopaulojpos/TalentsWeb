@@ -103,15 +103,16 @@ $app->get('/api/empresa/{id}', function(Request $request, Response $response){
     }
 });
 
-$app->get('/api/empresa/{id}/vagas', function(Request $request, Response $response){
+$app->get('/api/empresa/{id}/vagas/{filtro}', function(Request $request, Response $response){
 
     try{
         $id = $request->getAttribute('id');
+        $filtro = $request->getAttribute('filtro');
  
         $rnempresa = new RNEmpresa();
         $empresa = new Empresa();
         $empresa->setCdEmpresa($id);
-        $rnempresa = $rnempresa->pesquisarVagas($empresa);
+        $rnempresa = $rnempresa->pesquisarVagas($empresa, $filtro);
         $response->write(json_encode($rnempresa));
 
     } catch(Exception $e){

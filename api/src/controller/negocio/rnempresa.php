@@ -146,11 +146,14 @@ class RNEmpresa{
 		}
 	}
 
-	public function pesquisarVagas($empresa){
+	public function pesquisarVagas($empresa, $filtro){
 		try{
 			$validacoes = array();
 			if (empty($empresa->getCdEmpresa()))
-			array_push($validacoes, 'Não foi possivel carregar vagas pois o código da empresa não foi localizado!');
+				array_push($validacoes, 'Não foi possivel carregar vagas pois o código da empresa não foi localizado!');
+
+			if ($filtro != "A" && $filtro != "T")
+				array_push($validacoes, 'Filtro utilizado inválido!');
 
 			if ($validacoes != null){
 				return array('erro' => $validacoes);
@@ -158,7 +161,7 @@ class RNEmpresa{
 			}
 
 			$daoempresa = new DaoEmpresa();
-			$result = $daoempresa->pesquisarVagas($empresa);
+			$result = $daoempresa->pesquisarVagas($empresa, $filtro);
 			
 			if (!empty($result)){
 				return array('sucess' => $result);

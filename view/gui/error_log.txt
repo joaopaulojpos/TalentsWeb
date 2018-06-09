@@ -2534,3 +2534,32 @@ Stack trace:
 [09-Jun-2018 04:03:15 Europe/Berlin] PHP Warning:  Use of undefined constant active - assumed 'active' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 419
 [09-Jun-2018 04:03:21 Europe/Berlin] PHP Warning:  Use of undefined constant active - assumed 'active' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 419
 [09-Jun-2018 04:03:56 Europe/Berlin] PHP Warning:  Use of undefined constant active - assumed 'active' (this will throw an Error in a future version of PHP) in C:\xampp\htdocs\TalentsWeb\view\gui\lista_candidatos.php on line 419
+[09-Jun-2018 04:26:23 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function alert() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php:24
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 24
+[09-Jun-2018 04:28:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function alert() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php:24
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 24
+[09-Jun-2018 04:28:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function alert() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php:24
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 24
+[09-Jun-2018 04:28:26 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function alert() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php:24
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 24
+[09-Jun-2018 04:28:29 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to undefined function alert() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php:24
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 24
+[09-Jun-2018 04:28:41 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 46
+[09-Jun-2018 04:28:51 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 46
+[09-Jun-2018 04:28:58 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 46
+[09-Jun-2018 04:28:59 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 46
+[09-Jun-2018 04:29:00 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 46
+[09-Jun-2018 04:29:19 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 46
+[09-Jun-2018 04:29:20 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 46
+[09-Jun-2018 04:29:20 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 46
+[09-Jun-2018 04:29:21 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xampp\htdocs\TalentsWeb\view\gui\lista_vagas.php on line 46

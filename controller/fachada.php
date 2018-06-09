@@ -76,9 +76,9 @@
         }
     }
 
-    public function vagasEmpresaPesquisar($cd_empresa){
+    public function vagasEmpresaPesquisar($cd_empresa, $filtro){
         $daoempresa = new DaoEmpresa();
-        return json_decode($daoempresa->vagasEmpresaPesquisar($cd_empresa), true);
+        return json_decode($daoempresa->vagasEmpresaPesquisar($cd_empresa, $filtro), true);
     }
 
     public function vagaPesquisar($cd_vaga){

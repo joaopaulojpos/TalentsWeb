@@ -127,7 +127,7 @@ class DaoEmpresa implements iDAOEmpresa
 		}
 	}
 
-	public function pesquisarVagas(Empresa $emp){
+	public function pesquisarVagas(Empresa $emp, $filtro){
 		try{
 			$comando = 'select v.cd_vaga,v.nr_qtd_vaga,v.ds_observacao,v.dt_validade,v.tp_contratacao,v.nr_longitude,v.nr_latitude,v.ds_beneficios,
                                v.ds_horario_expediente,v.dt_criacao,v.ds_titulo,v.vl_salario,v.tp_status,v.nr_experiencia,v.ds_endereco,
@@ -154,10 +154,20 @@ class DaoEmpresa implements iDAOEmpresa
 					$where = $where . ' and v.cd_empresa = :cd_empresa';
 				}
 			}
+
+			if (!empty($filtro) && $filtro != "T"){
+				if (empty($where)){
+					$where = ' where v.tp_status = :tp_status';
+				}else{
+					$where = $where . ' and v.tp_status = :tp_status';
+				}
+			}
 			
 			$stmt = db::getInstance()->prepare($comando . $where . $orderBy);
 			if (!empty($emp->getCdEmpresa()))
 				$stmt->bindValue(':cd_empresa', $emp->getCdEmpresa());
+			if (!empty($filtro) && $filtro != "T")
+				$stmt->bindValue(':tp_status', $filtro);
 
 			$run = $stmt->execute();
             $result = $stmt->fetchAll(PDO::FETCH_ASSOC);

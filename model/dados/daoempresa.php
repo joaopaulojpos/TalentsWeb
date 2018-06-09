@@ -27,10 +27,10 @@ class DaoEmpresa
 		return $request->post($request::$url.'/empresa/login', array( 'login' => $emp->getDsEmail(), 'senha' => $emp->getDsSenha()));
 	}
 
-	public function vagasEmpresaPesquisar($cd_empresa){
+	public function vagasEmpresaPesquisar($cd_empresa, $filtro){
 		$request = new RequestMethods();
 
-		return $request->get($request::$url.'/empresa/'.$cd_empresa.'/vagas');
+		return $request->get($request::$url.'/empresa/'.$cd_empresa.'/vagas/'.$filtro);
 	}
 
 }

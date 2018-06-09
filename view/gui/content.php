@@ -42,13 +42,15 @@
                 </div>
 
                 <div class="col s12 m4 push-m2">
-                    <div class="card white altcard">
-                        <div class="card-content white-text">
-                            <span class="card-title grey-text">Vagas em Aberto</span>
-                            <p  class="center-align"><img src="images/open.png"></p>
-                            <p class="center-align grey-text">Aqui poderá consultar as vagas publicadas por você, que ainda permancem em aberto para os candidatos.</p>
+                    <a href="lista_vagas.php?filtro=A">
+                        <div class="card white altcard">
+                            <div class="card-content white-text">
+                                <span class="card-title grey-text">Vagas em Aberto</span>
+                                <p  class="center-align"><img src="images/open.png"></p>
+                                <p class="center-align grey-text">Aqui poderá consultar as vagas publicadas por você, que ainda permancem em aberto para os candidatos.</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>     
         </div>
