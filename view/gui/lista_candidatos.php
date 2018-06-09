@@ -299,7 +299,20 @@ if (is_array($arrayPromissores)){
                                     $ds_nome = $value['ds_nome'];
                                     $ds_email = $value['ds_email'];
                                     $dt_nascimento = $value['dt_nascimento'];
-                                    $b_foto = "https://i.pinimg.com/originals/d2/9e/ba/d29ebab9f2f5663d9993cfe72b6ebba8.jpg";
+
+                                    //$b_foto = "https://i.pinimg.com/originals/d2/9e/ba/d29ebab9f2f5663d9993cfe72b6ebba8.jpg";
+                                    if ($value['b_foto'] != null){
+                                        $b_foto = $value['b_foto'];
+                                    }else{
+                                        if ($value["tp_sexo"] == 'M'){
+                                            $b_foto = "http://plataformatalent.tmp.k8.com.br/view/gui/images/semfotom.png";
+                                        }else if ($value["tp_sexo"] == 'F'){
+                                            $b_foto = "http://plataformatalent.tmp.k8.com.br/view/gui/images/semfotof.png";
+                                        }else{
+                                            $b_foto = "http://plataformatalent.tmp.k8.com.br/view/gui/images/semfotoi.png";
+                                        }
+                                    }   
+
                                     if ($value["tp_sexo"] == 'M'){
                                         $sexo = "Masculino";
                                     }else if ($value["tp_sexo"] == 'F'){
@@ -353,7 +366,7 @@ if (is_array($arrayPromissores)){
                                             </div>
 
                                             <div class="card-stacked">
-                                                <div class="card-content">
+                                                <div class="card-content" style="padding: 0px 0px 0px 24px;">
                                                     <h5><?php echo $ds_nome; ?></h5>
                                                     <?php 
                                                         if ($value["cursos"]){
@@ -413,7 +426,20 @@ if (is_array($arrayPromissores)){
                                     $ds_nome = $value['ds_nome'];
                                     $ds_email = $value['ds_email'];
                                     $dt_nascimento = $value['dt_nascimento'];
-                                    $b_foto = "https://i.pinimg.com/originals/d2/9e/ba/d29ebab9f2f5663d9993cfe72b6ebba8.jpg";
+
+                                    //$b_foto = "https://i.pinimg.com/originals/d2/9e/ba/d29ebab9f2f5663d9993cfe72b6ebba8.jpg";
+                                    if ($value['b_foto'] != null){
+                                        $b_foto = $value['b_foto'];
+                                    }else{
+                                        if ($value["tp_sexo"] == 'M'){
+                                            $b_foto = "http://plataformatalent.tmp.k8.com.br/view/gui/images/semfotom.png";
+                                        }else if ($value["tp_sexo"] == 'F'){
+                                            $b_foto = "http://plataformatalent.tmp.k8.com.br/view/gui/images/semfotof.png";
+                                        }else{
+                                            $b_foto = "http://plataformatalent.tmp.k8.com.br/view/gui/images/semfotoi.png";
+                                        }
+                                    }      
+
                                     if ($value["tp_sexo"] == 'M'){
                                         $sexo = "Masculino";
                                     }else if ($value["tp_sexo"] == 'F'){
@@ -467,7 +493,7 @@ if (is_array($arrayPromissores)){
                                             </div>
 
                                             <div class="card-stacked">
-                                                <div class="card-content">
+                                                <div class="card-content" style="padding: 0px 0px 0px 24px;">
                                                     <h5><?php echo $ds_nome; ?></h5>
                                                     <?php 
                                                         if ($value["cursos"]){

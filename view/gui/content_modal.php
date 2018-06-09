@@ -11,7 +11,7 @@
                         <img src="<?php echo $b_foto; ?>" align="left" width="150" height="150">
                     </div>
                     <div class="card-stacked">
-                        <div class="card-content">
+                        <div class="card-content" style="padding: 0px 0px 0px 10px;">
                             <h6><b>Nome: </b> <?php echo $ds_nome; ?></h6>
                             <h6><b>Email: </b> <?php echo $ds_email; ?></h6>
                             <h6><b>Data de Nascimento: </b> <?php echo $dt_nascimento; ?></h6>
@@ -174,11 +174,20 @@
                                     <tbody>
                                         <?php 
                                             if ($value["idiomas"]){
-                                                foreach ($value["idiomas"] as $key => $idiomas) {              
+                                                foreach ($value["idiomas"] as $key => $idiomas) {    
+                                                    if ($idiomas['nr_nivel'] == 1){
+                                                        $nivel_idioma = "Básico";    
+                                                    }else if ($idiomas['nr_nivel'] == 2){
+                                                        $nivel_idioma = "Médio"; 
+                                                    }else if ($idiomas['nr_nivel'] == 3){
+                                                        $nivel_idioma = "Avançado"; 
+                                                    }else{
+                                                        $nivel_idioma = $idiomas['nr_nivel']; 
+                                                    }
                                         ?>   
                                         <tr>
                                             <td><?php echo $idiomas['ds_idioma']; ?></td>
-                                            <td><?php echo $idiomas['nr_nivel']; ?></td>
+                                            <td><?php echo $nivel_idioma; ?></td>
                                             <td style="float:right;">
                                                 <?php
                                                     $percent_idioma = (double) number_format(((in_percent($idiomas['cd_idioma'], $idiomas['nr_nivel'], 'cd_idioma', $idiomas_vaga)) * 100), 2, ',', ' ');
