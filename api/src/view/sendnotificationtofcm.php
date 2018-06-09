@@ -25,9 +25,11 @@ class sendnotificationtofcm
 
             $message = new Message();
             $message->addRecipient(new Topic($topic));
-            $message->setNotification(new Notification('Vagas Talents', 'Parabéns, você foi selecionado pela empresa '
+            $note = new Notification('Vagas Talents', 'Parabéns, você foi selecionado pela empresa '
                 . $notification['ds_nome_fantasia']
-                . ' para a vaga de ' . $notification['ds_titulo']));
+                . ' para a vaga de ' . $notification['ds_titulo']);
+            $note->setIcon('drawable-ldpi-icon.png')->setColor('#1b5e20');
+            $message->setNotification($note);
             //$message->setNotification(new Notification($notification['title'], $notification['body']));
 
             $response = $client->send($message);
