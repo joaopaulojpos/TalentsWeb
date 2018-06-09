@@ -273,6 +273,31 @@ class DaoProfissional implements iDAOProfissional
             $stmt->closeCursor();
         }
     }
+    public function getNotificacoesDetalhes($cd_vaga){
+        try{
+            $sql = 'select p.ds_nome,v.ds_titulo,e.ds_nome_fantasia, v.cd_vaga, v.ds_segunda_etapa
+                      from profissional_vaga as pv
+                      JOIN
+                        profissional p on pv.cd_profissional = p.cd_profissional
+                      JOIN
+                        vaga v on pv.cd_vaga = v.cd_vaga
+                      JOIN empresa e on v.cd_empresa = e.cd_empresa
+                    where v.cd_vaga = :cd_vaga and match_empresa = 1;';
+            $stmt = db::getInstance()->prepare($sql);
+
+            if (!empty($cd_vaga))
+                $stmt->bindValue(':cd_vaga', $cd_vaga);
+
+            $run = $stmt->execute();
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            return $result;
+        }catch (PDOException $e){
+            throw new Exception($e->getMessage());
+        }finally{
+            $stmt->closeCursor();
+        }
+    }
     public function getProfissional(Profissional $u, $alt='false'){
         try{
 			$comando = 'select * from profissional ';
