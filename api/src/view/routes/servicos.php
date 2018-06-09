@@ -236,7 +236,7 @@ $app->get('/api/profissional/notificacoesdetalhes', function(Request $request, R
 
     try{
         $rnprofissional = new RNProfissional();
-        $rnprofissional = $rnprofissional->getNotificacaoDetalhes($request->getParam('cd_vaga'));
+        $rnprofissional = $rnprofissional->getNotificacaoDetalhes($request->getParam('cd_vaga'),$request->getParam('cd_profissional'));
         $response->write(json_encode($rnprofissional));
 
     } catch(Exception $e){

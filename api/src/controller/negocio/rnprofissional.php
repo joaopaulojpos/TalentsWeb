@@ -174,10 +174,10 @@ class RNProfissional{
 
     }
 
-    public function getNotificacaoDetalhes($cd_vaga){
+    public function getNotificacaoDetalhes($cd_vaga,$cd_profissional){
         try{
             $dao = new DaoProfissional();
-            $result = $dao->getNotificacoesDetalhes($cd_vaga);
+            $result = $dao->getNotificacoesDetalhes($cd_vaga,$cd_profissional);
             return array('sucess'=> $result);
         }catch (Exception $e){
             return array('erro' => $e->getMessage());
