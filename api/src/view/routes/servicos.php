@@ -231,7 +231,19 @@ $app->get('/api/profissional/notificacoes', function(Request $request, Response 
         $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
- 
+
+$app->get('/api/profissional/notificacoes/detalhes', function(Request $request, Response $response){
+
+    try{
+        $rnprofissional = new RNProfissional();
+        $rnprofissional = $rnprofissional->getNotificacaoDetalhes($request->getParam('cd_vaga'));
+        $response->write(json_encode($rnprofissional));
+
+    } catch(Exception $e){
+        $response->write(json_encode(array('erro' => $e->getMessage())));
+    }
+});
+
 $app->get('/api/profissional/profissional', function(Request $request, Response $response){
 
     try{
@@ -543,10 +555,7 @@ $app->post('/api/vaga/curtirVaga', function(Request $request, Response $response
         $response->write(json_encode(array('erro' => $e->getMessage())));
     }
 });
-$app->get('/api/teste', function(Request $request, Response $response){
 
-    $response->write('Testando post para notifications');
-});
 /**
  * Like profissional da vaga
  */

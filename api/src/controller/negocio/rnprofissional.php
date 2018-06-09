@@ -173,6 +173,17 @@ class RNProfissional{
         }
 
     }
+
+    public function getNotificacaoDetalhes($cd_vaga){
+        try{
+            $dao = new DaoProfissional();
+            $result = $dao->getNotificacoesDetalhes($cd_vaga);
+            return array('sucess'=> $result);
+        }catch (Exception $e){
+            return array('erro' => $e->getMessage());
+        }
+    }
+
     public function getProfissional($ds_email){
         try{
         	if (empty($ds_email)){
