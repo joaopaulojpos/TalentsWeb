@@ -232,7 +232,7 @@ $app->get('/api/profissional/notificacoes', function(Request $request, Response 
     }
 });
 
-$app->get('/api/profissional/notificacoes/detalhes', function(Request $request, Response $response){
+$app->get('/api/profissional/notificacoesdetalhes', function(Request $request, Response $response){
 
     try{
         $rnprofissional = new RNProfissional();
