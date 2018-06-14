@@ -167,7 +167,7 @@ class DaoProfissional implements iDAOProfissional
      */
     public function listarVagaProfissional($cd_profissional, $alt='false'){
         try{
-            $comando = " SELECT v.cd_vaga,
+            $comando = "SELECT v.cd_vaga,
             v.nr_qtd_vaga,
             v.ds_observacao,
             v.dt_validade,
@@ -208,9 +208,28 @@ class DaoProfissional implements iDAOProfissional
             p.nr_latitude,
             round(
                     (SELECT (6371 * acos( cos(radians(v.nr_latitude)) * cos(radians(p.nr_latitude)) * cos(radians(p.nr_longitude) - radians(v.nr_longitude)) + sin(radians(v.nr_latitude)) * sin(radians(p.nr_latitude)))))) distancia_km,
-                    (SELECT CASE WHEN qtd_em_comun = qtd_total_vaga THEN 100 WHEN qtd_em_comun < qtd_total_vaga THEN ((qtd_em_comun/qtd_total_vaga ) * 100) ELSE 0 end AS resultado FROM ( SELECT Count(*) AS qtd_em_comun, /*Verifica a quantidade total de idiomas cadastrados para determinada vaga */ (SELECT Count(*) FROM vaga_idioma WHERE cd_vaga = cd_vaga) qtd_total_vaga /* Verifica a quantidade de idiomas em comum com determinada vaga */ FROM ( SELECT vi.cd_idioma i1, pi.cd_idioma i2 FROM vaga_idioma vi INNER JOIN profissional_idioma pi ON vi.cd_idioma = pi.cd_idioma WHERE pi.cd_profissional = :cod_prof and vi.cd_vaga = cd_vaga) AS qtde_cursos_em_comum ) AS table_result) as percentual_idioma,
-          (SELECT CASE WHEN qtd_em_comun = qtd_total_vaga THEN 100 WHEN qtd_em_comun < qtd_total_vaga THEN ((qtd_em_comun/qtd_total_vaga ) * 100) ELSE 0 end AS resultado FROM ( SELECT Count(*) AS qtd_em_comun, /*Verifica a quantidade total de cursos cadastrados para determinada vaga */ (SELECT Count(*) FROM vaga_curso WHERE cd_vaga = cd_vaga) qtd_total_vaga /* Verifica a quantidade de cursos em comum com determinada vaga */ FROM ( SELECT vc.cd_curso c1, pc.cd_curso c2 FROM vaga_curso vc INNER JOIN profissional_curso pc ON vc.cd_curso = pc.cd_curso WHERE pc.cd_profissional = :cod_prof and vc.cd_vaga = cd_vaga) AS qtde_cursos_em_comum ) AS table_result) as percentual_curso,
-                    (SELECT CASE WHEN qtd_em_comun = qtd_total_vaga THEN 100 WHEN qtd_em_comun < qtd_total_vaga THEN ((qtd_em_comun/qtd_total_vaga ) * 100) ELSE 0 end AS resultado FROM ( SELECT Count(*) AS qtd_em_comun, /*Verifica a quantidade total de competencias cadastrados para determinada vaga */ (SELECT Count(*) FROM vaga_competencia_tecnica WHERE cd_vaga = cd_vaga) qtd_total_vaga /* Verifica a quantidade de competencias em comum com determinada vaga */ FROM ( SELECT vct.cd_competencia_tecnica ct1, pct.cd_competencia_tecnica pct1 FROM vaga_competencia_tecnica vct INNER JOIN profissional_competencia_tecnica pct ON vct.cd_competencia_tecnica = pct.cd_competencia_tecnica WHERE pct.cd_profissional = :cod_prof and vct.cd_vaga = cd_vaga) AS qtde_competencias_em_comum ) AS table_result) as percentual_comp
+            (SELECT     count(*)
+											
+                                 FROM       vaga_curso vc 
+                                 INNER JOIN profissional_curso pc 
+                                 ON         vc.cd_curso = pc.cd_curso 
+                                 WHERE      pc.cd_profissional = :cod_prof 
+                                 AND        vc.cd_vaga = v.cd_vaga) AS qtde_cursos_em_comum ,
+			 
+                                ( SELECT     count(*) 
+                                 FROM       vaga_idioma vi 
+                                 INNER JOIN profissional_idioma pi 
+                                 ON         vi.cd_idioma = pi.cd_idioma 
+                                 WHERE      pi.cd_profissional = :cod_prof 
+                                 AND        vi.cd_vaga = v.cd_vaga) AS qtde_idioma_em_comum ,
+
+			(
+                                 SELECT     count(*) 
+                                 FROM       vaga_competencia_tecnica vct 
+                                 INNER JOIN profissional_competencia_tecnica pct 
+                                 ON         vct.cd_competencia_tecnica = pct.cd_competencia_tecnica
+                                 WHERE      pct.cd_profissional = :cod_prof 
+                                 AND        vct.cd_vaga = cd_vaga) AS qtde_competencias_em_comum 					 
      FROM vaga v
      INNER JOIN cargo c ON c.cd_cargo = v.cd_cargo
      INNER JOIN empresa e ON e.cd_empresa = v.cd_empresa
@@ -226,8 +245,8 @@ class DaoProfissional implements iDAOProfissional
           FROM profissional_vaga
           WHERE cd_profissional = :cod_prof)
        AND v.tp_status = 'A'
-   HAVING distancia_km <= 60
-   And (percentual_idioma + percentual_curso + percentual_comp  ) > 0
+	 HAVING distancia_km <= 60
+	 AND (qtde_cursos_em_comum + qtde_idioma_em_comum + qtde_competencias_em_comum ) > 0
      ORDER BY v.cd_vaga DESC
      LIMIT 1;";
 
