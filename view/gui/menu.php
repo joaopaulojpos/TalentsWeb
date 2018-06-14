@@ -18,6 +18,8 @@ error_reporting(E_ALL);
     <link rel="stylesheet" href="css/custom.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Talents - Conectando talentos pelo mundo</title>
+    <link rel = "shortcut icon" type = "imagem/x-icon" href = "images/icon.ico"/>
     
 </head>
 <body class="grey lighten-3">
@@ -28,9 +30,9 @@ error_reporting(E_ALL);
                   <a href="#!" class="brand-logo logo">&nbsp; <span class="logo2">T</span><span class="logo3">alents</span></a>
                   <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                   <ul class="right hide-on-med-and-down">
-					<li><a href="recarga_saldo.php"><?php echo 'R$ ' . number_format($_SESSION['empresaLogada'][0]['vl_saldo'], 2, '.', ''); ?></a></li>
-                    <li><a href="dashboard.php">Home</a></li>
-                    <li><a href="lista_vagas.php">Vagas</a></li>
+					<li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Recarga de saldo"><a href="recarga_saldo.php"><?php echo 'R$ ' . number_format($_SESSION['empresaLogada'][0]['vl_saldo'], 2, '.', ''); ?></a></li>
+                    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Home"><a href="dashboard.php">Home</a></li>
+                    <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Vagas"><a href="lista_vagas.php">Vagas</a></li>
                     <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Perfil"><a href="cadastro_empresa.php"><i class="material-icons">person</i></a></li>
                     <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="login.php"><i class="material-icons">exit_to_app</i></a></li>
                   </ul>
@@ -39,7 +41,9 @@ error_reporting(E_ALL);
         </div>
         <!-- Menu Mobile -->
         <ul class="side-nav" id="mobile-demo">
-            <li><a href="dashboard.php">Home</a></li>
+            <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Recarda de Saldo"><a href="recarga_saldo.php"><?php echo 'R$ ' . number_format($_SESSION['empresaLogada'][0]['vl_saldo'], 2, '.', ''); ?></a></li>
+            <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Home"><a href="dashboard.php">Home</a></li>
+            <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Vagas"><a href="lista_vagas.php">Vagas</a></li>
             <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Perfil"><a href="cadastro_empresa.php"><i class="material-icons">person</i></a></li>
             <li class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Sair"><a href="login.php"><i class="material-icons">exit_to_app</i></a></li>
         </ul>

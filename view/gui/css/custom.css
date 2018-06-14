@@ -72,6 +72,10 @@ back{
   height: 11cm;
 }
 
+.card .card-title{
+  font-weight: 400;
+}
+
 .modal{
   width: 100%;
   max-height: 90%;

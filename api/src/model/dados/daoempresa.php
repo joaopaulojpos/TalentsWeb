@@ -9,8 +9,8 @@ class DaoEmpresa implements iDAOEmpresa
 	}
 	public function cadastrar(Empresa $emp){
 		try{
-			$comando = "insert into empresa (nr_cnpj, ds_razao_social, ds_nome_fantasia, nr_porte, ds_nome_responsavel, ds_area_atuacao, ds_site, ds_telefone, ds_email, ds_senha) 
-							 values (:nr_cnpj, :ds_razao_social, :ds_nome_fantasia, :nr_porte, :ds_nome_responsavel, :ds_area_atuacao, :ds_site, :ds_telefone, :ds_email, :ds_senha)";
+			$comando = "insert into empresa (nr_cnpj, ds_razao_social, ds_nome_fantasia, nr_porte, ds_nome_responsavel, ds_area_atuacao, ds_site, ds_telefone, ds_email, ds_senha, vl_saldo) 
+							 values (:nr_cnpj, :ds_razao_social, :ds_nome_fantasia, :nr_porte, :ds_nome_responsavel, :ds_area_atuacao, :ds_site, :ds_telefone, :ds_email, :ds_senha, :vl_saldo)";
 			$stmt = db::getInstance()->prepare($comando);
 
 			$stmt->bindValue(':nr_cnpj', $emp->getNrCnpj());
@@ -23,6 +23,7 @@ class DaoEmpresa implements iDAOEmpresa
 			$stmt->bindValue(':ds_telefone', $emp->getDsTelefone());
 			$stmt->bindValue(':ds_email', $emp->getDsEmail());
 			$stmt->bindValue(':ds_senha', $emp->getDsSenha());
+			$stmt->bindValue(':vl_saldo', 200);
 			$run = $stmt->execute();
 
 		}catch(Exception $e){

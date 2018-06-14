@@ -54,7 +54,7 @@ class DaoCurso implements iDAOCurso
     public function listarCursoProfissional($cd_profissional)
     {
       try{
-        $sql = 'select pc.cd_curso, c.ds_curso, pc.ds_instituicao, pc.dt_inicio, pc.dt_fim, pc.nr_periodo
+        $sql = 'select pc.cd_curso, c.ds_curso, c.cd_formacao, pc.ds_instituicao, pc.dt_inicio, pc.dt_fim, pc.nr_periodo
                   from profissional_curso pc
              left join curso c on c.cd_curso = pc.cd_curso
                  where pc.cd_profissional = :cd_profissional
@@ -74,6 +74,7 @@ class DaoCurso implements iDAOCurso
             $curso = new curso();
             $curso->setCdCurso($row['cd_curso']);
             $curso->setDsCurso($row['ds_curso']);
+            $curso->setFormacao($row['cd_formacao']);
             $curso->setDsInstituicao($row['ds_instituicao']);
             $curso->setDtInicio($row['dt_inicio']);
             $curso->setDtFim($row['dt_fim']);

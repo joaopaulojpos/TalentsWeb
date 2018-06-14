@@ -218,11 +218,20 @@ include "foooter.php";
                         </thead>
                         <tbody>
                           <?php if ($value["idiomas"]){ 
-                                  foreach ($value["idiomas"] as $key => $comp_tec) {    
+                                  foreach ($value["idiomas"] as $key => $idiomas) {  
+                                    if ($idiomas['nr_nivel'] == 1){
+                                        $nivel_idioma = "Básico";    
+                                    }else if ($idiomas['nr_nivel'] == 2){
+                                        $nivel_idioma = "Médio"; 
+                                    }else if ($idiomas['nr_nivel'] == 3){
+                                        $nivel_idioma = "Avançado"; 
+                                    }else{
+                                        $nivel_idioma = $idiomas['nr_nivel']; 
+                                    }  
                           ?>
                             <tr>
-                              <td class='primeiro'> <?php echo $comp_tec['ds_idioma']; ?></td>
-                              <td class='segundo'> <?php echo $comp_tec['nr_nivel']; ?></td>
+                              <td class='primeiro'> <?php echo $idiomas['ds_idioma']; ?></td>
+                              <td class='segundo'> <?php echo $nivel_idioma; ?></td>
                             </tr>
                           <?php 
                                   }

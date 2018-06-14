@@ -28,19 +28,6 @@ include "menu.php";
                         <div class="card-content white-text">
                         	<form name="formulario" id="formulario" method="post" action="../validacoes/valida_recarga.php">
 	                            <span class="card-title grey-text">Recarregar saldo</span>
-	                           	<p>                          	
-	                            	<div class="row grey-text">
-								    	<div class="col s4">
-								    		<button class="btn waves-effect waves-light col s12 m12 teal darken-1" type="button" id="adicionar10saldo" name="adicionar10saldo">+R$10</button>
-								    	</div>
-								      	<div class="col s4">
-								    		<button class="btn waves-effect waves-light col s12 m12 teal darken-1" type="button" id="adicionar100saldo" name="adicionar100saldo">+R$100</button>
-								    	</div>
-								      	<div class="col s4">
-								    		<button class="btn waves-effect waves-light col s12 m12 teal darken-1" type="button" id="adicionar1000saldo" name="adicionar1000saldo">+R$1000</button>
-								    	</div>
-								    </div>
-								</p>
 	                            <p>
 	                            	<div class="input-field col s12">
 	                            		<input type="hidden" class="grey-text" name="cd_empresa" id="cd_empresa" value="<?php echo $empresa[0]['cd_empresa']; ?>">

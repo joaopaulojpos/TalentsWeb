@@ -88,10 +88,10 @@ function in_array_field($needle, $needle_field, $haystack) {
                 return 1;
         }
         if ($achou_algum == false){
-            return 0.10;
+            return 0.05;
         }
     }else{
-        return 0.10; 
+        return 0.05; 
     }
     return 0;
 }
@@ -146,23 +146,23 @@ function retorna_nivel($nr_nivel, $needle_field){
         if ($nr_nivel == 1){
             return 0.03;
         }else if ($nr_nivel == 2){
-            return 0.08;
+            return 0.06;
         }else if ($nr_nivel == 3){
-            return 0.12;
+            return 0.09;
         }else{
             return 0;
         }
     }else if ($needle_field == 'cd_competencia_tecnica'){
         if ($nr_nivel == 1){
-            return 0.02;
+            return 0.01;
         }else if ($nr_nivel == 2){
-            return 0.04;
+            return 0.02;
         }else if ($nr_nivel == 3){
-            return 0.06;
+            return 0.03;
         }else if ($nr_nivel == 4){
-            return 0.08;
+            return 0.04;
         }else if ($nr_nivel == 5){
-            return 0.10;
+            return 0.05;
         }else{
             return 0;
         }
@@ -195,10 +195,28 @@ foreach ($arrayprofissionais as $key => $value) {
 
             if ($value["cursos"]){
                 $qtdCursosValidos = 0;
-                foreach ($value["cursos"] as $key => $cursos) {   
-                    $qtdCursosValidos = $qtdCursosValidos + (in_array_field($cursos['cd_curso'], 'cd_curso', $cursos_vaga));
+                $atendecemporcento = False;
+                $valorcurso = 0;
+
+                foreach ($value["cursos"] as $key => $cursos) { 
+                    $valorcurso = (in_array_field($cursos['cd_curso'], 'cd_curso', $cursos_vaga));
+
+                    if ($valorcurso == 1 && (!$atendecemporcento)){
+                        $atendecemporcento = True;
+                    }else{
+                        if ($cursos['ds_formacao'] == 1){
+                            $qtdCursosValidos = $qtdCursosValidos + 5;
+                        }else{
+                            $qtdCursosValidos = $qtdCursosValidos + 2.5;
+                        }
+                    }
                 }
-                $value["porcentagem_cursos"] = $value["porcentagem_cursos"] + (($qtdCursosValidos*100) / (is_array($cursos_vaga) ? count($cursos_vaga) : 1) );
+                
+                if ($atendecemporcento){
+                    $value["porcentagem_cursos"] = 100 + $qtdCursosValidos;
+                }else{
+                    $value["porcentagem_cursos"] = $value["porcentagem_cursos"] + (($qtdCursosValidos*100) / (is_array($cursos_vaga) ? count($cursos_vaga) : 1) );
+                }
             }
 
             //parte das competências técnicas
@@ -301,7 +319,7 @@ if (is_array($arrayPromissores)){
                                     $dt_nascimento = $value['dt_nascimento'];
 
                                     //$b_foto = "https://i.pinimg.com/originals/d2/9e/ba/d29ebab9f2f5663d9993cfe72b6ebba8.jpg";
-                                    if ($value['b_foto'] != null){
+                                    if ($value['b_foto'] != null && strlen($value['b_foto']) > 1000){
                                         $b_foto = $value['b_foto'];
                                     }else{
                                         if ($value["tp_sexo"] == 'M'){
@@ -428,7 +446,7 @@ if (is_array($arrayPromissores)){
                                     $dt_nascimento = $value['dt_nascimento'];
 
                                     //$b_foto = "https://i.pinimg.com/originals/d2/9e/ba/d29ebab9f2f5663d9993cfe72b6ebba8.jpg";
-                                    if ($value['b_foto'] != null){
+                                    if ($value['b_foto'] != null && strlen($value['b_foto']) > 1000){
                                         $b_foto = $value['b_foto'];
                                     }else{
                                         if ($value["tp_sexo"] == 'M'){
