@@ -201,7 +201,9 @@ foreach ($arrayprofissionais as $key => $value) {
                 foreach ($value["cursos"] as $key => $cursos) { 
                     $valorcurso = (in_array_field($cursos['cd_curso'], 'cd_curso', $cursos_vaga));
 
-                    if ($valorcurso == 1 && (!$atendecemporcento)){
+                    if ($valorcurso == 1 && ($atendecemporcento)){
+                        $qtdCursosValidos = $qtdCursosValidos + 15;
+                    } else if ($valorcurso == 1 && (!$atendecemporcento)){
                         $atendecemporcento = True;
                     }else{
                         if ($cursos['ds_formacao'] == 1){
